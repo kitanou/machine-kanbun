@@ -147,6 +147,9 @@ def encode_adaptive(p: Profile, policy: dict) -> str:
 
 def encode_doc(profiles: Sequence[Profile], fmt: str, policy: dict = None) -> str:
     """Render a multi-entity document. fmt: json | L0..L5 | adaptive."""
+    if fmt.startswith("ab"):
+        from .ablate import encode_ablation
+        return encode_ablation(profiles, fmt)
     if fmt == "adaptive":
         return "\n".join(encode_adaptive(p, policy) for p in profiles)
     if fmt == "json":

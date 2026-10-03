@@ -109,10 +109,21 @@ def cmd_longqa(a):
     from . import longrun
     from .lmstudio import Stalled
     try:
-        longrun.run(a.model, a.lengths, a.variants or longrun.DEFAULT_VARIANTS, a.seed, a.n_questions, a.base_url)
+        longrun.run(a.model, a.lengths, a.variants or longrun.DEFAULT_VARIANTS, a.seed, a.n_questions, a.base_url,
+                    **({"out_dir": Path(a.out)} if a.out else {}))
     except Stalled as e:
         print(f"STALLED: {e}", flush=True)
         sys.exit(75)  # EX_TEMPFAIL: caller should reload the model and resume
+
+
+def cmd_ablreport(a):
+    from . import ablreport
+    ablreport.main()
+
+
+def cmd_convcost(a):
+    from . import convcost
+    convcost.run(a.model, a.lengths, a.llm_lengths)
 
 
 def cmd_longreport(a):
@@ -137,7 +148,14 @@ def main():
     l.add_argument("--variants", nargs="*", default=None, help="fmt[:legend], e.g. L5:full adaptive:minimal")
     l.add_argument("--seed", type=int, default=1); l.add_argument("--n-questions", type=int, default=64)
     l.add_argument("--base-url", default="http://localhost:1234/v1")
+    l.add_argument("--out", default=None, help="output dir (default results/long)")
     l.set_defaults(fn=cmd_longqa)
+    ab = sub.add_parser("ablreport"); ab.set_defaults(fn=cmd_ablreport)
+    cv = sub.add_parser("convcost", help="Issue #10: conversion cost (rule-based timing + LLM L0->L1)")
+    cv.add_argument("--model", required=True)
+    cv.add_argument("--lengths", nargs="*", type=int, default=[2000, 8000, 16000, 32000])
+    cv.add_argument("--llm-lengths", nargs="*", type=int, default=[2000, 8000])
+    cv.set_defaults(fn=cmd_convcost)
     lr = sub.add_parser("longreport"); lr.add_argument("--reuse", nargs="*", type=int, default=[1, 10, 100])
     lr.set_defaults(fn=cmd_longreport)
     r = sub.add_parser("report"); r.add_argument("files", nargs="*"); r.set_defaults(fn=cmd_report)
