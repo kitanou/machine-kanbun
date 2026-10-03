@@ -21,7 +21,7 @@ class Reply:
 
 
 def chat(model: str, system: str, user: str, base_url: str = BASE_URL,
-         max_tokens: int = 200, timeout: float = 300) -> Reply:
+         max_tokens: int = 300, timeout: float = 300, extra: Optional[dict] = None) -> Reply:
     body = json.dumps({
         "model": model,
         "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}],
@@ -29,6 +29,7 @@ def chat(model: str, system: str, user: str, base_url: str = BASE_URL,
         "max_tokens": max_tokens,
         "stream": True,
         "stream_options": {"include_usage": True},
+        **(extra or {}),
     }).encode()
     req = urllib.request.Request(base_url + "/chat/completions", body,
                                  {"Content-Type": "application/json"})
@@ -47,11 +48,12 @@ def chat(model: str, system: str, user: str, base_url: str = BASE_URL,
             if ev.get("usage"):
                 usage = ev["usage"]
             for ch in ev.get("choices", []):
-                piece = (ch.get("delta") or {}).get("content")
-                if piece:
-                    if not ttft:
-                        ttft = time.perf_counter() - t0
-                    parts.append(piece)
+                delta = ch.get("delta") or {}
+                # TTFT = first token of any kind (reasoning or content), i.e. prompt-processing latency
+                if not ttft and (delta.get("content") or delta.get("reasoning_content")):
+                    ttft = time.perf_counter() - t0
+                if delta.get("content"):
+                    parts.append(delta["content"])
     total = time.perf_counter() - t0
     text = re.sub(r"<think>.*?</think>", "", "".join(parts), flags=re.S).strip()
     return Reply(text, usage.get("prompt_tokens"), usage.get("completion_tokens"), ttft, total)
