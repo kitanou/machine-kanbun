@@ -109,3 +109,48 @@ def encode(p: Profile, fmt: str) -> str:
             parts.append(f"{g}{{{body}}}" if g else body)
         return p.label + "{" + ";".join(parts) + "}"
     raise ValueError(fmt)
+
+
+# ---------------------------------------------------------------- documents / adaptive
+import json as _json
+from pathlib import Path as _Path
+from typing import Sequence
+
+POLICIES = _json.loads((_Path(__file__).parent / "data" / "policies.json").read_text(encoding="utf-8"))
+
+
+def _fact_class(f: Fact) -> str:
+    if f.unc:
+        return "unc"
+    if f.kind == "attr":
+        return "num"  # lossless: key:value is identical at every level
+    if f.kind == "time":
+        return "time"
+    if f.kind == "simple" and (f.neg or f.pred in ("禁", "無")):
+        return "neg"
+    return "default"
+
+
+def encode_adaptive(p: Profile, policy: dict) -> str:
+    """Per-fact compression level chosen by semantic class (model-specific policy).
+    A level of "ja" falls back to the natural Japanese summary phrase."""
+    parts = []
+    for g, fs in _grouped(p).items():
+        items = []
+        for f in fs:
+            lv = policy.get(_fact_class(f), policy["default"])
+            items.append(f.summary.rstrip("。") if lv == "ja" else _core(f, 5 if lv == 5 else lv))
+        body = ";".join(items)
+        parts.append(f"{g}{{{body}}}" if g else body)
+    return p.label + "{" + ";".join(parts) + "}"
+
+
+def encode_doc(profiles: Sequence[Profile], fmt: str, policy: dict = None) -> str:
+    """Render a multi-entity document. fmt: json | L0..L5 | adaptive."""
+    if fmt == "adaptive":
+        return "\n".join(encode_adaptive(p, policy) for p in profiles)
+    if fmt == "json":
+        return "[" + ",".join(to_json(p) for p in profiles) + "]"
+    if fmt == "L1":  # multi-entity: every summary line must say whose facts they are
+        return "\n".join(p.label + "：" + "".join(f.summary for f in p.facts) for p in profiles)
+    return "\n\n".join(encode(p, fmt) for p in profiles) if fmt == "L4" else "\n".join(encode(p, fmt) for p in profiles)

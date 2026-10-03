@@ -39,6 +39,7 @@ class Question:
     yn: Optional[bool] = None  # gold for yes/no questions
     answer: List[str] = field(default_factory=list)  # all must appear (span questions)
     reject: List[str] = field(default_factory=list)  # none may appear
+    op: str = ""  # semantic operator exercised (不 無 未 非 禁 疑 故 若 過今将 ...)
 
 
 @dataclass

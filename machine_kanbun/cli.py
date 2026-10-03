@@ -103,6 +103,23 @@ def cmd_report(a):
             print(line)
 
 
+def cmd_longqa(a):
+    import sys
+
+    from . import longrun
+    from .lmstudio import Stalled
+    try:
+        longrun.run(a.model, a.lengths, a.variants or longrun.DEFAULT_VARIANTS, a.seed, a.n_questions, a.base_url)
+    except Stalled as e:
+        print(f"STALLED: {e}", flush=True)
+        sys.exit(75)  # EX_TEMPFAIL: caller should reload the model and resume
+
+
+def cmd_longreport(a):
+    from . import longreport
+    longreport.main(a.reuse)
+
+
 def main():
     ap = argparse.ArgumentParser(prog="machine_kanbun")
     sub = ap.add_subparsers(required=True)
@@ -114,6 +131,15 @@ def main():
     q.add_argument("--no-think", action="store_true")
     q.add_argument("--tag"); q.add_argument("--base-url", default="http://localhost:1234/v1")
     q.set_defaults(fn=cmd_qa)
+    l = sub.add_parser("longqa", help="Issue #4: long-context grid")
+    l.add_argument("--model", required=True)
+    l.add_argument("--lengths", nargs="*", type=int, default=[2000, 8000, 32000])
+    l.add_argument("--variants", nargs="*", default=None, help="fmt[:legend], e.g. L5:full adaptive:minimal")
+    l.add_argument("--seed", type=int, default=1); l.add_argument("--n-questions", type=int, default=64)
+    l.add_argument("--base-url", default="http://localhost:1234/v1")
+    l.set_defaults(fn=cmd_longqa)
+    lr = sub.add_parser("longreport"); lr.add_argument("--reuse", nargs="*", type=int, default=[1, 10, 100])
+    lr.set_defaults(fn=cmd_longreport)
     r = sub.add_parser("report"); r.add_argument("files", nargs="*"); r.set_defaults(fn=cmd_report)
     a = ap.parse_args(); a.fn(a)
 
