@@ -39,3 +39,15 @@ def score(q: Question, answer: str) -> bool:
     if not all(_norm(x) in a for x in q.answer):
         return False
     return not any(_norm(x) in a for x in q.reject)
+
+
+INSTR = ("コンテキストに基づき簡潔に答えてください。質問が「〜ですか」のようにはい/いいえで答える形式の場合のみ、"
+         "最初の語を「はい」または「いいえ」にしてください。それ以外の質問には、答えとなる語句だけを述べてください。")
+
+
+def build_prompt_v2(context: str, q: Question, extra_legend: Optional[str] = None, no_think: bool = False) -> str:
+    """Long-context prompt. `extra_legend` (category legend) sits after the context so the
+    context prefix stays identical across questions (prefix-cache friendly)."""
+    leg = f"{extra_legend}\n" if extra_legend else ""
+    tail = "\n/no_think" if no_think else ""
+    return f"コンテキスト:\n{context}\n\n{leg}質問: {q.q}\n{INSTR}{tail}"

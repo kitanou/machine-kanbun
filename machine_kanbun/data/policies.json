@@ -1,0 +1,6 @@
+{
+  "gemma": {"default": 5, "neg": 5, "time": 4, "unc": 5, "legend": "minimal",
+            "note": "issue #4 example: 通常/否定 L5, 時制 L4, 疑 L5+最小凡例, 数値 lossless"},
+  "qwen":  {"default": 3, "neg": 4, "time": 3, "unc": "ja", "legend": "none",
+            "note": "issue #4 example: 通常 L3, 否定 L4, 時制 L2/L3, 疑 は自然文, 数値 lossless"}
+}
