@@ -38,8 +38,9 @@ def cmd_qa(a):
     RESULTS.mkdir(exist_ok=True)
     tag = a.tag or ("legend" if a.legend else "nolegend")
     out = RESULTS / f"{a.model.replace('/', '_')}__{tag}.jsonl"
+    extra = {"reasoning_effort": "none"} if "gemma" in a.model else None  # disable thinking
     no_think = "qwen3" in a.model and "qwen3." not in a.model or a.no_think
-    chat(a.model, qamod.SYSTEM, "こんにちは", base_url=a.base_url, max_tokens=5)  # warm-up (model load)
+    chat(a.model, qamod.SYSTEM, "こんにちは", base_url=a.base_url, max_tokens=5, extra=extra)  # warm-up (model load)
     with out.open("w", encoding="utf-8") as fh:
         for fmt in a.formats:
             for p in profiles:
@@ -47,7 +48,7 @@ def cmd_qa(a):
                 for q in p.questions:
                     prompt = qamod.build_prompt(ctx, q, legend=a.legend and fmt not in ("json", "L0", "L1"),
                                                 no_think=no_think)
-                    r = chat(a.model, qamod.SYSTEM, prompt, base_url=a.base_url)
+                    r = chat(a.model, qamod.SYSTEM, prompt, base_url=a.base_url, extra=extra)
                     ok = qamod.score(q, r.text)
                     rec = dict(model=a.model, fmt=fmt, profile=p.id, cat=q.cat, q=q.q, ok=ok,
                                answer=r.text, prompt_tokens=r.prompt_tokens, ttft=r.ttft,
