@@ -47,6 +47,12 @@ def spec() -> str:
     return "\n".join(lines)
 
 
+def legend_text() -> str:
+    """Compact operator table for QA over an IR (what the round-trip prompt already contains)."""
+    return (f"IR notation {CORE_VERSION}: each line is `<ops>: <content>`; the operators mean: "
+            + "; ".join(f"{o['symbol']}={o['meaning']}" for o in CORE if o["symbol"] != "~") + ". `~` marks free text.")
+
+
 EXAMPLES = {  # per source language; not part of the benchmark
     "EN": [("The bakery stays closed on Mondays, but it opens early on Sundays.", "今 不: bakery open Monday\n今: bakery open Sunday early"),
            ("If the form is not signed, the request will not be processed. A new rule, they say.", "若: [不: form signed] → [将 不: request processed]\n伝(unknown): [new_rule]"),
@@ -61,6 +67,7 @@ EXAMPLES = {  # per source language; not part of the benchmark
            ("如果表格没有签字，申请就不会被处理。据说这是新规定。", "若: [不: 表格 签字] → [将 不: 申请 处理]\n伝(不明): [新规定]"),
            ("旧水泵因为过热而损坏，所以工厂推迟了重启。", "過 故: [旧水泵 过热] → [旧水泵 损坏]\n過 延: 工厂 重启")],
 }
+_ALIAS = {"將": "将", "==": "=", ">=": ">", "≥": ">"}  # spelling variants of core operators, not new operators
 _STMT = re.compile(r"^\s*([^:：]*?)\s*[:：]\s*(.*)$")
 _OPTOK = re.compile(r"[^\s()（）]+(?:\([^)]*\))?")
 
@@ -80,7 +87,8 @@ def parse(ir: str) -> Dict[str, object]:
         if not m:
             bad += 1
             continue
-        ops = [re.sub(r"\(.*\)$", "", t) for t in m.group(1).split()]
+        head = re.sub(r"\([^)]*\)", lambda g: "(" + g.group(0)[1:-1].replace(" ", "_") + ")", m.group(1))  # 伝(Mr. Yamada) is one token
+        ops = [_ALIAS.get(re.sub(r"\(.*\)$", "", t), re.sub(r"\(.*\)$", "", t)) for t in head.split()]
         for o in ops:
             if o in SYMBOLS:
                 used[o] = used.get(o, 0) + 1

@@ -73,3 +73,31 @@ def run(model: str, langs: List[str], base_url: str = "http://localhost:1234/v1"
             acc = {c: sum(x["ok"] for x in rec["qa"] if x["ctx"] == c) / max(1, sum(1 for x in rec["qa"] if x["ctx"] == c)) for c in ("orig", "ir", "rt")}
             print(f"{model} {lang} {it['id']}: orig={acc['orig']:.0%} ir={acc['ir']:.0%} rt={acc['rt']:.0%} "
                   f"free={rec['parse']['free_text']} unk={len(rec['parse']['unknown'])} conv={r1.total:.0f}s", flush=True)
+
+
+def run_legend(model: str, base_url: str = "http://localhost:1234/v1", out: Path = OUT) -> None:
+    """QA over the *saved* IR with the operator legend in the system prompt (separates information loss from
+    the model's ability to read the operators: the round-trip prompt already contains the legend)."""
+    src = out / f"{model.replace('/', '_')}.jsonl"
+    dst = out / f"{model.replace('/', '_')}__irlegend.jsonl"
+    done = set()
+    if dst.exists():
+        for l in dst.read_text(encoding="utf-8").splitlines():
+            r = json.loads(l)
+            done.add((r["lang"], r["item"]))
+    extra = {"reasoning_effort": "none"} if "gemma" in model else None
+    nt = "\n/no_think" if ("qwen3" in model and "qwen3." not in model) else ""
+    items = {it["id"]: it for it in ITEMS}
+    for line in src.read_text(encoding="utf-8").splitlines():
+        r = json.loads(line)
+        if (r["lang"], r["item"]) in done:
+            continue
+        system = f"[run:{uuid.uuid4().hex[:8]}] {qamod.SYSTEMS[r['lang']]}\n{core.legend_text()}"
+        qa = []
+        for qd in items[r["item"]]["qs"]:
+            q = _question(qd, r["lang"], r["ph"])
+            a = chat(model, system, qamod.build_prompt_lang(r["ir"], q.q, r["lang"], bool(nt)), extra=extra, deadline=120)
+            qa.append(dict(q=q.q, ctx="irL", ok=qamod.score(q, a.text, ml=True), answer=a.text, prompt_tokens=a.prompt_tokens))
+        with dst.open("a", encoding="utf-8") as fh:
+            fh.write(json.dumps(dict(model=model, lang=r["lang"], item=r["item"], qa=qa), ensure_ascii=False) + "\n")
+        print(f"{model} {r['lang']} {r['item']}: irL={sum(x['ok'] for x in qa) / len(qa):.0%}", flush=True)
