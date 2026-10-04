@@ -17,8 +17,8 @@ from .natural_data import ITEMS, LANGS, PHENOMENA
 RES = Path(__file__).parent.parent / "results"
 EXPECT = {"否定": {"不", "無", "未", "非"}, "時制": {"過", "今", "将", "既", "継"}, "様相": {"禁", "必", "可", "願", "意", "不"},
           "不確実性": {"疑"}, "伝聞": {"伝", "推"}, "因果": {"故", "然"}, "条件": {"若"}, "比較": {">", "="}, "意図・中止": {"止", "延", "予", "意"}}
-CTX = ("orig", "ir", "rt")
-CTXN = {"orig": "原文", "ir": "IRのみ", "rt": "往復(IR→自然文)"}
+CTX = ("orig", "ir", "irL", "rt")
+CTXN = {"orig": "原文", "ir": "IRのみ", "irL": "IR+凡例", "rt": "往復(IR→自然文)"}
 
 
 def load():
@@ -27,6 +27,12 @@ def load():
         for l in f.read_text(encoding="utf-8").splitlines():
             if l.strip():
                 recs.append(json.loads(l))
+    extra = {(r["model"], r["lang"], r["item"]): r["qa"] for r in recs if "ph" not in r}
+    recs = [r for r in recs if "ph" in r]
+    for r in recs:
+        r["parse"] = core.parse(r["ir"])  # re-parse with the current parser (stored stats may predate parser fixes)
+    for r in recs:  # IR + operator legend QA, computed on the saved IR
+        r["qa"] = r["qa"] + extra.get((r["model"], r["lang"], r["item"]), [])
     return recs
 
 
@@ -45,8 +51,8 @@ def main():
         P(f"\n## {model}({len(R)} 件)\n")
         # accuracy by language x ctx
         P("**言語別精度**\n")
-        P("| 言語 | 問題数 | 原文 | IRのみ | 往復 | IR − 原文 | 往復 − 原文 |")
-        P("|---|---|---|---|---|---|---|")
+        P("| 言語 | 問題数 | 原文 | IRのみ | IR+凡例 | 往復 | IR − 原文 | IR+凡例 − 原文 | 往復 − 原文 |")
+        P("|---|---|---|---|---|---|---|---|---|")
         def acc(rs, c):
             q = [x for r in rs for x in r["qa"] if x["ctx"] == c]
             return sum(x["ok"] for x in q) / len(q) if q else 0, len(q)
@@ -66,10 +72,12 @@ def main():
             if not rs:
                 continue
             a = {c: acc(rs, c) for c in CTX}
-            P(f"| {lg} | {a['orig'][1]} | {a['orig'][0]:.1%} | {a['ir'][0]:.1%} | {a['rt'][0]:.1%} | {paired(rs, 'ir', 'orig')} | {paired(rs, 'rt', 'orig')} |")
+            leg = f"{a['irL'][0]:.1%}" if a["irL"][1] else "-"
+            P(f"| {lg} | {a['orig'][1]} | {a['orig'][0]:.1%} | {a['ir'][0]:.1%} | {leg} | {a['rt'][0]:.1%} | {paired(rs, 'ir', 'orig')} | "
+              f"{paired(rs, 'irL', 'orig') if a['irL'][1] else '-'} | {paired(rs, 'rt', 'orig')} |")
         P("\n**意味現象別精度(4言語プール)**\n")
-        P("| 現象 | 問題数 | 原文 | IRのみ | 往復 | 期待演算子の使用率 | 自由記述(~)あり | 未知演算子あり |")
-        P("|---|---|---|---|---|---|---|---|")
+        P("| 現象 | 問題数 | 原文 | IRのみ | IR+凡例 | 往復 | 期待演算子の使用率 | 自由記述(~)あり | 未知演算子あり |")
+        P("|---|---|---|---|---|---|---|---|---|")
         for ph in PHENOMENA:
             rs = [r for r in R if r["ph"] == ph]
             if not rs:
@@ -77,7 +85,8 @@ def main():
             a = {c: acc(rs, c) for c in CTX}
             exp = EXPECT.get(ph)
             use = f"{sum(1 for r in rs if exp & set(r['parse']['used'])) / len(rs):.0%}" if exp else "(該当なし)"
-            P(f"| {ph} | {a['orig'][1]} | {a['orig'][0]:.1%} | {a['ir'][0]:.1%} | {a['rt'][0]:.1%} | {use} | "
+            legph = f"{a['irL'][0]:.1%}" if a['irL'][1] else '-'
+            P(f"| {ph} | {a['orig'][1]} | {a['orig'][0]:.1%} | {a['ir'][0]:.1%} | {legph} | {a['rt'][0]:.1%} | {use} | "
               f"{sum(1 for r in rs if r['parse']['free_text']) / len(rs):.0%} | {sum(1 for r in rs if r['parse']['unknown']) / len(rs):.0%} |")
         # core coverage (B)
         P("\n**コア演算子のカバレッジ(段階B)**\n")

@@ -137,7 +137,7 @@ def cmd_natural(a):
     from . import natural
     from .lmstudio import Stalled
     try:
-        natural.run(a.model, a.langs)
+        (natural.run_legend(a.model) if a.legend else natural.run(a.model, a.langs))
     except Stalled as e:
         print(f"STALLED: {e}", flush=True)
         sys.exit(75)
@@ -219,6 +219,7 @@ def main():
     nr = sub.add_parser("naturalreport", help="Issue #19 B/C/D report"); nr.set_defaults(fn=cmd_naturalreport)
     nt = sub.add_parser("natural", help="Issue #19 C/D: natural sentences -> IR -> QA / round trip")
     nt.add_argument("--model", required=True); nt.add_argument("--langs", nargs="*", default=["JA", "EN", "KO", "ZH"])
+    nt.add_argument("--legend", action="store_true", help="QA over the saved IR with the operator legend")
     nt.set_defaults(fn=cmd_natural)
     cv = sub.add_parser("convcost", help="Issue #10: conversion cost (rule-based timing + LLM L0->L1)")
     cv.add_argument("--model", required=True)
