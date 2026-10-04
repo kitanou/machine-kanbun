@@ -181,11 +181,11 @@ def main():
                     lo, hi = diff_ci(bb, cc, n)
                     P(f"| {model} | {NAMES[a]} − {NAMES[b]} | {'+'.join(grp)} | {n} | {(bb - cc) / n * 100:+.1f}pt [{lo:+.1f},{hi:+.1f}] | {bb}/{cc} | {sign_test(bb, cc):.2f} |")
     # ---- categories
-    P("\n## 意味カテゴリ別精度(文脈長・言語プール, 括弧内は問題数)\n")
+    P("\n## 意味カテゴリ別精度(EN+KO・文脈長プール, 括弧内は問題数)\n")
     for model in models:
         by = defaultdict(lambda: defaultdict(list))
         for (m, l, c), d in S.items():
-            if m == model and c.split("-")[1] in CONDS and not (c == "JA-IRL"):
+            if m == model and c.split("-")[1] in CONDS and not c.startswith("JA-"):  # EN/KO only: JA IR-L == IR-C was not re-run
                 for r in d["rows"]:
                     by[c.split("-")[1]][r["cat"]].append(r["ok"])
         cats = sorted({x for v in by.values() for x in v})
