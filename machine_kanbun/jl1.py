@@ -40,6 +40,7 @@ class Tok:
     i: int = 0
     head: int = -1  # dependency head index (GiNZA only)
     dep: str = ""
+    ctype: str = ""  # conjugation type (Sudachi only), e.g. "五段-カ行"
 
 
 class Analyzer:
@@ -61,7 +62,7 @@ class Sudachi(Analyzer):
         out = []
         for i, m in enumerate(self._t.tokenize(text, self._m)):
             p = m.part_of_speech()
-            out.append(Tok(m.surface(), m.dictionary_form(), p[0], p[1], p[5] if len(p) > 5 else "", i))
+            out.append(Tok(m.surface(), m.dictionary_form(), p[0], p[1], p[5] if len(p) > 5 else "", i, ctype=p[4] if len(p) > 4 else ""))
         return out
 
 
@@ -149,6 +150,10 @@ def merge_kamo(toks: List[Tok]) -> List[Tok]:
     i = 0
     while i < len(toks):
         t = toks[i]
+        if t.surface == "なん" and i + 1 < len(toks) and toks[i + 1].surface == "か" and (i == 0 or toks[i - 1].surface in ("、", "。")):
+            out.append(Tok("なんか", "なんか", "副詞", "", "", t.i))  # sentence-initial filler (Sudachi splits it into なん|か)
+            i += 2
+            continue
         if t.surface.startswith("かもしれ") or (t.surface == "かも" and i + 1 < len(toks) and toks[i + 1].surface.startswith("しれ")) or (t.surface == "か" and i + 2 < len(toks) and toks[i + 1].surface == "も" and toks[i + 2].surface.startswith("しれ")):
             j = i + (1 if t.surface.startswith("かもしれ") else 2 if t.surface == "かも" else 3)
             while j < len(toks) and (toks[j].pos in ("助動詞", "AUX") or toks[j].surface in ("ない", "ん", "ませ", "ます", "です")):
@@ -161,7 +166,12 @@ def merge_kamo(toks: List[Tok]) -> List[Tok]:
     return out
 
 
-def to_l1(toks: List[Tok], keep_case: bool = False, keep_connectors: bool = False, sep: str = " ") -> str:
+def to_l1(toks: List[Tok], keep_case: bool = False, keep_connectors: bool = False, sep: str = " ", *, drop: frozenset = frozenset(),
+          surface: bool = False, keep_filler: bool = False, keep_polite: bool = False, no_slash: bool = False, drop_person: bool = False) -> str:
+    """Ablation switches (Issues #25/#30; defaults reproduce the Issue #20 variants):
+    drop = marker words to delete (ない/た/らしい/たい/かも/みたい/う); surface = keep conjugated surface instead of lemma;
+    keep_filler / keep_polite = keep fillers+interjections+conjunctions / polite+copula auxiliaries; no_slash = no sentence marker;
+    drop_person = drop proper nouns and honorifics (control: the question's subject disappears)."""
     toks = merge_kamo(toks)
     out: List[str] = []
     last_noun = False
@@ -172,14 +182,27 @@ def to_l1(toks: List[Tok], keep_case: bool = False, keep_connectors: bool = Fals
         nxt = toks[i + 1:i + 4]
         s = t.surface
         if s in PUNCT_END:
-            if out and out[-1] != "/":
+            if out and out[-1] != "/" and not no_slash:
                 out.append("/")
             i += 1
             continue
-        if t.pos in ("補助記号", "空白", "記号", "接続詞", "感動詞", "PUNCT"):
+        if t.pos in ("補助記号", "空白", "記号", "PUNCT") or (t.pos in ("接続詞", "感動詞") and not keep_filler):
+            i += 1
+            continue
+        if t.pos in ("接続詞", "感動詞"):
+            out.append(s)
             i += 1
             continue
         mk = _marker(t, nxt)
+        if t.surface == "かも":
+            if "かも" not in drop:
+                out.append("かも")
+            last_noun = False
+            i += 1
+            continue
+        if mk in drop or (t.surface in ("う", "よう") and t.pos in ("助動詞", "AUX") and "う" in drop and False):
+            i += 1
+            continue
         if t.surface == "かも":
             out.append("かも")
             last_noun = False
@@ -199,9 +222,14 @@ def to_l1(toks: List[Tok], keep_case: bool = False, keep_connectors: bool = Fals
             i += 1
             continue
         if t.pos in ("助動詞", "AUX"):  # polite, copula, volitional ... dropped
+            if keep_polite:
+                out.append(s)
             i += 1
             continue
         if t.pos == "接尾辞" and (s in HONORIFIC or t.lemma in HONORIFIC):
+            i += 1
+            continue
+        if drop_person and t.pos == "名詞" and t.sub.startswith("固有名詞"):
             i += 1
             continue
         if t.pos in ("名詞", "代名詞", "NOUN", "PROPN", "PRON", "接頭辞"):
@@ -216,22 +244,22 @@ def to_l1(toks: List[Tok], keep_case: bool = False, keep_connectors: bool = Fals
             if t.sub.startswith("非自立") and t.lemma in DROP_VERB_AUX or t.lemma in ("する", "為る") and out:
                 i += 1  # light verb after a nominal ("結婚した") or progressive "いる"
                 continue
-            lemma = t.lemma
-            out.append(lemma)
+            out.append(s if surface else t.lemma)
             last_noun = False
-            if "意志" in t.cform:
+            if "意志" in t.cform and "う" not in drop:
                 out.append("う")
             i += 1
             continue
         if t.pos in ("形容詞", "形状詞", "ADJ"):
             if t.lemma in NEG:
-                out.append("ない")
+                if "ない" not in drop:
+                    out.append("ない")
             else:
-                out.append(t.lemma if t.pos != "形状詞" else s)
+                out.append(t.lemma if (t.pos != "形状詞" and not surface) else s)
             i += 1
             continue
         if t.pos in ("副詞", "ADV", "連体詞"):
-            if s not in FILLER_ADV:
+            if s not in FILLER_ADV or keep_filler:
                 out.append(s)
             i += 1
             continue
