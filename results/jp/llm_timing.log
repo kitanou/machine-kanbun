@@ -1,0 +1,5 @@
+gemma full 10-600 rc=0 3231s
+gemma rag 1000/10000 rc=0 1036s
+qwen full 10-100 rc=0 522s
+qwen rag 1000/10000 rc=0 917s
+DONE

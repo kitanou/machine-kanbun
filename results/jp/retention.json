@@ -1,0 +1,390 @@
+{
+ "_calibration_l0_status_accuracy": 1.0,
+ "sudachi-m": {
+  "person": 1.0,
+  "event": 0.998,
+  "status": 0.981,
+  "not_done_as_done": 0.0,
+  "nums": 1.0,
+  "time": 1.0,
+  "by_status": {
+   "DONE": 0.9153605015673981,
+   "NOT_DONE": 0.959409594095941,
+   "PLANNED": 1.0,
+   "WANTED": 1.0,
+   "UNDECIDED": 1.0,
+   "HEARSAY": 1.0,
+   "POSSIBLE": 1.0
+  },
+  "confusion": {
+   "DONE": {
+    "NOT_DONE": 13,
+    "DONE": 292,
+    "WANTED": 14
+   },
+   "NOT_DONE": {
+    "NOT_DONE": 260,
+    "WANTED": 11
+   },
+   "PLANNED": {
+    "PLANNED": 281
+   },
+   "WANTED": {
+    "WANTED": 252
+   },
+   "UNDECIDED": {
+    "UNDECIDED": 317
+   },
+   "HEARSAY": {
+    "HEARSAY": 278
+   },
+   "POSSIBLE": {
+    "POSSIBLE": 282
+   }
+  }
+ },
+ "sudachi-g": {
+  "person": 1.0,
+  "event": 0.998,
+  "status": 0.981,
+  "not_done_as_done": 0.0,
+  "nums": 1.0,
+  "time": 1.0,
+  "by_status": {
+   "DONE": 0.9153605015673981,
+   "NOT_DONE": 0.959409594095941,
+   "PLANNED": 1.0,
+   "WANTED": 1.0,
+   "UNDECIDED": 1.0,
+   "HEARSAY": 1.0,
+   "POSSIBLE": 1.0
+  },
+  "confusion": {
+   "DONE": {
+    "NOT_DONE": 13,
+    "DONE": 292,
+    "WANTED": 14
+   },
+   "NOT_DONE": {
+    "NOT_DONE": 260,
+    "WANTED": 11
+   },
+   "PLANNED": {
+    "PLANNED": 281
+   },
+   "WANTED": {
+    "WANTED": 252
+   },
+   "UNDECIDED": {
+    "UNDECIDED": 317
+   },
+   "HEARSAY": {
+    "HEARSAY": 278
+   },
+   "POSSIBLE": {
+    "POSSIBLE": 282
+   }
+  }
+ },
+ "mecab-m": {
+  "person": 1.0,
+  "event": 0.998,
+  "status": 0.981,
+  "not_done_as_done": 0.0,
+  "nums": 1.0,
+  "time": 1.0,
+  "by_status": {
+   "DONE": 0.9153605015673981,
+   "NOT_DONE": 0.959409594095941,
+   "PLANNED": 1.0,
+   "WANTED": 1.0,
+   "UNDECIDED": 1.0,
+   "HEARSAY": 1.0,
+   "POSSIBLE": 1.0
+  },
+  "confusion": {
+   "DONE": {
+    "NOT_DONE": 13,
+    "DONE": 292,
+    "WANTED": 14
+   },
+   "NOT_DONE": {
+    "NOT_DONE": 260,
+    "WANTED": 11
+   },
+   "PLANNED": {
+    "PLANNED": 281
+   },
+   "WANTED": {
+    "WANTED": 252
+   },
+   "UNDECIDED": {
+    "UNDECIDED": 317
+   },
+   "HEARSAY": {
+    "HEARSAY": 278
+   },
+   "POSSIBLE": {
+    "POSSIBLE": 282
+   }
+  }
+ },
+ "janome-m": {
+  "person": 1.0,
+  "event": 0.982,
+  "status": 0.941,
+  "not_done_as_done": 0.0524822695035461,
+  "nums": 1.0,
+  "time": 0.77,
+  "by_status": {
+   "DONE": 0.9059561128526645,
+   "NOT_DONE": 0.959409594095941,
+   "PLANNED": 1.0,
+   "WANTED": 0.6944444444444444,
+   "UNDECIDED": 1.0,
+   "HEARSAY": 1.0,
+   "POSSIBLE": 1.0
+  },
+  "confusion": {
+   "DONE": {
+    "NOT_DONE": 16,
+    "DONE": 289,
+    "WANTED": 14
+   },
+   "NOT_DONE": {
+    "NOT_DONE": 260,
+    "WANTED": 11
+   },
+   "PLANNED": {
+    "PLANNED": 281
+   },
+   "WANTED": {
+    "WANTED": 175,
+    "DONE": 74,
+    "NOT_DONE": 3
+   },
+   "UNDECIDED": {
+    "UNDECIDED": 317
+   },
+   "HEARSAY": {
+    "HEARSAY": 278
+   },
+   "POSSIBLE": {
+    "POSSIBLE": 282
+   }
+  }
+ },
+ "sudachi-p": {
+  "person": 1.0,
+  "event": 0.998,
+  "status": 0.981,
+  "not_done_as_done": 0.0,
+  "nums": 1.0,
+  "time": 1.0,
+  "by_status": {
+   "DONE": 0.9153605015673981,
+   "NOT_DONE": 0.959409594095941,
+   "PLANNED": 1.0,
+   "WANTED": 1.0,
+   "UNDECIDED": 1.0,
+   "HEARSAY": 1.0,
+   "POSSIBLE": 1.0
+  },
+  "confusion": {
+   "DONE": {
+    "NOT_DONE": 13,
+    "DONE": 292,
+    "WANTED": 14
+   },
+   "NOT_DONE": {
+    "NOT_DONE": 260,
+    "WANTED": 11
+   },
+   "PLANNED": {
+    "PLANNED": 281
+   },
+   "WANTED": {
+    "WANTED": 252
+   },
+   "UNDECIDED": {
+    "UNDECIDED": 317
+   },
+   "HEARSAY": {
+    "HEARSAY": 278
+   },
+   "POSSIBLE": {
+    "POSSIBLE": 282
+   }
+  }
+ },
+ "sudachi-c": {
+  "person": 1.0,
+  "event": 0.998,
+  "status": 0.981,
+  "not_done_as_done": 0.0,
+  "nums": 1.0,
+  "time": 1.0,
+  "by_status": {
+   "DONE": 0.9153605015673981,
+   "NOT_DONE": 0.959409594095941,
+   "PLANNED": 1.0,
+   "WANTED": 1.0,
+   "UNDECIDED": 1.0,
+   "HEARSAY": 1.0,
+   "POSSIBLE": 1.0
+  },
+  "confusion": {
+   "DONE": {
+    "NOT_DONE": 13,
+    "DONE": 292,
+    "WANTED": 14
+   },
+   "NOT_DONE": {
+    "NOT_DONE": 260,
+    "WANTED": 11
+   },
+   "PLANNED": {
+    "PLANNED": 281
+   },
+   "WANTED": {
+    "WANTED": 252
+   },
+   "UNDECIDED": {
+    "UNDECIDED": 317
+   },
+   "HEARSAY": {
+    "HEARSAY": 278
+   },
+   "POSSIBLE": {
+    "POSSIBLE": 282
+   }
+  }
+ },
+ "ginza-m": {
+  "person": 1.0,
+  "event": 0.998,
+  "status": 0.981,
+  "not_done_as_done": 0.0,
+  "nums": 1.0,
+  "time": 1.0,
+  "by_status": {
+   "DONE": 0.9153605015673981,
+   "NOT_DONE": 0.959409594095941,
+   "PLANNED": 1.0,
+   "WANTED": 1.0,
+   "UNDECIDED": 1.0,
+   "HEARSAY": 1.0,
+   "POSSIBLE": 1.0
+  },
+  "confusion": {
+   "DONE": {
+    "NOT_DONE": 13,
+    "DONE": 292,
+    "WANTED": 14
+   },
+   "NOT_DONE": {
+    "NOT_DONE": 260,
+    "WANTED": 11
+   },
+   "PLANNED": {
+    "PLANNED": 281
+   },
+   "WANTED": {
+    "WANTED": 252
+   },
+   "UNDECIDED": {
+    "UNDECIDED": 317
+   },
+   "HEARSAY": {
+    "HEARSAY": 278
+   },
+   "POSSIBLE": {
+    "POSSIBLE": 282
+   }
+  }
+ },
+ "ginza-d": {
+  "person": 1.0,
+  "event": 0.998,
+  "status": 0.9855,
+  "not_done_as_done": 0.0,
+  "nums": 1.0,
+  "time": 1.0,
+  "by_status": {
+   "DONE": 0.9278996865203761,
+   "NOT_DONE": 0.977859778597786,
+   "PLANNED": 1.0,
+   "WANTED": 1.0,
+   "UNDECIDED": 1.0,
+   "HEARSAY": 1.0,
+   "POSSIBLE": 1.0
+  },
+  "confusion": {
+   "DONE": {
+    "NOT_DONE": 13,
+    "DONE": 296,
+    "WANTED": 10
+   },
+   "NOT_DONE": {
+    "NOT_DONE": 265,
+    "WANTED": 6
+   },
+   "PLANNED": {
+    "PLANNED": 281
+   },
+   "WANTED": {
+    "WANTED": 252
+   },
+   "UNDECIDED": {
+    "UNDECIDED": 317
+   },
+   "HEARSAY": {
+    "HEARSAY": 278
+   },
+   "POSSIBLE": {
+    "POSSIBLE": 282
+   }
+  }
+ },
+ "naive": {
+  "person": 1.0,
+  "event": 1.0,
+  "status": 0.043,
+  "not_done_as_done": 0.0,
+  "nums": 1.0,
+  "time": 0.7616666666666667,
+  "by_status": {
+   "DONE": 0.0,
+   "NOT_DONE": 0.0,
+   "PLANNED": 0.30604982206405695,
+   "WANTED": 0.0,
+   "UNDECIDED": 0.0,
+   "HEARSAY": 0.0,
+   "POSSIBLE": 0.0
+  },
+  "confusion": {
+   "DONE": {
+    "UNKNOWN": 319
+   },
+   "NOT_DONE": {
+    "UNKNOWN": 271
+   },
+   "PLANNED": {
+    "PLANNED": 86,
+    "UNKNOWN": 195
+   },
+   "WANTED": {
+    "UNKNOWN": 252
+   },
+   "UNDECIDED": {
+    "UNKNOWN": 317
+   },
+   "HEARSAY": {
+    "UNKNOWN": 278
+   },
+   "POSSIBLE": {
+    "UNKNOWN": 282
+   }
+  }
+ }
+}
