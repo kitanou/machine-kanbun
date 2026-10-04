@@ -80,7 +80,7 @@ def tok_per_pt(base, v) -> str:
     return "損失なし" if lost <= 0 else f"{saved / lost:.0f} tok/pt"
 
 
-def svg_scatter(points, title, path: Path):
+def svg_scatter(points, title, path: Path, colors=None):
     """points: [(label, x, y, kind)] kind in anchor|single|ladder. Pure SVG, no dependencies."""
     W, H, M = 760, 460, 60
     xs, ys = [p[1] for p in points], [p[2] for p in points]
@@ -88,7 +88,7 @@ def svg_scatter(points, title, path: Path):
     y0, y1 = max(0, min(ys) - 5), min(100, max(ys) + 3)
     sx = lambda x: M + (x - x0) / (x1 - x0 or 1) * (W - 2 * M)
     sy = lambda y: H - M - (y - y0) / (y1 - y0 or 1) * (H - 2 * M)
-    col = {"anchor": "#c0392b", "single": "#2471a3", "ladder": "#1e8449"}
+    col = colors or {"anchor": "#c0392b", "single": "#2471a3", "ladder": "#1e8449"}
     o = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" font-family="sans-serif" font-size="11">',
          f'<rect width="{W}" height="{H}" fill="white"/>', f'<text x="{W / 2}" y="22" text-anchor="middle" font-size="14">{title}</text>',
          f'<line x1="{M}" y1="{H - M}" x2="{W - M}" y2="{H - M}" stroke="#444"/><line x1="{M}" y1="{M}" x2="{M}" y2="{H - M}" stroke="#444"/>',
