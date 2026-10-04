@@ -3,3 +3,5 @@ __pycache__/
 .pytest_cache/
 .DS_Store
 .venv-ja/
+.venv-mlx/
+results/jp2/cache/

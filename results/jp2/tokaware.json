@@ -1,0 +1,394 @@
+{
+ "cl100k_base": {
+  "L0_tokens_per_memory": 35.346666666666664,
+  "generic_m": {
+   "style": "sep=' ' stop=' / ' marker=kana verb=lemma",
+   "style_obj": {
+    "sep": " ",
+    "stop": " / ",
+    "marker": "kana",
+    "verbform": "lemma"
+   },
+   "tokens_per_memory": 29.775,
+   "ratio_vs_L0": 0.8423708034703885,
+   "retention": 0.9833333333333333,
+   "false_done": 0
+  },
+  "generic_g": {
+   "style": "sep='' stop='/' marker=kana verb=lemma",
+   "style_obj": {
+    "sep": "",
+    "stop": "/",
+    "marker": "kana",
+    "verbform": "lemma"
+   },
+   "tokens_per_memory": 23.428333333333335,
+   "ratio_vs_L0": 0.6628159185213128,
+   "retention": 0.9833333333333333,
+   "false_done": 0
+  },
+  "best": {
+   "style": "sep='' stop='' marker=ascii verb=lemma",
+   "style_obj": {
+    "sep": "",
+    "stop": "",
+    "marker": "ascii",
+    "verbform": "lemma"
+   },
+   "tokens_per_memory": 22.843333333333334,
+   "ratio_vs_L0": 0.6462655601659751,
+   "retention": 0.9833333333333333,
+   "false_done": 0
+  },
+  "best_readable": {
+   "style": "sep=' ' stop='/' marker=ascii verb=lemma",
+   "style_obj": {
+    "sep": " ",
+    "stop": "/",
+    "marker": "ascii",
+    "verbform": "lemma"
+   },
+   "tokens_per_memory": 26.476666666666667,
+   "ratio_vs_L0": 0.7490569596378726,
+   "retention": 0.9833333333333333,
+   "false_done": 0
+  },
+  "n_styles": 96
+ },
+ "o200k_base": {
+  "L0_tokens_per_memory": 24.885,
+  "generic_m": {
+   "style": "sep=' ' stop=' / ' marker=kana verb=lemma",
+   "style_obj": {
+    "sep": " ",
+    "stop": " / ",
+    "marker": "kana",
+    "verbform": "lemma"
+   },
+   "tokens_per_memory": 20.795,
+   "ratio_vs_L0": 0.8356439622262407,
+   "retention": 0.9833333333333333,
+   "false_done": 0
+  },
+  "generic_g": {
+   "style": "sep='' stop='/' marker=kana verb=lemma",
+   "style_obj": {
+    "sep": "",
+    "stop": "/",
+    "marker": "kana",
+    "verbform": "lemma"
+   },
+   "tokens_per_memory": 15.818333333333333,
+   "ratio_vs_L0": 0.6356573571763445,
+   "retention": 0.9833333333333333,
+   "false_done": 0
+  },
+  "best": {
+   "style": "sep='' stop='' marker=kanji verb=lemma",
+   "style_obj": {
+    "sep": "",
+    "stop": "",
+    "marker": "kanji",
+    "verbform": "lemma"
+   },
+   "tokens_per_memory": 14.795,
+   "ratio_vs_L0": 0.5945348603576451,
+   "retention": 0.9833333333333333,
+   "false_done": 0
+  },
+  "best_readable": {
+   "style": "sep=' ' stop='。' marker=ascii verb=lemma",
+   "style_obj": {
+    "sep": " ",
+    "stop": "。",
+    "marker": "ascii",
+    "verbform": "lemma"
+   },
+   "tokens_per_memory": 18.336666666666666,
+   "ratio_vs_L0": 0.7368562052106356,
+   "retention": 0.9966666666666667,
+   "false_done": 0
+  },
+  "n_styles": 96
+ },
+ "qwen3": {
+  "L0_tokens_per_memory": 19.803333333333335,
+  "generic_m": {
+   "style": "sep=' ' stop=' / ' marker=kana verb=lemma",
+   "style_obj": {
+    "sep": " ",
+    "stop": " / ",
+    "marker": "kana",
+    "verbform": "lemma"
+   },
+   "tokens_per_memory": 23.991666666666667,
+   "ratio_vs_L0": 1.211496381080626,
+   "retention": 0.9833333333333333,
+   "false_done": 0
+  },
+  "generic_g": {
+   "style": "sep='' stop='/' marker=kana verb=lemma",
+   "style_obj": {
+    "sep": "",
+    "stop": "/",
+    "marker": "kana",
+    "verbform": "lemma"
+   },
+   "tokens_per_memory": 13.78,
+   "ratio_vs_L0": 0.6958424507658643,
+   "retention": 0.9833333333333333,
+   "false_done": 0
+  },
+  "best": {
+   "style": "sep='' stop='' marker=kana verb=lemma",
+   "style_obj": {
+    "sep": "",
+    "stop": "",
+    "marker": "kana",
+    "verbform": "lemma"
+   },
+   "tokens_per_memory": 13.14,
+   "ratio_vs_L0": 0.6635246591482915,
+   "retention": 0.9833333333333333,
+   "false_done": 0
+  },
+  "best_readable": {
+   "style": "sep='・' stop='/' marker=kana verb=lemma",
+   "style_obj": {
+    "sep": "・",
+    "stop": "/",
+    "marker": "kana",
+    "verbform": "lemma"
+   },
+   "tokens_per_memory": 20.491666666666667,
+   "ratio_vs_L0": 1.0347584581720248,
+   "retention": 0.9833333333333333,
+   "false_done": 0
+  },
+  "n_styles": 96
+ },
+ "gemma2": {
+  "L0_tokens_per_memory": 16.26,
+  "generic_m": {
+   "style": "sep=' ' stop=' / ' marker=kana verb=lemma",
+   "style_obj": {
+    "sep": " ",
+    "stop": " / ",
+    "marker": "kana",
+    "verbform": "lemma"
+   },
+   "tokens_per_memory": 14.24,
+   "ratio_vs_L0": 0.8757687576875768,
+   "retention": 0.9833333333333333,
+   "false_done": 0
+  },
+  "generic_g": {
+   "style": "sep='' stop='/' marker=kana verb=lemma",
+   "style_obj": {
+    "sep": "",
+    "stop": "/",
+    "marker": "kana",
+    "verbform": "lemma"
+   },
+   "tokens_per_memory": 11.048333333333334,
+   "ratio_vs_L0": 0.6794792947929479,
+   "retention": 0.9833333333333333,
+   "false_done": 0
+  },
+  "best": {
+   "style": "sep='' stop='' marker=kana verb=lemma",
+   "style_obj": {
+    "sep": "",
+    "stop": "",
+    "marker": "kana",
+    "verbform": "lemma"
+   },
+   "tokens_per_memory": 10.411666666666667,
+   "ratio_vs_L0": 0.6403239032390323,
+   "retention": 0.9833333333333333,
+   "false_done": 0
+  },
+  "best_readable": {
+   "style": "sep=' ' stop='/' marker=ascii verb=lemma",
+   "style_obj": {
+    "sep": " ",
+    "stop": "/",
+    "marker": "ascii",
+    "verbform": "lemma"
+   },
+   "tokens_per_memory": 13.618333333333334,
+   "ratio_vs_L0": 0.8375358753587535,
+   "retention": 0.9833333333333333,
+   "false_done": 0
+  },
+  "n_styles": 96
+ },
+ "llama3.1": {
+  "L0_tokens_per_memory": 21.64666666666667,
+  "generic_m": {
+   "style": "sep=' ' stop=' / ' marker=kana verb=lemma",
+   "style_obj": {
+    "sep": " ",
+    "stop": " / ",
+    "marker": "kana",
+    "verbform": "lemma"
+   },
+   "tokens_per_memory": 19.575,
+   "ratio_vs_L0": 0.9042962734832152,
+   "retention": 0.9833333333333333,
+   "false_done": 0
+  },
+  "generic_g": {
+   "style": "sep='' stop='/' marker=kana verb=lemma",
+   "style_obj": {
+    "sep": "",
+    "stop": "/",
+    "marker": "kana",
+    "verbform": "lemma"
+   },
+   "tokens_per_memory": 14.533333333333333,
+   "ratio_vs_L0": 0.6713889744379427,
+   "retention": 0.9833333333333333,
+   "false_done": 0
+  },
+  "best": {
+   "style": "sep='' stop='' marker=kanji verb=lemma",
+   "style_obj": {
+    "sep": "",
+    "stop": "",
+    "marker": "kanji",
+    "verbform": "lemma"
+   },
+   "tokens_per_memory": 13.745,
+   "ratio_vs_L0": 0.634970742223591,
+   "retention": 0.9833333333333333,
+   "false_done": 0
+  },
+  "best_readable": {
+   "style": "sep=' ' stop='。' marker=ascii verb=lemma",
+   "style_obj": {
+    "sep": " ",
+    "stop": "。",
+    "marker": "ascii",
+    "verbform": "lemma"
+   },
+   "tokens_per_memory": 17.43,
+   "ratio_vs_L0": 0.8052048044348629,
+   "retention": 0.9966666666666667,
+   "false_done": 0
+  },
+  "n_styles": 96
+ },
+ "mistral-nemo": {
+  "L0_tokens_per_memory": 22.721666666666668,
+  "generic_m": {
+   "style": "sep=' ' stop=' / ' marker=kana verb=lemma",
+   "style_obj": {
+    "sep": " ",
+    "stop": " / ",
+    "marker": "kana",
+    "verbform": "lemma"
+   },
+   "tokens_per_memory": 20.703333333333333,
+   "ratio_vs_L0": 0.9111714222841634,
+   "retention": 0.9833333333333333,
+   "false_done": 0
+  },
+  "generic_g": {
+   "style": "sep='' stop='/' marker=kana verb=lemma",
+   "style_obj": {
+    "sep": "",
+    "stop": "/",
+    "marker": "kana",
+    "verbform": "lemma"
+   },
+   "tokens_per_memory": 15.998333333333333,
+   "ratio_vs_L0": 0.7041003447517054,
+   "retention": 0.9833333333333333,
+   "false_done": 0
+  },
+  "best": {
+   "style": "sep='' stop='' marker=kanji verb=lemma",
+   "style_obj": {
+    "sep": "",
+    "stop": "",
+    "marker": "kanji",
+    "verbform": "lemma"
+   },
+   "tokens_per_memory": 15.08,
+   "ratio_vs_L0": 0.6636837086481332,
+   "retention": 0.9833333333333333,
+   "false_done": 0
+  },
+  "best_readable": {
+   "style": "sep=' ' stop='/' marker=kana verb=lemma",
+   "style_obj": {
+    "sep": " ",
+    "stop": "/",
+    "marker": "kana",
+    "verbform": "lemma"
+   },
+   "tokens_per_memory": 20.205,
+   "ratio_vs_L0": 0.8892393457052739,
+   "retention": 0.9833333333333333,
+   "false_done": 0
+  },
+  "n_styles": 96
+ },
+ "deepseek-v3": {
+  "L0_tokens_per_memory": 22.213333333333335,
+  "generic_m": {
+   "style": "sep=' ' stop=' / ' marker=kana verb=lemma",
+   "style_obj": {
+    "sep": " ",
+    "stop": " / ",
+    "marker": "kana",
+    "verbform": "lemma"
+   },
+   "tokens_per_memory": 21.753333333333334,
+   "ratio_vs_L0": 0.9792917166866746,
+   "retention": 0.9833333333333333,
+   "false_done": 0
+  },
+  "generic_g": {
+   "style": "sep='' stop='/' marker=kana verb=lemma",
+   "style_obj": {
+    "sep": "",
+    "stop": "/",
+    "marker": "kana",
+    "verbform": "lemma"
+   },
+   "tokens_per_memory": 14.361666666666666,
+   "ratio_vs_L0": 0.6465336134453781,
+   "retention": 0.9833333333333333,
+   "false_done": 0
+  },
+  "best": {
+   "style": "sep='' stop='' marker=kanji verb=lemma",
+   "style_obj": {
+    "sep": "",
+    "stop": "",
+    "marker": "kanji",
+    "verbform": "lemma"
+   },
+   "tokens_per_memory": 13.338333333333333,
+   "ratio_vs_L0": 0.6004651860744297,
+   "retention": 0.9833333333333333,
+   "false_done": 0
+  },
+  "best_readable": {
+   "style": "sep=' ' stop='/' marker=ascii verb=lemma",
+   "style_obj": {
+    "sep": " ",
+    "stop": "/",
+    "marker": "ascii",
+    "verbform": "lemma"
+   },
+   "tokens_per_memory": 19.115,
+   "ratio_vs_L0": 0.8605192076830731,
+   "retention": 0.9833333333333333,
+   "false_done": 0
+  },
+  "n_styles": 96
+ }
+}
