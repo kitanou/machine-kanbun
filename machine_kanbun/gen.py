@@ -109,7 +109,7 @@ def _finish(prof, qs, labels, texts, qml):
     for q, (qe, qk, ans) in zip(qs, qml):
         q.q_en, q.q_ko = qe, qk
         if ans:
-            q.answer_ml = [ans]
+            q.answer_ml = ans if isinstance(ans, list) else [ans]
     return prof, qs
 
 
@@ -275,7 +275,7 @@ def _cross_questions(rng, entities, persons):
             je, jk = i18n.JOB[job]
             ce, ck = i18n.CITY[city]
             qj = Question(f"{pr.label}の担当者の職業は？", "横断推論", answer=[job], q_en=f"What is the job of the owner of {le}?",
-                          q_ko=f"{lk}의 담당자의 직업은 무엇입니까?", answer_ml=[f"{job}|{je}|{jk}"])
+                          q_ko=f"{lk}의 담당자의 직업은 무엇입니까?", answer_ml=[i18n.job_ans(job)])
             qc = Question(f"{pr.label}の担当者はどこに住んでいますか？", "横断推論", answer=[city], q_en=f"Where does the owner of {le} live?",
                           q_ko=f"{lk}의 담당자는 어디에 살고 있습니까?", answer_ml=[f"{city}|{ce}|{ck}"])
             out += [qj, qc]

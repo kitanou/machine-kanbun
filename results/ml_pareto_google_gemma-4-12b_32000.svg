@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="460" font-family="sans-serif" font-size="11">
+<rect width="760" height="460" fill="white"/>
+<text x="380.0" y="22" text-anchor="middle" font-size="14">google/gemma-4-12b 32000: tokens vs accuracy (red=JA blue=EN green=KO)</text>
+<line x1="60" y1="400" x2="700" y2="400" stroke="#444"/><line x1="60" y1="60" x2="60" y2="400" stroke="#444"/>
+<text x="380.0" y="446" text-anchor="middle">context tokens</text>
+<text x="16" y="230.0" transform="rotate(-90 16 230.0)" text-anchor="middle">QA accuracy (%)</text>
+<text x="60" y="414" text-anchor="middle">11442</text>
+<text x="54" y="404" text-anchor="end">78</text>
+<line x1="60" y1="400" x2="700" y2="400" stroke="#eee"/>
+<text x="220" y="414" text-anchor="middle">12232</text>
+<text x="54" y="319" text-anchor="end">83</text>
+<line x1="60" y1="315" x2="700" y2="315" stroke="#eee"/>
+<text x="380" y="414" text-anchor="middle">13023</text>
+<text x="54" y="234" text-anchor="end">89</text>
+<line x1="60" y1="230" x2="700" y2="230" stroke="#eee"/>
+<text x="540" y="414" text-anchor="middle">13813</text>
+<text x="54" y="149" text-anchor="end">94</text>
+<line x1="60" y1="145" x2="700" y2="145" stroke="#eee"/>
+<text x="700" y="414" text-anchor="middle">14603</text>
+<text x="54" y="64" text-anchor="end">99</text>
+<line x1="60" y1="60" x2="700" y2="60" stroke="#eee"/>
+<circle cx="188" cy="110" r="4.5" fill="#c0392b" fill-opacity="0.8"/>
+<text x="194" y="105" fill="#333">JA-L1</text>
+<circle cx="245" cy="179" r="4.5" fill="#c0392b" fill-opacity="0.8"/>
+<text x="251" y="174" fill="#333">JA-MKW</text>
+<circle cx="132" cy="110" r="4.5" fill="#2471a3" fill-opacity="0.8"/>
+<text x="138" y="105" fill="#333">EN-L1</text>
+<circle cx="274" cy="213" r="4.5" fill="#2471a3" fill-opacity="0.8"/>
+<text x="280" y="208" fill="#333">EN-MKW</text>
+<circle cx="614" cy="144" r="4.5" fill="#1e8449" fill-opacity="0.8"/>
+<text x="620" y="139" fill="#333">KO-L1</text>
+<circle cx="311" cy="179" r="4.5" fill="#1e8449" fill-opacity="0.8"/>
+<text x="317" y="174" fill="#333">KO-MKW</text>
+<circle cx="274" cy="283" r="4.5" fill="#2471a3" fill-opacity="0.8"/>
+<text x="280" y="278" fill="#333">EN-MKW@JA</text>
+<circle cx="311" cy="317" r="4.5" fill="#1e8449" fill-opacity="0.8"/>
+<text x="317" y="312" fill="#333">KO-MKW@JA</text>
+</svg>

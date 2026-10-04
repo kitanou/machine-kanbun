@@ -46,6 +46,24 @@ JOB = _t("IT:IT:IT 医療:healthcare:의료 教育:education:교육 建設:const
          "製造:manufacturing:제조 小売:retail:소매 出版:publishing:출판 法務:legal:법무 設計:design:설계")
 FOOD = _t("十割蕎麦:100%-buckwheat-soba:메밀-100%-소바 カレー:curry:카레 寿司:sushi:초밥 焼き鳥:yakitori:야키토리 ラーメン:ramen:라멘 "
           "天ぷら:tempura:튀김 お好み焼き:okonomiyaki:오코노미야키 餃子:gyoza:만두 うなぎ:eel:장어 鍋:hot-pot:전골")
+# Accepted free translations of kanji concept words (MKW keeps concepts in kanji, so the model
+# translates them on its own: 医療 -> "Medical"). Stems are used so that inflections match.
+JOB_ALT = {"IT": ["information technology", "정보기술"], "医療": ["medical", "medicine", "의학"], "教育": ["teaching", "educat"],
+           "建設": ["building", "건축"], "金融": ["financ", "banking"], "農業": ["farming", "agricultur", "농사"],
+           "運輸": ["transport", "logistics", "shipping", "운수", "물류"], "製造": ["manufactur", "production", "제조업"],
+           "小売": ["retail", "리테일", "유통"], "出版": ["publish"], "法務": ["legal", "law", "법률"], "設計": ["engineering", "design", "디자인"]}
+PAIR_ALT = {"犬": ["dog"], "猫": ["cat"], "山": ["mountain"], "海": ["sea"], "朝": ["morning"], "夜": ["night"], "電車": ["train"], "バス": ["bus"]}
+
+
+def job_ans(ja: str) -> str:
+    return "|".join([ja, *JOB[ja], *JOB_ALT.get(ja, [])])
+
+
+def pair_ans(ja: str) -> str:
+    e, k = PAIR[ja]
+    return "|".join([ja, _sp(e), k, *PAIR_ALT.get(ja, [])])
+
+
 UNC = _t("納豆:natto:낫토 ヨーグルト:yogurt:요거트 チーズ:cheese:치즈 パクチー:cilantro:고수 生卵:raw-eggs:날계란 レバー:liver:간")
 PAIR = _t("蕎麦:soba:소바 うどん:udon:우동 珈琲:coffee:커피 紅茶:tea:홍차 犬:dogs:개 猫:cats:고양이 山:mountains:산 海:the-sea:바다 "
           "朝:mornings:아침 夜:nights:밤 電車:trains:전철 バス:buses:버스")
@@ -57,13 +75,13 @@ WEATHER = {"雨": ("it rains", "go for a walk", "비가 오면", "산책을 하�
 CAUSES_I18N = [
     dict(en0="{L} feels sleepy during the day because of lack of sleep.", en1="Lack of sleep causes daytime sleepiness.",
          ko0="{L}{topic} 수면 부족 때문에 낮에 졸리다.", ko1="수면 부족으로 낮에 졸림.",
-         prob_en="daytime sleepiness", prob_ko="낮 졸림", ans="睡眠|sleep|수면"),
+         prob_en="daytime sleepiness", prob_ko="낮 졸림", ans="睡眠|sleep|수면|잠"),
     dict(en0="{L} gained weight because of lack of exercise.", en1="Lack of exercise: weight gain.",
          ko0="{L}{topic} 운동 부족 때문에 체중이 늘었다.", ko1="운동 부족으로 체중 증가.",
-         prob_en="weight gain", prob_ko="체중 증가", ans="運動|exercise|운동"),
+         prob_en="weight gain", prob_ko="체중 증가", ans="運動|exercise|workout|운동"),
     dict(en0="{L}'s health worsened because of excessive overtime.", en1="Excessive overtime worsens health.",
          ko0="{L}{topic} 야근이 너무 많아 건강이 나빠졌다.", ko1="야근 과다로 건강 악화.",
-         prob_en="health problems", prob_ko="건강 문제", ans="残業|overtime|야근"),
+         prob_en="health problems", prob_ko="건강 문제", ans="残業|overtime|workload|야근|잔업|초과 근무|초과근무|과다한 업무|업무 과다"),
 ]
 MONTHS = "January February March April May June July August September October November December".split()
 # Korean reading of Latin words ending in a consonant sound (devices, languages, databases, codenames)
@@ -174,12 +192,12 @@ def person_texts(L: Tuple[str, str, str], p: dict) -> Tuple[Dict[str, Row], List
     }
     q = [  # order must match gen.build_person's question list
         (f"In what year was {le} born?", f"{topic(lk)} 몇 년에 태어났습니까?", None),
-        (f"What is {le}'s job?", f"{lk}의 직업은 무엇입니까?", f"{p['job']}|{job_e}|{job_k}"),
+        (f"What is {le}'s job?", f"{lk}의 직업은 무엇입니까?", job_ans(p['job'])),
         (f"Where does {le} live?", f"{topic(lk)} 어디에 살고 있습니까?", f"{p['city']}|{city_e}|{city_k}"),
         (f"Does {le} like {food_e}?", f"{topic(lk)} {obj(food_k)} 좋아합니까?", None),
         (f"Does {le} drink alcohol?", f"{topic(lk)} 술을 마십니까?", None),
         (f"Is it confirmed that {le} does not eat {unc_e}?", f"{subj(lk)} {obj(unc_k)} 먹지 않는다는 것이 확인되었습니까?", None),
-        (f"Which does {le} prefer, {a_e} or {b_e}?", f"{topic(lk)} {with_(a_k)} {b_k} 중 어느 쪽을 더 좋아합니까?", f"{p['cmp'][0]}|{a_e}|{a_k}"),
+        (f"Which does {le} prefer, {a_e} or {b_e}?", f"{topic(lk)} {with_(a_k)} {b_k} 중 어느 쪽을 더 좋아합니까?", pair_ans(p['cmp'][0])),
         (f"May {le} drink coffee at night?", f"{topic(lk)} 밤에 커피를 마셔도 됩니까?", None),
         (f"What device does {le} currently use?", f"{subj(lk)} 현재 사용하는 기기는 무엇입니까?", None),
         (f"What device does {le} plan to use in the future?", f"{subj(lk)} 앞으로 사용할 예정인 기기는 무엇입니까?", None),
@@ -187,7 +205,7 @@ def person_texts(L: Tuple[str, str, str], p: dict) -> Tuple[Dict[str, Row], List
         (f"Has {le} already bought the {d[2]}?", f"{topic(lk)} {obj(d[2])} 이미 구매했습니까?", None),
         (f"When {w[0]}, does {le} {w[1]}?", f"{w[2]} {topic(lk)} {w[4]}?", None),
         (f"What is the cause of {le}'s {c['prob_en']}?", f"{lk}의 {c['prob_ko']} 원인은 무엇입니까?", c["ans"]),
-        (f'What is the job of the person nicknamed "{alias_e}"?', f'"{alias_k}"라고 불리는 사람의 직업은 무엇입니까?', f"{p['job']}|{job_e}|{job_k}"),
+        (f'What is the job of the person nicknamed "{alias_e}"?', f'"{alias_k}"라고 불리는 사람의 직업은 무엇입니까?', job_ans(p['job'])),
     ]
     return T, q
 
@@ -223,7 +241,7 @@ def project_texts(L: Tuple[str, str, str], p: dict) -> Tuple[Dict[str, Row], Lis
                f"{topic(lk)} AWS로의 이전을 검토 중이지만 확정은 아니다.", "AWS 이전 검토 중(미확정)."),
     }
     q = [  # order must match gen.build_project
-        (f"What is the due date of {le}?", f"{lk}의 납기는 언제입니까?", None),
+        (f"What is the due date of {le}?", f"{lk}의 납기는 언제입니까?", [str(y), f"{m}|{MONTHS[m - 1]}|{m:02d}", str(d)]),
         (f"Who is in charge of {le}?", f"{lk}의 담당자는 누구입니까?", f"{p['owner']}|{owner_e}|{owner_k}"),
         (f"How many members are on the team of {le}?", f"{lk}의 팀은 몇 명입니까?", None),
         (f"What language is {le} implemented in?", f"{lk}의 구현 언어는 무엇입니까?", None),
@@ -235,8 +253,8 @@ def project_texts(L: Tuple[str, str, str], p: dict) -> Tuple[Dict[str, Row], Lis
         (f"May production be changed directly on {le}?", f"{lk}에서 운영 환경을 직접 변경해도 됩니까?", None),
         (f"Can {le} be outsourced?", f"{lk}의 개발을 외주할 수 있습니까?", None),
         (f"Was the cause of the recent incident on {le} {nd}?", f"{lk}의 최근 장애 원인은 {nd}입니까?", None),
-        (f"Why is {le} delayed?", f"{lk}의 개발이 지연되고 있는 이유는 무엇입니까?", "仕様変更|specification|spec|사양 변경"),
-        (f"What is required on {le} if the budget is exceeded?", f"{lk}에서 예산을 초과하면 무엇이 필요합니까?", "部長|department head|부장"),
+        (f"Why is {le} delayed?", f"{lk}의 개발이 지연되고 있는 이유는 무엇입니까?", "仕様変更|specification|spec|requirement|사양|스펙|요구사항|요구 사항"),
+        (f"What is required on {le} if the budget is exceeded?", f"{lk}에서 예산을 초과하면 무엇이 필요합니까?", "部長|department head|head of|manager|부장"),
         (f"Which is faster on {le}, {fa} or {fb}?", f"{lk}에서 {with_(fa)} {fb} 중 처리 속도가 빠른 것은 어느 쪽입니까?", None),
         (f"Is the AWS migration of {le} confirmed?", f"{lk}의 AWS 이전은 확정되었습니까?", None),
     ]
@@ -275,7 +293,7 @@ def event_texts(L: Tuple[str, str, str], p: dict) -> Tuple[Dict[str, Row], List[
         (f"What is the visitor capacity of {le}?", f"{lk}의 입장객 정원은 몇 명입니까?", None),
         (f"Is {le} canceled if it rains?", f"{topic(lk)} 비가 오면 취소됩니까?", None),
         (f"Are food stalls set up at {le} when the wind is strong?", f"{lk}에서는 바람이 강할 때 노점이 설치됩니까?", None),
-        (f"Why was {le} canceled last time?", f"{subj(lk)} 지난번에 취소된 이유는 무엇입니까?", "雨|rain|비"),
+        (f"Why was {le} canceled last time?", f"{subj(lk)} 지난번에 취소된 이유는 무엇입니까?", "雨|rain|weather|비|우천|강우"),
         (f"May open flames be used at {le}?", f"{lk}에서 화기를 사용해도 됩니까?", None),
         (f"Does {le} have a parking lot?", f"{lk}에는 주차장이 있습니까?", None),
         (f"Has the police notification for {le} been completed?", f"{lk}의 경찰 신고는 완료되었습니까?", None),

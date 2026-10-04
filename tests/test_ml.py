@@ -85,3 +85,17 @@ def test_free_form_polarity(ans, gold):
     q = Question("q", "c", yn=True if gold else False)
     got = qamod._polarity(qamod._norm(ans))
     assert got == gold
+
+
+def test_alternative_translations_are_accepted():
+    from machine_kanbun import gen as g
+    qs = [q for e in ENTS for q in []]  # placeholder to keep lints quiet
+    ents, qs = g.generate(2000, count, seed=1, n_questions=48)
+    due = next(q for q in qs if q.q_en.startswith("What is the due date"))
+    y, m, d = due.answer
+    month = i18n.MONTHS[int(m) - 1]
+    assert qamod.score(due, f"{month} {d}, {y}.", ml=True) and qamod.score(due, f"{y}-{int(m):02d}-{int(d):02d}", ml=True)
+    assert qamod.score(due, f"{y}년 {m}월 {d}일", ml=True)
+    assert not qamod.score(due, f"{month} 99, {y}", ml=True)
+    job = Question("q", "c", answer=["医療"], answer_ml=[i18n.job_ans("医療")])
+    assert qamod.score(job, "Medical", ml=True) and qamod.score(job, "의료", ml=True) and not qamod.score(job, "Retail", ml=True)
