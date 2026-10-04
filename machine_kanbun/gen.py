@@ -11,7 +11,7 @@ from __future__ import annotations
 import random
 from typing import Callable, Dict, List, Tuple
 
-from . import i18n
+from . import i18n, i18n_zh
 from .model import Fact, Profile, Question
 
 SURNAMES = ("佐藤 鈴木 高橋 田中 伊藤 渡辺 山本 中村 小林 加藤 吉田 山田 佐々木 山口 松本 井上 木村 林 斎藤 清水 "
@@ -98,7 +98,23 @@ def build_person(rng: random.Random, name: str, alias: str) -> Tuple[Profile, Li
     ]
     params = dict(name=name, alias=alias, year=year, job=job, city=city, food=food, unc=unc_food, drinks=drinks,
                   dev=dev, w=w, cmp=(cmp_a, cmp_b), ci=CAUSES.index(c))
-    return _finish(Profile(L, L, facts, [], {"cls": "人物", "name": name}), qs, i18n.labels("人物", name), *i18n.person_texts(i18n.labels("人物", name), params))
+    res = _finish(Profile(L, L, facts, [], {"cls": "人物", "name": name}), qs, i18n.labels("人物", name), *i18n.person_texts(i18n.labels("人物", name), params))
+    return _finish_zh(*res, i18n_zh.person_texts(i18n_zh.labels("人物", name), params))
+
+
+def _finish_zh(prof, qs, zh):
+    """Attach Chinese wording; `extra` appends Chinese answer alternatives to the existing ja|en|ko group."""
+    T, q, extra = zh
+    for f in prof.facts:
+        f.zh, f.zh1 = T[f.id]
+    assert len(qs) == len(q), (prof.label, len(qs), len(q))
+    for i, (qq, (qz, ans)) in enumerate(zip(qs, q)):
+        qq.q_zh = qz
+        alts = [x for x in (ans, extra.get(i)) if x]
+        if alts:
+            joined = "|".join(alts)
+            qq.answer_ml = [qq.answer_ml[0] + "|" + joined] + qq.answer_ml[1:] if qq.answer_ml else [joined]
+    return prof, qs
 
 
 def _finish(prof, qs, labels, texts, qml):
@@ -162,7 +178,8 @@ def build_project(rng: random.Random, code: str, owner: str) -> Tuple[Profile, L
     ]
     params = dict(due=(y, m, d), owner=owner, size=size, lang=lang, db=db, vers=vers, non_db=non_db, fa=fa, fb=fb)
     lab = i18n.labels("案件", code)
-    return _finish(Profile(L, L, facts, [], {"cls": "案件", "name": code, "owner": owner}), qs, lab, *i18n.project_texts(lab, params))
+    res = _finish(Profile(L, L, facts, [], {"cls": "案件", "name": code, "owner": owner}), qs, lab, *i18n.project_texts(lab, params))
+    return _finish_zh(*res, i18n_zh.project_texts(i18n_zh.labels("案件", code), params))
 
 
 def build_event(rng: random.Random, name: str) -> Tuple[Profile, List[Question]]:
@@ -210,8 +227,9 @@ def build_event(rng: random.Random, name: str) -> Tuple[Profile, List[Question]]
     nplace = name[: -len(season)]
     params = dict(month=mo, day=dd, place=place[:-2], cap=cap, bud=bud, stalls=stalls, parking=parking)
     lab = i18n.labels("催事", name, place=nplace, season=season)
-    return _finish(Profile(L, L, facts, [], {"cls": "催事", "name": name, "place": nplace, "season": season, "venue": place[:-2]}),
-                   qs, lab, *i18n.event_texts(lab, params))
+    res = _finish(Profile(L, L, facts, [], {"cls": "催事", "name": name, "place": nplace, "season": season, "venue": place[:-2]}),
+                  qs, lab, *i18n.event_texts(lab, params))
+    return _finish_zh(*res, i18n_zh.event_texts(i18n_zh.labels("催事", name, place=nplace, season=season), params))
 
 
 def generate(target_tokens: int, count: Callable[[str], int], seed: int = 0, n_questions: int = 40) -> Tuple[List[Profile], List[Question]]:
@@ -274,10 +292,11 @@ def _cross_questions(rng, entities, persons):
             _, le, lk = lab(pr)
             je, jk = i18n.JOB[job]
             ce, ck = i18n.CITY[city]
+            lz = i18n_zh.labels("案件", pr.meta["name"])
             qj = Question(f"{pr.label}の担当者の職業は？", "横断推論", answer=[job], q_en=f"What is the job of the owner of {le}?",
-                          q_ko=f"{lk}의 담당자의 직업은 무엇입니까?", answer_ml=[i18n.job_ans(job)])
+                          q_ko=f"{lk}의 담당자의 직업은 무엇입니까?", q_zh=f"{lz}的负责人从事什么行业？", answer_ml=[i18n_zh.job_ans(job)])
             qc = Question(f"{pr.label}の担当者はどこに住んでいますか？", "横断推論", answer=[city], q_en=f"Where does the owner of {le} live?",
-                          q_ko=f"{lk}의 담당자는 어디에 살고 있습니까?", answer_ml=[f"{city}|{ce}|{ck}"])
+                          q_ko=f"{lk}의 담당자는 어디에 살고 있습니까?", q_zh=f"{lz}的负责人住在哪里？", answer_ml=[f"{city}|{ce}|{ck}|{i18n_zh.CITY[city]}"])
             out += [qj, qc]
     if len(events) >= 2:
         for _ in range(2):
@@ -292,7 +311,9 @@ def _cross_questions(rng, entities, persons):
                 out.append(Question(f"{a.label}と{b.label}では、定員が多いのはどちらですか？", "横断推論", answer=[win.label[2:]], op=">",
                                     q_en=f"Which has the larger capacity, {ae} or {be}?",
                                     q_ko=f"{i18n.with_(ak)} {bk} 중 정원이 더 많은 것은 어느 쪽입니까?",
-                                    answer_ml=[f"{wj}|{we}|{wk}"]))
+                                    q_zh=f"{i18n_zh.labels('催事', a.meta['name'], place=a.meta['place'], season=a.meta['season'])}和"
+                                         f"{i18n_zh.labels('催事', b.meta['name'], place=b.meta['place'], season=b.meta['season'])}相比，哪个的入场人数上限更多？",
+                                    answer_ml=[f"{wj}|{we}|{wk}|{i18n_zh.PLACE[win.meta['place']]}{i18n_zh.SEASON[win.meta['season']]}"]))
     return out
 
 

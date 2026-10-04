@@ -10,10 +10,17 @@ Same skeleton (`class name{key:value;group{...};...}`) rendered with three vocab
          (names, concept nouns, numbers, units) stay as in IR-L
   IR-IDL IR-ID plus a legend that maps the codes back to words (cost counted as a fixed overhead)
 
+Label families (Issue #19 E) keep content words (names, concept nouns, numbers) as in IR-L and vary
+only the structural words:
+  IR-CS  kanji structural labels (like IR-C) + local content words (the "pure label" version of IR-C)
+  IR-EN  English structural labels in every language (an English "universal" label set)
+  IR-SYM rare Unicode symbols, one per structural word, language independent (opaque *and* token-expensive)
+
 Symbols (`{ } ; : > ?`) are language-independent and kept in every condition.
 """
 from __future__ import annotations
 
+import random
 import re
 from typing import Dict, Iterable, List, Tuple
 
@@ -22,6 +29,7 @@ from .encoder import _grouped
 from .model import Fact, Profile
 
 CONDS = ("IRC", "IRL", "IRID", "IRIDL")
+EXTRA_CONDS = ("IRCS", "IREN", "IRSYM")  # Issue #19 (E): label families with the *content words* held at IR-L
 
 
 def _t(s: str) -> Dict[str, Tuple[str, str]]:
@@ -36,12 +44,41 @@ GROUP = _t("食:food:식사 医:medical:의료 機:devices:기기 習:habits:습
 TENSE = _t("過:past:과거 今:now:현재 将:future:미래")
 OP = _t("不:not:안 未:not_yet:아직안 非:is_not:아님 禁:prohibited:금지 無:none:없음 有:exists:있음 疑:uncertain:불확실 必:always:반드시 故:so:그래서")
 REL = _t("好:like:좋아함 飲:drink:마심 食:eat:먹음 行:go:감 速:faster:빠름 要:needed:필요 止:cancel:취소 設:set_up:설치 実施:held:실시 超過:exceeded:초과 可:allowed:가능")
+# Simplified-Chinese words (Issue #19 A). Chinese uses hanzi natively, so the canonical kanji labels (IR-C) are partly native
+# and IR-L is the simplified-hanzi version (職->职业, 医療->医疗 ...).
+def _z(s: str) -> Dict[str, str]:
+    return dict(x.split(":") for x in s.split())
+
+
+VOC_ZH = {
+    "class": _z("人物:人物 案件:项目 催事:活动"),
+    "key": _z("生:出生 職:职业 住:居住 愛称:昵称 日:日期 場:场地 定員:容量 予算:预算 期限:截止 担当:负责人 人数:团队人数 言語:语言 DB:数据库"),
+    "group": _z("食:饮食 医:医疗 機:设备 習:习惯 運:运营 規:规定 屋台:摊位 版:版本 工:开发"),
+    "tense": _z("過:过去 今:现在 将:将来"),
+    "op": _z("不:不 未:尚未 非:并非 禁:禁止 無:无 有:有 疑:存疑 必:必定 故:因此"),
+    "rel": _z("好:喜欢 飲:喝 食:吃 行:去 速:更快 要:需要 止:取消 設:设置 実施:举办 超過:超出 可:允许"),
+}
+NOUN_ZH = _z("鍋:火锅 十割蕎麦:纯荞麦面 カレー:咖喱 寿司:寿司 焼き鳥:烤鸡肉串 ラーメン:拉面 天ぷら:天妇罗 お好み焼き:大阪烧 餃子:饺子 うなぎ:鳗鱼 "
+             "納豆:纳豆 ヨーグルト:酸奶 チーズ:奶酪 パクチー:香菜 生卵:生鸡蛋 レバー:肝脏 酒:酒 夜間珈琲:夜间咖啡 火気:明火 花火:烟花 "
+             "警察届出:警方报备 負荷試験:压力测试 本番直接変更:直接修改生产环境 外注:外包 障害原因:故障原因 AWS移行:AWS迁移 駐車場:停车场 "
+             "雨:下雨 強風:大风 雪:下雪 予算:预算 散歩:散步 催事:活动 屋台:摊位 釣り:钓鱼 部長承認:部长批准 ランニング:跑步 仕様変更:需求变更 "
+             "睡眠不足:睡眠不足 運動不足:运动不足 残業過多:加班过多 日中眠:白天犯困 体重増:体重增加 体調悪化:身体状况恶化 "
+             "前回催事止:上次活动取消 開発遅延:开发延迟 蕎麦:荞麦面 うどん:乌冬面 珈琲:咖啡 紅茶:红茶 犬:狗 猫:猫 山:山 海:大海 朝:早晨 "
+             "夜:夜晚 電車:电车 バス:公交车")
 # opaque, language-independent codes
 CODES: Dict[str, Dict[str, str]] = {
     "class": {k: f"E{i}" for i, k in enumerate(CLASS, 1)}, "key": {k: f"K{i}" for i, k in enumerate(KEY, 1)},
     "group": {k: f"G{i}" for i, k in enumerate(GROUP, 1)}, "tense": {k: f"T{i}" for i, k in enumerate(TENSE, 1)},
     "op": {k: f"O{i}" for i, k in enumerate(OP, 1)}, "rel": {k: f"R{i}" for i, k in enumerate(REL, 1)},
 }
+_sym = random.Random(2026).sample([chr(c) for c in range(0x2300, 0x2400) if chr(c).isprintable()], 60)
+SYMBOLS: Dict[str, Dict[str, str]] = {}
+_i = 0
+for _kind in ("class", "key", "group", "tense", "op", "rel"):
+    SYMBOLS[_kind] = {}
+    for _k in {"class": CLASS, "key": KEY, "group": GROUP, "tense": TENSE, "op": OP, "rel": REL}[_kind]:
+        SYMBOLS[_kind][_k] = _sym[_i]
+        _i += 1
 VOC = {"class": CLASS, "key": KEY, "group": GROUP, "tense": TENSE, "op": OP, "rel": REL}
 
 # ------------------------------------------------------------------ content nouns (kept as words in IR-L and IR-ID)
@@ -64,6 +101,10 @@ def _noun(t: str, lang: str) -> str:
     """Content word in the input language (underscores keep multi-word nouns together)."""
     if lang == "JA":
         return t
+    if lang == "ZH":
+        if t in NOUN_ZH:
+            return NOUN_ZH[t]
+        return t[:-2] + "购买" if t.endswith("購入") else t
     if t in NOUN:
         return NOUN[t][0 if lang == "EN" else 1]
     if t.endswith("購入"):  # "Kindle購入" -> "Kindle_purchase"
@@ -72,10 +113,16 @@ def _noun(t: str, lang: str) -> str:
 
 
 def _struct(kind: str, t: str, lang: str, cond: str) -> str:
-    if cond == "IRC" or (lang == "JA" and cond == "IRL"):
+    if cond in ("IRC", "IRCS") or (lang == "JA" and cond == "IRL"):
         return t
+    if cond == "IREN":
+        return VOC[kind][t][0]
+    if cond == "IRSYM":
+        return SYMBOLS[kind][t]
     if cond == "IRID" or cond == "IRIDL":
         return CODES[kind][t]
+    if lang == "ZH":
+        return VOC_ZH[kind][t]
     return VOC[kind][t][0 if lang == "EN" else 1]
 
 
@@ -89,6 +136,19 @@ def _word(kind: str, t: str, lang: str, cond: str) -> str:
 def _value(key: str, v: str, lang: str, cond: str) -> str:
     """Attribute value: names are already localised; concept values / units follow the condition."""
     if cond == "IRC" or lang == "JA":
+        return v
+    if lang == "ZH":
+        from . import i18n_zh
+        if key == "職":
+            return i18n_zh.JOB[v]
+        if key == "日":
+            return v  # "11月26日" is already Chinese
+        if key == "予算":
+            return f"{int(v[:-2])}万日元"
+        if key in ("定員", "人数"):
+            return f"{v[:-1]}人"
+        if key == "場":
+            return v[:-2] + "公园" if v.endswith("公園") else v
         return v
     i = 0 if lang == "EN" else 1
     if key == "職":
@@ -145,7 +205,7 @@ def _core(f: Fact, lang: str, cond: str) -> str:
     elif f.kind == "time":
         v = f.value
         if v.endswith("軒") and cond != "IRC" and lang != "JA":
-            v = UNIT["軒"][0 if lang == "EN" else 1].format(n=v[:-1])
+            v = f"{v[:-1]}个摊位" if lang == "ZH" else UNIT["軒"][0 if lang == "EN" else 1].format(n=v[:-1])
         out = f"{w('tense', f.tense)}:{v}"
     elif f.kind == "compare":
         out = f"{w('rel', f.pred)}:{_noun(f.a, lang) if cond != 'IRC' else f.a}>{_noun(f.b, lang) if cond != 'IRC' else f.b}"
@@ -163,13 +223,17 @@ def _label(p: Profile, lang: str, cond: str) -> str:
     cls = p.meta["cls"]
     q = mlenc.localize(p, lang)  # proper names in the source script (all conditions)
     name = q.label[len(cls):]
-    if cond == "IRC" or (lang == "JA" and cond == "IRL"):
+    if cond in ("IRC", "IRCS") or (lang == "JA" and cond == "IRL"):
         return q.label
+    if cond == "IRSYM":
+        return f"{SYMBOLS['class'][cls]}:{_event_name(p, lang) if cls == '催事' else name}"
+    if cond == "IREN":
+        return f"{CLASS[cls][0]} {_event_name(p, lang) if cls == '催事' else name}"
     if cond in ("IRID", "IRIDL"):
         sep = " " if p.meta["cls"] == "催事" and lang != "JA" else ""
         name = _event_name(p, lang) if cls == "催事" else name
         return f"{CODES['class'][cls]}:{name}"
-    c = CLASS[cls][0 if lang == "EN" else 1] if lang != "JA" else cls
+    c = (VOC_ZH["class"][cls] if lang == "ZH" else CLASS[cls][0 if lang == "EN" else 1]) if lang != "JA" else cls
     return f"{c} {_event_name(p, lang) if cls == '催事' else name}"
 
 
@@ -178,6 +242,9 @@ def _event_name(p: Profile, lang: str) -> str:
     m = p.meta
     if lang == "JA":
         return m["place"] + m["season"]
+    if lang == "ZH":
+        from . import i18n_zh
+        return i18n_zh.PLACE[m["place"]] + i18n_zh.SEASON[m["season"]]
     i = 0 if lang == "EN" else 1
     return f"{i18n.PLACE[m['place']][i]} {i18n.SEASON[m['season']][i]}"
 
@@ -201,7 +268,7 @@ def legend(lang: str) -> str:
     items = []
     for kind in ("class", "key", "group", "tense", "op", "rel"):
         for ja, code in CODES[kind].items():
-            word = ja if lang == "JA" else VOC[kind][ja][i]
+            word = ja if lang == "JA" else VOC_ZH[kind][ja] if lang == "ZH" else VOC[kind][ja][i]
             items.append(f"{code}={word}")
-    head = {"JA": "対応表", "EN": "Code legend", "KO": "코드 대응표"}[lang]
+    head = {"JA": "対応表", "EN": "Code legend", "KO": "코드 대응표", "ZH": "对照表"}[lang]
     return f"{head}: " + " ".join(items) + " | ?=if-then >=greater-than"

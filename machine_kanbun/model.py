@@ -35,6 +35,8 @@ class Fact:
     en1: str = ""
     ko: str = ""
     ko1: str = ""
+    zh: str = ""
+    zh1: str = ""
 
 
 @dataclass
@@ -48,6 +50,7 @@ class Question:
     answer_ml: List[str] = field(default_factory=list)  # "ja|en|ko" alternatives for non-Japanese settings
     q_en: str = ""  # same question in English / Korean (Issue #11)
     q_ko: str = ""
+    q_zh: str = ""
 
 
 @dataclass

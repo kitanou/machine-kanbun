@@ -1,0 +1,6 @@
+gemma 2k rc=0 665s
+qwen 2k rc=0 341s
+gemma 8k rc=0 1012s
+gemma 16k rc=0 1336s
+gemma 32k rc=0 1464s
+DONE

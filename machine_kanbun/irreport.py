@@ -22,7 +22,9 @@ COLORS = {"anchor": "#c0392b", "single": "#2471a3", "ladder": "#1e8449"}  # JA /
 
 def load():
     rows, errors = [], []
-    for d in ("ml", "ir"):
+    for d in ("ml", "ir", "zh"):
+        if not (RES / d).exists():
+            continue
         for f in sorted((RES / d).glob("*.jsonl")):
             for l in f.read_text(encoding="utf-8").splitlines():
                 if l.strip():

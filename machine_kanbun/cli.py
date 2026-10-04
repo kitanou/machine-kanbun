@@ -116,6 +116,43 @@ def cmd_longqa(a):
         sys.exit(75)  # EX_TEMPFAIL: caller should reload the model and resume
 
 
+def cmd_naturalreport(a):
+    from . import naturalreport
+    naturalreport.main()
+
+
+def cmd_zhreport(a):
+    from . import zhreport
+    zhreport.main()
+
+
+def cmd_labelfam(a):
+    from . import labelfam
+    labelfam.main()
+
+
+def cmd_natural(a):
+    import sys
+
+    from . import natural
+    from .lmstudio import Stalled
+    try:
+        natural.run(a.model, a.langs)
+    except Stalled as e:
+        print(f"STALLED: {e}", flush=True)
+        sys.exit(75)
+
+
+def cmd_tokcross(a):
+    from . import tokcross
+    tokcross.main()
+
+
+def cmd_layers(a):
+    from . import layers
+    layers.main()
+
+
 def cmd_irreport(a):
     from . import irreport
     irreport.main()
@@ -175,6 +212,14 @@ def main():
     ab = sub.add_parser("ablreport"); ab.set_defaults(fn=cmd_ablreport)
     mr = sub.add_parser("mlreport", help="Issue #11 report"); mr.set_defaults(fn=cmd_mlreport)
     ir = sub.add_parser("irreport", help="Issue #17 report"); ir.set_defaults(fn=cmd_irreport)
+    ly = sub.add_parser("layers", help="Issue #19 three-layer decomposition"); ly.set_defaults(fn=cmd_layers)
+    tc = sub.add_parser("tokcross", help="Issue #19 cross-tokenizer token counts"); tc.set_defaults(fn=cmd_tokcross)
+    lf = sub.add_parser("labelfam", help="Issue #19 E report"); lf.set_defaults(fn=cmd_labelfam)
+    zr = sub.add_parser("zhreport", help="Issue #19 A report"); zr.set_defaults(fn=cmd_zhreport)
+    nr = sub.add_parser("naturalreport", help="Issue #19 B/C/D report"); nr.set_defaults(fn=cmd_naturalreport)
+    nt = sub.add_parser("natural", help="Issue #19 C/D: natural sentences -> IR -> QA / round trip")
+    nt.add_argument("--model", required=True); nt.add_argument("--langs", nargs="*", default=["JA", "EN", "KO", "ZH"])
+    nt.set_defaults(fn=cmd_natural)
     cv = sub.add_parser("convcost", help="Issue #10: conversion cost (rule-based timing + LLM L0->L1)")
     cv.add_argument("--model", required=True)
     cv.add_argument("--lengths", nargs="*", type=int, default=[2000, 8000, 16000, 32000])
