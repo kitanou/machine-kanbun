@@ -1,0 +1,21 @@
+/Users/ide3/machine-kanbun/.venv-ja/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+embedded ng-nomic-embed-text-v1.5 L0            124.0s
+embedded ng-nomic-embed-text-v1.5 sudachi-m     117.8s
+embedded ng-nomic-embed-text-v1.5 sudachi-g     118.1s
+embedded ng-nomic-embed-text-v1.5 mecab-m       116.6s
+embedded ng-nomic-embed-text-v1.5 sudachi-p     114.2s
+embedded ng-nomic-embed-text-v1.5 ginza-d       119.4s
+embedded ng-nomic-embed-text-v1.5 naive         111.1s
+embedded ing-qwen3-embedding-0.6b L0            556.7s
+embedded ing-qwen3-embedding-0.6b sudachi-m     599.9s
+embedded ing-qwen3-embedding-0.6b sudachi-g     555.7s
+embedded ing-qwen3-embedding-0.6b mecab-m       628.0s
+embedded ing-qwen3-embedding-0.6b sudachi-p     615.7s
+embedded ing-qwen3-embedding-0.6b ginza-d       641.8s
+embedded ing-qwen3-embedding-0.6b naive         562.4s
+scale 10 done
+scale 100 done
+scale 1000 done
+scale 5000 done
+scale 10000 done

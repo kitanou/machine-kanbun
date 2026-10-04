@@ -1,0 +1,64 @@
+/Users/ide3/machine-kanbun/.venv-ja/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+google/gemma-4-12b N=10 L0: acc=100.0% ctx=207tok cold_ttft=3.3s
+google/gemma-4-12b N=10 sudachi-m: acc=100.0% ctx=182tok cold_ttft=3.1s
+google/gemma-4-12b N=10 sudachi-g: acc=90.0% ctx=140tok cold_ttft=2.7s
+google/gemma-4-12b N=10 sudachi-p: acc=100.0% ctx=197tok cold_ttft=3.3s
+google/gemma-4-12b N=10 ginza-d: acc=100.0% ctx=227tok cold_ttft=3.7s
+google/gemma-4-12b N=10 naive: acc=90.0% ctx=112tok cold_ttft=2.5s
+google/gemma-4-12b N=100 L0: acc=90.0% ctx=1961tok cold_ttft=21.6s
+google/gemma-4-12b N=100 sudachi-m: acc=95.0% ctx=1745tok cold_ttft=19.3s
+google/gemma-4-12b N=100 sudachi-g: acc=77.5% ctx=1382tok cold_ttft=15.9s
+google/gemma-4-12b N=100 sudachi-p: acc=95.0% ctx=1918tok cold_ttft=19.9s
+google/gemma-4-12b N=100 ginza-d: acc=100.0% ctx=2083tok cold_ttft=21.9s
+google/gemma-4-12b N=100 naive: acc=67.5% ctx=1074tok cold_ttft=12.5s
+google/gemma-4-12b N=300 L0: acc=80.0% ctx=5655tok cold_ttft=59.7s
+google/gemma-4-12b N=300 sudachi-m: acc=87.5% ctx=4983tok cold_ttft=51.5s
+google/gemma-4-12b N=300 sudachi-g: acc=72.5% ctx=3974tok cold_ttft=41.2s
+google/gemma-4-12b N=300 sudachi-p: acc=85.0% ctx=5481tok cold_ttft=57.3s
+google/gemma-4-12b N=300 ginza-d: acc=87.5% ctx=5902tok cold_ttft=62.3s
+google/gemma-4-12b N=300 naive: acc=50.0% ctx=3127tok cold_ttft=33.2s
+google/gemma-4-12b N=600 L0: acc=62.5% ctx=11273tok cold_ttft=116.0s
+google/gemma-4-12b N=600 sudachi-m: acc=82.5% ctx=9990tok cold_ttft=103.5s
+google/gemma-4-12b N=600 sudachi-g: acc=57.5% ctx=7991tok cold_ttft=92.1s
+google/gemma-4-12b N=600 sudachi-p: acc=67.5% ctx=11014tok cold_ttft=119.4s
+google/gemma-4-12b N=600 ginza-d: acc=75.0% ctx=11845tok cold_ttft=118.2s
+google/gemma-4-12b N=600 naive: acc=20.0% ctx=6263tok cold_ttft=62.3s
+/Users/ide3/machine-kanbun/.venv-ja/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+RAG google/gemma-4-12b N=1000 L0: acc=90.0% hit=98% prompt=232tok total=2.22s
+RAG google/gemma-4-12b N=1000 sudachi-m: acc=90.0% hit=100% prompt=221tok total=2.10s
+RAG google/gemma-4-12b N=1000 sudachi-g: acc=85.0% hit=100% prompt=209tok total=2.01s
+RAG google/gemma-4-12b N=1000 ginza-d: acc=82.5% hit=100% prompt=243tok total=2.31s
+RAG google/gemma-4-12b N=1000 naive: acc=50.0% hit=100% prompt=192tok total=1.76s
+RAG google/gemma-4-12b N=10000 L0: acc=75.0% hit=80% prompt=227tok total=2.13s
+RAG google/gemma-4-12b N=10000 sudachi-m: acc=77.5% hit=95% prompt=210tok total=1.99s
+RAG google/gemma-4-12b N=10000 sudachi-g: acc=65.0% hit=90% prompt=200tok total=1.87s
+RAG google/gemma-4-12b N=10000 ginza-d: acc=82.5% hit=100% prompt=229tok total=2.17s
+RAG google/gemma-4-12b N=10000 naive: acc=65.0% hit=100% prompt=196tok total=1.81s
+/Users/ide3/machine-kanbun/.venv-ja/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+qwen/qwen3-8b N=10 L0: acc=70.0% ctx=218tok cold_ttft=2.4s
+qwen/qwen3-8b N=10 sudachi-m: acc=70.0% ctx=267tok cold_ttft=2.5s
+qwen/qwen3-8b N=10 sudachi-g: acc=60.0% ctx=157tok cold_ttft=2.0s
+qwen/qwen3-8b N=10 sudachi-p: acc=70.0% ctx=282tok cold_ttft=2.7s
+qwen/qwen3-8b N=10 ginza-d: acc=50.0% ctx=326tok cold_ttft=2.9s
+qwen/qwen3-8b N=10 naive: acc=30.0% ctx=163tok cold_ttft=2.0s
+qwen/qwen3-8b N=100 L0: acc=52.5% ctx=2068tok cold_ttft=12.8s
+qwen/qwen3-8b N=100 sudachi-m: acc=52.5% ctx=2618tok cold_ttft=16.2s
+qwen/qwen3-8b N=100 sudachi-g: acc=37.5% ctx=1554tok cold_ttft=9.8s
+qwen/qwen3-8b N=100 sudachi-p: acc=62.5% ctx=2801tok cold_ttft=17.1s
+qwen/qwen3-8b N=100 ginza-d: acc=55.0% ctx=3082tok cold_ttft=18.9s
+qwen/qwen3-8b N=100 naive: acc=17.5% ctx=1601tok cold_ttft=10.2s
+/Users/ide3/machine-kanbun/.venv-ja/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+RAG qwen/qwen3-8b N=1000 L0: acc=65.0% hit=98% prompt=257tok total=1.72s
+RAG qwen/qwen3-8b N=1000 sudachi-m: acc=80.0% hit=100% prompt=278tok total=1.82s
+RAG qwen/qwen3-8b N=1000 sudachi-g: acc=70.0% hit=100% prompt=239tok total=1.60s
+RAG qwen/qwen3-8b N=1000 ginza-d: acc=70.0% hit=100% prompt=305tok total=1.98s
+RAG qwen/qwen3-8b N=1000 naive: acc=35.0% hit=100% prompt=227tok total=1.56s
+RAG qwen/qwen3-8b N=10000 L0: acc=75.0% hit=80% prompt=254tok total=1.81s
+RAG qwen/qwen3-8b N=10000 sudachi-m: acc=60.0% hit=95% prompt=263tok total=1.79s
+RAG qwen/qwen3-8b N=10000 sudachi-g: acc=65.0% hit=90% prompt=229tok total=1.61s
+RAG qwen/qwen3-8b N=10000 ginza-d: acc=65.0% hit=100% prompt=290tok total=2.00s
+RAG qwen/qwen3-8b N=10000 naive: acc=22.5% hit=100% prompt=241tok total=1.68s

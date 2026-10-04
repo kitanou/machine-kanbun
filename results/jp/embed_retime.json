@@ -1,0 +1,76 @@
+{
+ "n_texts": 1500,
+ "repeats": 3,
+ "models": {
+  "text-embedding-qwen3-embedding-0.6b": {
+   "loaded": [
+    "IDENTIFIER",
+    "text-embedding-qwen3-embedding-0.6b"
+   ],
+   "L0": {
+    "s": 64.89732675,
+    "texts_per_s": 23.113432788662593
+   },
+   "sudachi-m": {
+    "s": 94.07599862499995,
+    "texts_per_s": 15.944555698836737
+   },
+   "sudachi-g": {
+    "s": 86.24583862499992,
+    "texts_per_s": 17.39214348094005
+   },
+   "mecab-m": {
+    "s": 94.19530933400006,
+    "texts_per_s": 15.924359828590433
+   },
+   "sudachi-p": {
+    "s": 96.97786520800014,
+    "texts_per_s": 15.467447100250855
+   },
+   "ginza-d": {
+    "s": 100.8804137090001,
+    "texts_per_s": 14.869090488931816
+   },
+   "naive": {
+    "s": 88.40140187499992,
+    "texts_per_s": 16.96805670707585
+   },
+   "query_embed_ms": 57.95579520500041
+  },
+  "text-embedding-nomic-embed-text-v1.5": {
+   "loaded": [
+    "IDENTIFIER",
+    "text-embedding-nomic-embed-text-v1.5"
+   ],
+   "L0": {
+    "s": 18.63126125000008,
+    "texts_per_s": 80.50984739425483
+   },
+   "sudachi-m": {
+    "s": 17.670265208000274,
+    "texts_per_s": 84.88836937890835
+   },
+   "sudachi-g": {
+    "s": 17.068517832999987,
+    "texts_per_s": 87.88109282107231
+   },
+   "mecab-m": {
+    "s": 17.051945167000213,
+    "texts_per_s": 87.96650383927319
+   },
+   "sudachi-p": {
+    "s": 17.29197941700022,
+    "texts_per_s": 86.74541900768797
+   },
+   "ginza-d": {
+    "s": 17.68774916600023,
+    "texts_per_s": 84.80445905934329
+   },
+   "naive": {
+    "s": 17.078839166999842,
+    "texts_per_s": 87.82798323309568
+   },
+   "query_embed_ms": 11.459638544999962
+  }
+ }
+}

@@ -1,0 +1,4819 @@
+{
+ "scales": [
+  10,
+  100,
+  1000,
+  5000,
+  10000
+ ],
+ "nq": 200,
+ "results": {
+  "10|L0|raw": {
+   "bm25": {
+    "recall1": 0.9,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.95,
+    "ndcg10": 0.9630929753571458,
+    "ms": 0.41742089997569565
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 1.0,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 1.0,
+    "ndcg10": 1.0,
+    "retrieve_ms": 0.14837499993518577,
+    "query_embed_ms": 531.776224999976
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 1.0,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 1.0,
+    "ndcg10": 1.0,
+    "retrieve_ms": 0.013854200005880557,
+    "query_embed_ms": 100.8114750000459
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "UNDECIDED": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "POSSIBLE": 1.0,
+     "WANTED": 1.0,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "UNDECIDED": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "POSSIBLE": 1.0,
+     "WANTED": 1.0,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "UNDECIDED": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "POSSIBLE": 1.0,
+     "WANTED": 1.0,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0
+    }
+   }
+  },
+  "10|sudachi-m|raw": {
+   "bm25": {
+    "recall1": 1.0,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 1.0,
+    "ndcg10": 1.0,
+    "ms": 0.0788332999945851
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 1.0,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 1.0,
+    "ndcg10": 1.0,
+    "retrieve_ms": 0.011558300047909142,
+    "query_embed_ms": 33.952975000011065
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.9,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.95,
+    "ndcg10": 0.9630929753571458,
+    "retrieve_ms": 0.014570799976354465,
+    "query_embed_ms": 89.08785410003475
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "UNDECIDED": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "POSSIBLE": 1.0,
+     "WANTED": 1.0,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "UNDECIDED": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "POSSIBLE": 1.0,
+     "WANTED": 1.0,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "UNDECIDED": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "POSSIBLE": 1.0,
+     "WANTED": 1.0,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0
+    }
+   }
+  },
+  "10|sudachi-m|l1": {
+   "bm25": {
+    "recall1": 1.0,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 1.0,
+    "ndcg10": 1.0,
+    "ms": 0.05019170002924511
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 1.0,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 1.0,
+    "ndcg10": 1.0,
+    "retrieve_ms": 0.014995899982750416,
+    "query_embed_ms": 36.735349999980826
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.9,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.95,
+    "ndcg10": 0.9630929753571458,
+    "retrieve_ms": 0.012379199961287668,
+    "query_embed_ms": 91.54462500000591
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "UNDECIDED": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "POSSIBLE": 1.0,
+     "WANTED": 1.0,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "UNDECIDED": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "POSSIBLE": 1.0,
+     "WANTED": 1.0,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "UNDECIDED": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "POSSIBLE": 1.0,
+     "WANTED": 1.0,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0
+    }
+   }
+  },
+  "10|sudachi-g|raw": {
+   "bm25": {
+    "recall1": 0.9,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.95,
+    "ndcg10": 0.9630929753571458,
+    "ms": 0.04580409995469381
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 1.0,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 1.0,
+    "ndcg10": 1.0,
+    "retrieve_ms": 0.014366699997481192,
+    "query_embed_ms": 35.72707089997493
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.9,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.95,
+    "ndcg10": 0.9630929753571458,
+    "retrieve_ms": 0.01516659995104419,
+    "query_embed_ms": 92.60557910001808
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "UNDECIDED": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "POSSIBLE": 1.0,
+     "WANTED": 1.0,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "UNDECIDED": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "POSSIBLE": 1.0,
+     "WANTED": 1.0,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "UNDECIDED": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "POSSIBLE": 1.0,
+     "WANTED": 1.0,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0
+    }
+   }
+  },
+  "10|sudachi-g|l1": {
+   "bm25": {
+    "recall1": 1.0,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 1.0,
+    "ndcg10": 1.0,
+    "ms": 0.1157832999524544
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 1.0,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 1.0,
+    "ndcg10": 1.0,
+    "retrieve_ms": 0.012133400014135987,
+    "query_embed_ms": 30.615800000032323
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.9,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.95,
+    "ndcg10": 0.9630929753571458,
+    "retrieve_ms": 0.012704100026894594,
+    "query_embed_ms": 87.01492500003951
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "UNDECIDED": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "POSSIBLE": 1.0,
+     "WANTED": 1.0,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "UNDECIDED": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "POSSIBLE": 1.0,
+     "WANTED": 1.0,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "UNDECIDED": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "POSSIBLE": 1.0,
+     "WANTED": 1.0,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0
+    }
+   }
+  },
+  "10|mecab-m|raw": {
+   "bm25": {
+    "recall1": 1.0,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 1.0,
+    "ndcg10": 1.0,
+    "ms": 0.11360420003256877
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 1.0,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 1.0,
+    "ndcg10": 1.0,
+    "retrieve_ms": 0.01384170000164886,
+    "query_embed_ms": 34.13144999994984
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.9,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.95,
+    "ndcg10": 0.9630929753571458,
+    "retrieve_ms": 0.014195800031302497,
+    "query_embed_ms": 92.77902499998163
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "UNDECIDED": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "POSSIBLE": 1.0,
+     "WANTED": 1.0,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "UNDECIDED": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "POSSIBLE": 1.0,
+     "WANTED": 1.0,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "UNDECIDED": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "POSSIBLE": 1.0,
+     "WANTED": 1.0,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0
+    }
+   }
+  },
+  "10|mecab-m|l1": {
+   "bm25": {
+    "recall1": 1.0,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 1.0,
+    "ndcg10": 1.0,
+    "ms": 0.030345800041686743
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 1.0,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 1.0,
+    "ndcg10": 1.0,
+    "retrieve_ms": 0.01053750002029119,
+    "query_embed_ms": 31.730662500012844
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.9,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.95,
+    "ndcg10": 0.9630929753571458,
+    "retrieve_ms": 0.012045800031046383,
+    "query_embed_ms": 86.90449999994598
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "UNDECIDED": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "POSSIBLE": 1.0,
+     "WANTED": 1.0,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "UNDECIDED": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "POSSIBLE": 1.0,
+     "WANTED": 1.0,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "UNDECIDED": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "POSSIBLE": 1.0,
+     "WANTED": 1.0,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0
+    }
+   }
+  },
+  "10|sudachi-p|raw": {
+   "bm25": {
+    "recall1": 0.9,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.95,
+    "ndcg10": 0.9630929753571458,
+    "ms": 0.11075000002165325
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 1.0,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 1.0,
+    "ndcg10": 1.0,
+    "retrieve_ms": 0.014887500037730206,
+    "query_embed_ms": 30.70812500000102
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.9,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.95,
+    "ndcg10": 0.9630929753571458,
+    "retrieve_ms": 0.016420799965999322,
+    "query_embed_ms": 95.4078541999479
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "UNDECIDED": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "POSSIBLE": 1.0,
+     "WANTED": 1.0,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "UNDECIDED": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "POSSIBLE": 1.0,
+     "WANTED": 1.0,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "UNDECIDED": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "POSSIBLE": 1.0,
+     "WANTED": 1.0,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0
+    }
+   }
+  },
+  "10|sudachi-p|l1": {
+   "bm25": {
+    "recall1": 1.0,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 1.0,
+    "ndcg10": 1.0,
+    "ms": 0.0509291000525991
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 1.0,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 1.0,
+    "ndcg10": 1.0,
+    "retrieve_ms": 0.011404199995013187,
+    "query_embed_ms": 28.74610830003803
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.9,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.95,
+    "ndcg10": 0.9630929753571458,
+    "retrieve_ms": 0.012512500052253017,
+    "query_embed_ms": 94.32677919994603
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "UNDECIDED": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "POSSIBLE": 1.0,
+     "WANTED": 1.0,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "UNDECIDED": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "POSSIBLE": 1.0,
+     "WANTED": 1.0,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "UNDECIDED": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "POSSIBLE": 1.0,
+     "WANTED": 1.0,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0
+    }
+   }
+  },
+  "10|ginza-d|raw": {
+   "bm25": {
+    "recall1": 1.0,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 1.0,
+    "ndcg10": 1.0,
+    "ms": 0.1172207999843522
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 1.0,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 1.0,
+    "ndcg10": 1.0,
+    "retrieve_ms": 0.01739999997880659,
+    "query_embed_ms": 35.8022708000135
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.9,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.95,
+    "ndcg10": 0.9630929753571458,
+    "retrieve_ms": 0.02389999999650172,
+    "query_embed_ms": 90.03406250003536
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "UNDECIDED": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "POSSIBLE": 1.0,
+     "WANTED": 1.0,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "UNDECIDED": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "POSSIBLE": 1.0,
+     "WANTED": 1.0,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "UNDECIDED": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "POSSIBLE": 1.0,
+     "WANTED": 1.0,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0
+    }
+   }
+  },
+  "10|ginza-d|l1": {
+   "bm25": {
+    "recall1": 1.0,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 1.0,
+    "ndcg10": 1.0,
+    "ms": 0.02211659993918147
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 1.0,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 1.0,
+    "ndcg10": 1.0,
+    "retrieve_ms": 0.01322920006714412,
+    "query_embed_ms": 35.57776669995292
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.9,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.95,
+    "ndcg10": 0.9630929753571458,
+    "retrieve_ms": 0.011533299948496278,
+    "query_embed_ms": 86.70747090000077
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "UNDECIDED": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "POSSIBLE": 1.0,
+     "WANTED": 1.0,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "UNDECIDED": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "POSSIBLE": 1.0,
+     "WANTED": 1.0,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "UNDECIDED": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "POSSIBLE": 1.0,
+     "WANTED": 1.0,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0
+    }
+   }
+  },
+  "10|naive|raw": {
+   "bm25": {
+    "recall1": 0.8,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.9,
+    "ndcg10": 0.9261859507142916,
+    "ms": 0.07990419999259757
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 1.0,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 1.0,
+    "ndcg10": 1.0,
+    "retrieve_ms": 0.013175000003684545,
+    "query_embed_ms": 32.28900419999263
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 1.0,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 1.0,
+    "ndcg10": 1.0,
+    "retrieve_ms": 0.012658400009968318,
+    "query_embed_ms": 92.1681042000273
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "UNDECIDED": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "POSSIBLE": 1.0,
+     "WANTED": 1.0,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "UNDECIDED": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "POSSIBLE": 1.0,
+     "WANTED": 1.0,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "UNDECIDED": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "POSSIBLE": 1.0,
+     "WANTED": 1.0,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0
+    }
+   }
+  },
+  "10|naive|l1": {
+   "bm25": {
+    "recall1": 1.0,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 1.0,
+    "ndcg10": 1.0,
+    "ms": 0.03066250001211301
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 1.0,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 1.0,
+    "ndcg10": 1.0,
+    "retrieve_ms": 0.013291699997353135,
+    "query_embed_ms": 32.26657499999419
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 1.0,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 1.0,
+    "ndcg10": 1.0,
+    "retrieve_ms": 0.010470799952599918,
+    "query_embed_ms": 91.33625829999801
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "UNDECIDED": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "POSSIBLE": 1.0,
+     "WANTED": 1.0,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "UNDECIDED": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "POSSIBLE": 1.0,
+     "WANTED": 1.0,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "UNDECIDED": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "POSSIBLE": 1.0,
+     "WANTED": 1.0,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0
+    }
+   }
+  },
+  "100|L0|raw": {
+   "bm25": {
+    "recall1": 0.95,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.975,
+    "ndcg10": 0.9815464876785728,
+    "ms": 0.491080410001814
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.87,
+    "recall3": 0.98,
+    "recall5": 0.99,
+    "recall10": 1.0,
+    "mrr": 0.9239285714285714,
+    "ndcg10": 0.9431144791997839,
+    "retrieve_ms": 0.06968749999941792,
+    "query_embed_ms": 13.248264590001781
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.99,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.995,
+    "ndcg10": 0.9963092975357145,
+    "retrieve_ms": 0.02710500000830507,
+    "query_embed_ms": 35.98230125000555
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "HEARSAY": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "NOT_DONE": 1.0,
+     "POSSIBLE": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "pronoun": 1.0,
+     "UNDECIDED": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "DONE": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "HEARSAY": 0.9090909090909091,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "NOT_DONE": 1.0,
+     "POSSIBLE": 1.0,
+     "PLANNED": 1.0,
+     "polite": 0.9629629629629629,
+     "pronoun": 1.0,
+     "UNDECIDED": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 0.9166666666666666,
+     "DONE": 1.0
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "HEARSAY": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "NOT_DONE": 1.0,
+     "POSSIBLE": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "pronoun": 1.0,
+     "UNDECIDED": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "DONE": 1.0
+    }
+   }
+  },
+  "100|sudachi-m|raw": {
+   "bm25": {
+    "recall1": 1.0,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 1.0,
+    "ndcg10": 1.0,
+    "ms": 0.18365124999945692
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.88,
+    "recall3": 0.95,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.9248333333333334,
+    "ndcg10": 0.94351313810118,
+    "retrieve_ms": 0.010139169999092701,
+    "query_embed_ms": 13.161949160003132
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.98,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.99,
+    "ndcg10": 0.992618595071429,
+    "retrieve_ms": 0.010663330003808369,
+    "query_embed_ms": 34.83078792000015
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "HEARSAY": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "NOT_DONE": 1.0,
+     "POSSIBLE": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "pronoun": 1.0,
+     "UNDECIDED": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "DONE": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "HEARSAY": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "NOT_DONE": 1.0,
+     "POSSIBLE": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "pronoun": 1.0,
+     "UNDECIDED": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "DONE": 1.0
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "HEARSAY": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "NOT_DONE": 1.0,
+     "POSSIBLE": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "pronoun": 1.0,
+     "UNDECIDED": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "DONE": 1.0
+    }
+   }
+  },
+  "100|sudachi-m|l1": {
+   "bm25": {
+    "recall1": 1.0,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 1.0,
+    "ndcg10": 1.0,
+    "ms": 0.18758832999992592
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.88,
+    "recall3": 0.98,
+    "recall5": 0.99,
+    "recall10": 1.0,
+    "mrr": 0.9270833333333331,
+    "ndcg10": 0.9453171995628786,
+    "retrieve_ms": 0.00607541000135825,
+    "query_embed_ms": 12.511505000002217
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.97,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.985,
+    "ndcg10": 0.9889278926071435,
+    "retrieve_ms": 0.005151670002305764,
+    "query_embed_ms": 35.440125839995744
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "HEARSAY": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "NOT_DONE": 1.0,
+     "POSSIBLE": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "pronoun": 1.0,
+     "UNDECIDED": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "DONE": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "HEARSAY": 1.0,
+     "has_subject": 0.9886363636363636,
+     "casual": 0.9863013698630136,
+     "NOT_DONE": 1.0,
+     "POSSIBLE": 1.0,
+     "PLANNED": 0.9285714285714286,
+     "polite": 1.0,
+     "pronoun": 1.0,
+     "UNDECIDED": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "DONE": 1.0
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "HEARSAY": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "NOT_DONE": 1.0,
+     "POSSIBLE": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "pronoun": 1.0,
+     "UNDECIDED": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "DONE": 1.0
+    }
+   }
+  },
+  "100|sudachi-g|raw": {
+   "bm25": {
+    "recall1": 0.96,
+    "recall3": 0.98,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.975,
+    "ndcg10": 0.9812321262328969,
+    "ms": 0.209497919995556
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.89,
+    "recall3": 0.98,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.935,
+    "ndcg10": 0.9514693163757552,
+    "retrieve_ms": 0.019631670002127066,
+    "query_embed_ms": 12.978098749999845
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.95,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.975,
+    "ndcg10": 0.9815464876785728,
+    "retrieve_ms": 0.025301669993496034,
+    "query_embed_ms": 35.60727166999641
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "HEARSAY": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "NOT_DONE": 1.0,
+     "POSSIBLE": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "pronoun": 1.0,
+     "UNDECIDED": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "DONE": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "HEARSAY": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "NOT_DONE": 1.0,
+     "POSSIBLE": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "pronoun": 1.0,
+     "UNDECIDED": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "DONE": 1.0
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "HEARSAY": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "NOT_DONE": 1.0,
+     "POSSIBLE": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "pronoun": 1.0,
+     "UNDECIDED": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "DONE": 1.0
+    }
+   }
+  },
+  "100|sudachi-g|l1": {
+   "bm25": {
+    "recall1": 0.96,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.98,
+    "ndcg10": 0.9852371901428583,
+    "ms": 0.20133207999606384
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.86,
+    "recall3": 0.99,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.9225,
+    "ndcg10": 0.9423997409378794,
+    "retrieve_ms": 0.06981999999879918,
+    "query_embed_ms": 13.99817417000122
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.86,
+    "recall3": 0.99,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.9275,
+    "ndcg10": 0.9463276335450231,
+    "retrieve_ms": 0.06341917000099784,
+    "query_embed_ms": 34.815898340002605
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "HEARSAY": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "NOT_DONE": 1.0,
+     "POSSIBLE": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "pronoun": 1.0,
+     "UNDECIDED": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "DONE": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "HEARSAY": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "NOT_DONE": 1.0,
+     "POSSIBLE": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "pronoun": 1.0,
+     "UNDECIDED": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "DONE": 1.0
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "HEARSAY": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "NOT_DONE": 1.0,
+     "POSSIBLE": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "pronoun": 1.0,
+     "UNDECIDED": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "DONE": 1.0
+    }
+   }
+  },
+  "100|mecab-m|raw": {
+   "bm25": {
+    "recall1": 1.0,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 1.0,
+    "ndcg10": 1.0,
+    "ms": 0.26203040999462246
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.88,
+    "recall3": 0.95,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.9253333333333335,
+    "ndcg10": 0.9439513756095685,
+    "retrieve_ms": 0.035700830003406736,
+    "query_embed_ms": 14.10978625000098
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.98,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.99,
+    "ndcg10": 0.992618595071429,
+    "retrieve_ms": 0.04498917000091751,
+    "query_embed_ms": 35.58234999999513
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "HEARSAY": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "NOT_DONE": 1.0,
+     "POSSIBLE": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "pronoun": 1.0,
+     "UNDECIDED": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "DONE": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "HEARSAY": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "NOT_DONE": 1.0,
+     "POSSIBLE": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "pronoun": 1.0,
+     "UNDECIDED": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "DONE": 1.0
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "HEARSAY": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "NOT_DONE": 1.0,
+     "POSSIBLE": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "pronoun": 1.0,
+     "UNDECIDED": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "DONE": 1.0
+    }
+   }
+  },
+  "100|mecab-m|l1": {
+   "bm25": {
+    "recall1": 1.0,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 1.0,
+    "ndcg10": 1.0,
+    "ms": 0.14558458999999857
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.88,
+    "recall3": 0.98,
+    "recall5": 0.99,
+    "recall10": 1.0,
+    "mrr": 0.9270833333333331,
+    "ndcg10": 0.9453171995628786,
+    "retrieve_ms": 0.0037783300012961263,
+    "query_embed_ms": 12.63347082999644
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.97,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.985,
+    "ndcg10": 0.9889278926071435,
+    "retrieve_ms": 0.010862910003197612,
+    "query_embed_ms": 37.777835410006446
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "HEARSAY": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "NOT_DONE": 1.0,
+     "POSSIBLE": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "pronoun": 1.0,
+     "UNDECIDED": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "DONE": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "HEARSAY": 1.0,
+     "has_subject": 0.9886363636363636,
+     "casual": 0.9863013698630136,
+     "NOT_DONE": 1.0,
+     "POSSIBLE": 1.0,
+     "PLANNED": 0.9285714285714286,
+     "polite": 1.0,
+     "pronoun": 1.0,
+     "UNDECIDED": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "DONE": 1.0
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "HEARSAY": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "NOT_DONE": 1.0,
+     "POSSIBLE": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "pronoun": 1.0,
+     "UNDECIDED": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "DONE": 1.0
+    }
+   }
+  },
+  "100|sudachi-p|raw": {
+   "bm25": {
+    "recall1": 0.69,
+    "recall3": 0.95,
+    "recall5": 0.99,
+    "recall10": 1.0,
+    "mrr": 0.8173333333333334,
+    "ndcg10": 0.863480014820101,
+    "ms": 0.26065374999234336
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.87,
+    "recall3": 0.98,
+    "recall5": 0.99,
+    "recall10": 1.0,
+    "mrr": 0.9222619047619048,
+    "ndcg10": 0.9418051816640692,
+    "retrieve_ms": 0.025409170002603787,
+    "query_embed_ms": 11.745536250000441
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.98,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.99,
+    "ndcg10": 0.992618595071429,
+    "retrieve_ms": 0.00820290999399731,
+    "query_embed_ms": 35.66456624999773
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "HEARSAY": 0.9090909090909091,
+     "has_subject": 0.9886363636363636,
+     "casual": 1.0,
+     "NOT_DONE": 1.0,
+     "POSSIBLE": 1.0,
+     "PLANNED": 1.0,
+     "polite": 0.9629629629629629,
+     "pronoun": 1.0,
+     "UNDECIDED": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "DONE": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "HEARSAY": 1.0,
+     "has_subject": 0.9886363636363636,
+     "casual": 0.9863013698630136,
+     "NOT_DONE": 1.0,
+     "POSSIBLE": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "pronoun": 0.8333333333333334,
+     "UNDECIDED": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "DONE": 0.9411764705882353
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "HEARSAY": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "NOT_DONE": 1.0,
+     "POSSIBLE": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "pronoun": 1.0,
+     "UNDECIDED": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "DONE": 1.0
+    }
+   }
+  },
+  "100|sudachi-p|l1": {
+   "bm25": {
+    "recall1": 0.92,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.9583333333333333,
+    "ndcg10": 0.969165082750002,
+    "ms": 0.2058516699980828
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.89,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.9383333333333332,
+    "ndcg10": 0.954165082750002,
+    "retrieve_ms": 0.05957416999990528,
+    "query_embed_ms": 12.969212500001959
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.98,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.99,
+    "ndcg10": 0.992618595071429,
+    "retrieve_ms": 0.006633330003751325,
+    "query_embed_ms": 35.47778957999981
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "HEARSAY": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "NOT_DONE": 1.0,
+     "POSSIBLE": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "pronoun": 1.0,
+     "UNDECIDED": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "DONE": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "HEARSAY": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "NOT_DONE": 1.0,
+     "POSSIBLE": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "pronoun": 1.0,
+     "UNDECIDED": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "DONE": 1.0
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "HEARSAY": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "NOT_DONE": 1.0,
+     "POSSIBLE": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "pronoun": 1.0,
+     "UNDECIDED": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "DONE": 1.0
+    }
+   }
+  },
+  "100|ginza-d|raw": {
+   "bm25": {
+    "recall1": 1.0,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 1.0,
+    "ndcg10": 1.0,
+    "ms": 0.23692875000051572
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.87,
+    "recall3": 0.97,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.9186666666666669,
+    "ndcg10": 0.939028546912386,
+    "retrieve_ms": 0.07970292000209156,
+    "query_embed_ms": 13.35062208000636
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.97,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.985,
+    "ndcg10": 0.9889278926071436,
+    "retrieve_ms": 0.008428750006714836,
+    "query_embed_ms": 34.87423624999792
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "HEARSAY": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "NOT_DONE": 1.0,
+     "POSSIBLE": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "pronoun": 1.0,
+     "UNDECIDED": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "DONE": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "HEARSAY": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "NOT_DONE": 1.0,
+     "POSSIBLE": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "pronoun": 1.0,
+     "UNDECIDED": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "DONE": 1.0
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "HEARSAY": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "NOT_DONE": 1.0,
+     "POSSIBLE": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "pronoun": 1.0,
+     "UNDECIDED": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "DONE": 1.0
+    }
+   }
+  },
+  "100|ginza-d|l1": {
+   "bm25": {
+    "recall1": 1.0,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 1.0,
+    "ndcg10": 1.0,
+    "ms": 0.11987792000581976
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.89,
+    "recall3": 0.98,
+    "recall5": 0.99,
+    "recall10": 1.0,
+    "mrr": 0.9322619047619046,
+    "ndcg10": 0.9491865865926402,
+    "retrieve_ms": 0.006654999997408595,
+    "query_embed_ms": 13.737767909997274
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.96,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.98,
+    "ndcg10": 0.9852371901428583,
+    "retrieve_ms": 0.06884000000354717,
+    "query_embed_ms": 37.83241332999751
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "HEARSAY": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "NOT_DONE": 1.0,
+     "POSSIBLE": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "pronoun": 1.0,
+     "UNDECIDED": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "DONE": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "HEARSAY": 1.0,
+     "has_subject": 0.9886363636363636,
+     "casual": 0.9863013698630136,
+     "NOT_DONE": 1.0,
+     "POSSIBLE": 1.0,
+     "PLANNED": 0.9285714285714286,
+     "polite": 1.0,
+     "pronoun": 1.0,
+     "UNDECIDED": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "DONE": 1.0
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "HEARSAY": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "NOT_DONE": 1.0,
+     "POSSIBLE": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "pronoun": 1.0,
+     "UNDECIDED": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "DONE": 1.0
+    }
+   }
+  },
+  "100|naive|raw": {
+   "bm25": {
+    "recall1": 0.36,
+    "recall3": 0.6,
+    "recall5": 0.87,
+    "recall10": 0.98,
+    "mrr": 0.5386190476190476,
+    "ndcg10": 0.6432054565244429,
+    "ms": 0.06637250000494532
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.86,
+    "recall3": 0.95,
+    "recall5": 0.97,
+    "recall10": 0.99,
+    "mrr": 0.9113611111111111,
+    "ndcg10": 0.9302528601716813,
+    "retrieve_ms": 0.06075875000533415,
+    "query_embed_ms": 14.303422920002049
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.99,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.995,
+    "ndcg10": 0.9963092975357145,
+    "retrieve_ms": 0.005030829997849651,
+    "query_embed_ms": 38.41636457999812
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "HEARSAY": 0.7272727272727273,
+     "has_subject": 0.875,
+     "casual": 0.863013698630137,
+     "NOT_DONE": 1.0,
+     "POSSIBLE": 1.0,
+     "PLANNED": 1.0,
+     "polite": 0.8888888888888888,
+     "pronoun": 0.6666666666666666,
+     "UNDECIDED": 0.8333333333333334,
+     "WANTED": 0.9,
+     "omit_subject": 0.8333333333333334,
+     "DONE": 0.6470588235294118
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "HEARSAY": 0.9090909090909091,
+     "has_subject": 0.9772727272727273,
+     "casual": 0.9726027397260274,
+     "NOT_DONE": 1.0,
+     "POSSIBLE": 1.0,
+     "PLANNED": 1.0,
+     "polite": 0.9629629629629629,
+     "pronoun": 0.8333333333333334,
+     "UNDECIDED": 1.0,
+     "WANTED": 0.95,
+     "omit_subject": 0.9166666666666666,
+     "DONE": 0.9411764705882353
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "HEARSAY": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "NOT_DONE": 1.0,
+     "POSSIBLE": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "pronoun": 1.0,
+     "UNDECIDED": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "DONE": 1.0
+    }
+   }
+  },
+  "100|naive|l1": {
+   "bm25": {
+    "recall1": 0.98,
+    "recall3": 0.99,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.9875,
+    "ndcg10": 0.9906160631164486,
+    "ms": 0.055917500003488385
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.88,
+    "recall3": 0.98,
+    "recall5": 0.99,
+    "recall10": 0.99,
+    "mrr": 0.9295000000000002,
+    "ndcg10": 0.9443429083580618,
+    "retrieve_ms": 0.046997079998618574,
+    "query_embed_ms": 12.53287458000159
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.98,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.99,
+    "ndcg10": 0.992618595071429,
+    "retrieve_ms": 0.06699292000121204,
+    "query_embed_ms": 35.59886541999731
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "HEARSAY": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "NOT_DONE": 1.0,
+     "POSSIBLE": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "pronoun": 1.0,
+     "UNDECIDED": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "DONE": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "HEARSAY": 1.0,
+     "has_subject": 0.9886363636363636,
+     "casual": 0.9863013698630136,
+     "NOT_DONE": 1.0,
+     "POSSIBLE": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "pronoun": 1.0,
+     "UNDECIDED": 1.0,
+     "WANTED": 0.95,
+     "omit_subject": 1.0,
+     "DONE": 1.0
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "HEARSAY": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "NOT_DONE": 1.0,
+     "POSSIBLE": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "pronoun": 1.0,
+     "UNDECIDED": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "DONE": 1.0
+    }
+   }
+  },
+  "1000|L0|raw": {
+   "bm25": {
+    "recall1": 0.75,
+    "recall3": 0.945,
+    "recall5": 0.965,
+    "recall10": 1.0,
+    "mrr": 0.849422619047619,
+    "ndcg10": 0.8868553882996266,
+    "ms": 4.539104999998926
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.615,
+    "recall3": 0.845,
+    "recall5": 0.915,
+    "recall10": 0.965,
+    "mrr": 0.7475912569231535,
+    "ndcg10": 0.7996067749769771,
+    "retrieve_ms": 0.01972771000055218,
+    "query_embed_ms": 12.456387499996708
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.955,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.9758333333333333,
+    "ndcg10": 0.982082541375001,
+    "retrieve_ms": 0.030956460000197694,
+    "query_embed_ms": 32.459203960002014
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "POSSIBLE": 1.0,
+     "has_subject": 0.9580838323353293,
+     "casual": 0.9790209790209791,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "UNDECIDED": 0.875,
+     "NOT_DONE": 1.0,
+     "pronoun": 1.0,
+     "PLANNED": 1.0,
+     "polite": 0.9298245614035088,
+     "HEARSAY": 0.85,
+     "DONE": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "POSSIBLE": 1.0,
+     "has_subject": 0.8982035928143712,
+     "casual": 0.9020979020979021,
+     "WANTED": 0.9428571428571428,
+     "omit_subject": 1.0,
+     "UNDECIDED": 0.96875,
+     "NOT_DONE": 0.9428571428571428,
+     "pronoun": 0.8666666666666667,
+     "PLANNED": 0.9696969696969697,
+     "polite": 0.9473684210526315,
+     "HEARSAY": 0.85,
+     "DONE": 0.6190476190476191
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "POSSIBLE": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "UNDECIDED": 1.0,
+     "NOT_DONE": 1.0,
+     "pronoun": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "HEARSAY": 1.0,
+     "DONE": 1.0
+    }
+   }
+  },
+  "1000|sudachi-m|raw": {
+   "bm25": {
+    "recall1": 0.945,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.9700000000000002,
+    "ndcg10": 0.977737190142858,
+    "ms": 1.5331608349970338
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.635,
+    "recall3": 0.88,
+    "recall5": 0.915,
+    "recall10": 0.97,
+    "mrr": 0.7680223733500874,
+    "ndcg10": 0.8169267146743099,
+    "retrieve_ms": 0.040276459999404324,
+    "query_embed_ms": 11.48734104000141
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.835,
+    "recall3": 0.95,
+    "recall5": 0.97,
+    "recall10": 0.985,
+    "mrr": 0.8932738095238096,
+    "ndcg10": 0.915226535216388,
+    "retrieve_ms": 0.03145687500364147,
+    "query_embed_ms": 31.893471250000403
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "POSSIBLE": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "UNDECIDED": 1.0,
+     "NOT_DONE": 1.0,
+     "pronoun": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "HEARSAY": 1.0,
+     "DONE": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "POSSIBLE": 1.0,
+     "has_subject": 0.8982035928143712,
+     "casual": 0.916083916083916,
+     "WANTED": 0.9142857142857143,
+     "omit_subject": 1.0,
+     "UNDECIDED": 0.9375,
+     "NOT_DONE": 0.9142857142857143,
+     "pronoun": 0.8,
+     "PLANNED": 0.9393939393939394,
+     "polite": 0.9122807017543859,
+     "HEARSAY": 1.0,
+     "DONE": 0.6666666666666666
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "POSSIBLE": 1.0,
+     "has_subject": 0.9640718562874252,
+     "casual": 0.9790209790209791,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "UNDECIDED": 0.9375,
+     "NOT_DONE": 0.9428571428571428,
+     "pronoun": 1.0,
+     "PLANNED": 1.0,
+     "polite": 0.9473684210526315,
+     "HEARSAY": 0.9,
+     "DONE": 1.0
+    }
+   }
+  },
+  "1000|sudachi-m|l1": {
+   "bm25": {
+    "recall1": 0.945,
+    "recall3": 0.99,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.9683333333333334,
+    "ndcg10": 0.9763893069557348,
+    "ms": 1.4070827099976668
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.55,
+    "recall3": 0.83,
+    "recall5": 0.905,
+    "recall10": 0.955,
+    "mrr": 0.7014493297718851,
+    "ndcg10": 0.7626302919829452,
+    "retrieve_ms": 0.01670833500156732,
+    "query_embed_ms": 12.098182079998878
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.835,
+    "recall3": 0.94,
+    "recall5": 0.98,
+    "recall10": 1.0,
+    "mrr": 0.8946031746031744,
+    "ndcg10": 0.9205067330445224,
+    "retrieve_ms": 0.01576187500177184,
+    "query_embed_ms": 32.79647145999661
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "POSSIBLE": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "UNDECIDED": 1.0,
+     "NOT_DONE": 1.0,
+     "pronoun": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "HEARSAY": 1.0,
+     "DONE": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "POSSIBLE": 0.9583333333333334,
+     "has_subject": 0.8922155688622755,
+     "casual": 0.9300699300699301,
+     "WANTED": 0.9714285714285714,
+     "omit_subject": 0.9696969696969697,
+     "UNDECIDED": 0.8125,
+     "NOT_DONE": 0.8285714285714286,
+     "pronoun": 0.9333333333333333,
+     "PLANNED": 0.9090909090909091,
+     "polite": 0.8421052631578947,
+     "HEARSAY": 1.0,
+     "DONE": 0.9047619047619048
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "POSSIBLE": 0.9583333333333334,
+     "has_subject": 0.9760479041916168,
+     "casual": 0.986013986013986,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "UNDECIDED": 1.0,
+     "NOT_DONE": 0.9428571428571428,
+     "pronoun": 1.0,
+     "PLANNED": 1.0,
+     "polite": 0.9649122807017544,
+     "HEARSAY": 0.95,
+     "DONE": 1.0
+    }
+   }
+  },
+  "1000|sudachi-g|raw": {
+   "bm25": {
+    "recall1": 0.95,
+    "recall3": 0.995,
+    "recall5": 0.995,
+    "recall10": 1.0,
+    "mrr": 0.971547619047619,
+    "ndcg10": 0.9787492080416675,
+    "ms": 1.4798022949980805
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.64,
+    "recall3": 0.875,
+    "recall5": 0.91,
+    "recall10": 0.985,
+    "mrr": 0.7661014704770136,
+    "ndcg10": 0.8195458157597719,
+    "retrieve_ms": 0.03499124999962078,
+    "query_embed_ms": 12.665923334998297
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.86,
+    "recall3": 0.96,
+    "recall5": 0.98,
+    "recall10": 1.0,
+    "mrr": 0.9127976190476191,
+    "ndcg10": 0.9342616647370519,
+    "retrieve_ms": 0.06847707999895647,
+    "query_embed_ms": 32.42419937500017
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "POSSIBLE": 1.0,
+     "has_subject": 0.9940119760479041,
+     "casual": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "UNDECIDED": 0.96875,
+     "NOT_DONE": 1.0,
+     "pronoun": 1.0,
+     "PLANNED": 1.0,
+     "polite": 0.9824561403508771,
+     "HEARSAY": 1.0,
+     "DONE": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "POSSIBLE": 1.0,
+     "has_subject": 0.8922155688622755,
+     "casual": 0.916083916083916,
+     "WANTED": 0.9142857142857143,
+     "omit_subject": 1.0,
+     "UNDECIDED": 0.96875,
+     "NOT_DONE": 0.8857142857142857,
+     "pronoun": 0.8,
+     "PLANNED": 0.9090909090909091,
+     "polite": 0.8947368421052632,
+     "HEARSAY": 1.0,
+     "DONE": 0.6666666666666666
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "POSSIBLE": 1.0,
+     "has_subject": 0.9760479041916168,
+     "casual": 0.986013986013986,
+     "WANTED": 0.9428571428571428,
+     "omit_subject": 1.0,
+     "UNDECIDED": 0.96875,
+     "NOT_DONE": 1.0,
+     "pronoun": 1.0,
+     "PLANNED": 1.0,
+     "polite": 0.9649122807017544,
+     "HEARSAY": 0.95,
+     "DONE": 1.0
+    }
+   }
+  },
+  "1000|sudachi-g|l1": {
+   "bm25": {
+    "recall1": 0.885,
+    "recall3": 0.94,
+    "recall5": 0.95,
+    "recall10": 1.0,
+    "mrr": 0.9184781746031746,
+    "ndcg10": 0.9375549597327466,
+    "ms": 1.3370725000004313
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.585,
+    "recall3": 0.83,
+    "recall5": 0.91,
+    "recall10": 0.97,
+    "mrr": 0.7233809885732447,
+    "ndcg10": 0.783176262737871,
+    "retrieve_ms": 0.020311249995756953,
+    "query_embed_ms": 12.12185145499916
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.735,
+    "recall3": 0.85,
+    "recall5": 0.905,
+    "recall10": 0.935,
+    "mrr": 0.8047462035948746,
+    "ndcg10": 0.8339288256975226,
+    "retrieve_ms": 0.011461875001259614,
+    "query_embed_ms": 31.748562709999533
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "POSSIBLE": 0.875,
+     "has_subject": 0.9461077844311377,
+     "casual": 0.9440559440559441,
+     "WANTED": 0.9142857142857143,
+     "omit_subject": 0.9696969696969697,
+     "UNDECIDED": 1.0,
+     "NOT_DONE": 1.0,
+     "pronoun": 1.0,
+     "PLANNED": 0.9393939393939394,
+     "polite": 0.9649122807017544,
+     "HEARSAY": 0.9,
+     "DONE": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "POSSIBLE": 0.9583333333333334,
+     "has_subject": 0.8982035928143712,
+     "casual": 0.9020979020979021,
+     "WANTED": 0.9714285714285714,
+     "omit_subject": 0.9696969696969697,
+     "UNDECIDED": 0.8125,
+     "NOT_DONE": 0.8857142857142857,
+     "pronoun": 0.8666666666666667,
+     "PLANNED": 0.9696969696969697,
+     "polite": 0.9298245614035088,
+     "HEARSAY": 0.85,
+     "DONE": 0.9047619047619048
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "POSSIBLE": 0.9166666666666666,
+     "has_subject": 0.8922155688622755,
+     "casual": 0.916083916083916,
+     "WANTED": 0.8571428571428571,
+     "omit_subject": 0.9696969696969697,
+     "UNDECIDED": 0.84375,
+     "NOT_DONE": 0.9714285714285714,
+     "pronoun": 1.0,
+     "PLANNED": 0.9090909090909091,
+     "polite": 0.8771929824561403,
+     "HEARSAY": 0.9,
+     "DONE": 0.9523809523809523
+    }
+   }
+  },
+  "1000|mecab-m|raw": {
+   "bm25": {
+    "recall1": 0.94,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.9683333333333334,
+    "ndcg10": 0.9765464876785726,
+    "ms": 1.4182664599957207
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.64,
+    "recall3": 0.88,
+    "recall5": 0.915,
+    "recall10": 0.97,
+    "mrr": 0.7704633351660491,
+    "ndcg10": 0.8186998915008439,
+    "retrieve_ms": 0.032258960000035586,
+    "query_embed_ms": 11.191658124998867
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.835,
+    "recall3": 0.95,
+    "recall5": 0.97,
+    "recall10": 0.985,
+    "mrr": 0.8940833333333335,
+    "ndcg10": 0.9158811839842452,
+    "retrieve_ms": 0.048070420002659375,
+    "query_embed_ms": 32.094465210002454
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "POSSIBLE": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "UNDECIDED": 1.0,
+     "NOT_DONE": 1.0,
+     "pronoun": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "HEARSAY": 1.0,
+     "DONE": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "POSSIBLE": 1.0,
+     "has_subject": 0.8982035928143712,
+     "casual": 0.916083916083916,
+     "WANTED": 0.9142857142857143,
+     "omit_subject": 1.0,
+     "UNDECIDED": 0.9375,
+     "NOT_DONE": 0.9142857142857143,
+     "pronoun": 0.8,
+     "PLANNED": 0.9393939393939394,
+     "polite": 0.9122807017543859,
+     "HEARSAY": 1.0,
+     "DONE": 0.6666666666666666
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "POSSIBLE": 1.0,
+     "has_subject": 0.9640718562874252,
+     "casual": 0.9790209790209791,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "UNDECIDED": 0.9375,
+     "NOT_DONE": 0.9428571428571428,
+     "pronoun": 1.0,
+     "PLANNED": 1.0,
+     "polite": 0.9473684210526315,
+     "HEARSAY": 0.9,
+     "DONE": 1.0
+    }
+   }
+  },
+  "1000|mecab-m|l1": {
+   "bm25": {
+    "recall1": 0.945,
+    "recall3": 0.99,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.9683333333333334,
+    "ndcg10": 0.9763893069557348,
+    "ms": 1.3323100000025079
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.555,
+    "recall3": 0.835,
+    "recall5": 0.905,
+    "recall10": 0.96,
+    "mrr": 0.7042164466291476,
+    "ndcg10": 0.7661082916488466,
+    "retrieve_ms": 0.009175625000352738,
+    "query_embed_ms": 12.079948125001465
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.835,
+    "recall3": 0.94,
+    "recall5": 0.98,
+    "recall10": 0.995,
+    "mrr": 0.8944642857142856,
+    "ndcg10": 0.9190015830662024,
+    "retrieve_ms": 0.01589832999798091,
+    "query_embed_ms": 32.15147396000248
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "POSSIBLE": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "UNDECIDED": 1.0,
+     "NOT_DONE": 1.0,
+     "pronoun": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "HEARSAY": 1.0,
+     "DONE": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "POSSIBLE": 0.9583333333333334,
+     "has_subject": 0.8922155688622755,
+     "casual": 0.9300699300699301,
+     "WANTED": 0.9714285714285714,
+     "omit_subject": 0.9696969696969697,
+     "UNDECIDED": 0.8125,
+     "NOT_DONE": 0.8285714285714286,
+     "pronoun": 0.9333333333333333,
+     "PLANNED": 0.9090909090909091,
+     "polite": 0.8421052631578947,
+     "HEARSAY": 1.0,
+     "DONE": 0.9047619047619048
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "POSSIBLE": 0.9583333333333334,
+     "has_subject": 0.9760479041916168,
+     "casual": 0.986013986013986,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "UNDECIDED": 1.0,
+     "NOT_DONE": 0.9428571428571428,
+     "pronoun": 1.0,
+     "PLANNED": 1.0,
+     "polite": 0.9649122807017544,
+     "HEARSAY": 0.95,
+     "DONE": 1.0
+    }
+   }
+  },
+  "1000|sudachi-p|raw": {
+   "bm25": {
+    "recall1": 0.385,
+    "recall3": 0.585,
+    "recall5": 0.65,
+    "recall10": 0.76,
+    "mrr": 0.5177220198489166,
+    "ndcg10": 0.5637954579791541,
+    "ms": 1.3593904150002345
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.64,
+    "recall3": 0.905,
+    "recall5": 0.94,
+    "recall10": 0.975,
+    "mrr": 0.7763499834433548,
+    "ndcg10": 0.8253543215659894,
+    "retrieve_ms": 0.016907499998524145,
+    "query_embed_ms": 12.598904579999726
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.875,
+    "recall3": 0.985,
+    "recall5": 0.995,
+    "recall10": 1.0,
+    "mrr": 0.9277500000000002,
+    "ndcg10": 0.9460073512438454,
+    "retrieve_ms": 0.09657749999860243,
+    "query_embed_ms": 31.940658540002005
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "POSSIBLE": 0.7083333333333334,
+     "has_subject": 0.6467065868263473,
+     "casual": 0.6643356643356644,
+     "WANTED": 0.7714285714285715,
+     "omit_subject": 0.6666666666666666,
+     "UNDECIDED": 0.53125,
+     "NOT_DONE": 0.7428571428571429,
+     "pronoun": 0.6,
+     "PLANNED": 0.6060606060606061,
+     "polite": 0.6140350877192983,
+     "HEARSAY": 0.2,
+     "DONE": 0.9047619047619048
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "POSSIBLE": 1.0,
+     "has_subject": 0.9281437125748503,
+     "casual": 0.9370629370629371,
+     "WANTED": 0.9714285714285714,
+     "omit_subject": 1.0,
+     "UNDECIDED": 0.90625,
+     "NOT_DONE": 0.9142857142857143,
+     "pronoun": 0.8,
+     "PLANNED": 1.0,
+     "polite": 0.9473684210526315,
+     "HEARSAY": 1.0,
+     "DONE": 0.7619047619047619
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "POSSIBLE": 1.0,
+     "has_subject": 0.9940119760479041,
+     "casual": 0.993006993006993,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "UNDECIDED": 0.96875,
+     "NOT_DONE": 1.0,
+     "pronoun": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "HEARSAY": 1.0,
+     "DONE": 1.0
+    }
+   }
+  },
+  "1000|sudachi-p|l1": {
+   "bm25": {
+    "recall1": 0.775,
+    "recall3": 0.95,
+    "recall5": 0.985,
+    "recall10": 0.995,
+    "mrr": 0.8650555555555556,
+    "ndcg10": 0.8974424959023293,
+    "ms": 1.4027991650027616
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.615,
+    "recall3": 0.87,
+    "recall5": 0.94,
+    "recall10": 0.975,
+    "mrr": 0.7512613956323747,
+    "ndcg10": 0.8061718139707338,
+    "retrieve_ms": 0.05209458000081213,
+    "query_embed_ms": 11.130950000001576
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.92,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.9558333333333334,
+    "ndcg10": 0.9672011364464299,
+    "retrieve_ms": 0.03715354000178195,
+    "query_embed_ms": 32.354069795001124
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "POSSIBLE": 1.0,
+     "has_subject": 0.9820359281437125,
+     "casual": 0.986013986013986,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "UNDECIDED": 0.96875,
+     "NOT_DONE": 1.0,
+     "pronoun": 0.9333333333333333,
+     "PLANNED": 1.0,
+     "polite": 0.9824561403508771,
+     "HEARSAY": 0.9,
+     "DONE": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "POSSIBLE": 0.9166666666666666,
+     "has_subject": 0.9281437125748503,
+     "casual": 0.9370629370629371,
+     "WANTED": 0.9714285714285714,
+     "omit_subject": 1.0,
+     "UNDECIDED": 0.875,
+     "NOT_DONE": 0.9428571428571428,
+     "pronoun": 0.9333333333333333,
+     "PLANNED": 0.9393939393939394,
+     "polite": 0.9473684210526315,
+     "HEARSAY": 1.0,
+     "DONE": 0.9523809523809523
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "POSSIBLE": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "UNDECIDED": 1.0,
+     "NOT_DONE": 1.0,
+     "pronoun": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "HEARSAY": 1.0,
+     "DONE": 1.0
+    }
+   }
+  },
+  "1000|ginza-d|raw": {
+   "bm25": {
+    "recall1": 0.98,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.99,
+    "ndcg10": 0.9926185950714291,
+    "ms": 1.50126999999884
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.66,
+    "recall3": 0.87,
+    "recall5": 0.92,
+    "recall10": 0.97,
+    "mrr": 0.7750749162591071,
+    "ndcg10": 0.8219324464249016,
+    "retrieve_ms": 0.056078124998748535,
+    "query_embed_ms": 12.340948749997551
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.85,
+    "recall3": 0.95,
+    "recall5": 0.98,
+    "recall10": 0.99,
+    "mrr": 0.9018131868131867,
+    "ndcg10": 0.923013821518851,
+    "retrieve_ms": 0.030434165000770008,
+    "query_embed_ms": 32.7192633300001
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "POSSIBLE": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "UNDECIDED": 1.0,
+     "NOT_DONE": 1.0,
+     "pronoun": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "HEARSAY": 1.0,
+     "DONE": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "POSSIBLE": 1.0,
+     "has_subject": 0.9041916167664671,
+     "casual": 0.916083916083916,
+     "WANTED": 0.8857142857142857,
+     "omit_subject": 1.0,
+     "UNDECIDED": 0.96875,
+     "NOT_DONE": 0.9142857142857143,
+     "pronoun": 0.9333333333333333,
+     "PLANNED": 0.9393939393939394,
+     "polite": 0.9298245614035088,
+     "HEARSAY": 1.0,
+     "DONE": 0.7142857142857143
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "POSSIBLE": 1.0,
+     "has_subject": 0.9760479041916168,
+     "casual": 0.986013986013986,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "UNDECIDED": 0.96875,
+     "NOT_DONE": 0.9714285714285714,
+     "pronoun": 1.0,
+     "PLANNED": 1.0,
+     "polite": 0.9649122807017544,
+     "HEARSAY": 0.9,
+     "DONE": 1.0
+    }
+   }
+  },
+  "1000|ginza-d|l1": {
+   "bm25": {
+    "recall1": 0.995,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.9975,
+    "ndcg10": 0.9981546487678572,
+    "ms": 1.1495474999992439
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.595,
+    "recall3": 0.82,
+    "recall5": 0.885,
+    "recall10": 0.96,
+    "mrr": 0.7229752926107911,
+    "ndcg10": 0.7791865278615109,
+    "retrieve_ms": 0.008755835001466039,
+    "query_embed_ms": 12.671346665001693
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.84,
+    "recall3": 0.945,
+    "recall5": 0.99,
+    "recall10": 1.0,
+    "mrr": 0.9002083333333332,
+    "ndcg10": 0.9249392364061485,
+    "retrieve_ms": 0.036431875000744185,
+    "query_embed_ms": 31.81096187500316
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "POSSIBLE": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "UNDECIDED": 1.0,
+     "NOT_DONE": 1.0,
+     "pronoun": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "HEARSAY": 1.0,
+     "DONE": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "POSSIBLE": 0.9583333333333334,
+     "has_subject": 0.8622754491017964,
+     "casual": 0.9090909090909091,
+     "WANTED": 0.9714285714285714,
+     "omit_subject": 1.0,
+     "UNDECIDED": 0.84375,
+     "NOT_DONE": 0.8,
+     "pronoun": 0.9333333333333333,
+     "PLANNED": 0.8484848484848485,
+     "polite": 0.8245614035087719,
+     "HEARSAY": 1.0,
+     "DONE": 0.8095238095238095
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "POSSIBLE": 1.0,
+     "has_subject": 0.9880239520958084,
+     "casual": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "UNDECIDED": 1.0,
+     "NOT_DONE": 0.9428571428571428,
+     "pronoun": 1.0,
+     "PLANNED": 1.0,
+     "polite": 0.9649122807017544,
+     "HEARSAY": 1.0,
+     "DONE": 1.0
+    }
+   }
+  },
+  "1000|naive|raw": {
+   "bm25": {
+    "recall1": 0.19,
+    "recall3": 0.195,
+    "recall5": 0.24,
+    "recall10": 0.36,
+    "mrr": 0.2459088669765951,
+    "ndcg10": 0.24855558041654402,
+    "ms": 0.12297624999973777
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.69,
+    "recall3": 0.845,
+    "recall5": 0.915,
+    "recall10": 0.94,
+    "mrr": 0.7826288743902974,
+    "ndcg10": 0.8188543062337575,
+    "retrieve_ms": 0.0445779150004455,
+    "query_embed_ms": 11.973928335000892
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.87,
+    "recall3": 0.975,
+    "recall5": 0.99,
+    "recall10": 1.0,
+    "mrr": 0.920472222222222,
+    "ndcg10": 0.940318530758717,
+    "retrieve_ms": 0.030361665003511007,
+    "query_embed_ms": 31.809360414999905
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "POSSIBLE": 0.625,
+     "has_subject": 0.2754491017964072,
+     "casual": 0.25874125874125875,
+     "WANTED": 0.34285714285714286,
+     "omit_subject": 0.06060606060606061,
+     "UNDECIDED": 0.0625,
+     "NOT_DONE": 0.4857142857142857,
+     "pronoun": 0.06666666666666667,
+     "PLANNED": 0.06060606060606061,
+     "polite": 0.19298245614035087,
+     "HEARSAY": 0.0,
+     "DONE": 0.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "POSSIBLE": 1.0,
+     "has_subject": 0.8982035928143712,
+     "casual": 0.9090909090909091,
+     "WANTED": 0.9142857142857143,
+     "omit_subject": 1.0,
+     "UNDECIDED": 0.96875,
+     "NOT_DONE": 0.9428571428571428,
+     "pronoun": 0.8,
+     "PLANNED": 0.9393939393939394,
+     "polite": 0.9298245614035088,
+     "HEARSAY": 1.0,
+     "DONE": 0.5714285714285714
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "POSSIBLE": 1.0,
+     "has_subject": 0.9880239520958084,
+     "casual": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "UNDECIDED": 1.0,
+     "NOT_DONE": 1.0,
+     "pronoun": 1.0,
+     "PLANNED": 0.9696969696969697,
+     "polite": 0.9649122807017544,
+     "HEARSAY": 1.0,
+     "DONE": 0.9523809523809523
+    }
+   }
+  },
+  "1000|naive|l1": {
+   "bm25": {
+    "recall1": 0.99,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.995,
+    "ndcg10": 0.9963092975357145,
+    "ms": 0.21008812499985652
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.705,
+    "recall3": 0.85,
+    "recall5": 0.9,
+    "recall10": 0.95,
+    "mrr": 0.7917266480879901,
+    "ndcg10": 0.8282829059225776,
+    "retrieve_ms": 0.010952705001727736,
+    "query_embed_ms": 11.356730000002244
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.855,
+    "recall3": 0.97,
+    "recall5": 0.99,
+    "recall10": 1.0,
+    "mrr": 0.9133392857142857,
+    "ndcg10": 0.9350483137572483,
+    "retrieve_ms": 0.02727270500145096,
+    "query_embed_ms": 32.19634708000285
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "POSSIBLE": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "UNDECIDED": 1.0,
+     "NOT_DONE": 1.0,
+     "pronoun": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "HEARSAY": 1.0,
+     "DONE": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "POSSIBLE": 1.0,
+     "has_subject": 0.8802395209580839,
+     "casual": 0.8951048951048951,
+     "WANTED": 0.8857142857142857,
+     "omit_subject": 1.0,
+     "UNDECIDED": 0.96875,
+     "NOT_DONE": 0.9428571428571428,
+     "pronoun": 0.8,
+     "PLANNED": 0.8787878787878788,
+     "polite": 0.9122807017543859,
+     "HEARSAY": 0.95,
+     "DONE": 0.6190476190476191
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "POSSIBLE": 1.0,
+     "has_subject": 0.9880239520958084,
+     "casual": 1.0,
+     "WANTED": 1.0,
+     "omit_subject": 1.0,
+     "UNDECIDED": 1.0,
+     "NOT_DONE": 1.0,
+     "pronoun": 1.0,
+     "PLANNED": 0.9696969696969697,
+     "polite": 0.9649122807017544,
+     "HEARSAY": 1.0,
+     "DONE": 0.9523809523809523
+    }
+   }
+  },
+  "5000|L0|raw": {
+   "bm25": {
+    "recall1": 0.615,
+    "recall3": 0.8,
+    "recall5": 0.89,
+    "recall10": 0.94,
+    "mrr": 0.7282231512178089,
+    "ndcg10": 0.7771899967844454,
+    "ms": 20.87238853999679
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.32,
+    "recall3": 0.515,
+    "recall5": 0.635,
+    "recall10": 0.74,
+    "mrr": 0.458336700734922,
+    "ndcg10": 0.5174960532465949,
+    "retrieve_ms": 0.06736604000252555,
+    "query_embed_ms": 12.980925000001662
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.855,
+    "recall3": 0.965,
+    "recall5": 0.98,
+    "recall10": 0.995,
+    "mrr": 0.9089545454545456,
+    "ndcg10": 0.9300945714056716,
+    "retrieve_ms": 0.08355124999980035,
+    "query_embed_ms": 31.785730000001422
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "DONE": 1.0,
+     "has_subject": 0.8823529411764706,
+     "casual": 0.8978102189781022,
+     "POSSIBLE": 0.9642857142857143,
+     "omit_subject": 0.9333333333333333,
+     "polite": 0.873015873015873,
+     "UNDECIDED": 0.6451612903225806,
+     "HEARSAY": 0.7857142857142857,
+     "NOT_DONE": 1.0,
+     "pronoun": 1.0,
+     "PLANNED": 0.8709677419354839,
+     "WANTED": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "DONE": 0.29411764705882354,
+     "has_subject": 0.6294117647058823,
+     "casual": 0.6496350364963503,
+     "POSSIBLE": 0.7857142857142857,
+     "omit_subject": 0.6666666666666666,
+     "polite": 0.6031746031746031,
+     "UNDECIDED": 0.7096774193548387,
+     "HEARSAY": 0.5,
+     "NOT_DONE": 0.8846153846153846,
+     "pronoun": 0.6666666666666666,
+     "PLANNED": 0.5161290322580645,
+     "WANTED": 0.9090909090909091
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "DONE": 0.9117647058823529,
+     "has_subject": 0.9764705882352941,
+     "casual": 0.9927007299270073,
+     "POSSIBLE": 0.9642857142857143,
+     "omit_subject": 1.0,
+     "polite": 0.9523809523809523,
+     "UNDECIDED": 1.0,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0,
+     "pronoun": 1.0,
+     "PLANNED": 1.0,
+     "WANTED": 1.0
+    }
+   }
+  },
+  "5000|sudachi-m|raw": {
+   "bm25": {
+    "recall1": 0.87,
+    "recall3": 0.96,
+    "recall5": 0.975,
+    "recall10": 1.0,
+    "mrr": 0.9131031746031745,
+    "ndcg10": 0.9343384954435143,
+    "ms": 5.513815834997331
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.33,
+    "recall3": 0.58,
+    "recall5": 0.675,
+    "recall10": 0.83,
+    "mrr": 0.49032601264792175,
+    "ndcg10": 0.567302199492997,
+    "retrieve_ms": 0.09393021000050794,
+    "query_embed_ms": 11.5024668749993
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.71,
+    "recall3": 0.81,
+    "recall5": 0.855,
+    "recall10": 0.92,
+    "mrr": 0.7762535626500207,
+    "ndcg10": 0.8078532395021688,
+    "retrieve_ms": 0.06320478999896295,
+    "query_embed_ms": 31.831935834998145
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "DONE": 1.0,
+     "has_subject": 0.9764705882352941,
+     "casual": 0.9635036496350365,
+     "POSSIBLE": 1.0,
+     "omit_subject": 0.9666666666666667,
+     "polite": 1.0,
+     "UNDECIDED": 0.8387096774193549,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0,
+     "pronoun": 1.0,
+     "PLANNED": 1.0,
+     "WANTED": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "DONE": 0.35294117647058826,
+     "has_subject": 0.6705882352941176,
+     "casual": 0.6715328467153284,
+     "POSSIBLE": 0.7142857142857143,
+     "omit_subject": 0.7,
+     "polite": 0.6825396825396826,
+     "UNDECIDED": 0.5806451612903226,
+     "HEARSAY": 0.8571428571428571,
+     "NOT_DONE": 0.7692307692307693,
+     "pronoun": 0.6111111111111112,
+     "PLANNED": 0.6774193548387096,
+     "WANTED": 0.9090909090909091
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "DONE": 0.9117647058823529,
+     "has_subject": 0.8294117647058824,
+     "casual": 0.8613138686131386,
+     "POSSIBLE": 0.9285714285714286,
+     "omit_subject": 1.0,
+     "polite": 0.8412698412698413,
+     "UNDECIDED": 0.7741935483870968,
+     "HEARSAY": 0.75,
+     "NOT_DONE": 0.8461538461538461,
+     "pronoun": 1.0,
+     "PLANNED": 0.8387096774193549,
+     "WANTED": 0.9545454545454546
+    }
+   }
+  },
+  "5000|sudachi-m|l1": {
+   "bm25": {
+    "recall1": 0.84,
+    "recall3": 0.945,
+    "recall5": 0.97,
+    "recall10": 0.995,
+    "mrr": 0.8918970057720057,
+    "ndcg10": 0.9166982402310895,
+    "ms": 5.946627084999818
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.265,
+    "recall3": 0.495,
+    "recall5": 0.565,
+    "recall10": 0.725,
+    "mrr": 0.41717257108454137,
+    "ndcg10": 0.4822073662344132,
+    "retrieve_ms": 0.0492889599991031,
+    "query_embed_ms": 13.694668544999331
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.74,
+    "recall3": 0.785,
+    "recall5": 0.825,
+    "recall10": 0.91,
+    "mrr": 0.7854764767911824,
+    "ndcg10": 0.8105474792682604,
+    "retrieve_ms": 0.06554000000051019,
+    "query_embed_ms": 32.131921664999936
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "DONE": 1.0,
+     "has_subject": 0.9705882352941176,
+     "casual": 0.9708029197080292,
+     "POSSIBLE": 1.0,
+     "omit_subject": 0.9666666666666667,
+     "polite": 0.9682539682539683,
+     "UNDECIDED": 0.8064516129032258,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0,
+     "pronoun": 1.0,
+     "PLANNED": 1.0,
+     "WANTED": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "DONE": 0.4117647058823529,
+     "has_subject": 0.5294117647058824,
+     "casual": 0.5620437956204379,
+     "POSSIBLE": 0.6785714285714286,
+     "omit_subject": 0.7666666666666667,
+     "polite": 0.5714285714285714,
+     "UNDECIDED": 0.25806451612903225,
+     "HEARSAY": 0.75,
+     "NOT_DONE": 0.7307692307692307,
+     "pronoun": 0.6666666666666666,
+     "PLANNED": 0.3870967741935484,
+     "WANTED": 0.9090909090909091
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "DONE": 0.8529411764705882,
+     "has_subject": 0.7941176470588235,
+     "casual": 0.8540145985401459,
+     "POSSIBLE": 0.9642857142857143,
+     "omit_subject": 1.0,
+     "polite": 0.7619047619047619,
+     "UNDECIDED": 0.7741935483870968,
+     "HEARSAY": 0.6785714285714286,
+     "NOT_DONE": 0.8461538461538461,
+     "pronoun": 1.0,
+     "PLANNED": 0.7741935483870968,
+     "WANTED": 0.9090909090909091
+    }
+   }
+  },
+  "5000|sudachi-g|raw": {
+   "bm25": {
+    "recall1": 0.825,
+    "recall3": 0.94,
+    "recall5": 0.975,
+    "recall10": 0.99,
+    "mrr": 0.8877272845275184,
+    "ndcg10": 0.9126897438671538,
+    "ms": 5.750053124997976
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.315,
+    "recall3": 0.595,
+    "recall5": 0.71,
+    "recall10": 0.815,
+    "mrr": 0.48625693260248426,
+    "ndcg10": 0.5610070286648048,
+    "retrieve_ms": 0.08461145499950362,
+    "query_embed_ms": 13.18654250000236
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.68,
+    "recall3": 0.83,
+    "recall5": 0.86,
+    "recall10": 0.93,
+    "mrr": 0.7735979023216926,
+    "ndcg10": 0.8083554535179751,
+    "retrieve_ms": 0.05258916999991925,
+    "query_embed_ms": 32.15582458500194
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "DONE": 1.0,
+     "has_subject": 0.9705882352941176,
+     "casual": 0.9635036496350365,
+     "POSSIBLE": 1.0,
+     "omit_subject": 1.0,
+     "polite": 1.0,
+     "UNDECIDED": 0.8709677419354839,
+     "HEARSAY": 0.9642857142857143,
+     "NOT_DONE": 1.0,
+     "pronoun": 1.0,
+     "PLANNED": 1.0,
+     "WANTED": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "DONE": 0.4411764705882353,
+     "has_subject": 0.7176470588235294,
+     "casual": 0.7226277372262774,
+     "POSSIBLE": 0.7857142857142857,
+     "omit_subject": 0.6666666666666666,
+     "polite": 0.6825396825396826,
+     "UNDECIDED": 0.7419354838709677,
+     "HEARSAY": 0.8571428571428571,
+     "NOT_DONE": 0.7692307692307693,
+     "pronoun": 0.7222222222222222,
+     "PLANNED": 0.5483870967741935,
+     "WANTED": 0.9545454545454546
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "DONE": 0.9117647058823529,
+     "has_subject": 0.8352941176470589,
+     "casual": 0.8759124087591241,
+     "POSSIBLE": 0.8928571428571429,
+     "omit_subject": 1.0,
+     "polite": 0.8253968253968254,
+     "UNDECIDED": 0.8387096774193549,
+     "HEARSAY": 0.7142857142857143,
+     "NOT_DONE": 0.8846153846153846,
+     "pronoun": 0.9444444444444444,
+     "PLANNED": 0.8709677419354839,
+     "WANTED": 0.9090909090909091
+    }
+   }
+  },
+  "5000|sudachi-g|l1": {
+   "bm25": {
+    "recall1": 0.85,
+    "recall3": 0.92,
+    "recall5": 0.93,
+    "recall10": 0.955,
+    "mrr": 0.8875689221385357,
+    "ndcg10": 0.9029097120457306,
+    "ms": 5.5704058349965635
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.3,
+    "recall3": 0.53,
+    "recall5": 0.625,
+    "recall10": 0.74,
+    "mrr": 0.4481939077279356,
+    "ndcg10": 0.510074185110076,
+    "retrieve_ms": 0.06563562500105036,
+    "query_embed_ms": 12.24875562500074
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.555,
+    "recall3": 0.685,
+    "recall5": 0.73,
+    "recall10": 0.8,
+    "mrr": 0.6414756430627679,
+    "ndcg10": 0.6738036481785629,
+    "retrieve_ms": 0.05864604000180407,
+    "query_embed_ms": 31.657261665000075
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "DONE": 0.9705882352941176,
+     "has_subject": 0.9352941176470588,
+     "casual": 0.9197080291970803,
+     "POSSIBLE": 0.9285714285714286,
+     "omit_subject": 0.9,
+     "polite": 0.9523809523809523,
+     "UNDECIDED": 0.8387096774193549,
+     "HEARSAY": 0.9285714285714286,
+     "NOT_DONE": 1.0,
+     "pronoun": 0.8888888888888888,
+     "PLANNED": 0.9032258064516129,
+     "WANTED": 0.9545454545454546
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "DONE": 0.5588235294117647,
+     "has_subject": 0.6176470588235294,
+     "casual": 0.6131386861313869,
+     "POSSIBLE": 0.75,
+     "omit_subject": 0.6666666666666666,
+     "polite": 0.6507936507936508,
+     "UNDECIDED": 0.41935483870967744,
+     "HEARSAY": 0.5357142857142857,
+     "NOT_DONE": 0.8076923076923077,
+     "pronoun": 0.6111111111111112,
+     "PLANNED": 0.4838709677419355,
+     "WANTED": 0.9545454545454546
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "DONE": 0.6470588235294118,
+     "has_subject": 0.7,
+     "casual": 0.7299270072992701,
+     "POSSIBLE": 0.8571428571428571,
+     "omit_subject": 0.9,
+     "polite": 0.7301587301587301,
+     "UNDECIDED": 0.5806451612903226,
+     "HEARSAY": 0.6071428571428571,
+     "NOT_DONE": 0.8461538461538461,
+     "pronoun": 0.9444444444444444,
+     "PLANNED": 0.7741935483870968,
+     "WANTED": 0.8636363636363636
+    }
+   }
+  },
+  "5000|mecab-m|raw": {
+   "bm25": {
+    "recall1": 0.84,
+    "recall3": 0.96,
+    "recall5": 0.98,
+    "recall10": 1.0,
+    "mrr": 0.8968531746031746,
+    "ndcg10": 0.9223294373697702,
+    "ms": 5.684111454997947
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.33,
+    "recall3": 0.58,
+    "recall5": 0.675,
+    "recall10": 0.83,
+    "mrr": 0.4913701354571633,
+    "ndcg10": 0.568116141168318,
+    "retrieve_ms": 0.07849771000110195,
+    "query_embed_ms": 12.717867290002687
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.715,
+    "recall3": 0.795,
+    "recall5": 0.85,
+    "recall10": 0.925,
+    "mrr": 0.7778792027927426,
+    "ndcg10": 0.8102816156647116,
+    "retrieve_ms": 0.06483104499693582,
+    "query_embed_ms": 32.56131624999853
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "DONE": 1.0,
+     "has_subject": 0.9823529411764705,
+     "casual": 0.9708029197080292,
+     "POSSIBLE": 1.0,
+     "omit_subject": 0.9666666666666667,
+     "polite": 1.0,
+     "UNDECIDED": 0.8709677419354839,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0,
+     "pronoun": 1.0,
+     "PLANNED": 1.0,
+     "WANTED": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "DONE": 0.35294117647058826,
+     "has_subject": 0.6705882352941176,
+     "casual": 0.6715328467153284,
+     "POSSIBLE": 0.7142857142857143,
+     "omit_subject": 0.7,
+     "polite": 0.6825396825396826,
+     "UNDECIDED": 0.5806451612903226,
+     "HEARSAY": 0.8571428571428571,
+     "NOT_DONE": 0.7692307692307693,
+     "pronoun": 0.6111111111111112,
+     "PLANNED": 0.6774193548387096,
+     "WANTED": 0.9090909090909091
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "DONE": 0.8823529411764706,
+     "has_subject": 0.8235294117647058,
+     "casual": 0.8613138686131386,
+     "POSSIBLE": 0.9642857142857143,
+     "omit_subject": 1.0,
+     "polite": 0.8253968253968254,
+     "UNDECIDED": 0.7741935483870968,
+     "HEARSAY": 0.75,
+     "NOT_DONE": 0.8461538461538461,
+     "pronoun": 1.0,
+     "PLANNED": 0.8064516129032258,
+     "WANTED": 0.9545454545454546
+    }
+   }
+  },
+  "5000|mecab-m|l1": {
+   "bm25": {
+    "recall1": 0.84,
+    "recall3": 0.945,
+    "recall5": 0.97,
+    "recall10": 0.995,
+    "mrr": 0.8911448412698413,
+    "ndcg10": 0.9161579607321058,
+    "ms": 5.848339374997522
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.265,
+    "recall3": 0.495,
+    "recall5": 0.565,
+    "recall10": 0.725,
+    "mrr": 0.41825156254180007,
+    "ndcg10": 0.48286201500227044,
+    "retrieve_ms": 0.054616874999737774,
+    "query_embed_ms": 11.592487084999448
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.74,
+    "recall3": 0.785,
+    "recall5": 0.825,
+    "recall10": 0.915,
+    "mrr": 0.7861371115977893,
+    "ndcg10": 0.8124459643969786,
+    "retrieve_ms": 0.05383958500260633,
+    "query_embed_ms": 32.04630229000031
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "DONE": 1.0,
+     "has_subject": 0.9705882352941176,
+     "casual": 0.9708029197080292,
+     "POSSIBLE": 1.0,
+     "omit_subject": 0.9666666666666667,
+     "polite": 0.9682539682539683,
+     "UNDECIDED": 0.8064516129032258,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0,
+     "pronoun": 1.0,
+     "PLANNED": 1.0,
+     "WANTED": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "DONE": 0.4117647058823529,
+     "has_subject": 0.5294117647058824,
+     "casual": 0.5620437956204379,
+     "POSSIBLE": 0.6785714285714286,
+     "omit_subject": 0.7666666666666667,
+     "polite": 0.5714285714285714,
+     "UNDECIDED": 0.25806451612903225,
+     "HEARSAY": 0.75,
+     "NOT_DONE": 0.7307692307692307,
+     "pronoun": 0.6666666666666666,
+     "PLANNED": 0.3870967741935484,
+     "WANTED": 0.9090909090909091
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "DONE": 0.8529411764705882,
+     "has_subject": 0.7941176470588235,
+     "casual": 0.8540145985401459,
+     "POSSIBLE": 0.9642857142857143,
+     "omit_subject": 1.0,
+     "polite": 0.7619047619047619,
+     "UNDECIDED": 0.7741935483870968,
+     "HEARSAY": 0.6785714285714286,
+     "NOT_DONE": 0.8461538461538461,
+     "pronoun": 1.0,
+     "PLANNED": 0.7741935483870968,
+     "WANTED": 0.9090909090909091
+    }
+   }
+  },
+  "5000|sudachi-p|raw": {
+   "bm25": {
+    "recall1": 0.165,
+    "recall3": 0.295,
+    "recall5": 0.365,
+    "recall10": 0.515,
+    "mrr": 0.2730688742881135,
+    "ndcg10": 0.3163783369379693,
+    "ms": 5.134278124996854
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.33,
+    "recall3": 0.575,
+    "recall5": 0.7,
+    "recall10": 0.79,
+    "mrr": 0.48845215163974637,
+    "ndcg10": 0.5543494266051404,
+    "retrieve_ms": 0.0617731249985809,
+    "query_embed_ms": 12.449748125000042
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.72,
+    "recall3": 0.87,
+    "recall5": 0.915,
+    "recall10": 0.965,
+    "mrr": 0.8042453519738967,
+    "ndcg10": 0.84179383181717,
+    "retrieve_ms": 0.05572437499722582,
+    "query_embed_ms": 32.79644208500031
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "DONE": 0.6176470588235294,
+     "has_subject": 0.34705882352941175,
+     "casual": 0.4233576642335766,
+     "POSSIBLE": 0.4642857142857143,
+     "omit_subject": 0.4666666666666667,
+     "polite": 0.23809523809523808,
+     "UNDECIDED": 0.12903225806451613,
+     "HEARSAY": 0.17857142857142858,
+     "NOT_DONE": 0.34615384615384615,
+     "pronoun": 0.16666666666666666,
+     "PLANNED": 0.3225806451612903,
+     "WANTED": 0.5
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "DONE": 0.35294117647058826,
+     "has_subject": 0.7,
+     "casual": 0.6861313868613139,
+     "POSSIBLE": 0.7857142857142857,
+     "omit_subject": 0.7,
+     "polite": 0.7301587301587301,
+     "UNDECIDED": 0.6451612903225806,
+     "HEARSAY": 0.8214285714285714,
+     "NOT_DONE": 0.8846153846153846,
+     "pronoun": 0.6111111111111112,
+     "PLANNED": 0.6451612903225806,
+     "WANTED": 0.9090909090909091
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "DONE": 0.9117647058823529,
+     "has_subject": 0.9058823529411765,
+     "casual": 0.927007299270073,
+     "POSSIBLE": 0.9642857142857143,
+     "omit_subject": 0.9666666666666667,
+     "polite": 0.8888888888888888,
+     "UNDECIDED": 0.8387096774193549,
+     "HEARSAY": 0.8571428571428571,
+     "NOT_DONE": 0.9230769230769231,
+     "pronoun": 1.0,
+     "PLANNED": 1.0,
+     "WANTED": 0.9090909090909091
+    }
+   }
+  },
+  "5000|sudachi-p|l1": {
+   "bm25": {
+    "recall1": 0.485,
+    "recall3": 0.665,
+    "recall5": 0.84,
+    "recall10": 0.965,
+    "mrr": 0.6152919978019369,
+    "ndcg10": 0.697510193479402,
+    "ms": 5.791967499999373
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.32,
+    "recall3": 0.545,
+    "recall5": 0.615,
+    "recall10": 0.77,
+    "mrr": 0.4663847777228103,
+    "ndcg10": 0.5314443748083344,
+    "retrieve_ms": 0.03871437500038155,
+    "query_embed_ms": 11.760647500000232
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.76,
+    "recall3": 0.86,
+    "recall5": 0.9,
+    "recall10": 0.975,
+    "mrr": 0.8238745659358564,
+    "ndcg10": 0.858612232371234,
+    "retrieve_ms": 0.06632208499922854,
+    "query_embed_ms": 32.081285829999615
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "DONE": 0.8823529411764706,
+     "has_subject": 0.8647058823529412,
+     "casual": 0.8540145985401459,
+     "POSSIBLE": 0.9642857142857143,
+     "omit_subject": 0.7,
+     "polite": 0.8095238095238095,
+     "UNDECIDED": 0.7741935483870968,
+     "HEARSAY": 0.5357142857142857,
+     "NOT_DONE": 0.9230769230769231,
+     "pronoun": 0.5555555555555556,
+     "PLANNED": 0.9032258064516129,
+     "WANTED": 0.9090909090909091
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "DONE": 0.35294117647058826,
+     "has_subject": 0.5941176470588235,
+     "casual": 0.6058394160583942,
+     "POSSIBLE": 0.7142857142857143,
+     "omit_subject": 0.7333333333333333,
+     "polite": 0.6349206349206349,
+     "UNDECIDED": 0.4838709677419355,
+     "HEARSAY": 0.7857142857142857,
+     "NOT_DONE": 0.8076923076923077,
+     "pronoun": 0.7222222222222222,
+     "PLANNED": 0.41935483870967744,
+     "WANTED": 0.9090909090909091
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "DONE": 0.8823529411764706,
+     "has_subject": 0.8823529411764706,
+     "casual": 0.9124087591240876,
+     "POSSIBLE": 0.9642857142857143,
+     "omit_subject": 1.0,
+     "polite": 0.873015873015873,
+     "UNDECIDED": 0.8064516129032258,
+     "HEARSAY": 0.8214285714285714,
+     "NOT_DONE": 0.9230769230769231,
+     "pronoun": 1.0,
+     "PLANNED": 0.967741935483871,
+     "WANTED": 0.9545454545454546
+    }
+   }
+  },
+  "5000|ginza-d|raw": {
+   "bm25": {
+    "recall1": 0.9,
+    "recall3": 0.985,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.9437500000000001,
+    "ndcg10": 0.9581252311211026,
+    "ms": 5.605237079998915
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.35,
+    "recall3": 0.595,
+    "recall5": 0.67,
+    "recall10": 0.795,
+    "mrr": 0.4986817381776008,
+    "ndcg10": 0.5639878350473231,
+    "retrieve_ms": 0.05561582999689563,
+    "query_embed_ms": 11.880168334996597
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.705,
+    "recall3": 0.8,
+    "recall5": 0.855,
+    "recall10": 0.92,
+    "mrr": 0.7723586074609929,
+    "ndcg10": 0.8039631614517814,
+    "retrieve_ms": 0.08155375000114873,
+    "query_embed_ms": 32.57253708499775
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "DONE": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "POSSIBLE": 1.0,
+     "omit_subject": 1.0,
+     "polite": 1.0,
+     "UNDECIDED": 1.0,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0,
+     "pronoun": 1.0,
+     "PLANNED": 1.0,
+     "WANTED": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "DONE": 0.35294117647058826,
+     "has_subject": 0.6764705882352942,
+     "casual": 0.6642335766423357,
+     "POSSIBLE": 0.6071428571428571,
+     "omit_subject": 0.6333333333333333,
+     "polite": 0.6825396825396826,
+     "UNDECIDED": 0.7096774193548387,
+     "HEARSAY": 0.8214285714285714,
+     "NOT_DONE": 0.7307692307692307,
+     "pronoun": 0.5555555555555556,
+     "PLANNED": 0.6774193548387096,
+     "WANTED": 0.9090909090909091
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "DONE": 0.9411764705882353,
+     "has_subject": 0.8352941176470589,
+     "casual": 0.8686131386861314,
+     "POSSIBLE": 0.9642857142857143,
+     "omit_subject": 0.9666666666666667,
+     "polite": 0.8253968253968254,
+     "UNDECIDED": 0.7741935483870968,
+     "HEARSAY": 0.7857142857142857,
+     "NOT_DONE": 0.8076923076923077,
+     "pronoun": 1.0,
+     "PLANNED": 0.8387096774193549,
+     "WANTED": 0.8636363636363636
+    }
+   }
+  },
+  "5000|ginza-d|l1": {
+   "bm25": {
+    "recall1": 0.955,
+    "recall3": 0.99,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.9733333333333334,
+    "ndcg10": 0.9800800094200203,
+    "ms": 5.79701812499934
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.27,
+    "recall3": 0.48,
+    "recall5": 0.625,
+    "recall10": 0.745,
+    "mrr": 0.4231735804906061,
+    "ndcg10": 0.493013626535175,
+    "retrieve_ms": 0.05505583500053035,
+    "query_embed_ms": 12.378696665000462
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.745,
+    "recall3": 0.805,
+    "recall5": 0.87,
+    "recall10": 0.945,
+    "mrr": 0.7998569379403024,
+    "ndcg10": 0.8316196352682624,
+    "retrieve_ms": 0.07223687499845255,
+    "query_embed_ms": 31.81899707999946
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "DONE": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "POSSIBLE": 1.0,
+     "omit_subject": 1.0,
+     "polite": 1.0,
+     "UNDECIDED": 1.0,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0,
+     "pronoun": 1.0,
+     "PLANNED": 1.0,
+     "WANTED": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "DONE": 0.38235294117647056,
+     "has_subject": 0.6,
+     "casual": 0.6058394160583942,
+     "POSSIBLE": 0.6428571428571429,
+     "omit_subject": 0.7666666666666667,
+     "polite": 0.6666666666666666,
+     "UNDECIDED": 0.45161290322580644,
+     "HEARSAY": 0.8214285714285714,
+     "NOT_DONE": 0.8076923076923077,
+     "pronoun": 0.7777777777777778,
+     "PLANNED": 0.4838709677419355,
+     "WANTED": 0.9545454545454546
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "DONE": 0.8823529411764706,
+     "has_subject": 0.8470588235294118,
+     "casual": 0.8978102189781022,
+     "POSSIBLE": 0.9642857142857143,
+     "omit_subject": 1.0,
+     "polite": 0.8095238095238095,
+     "UNDECIDED": 0.9032258064516129,
+     "HEARSAY": 0.7857142857142857,
+     "NOT_DONE": 0.8076923076923077,
+     "pronoun": 1.0,
+     "PLANNED": 0.8387096774193549,
+     "WANTED": 0.9090909090909091
+    }
+   }
+  },
+  "5000|naive|raw": {
+   "bm25": {
+    "recall1": 0.17,
+    "recall3": 0.17,
+    "recall5": 0.17,
+    "recall10": 0.17,
+    "mrr": 0.1790887099753192,
+    "ndcg10": 0.17,
+    "ms": 0.5204260399978011
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.415,
+    "recall3": 0.6,
+    "recall5": 0.7,
+    "recall10": 0.76,
+    "mrr": 0.531986433724087,
+    "ndcg10": 0.5805649904119996,
+    "retrieve_ms": 0.062017085001571104,
+    "query_embed_ms": 12.619023960000959
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.725,
+    "recall3": 0.83,
+    "recall5": 0.86,
+    "recall10": 0.945,
+    "mrr": 0.7952500234254729,
+    "ndcg10": 0.8280946459145491,
+    "retrieve_ms": 0.05811666499994317,
+    "query_embed_ms": 32.06190895999953
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "DONE": 0.0,
+     "has_subject": 0.2,
+     "casual": 0.20437956204379562,
+     "POSSIBLE": 0.5,
+     "omit_subject": 0.0,
+     "polite": 0.09523809523809523,
+     "UNDECIDED": 0.0,
+     "HEARSAY": 0.0,
+     "NOT_DONE": 0.4230769230769231,
+     "pronoun": 0.0,
+     "PLANNED": 0.0,
+     "WANTED": 0.4090909090909091
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "DONE": 0.38235294117647056,
+     "has_subject": 0.6941176470588235,
+     "casual": 0.7226277372262774,
+     "POSSIBLE": 0.8214285714285714,
+     "omit_subject": 0.7333333333333333,
+     "polite": 0.6507936507936508,
+     "UNDECIDED": 0.7741935483870968,
+     "HEARSAY": 0.7857142857142857,
+     "NOT_DONE": 0.8076923076923077,
+     "pronoun": 0.5555555555555556,
+     "PLANNED": 0.5483870967741935,
+     "WANTED": 0.9090909090909091
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "DONE": 0.8823529411764706,
+     "has_subject": 0.8352941176470589,
+     "casual": 0.8686131386861314,
+     "POSSIBLE": 0.8928571428571429,
+     "omit_subject": 1.0,
+     "polite": 0.8412698412698413,
+     "UNDECIDED": 0.7741935483870968,
+     "HEARSAY": 0.7857142857142857,
+     "NOT_DONE": 0.8846153846153846,
+     "pronoun": 0.9444444444444444,
+     "PLANNED": 0.8709677419354839,
+     "WANTED": 0.9545454545454546
+    }
+   }
+  },
+  "5000|naive|l1": {
+   "bm25": {
+    "recall1": 0.945,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.9700000000000002,
+    "ndcg10": 0.9777371901428582,
+    "ms": 0.8358904199985773
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.44,
+    "recall3": 0.63,
+    "recall5": 0.665,
+    "recall10": 0.73,
+    "mrr": 0.5505820237208541,
+    "ndcg10": 0.5854919320785293,
+    "retrieve_ms": 0.04237500000272121,
+    "query_embed_ms": 10.200730834999376
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.73,
+    "recall3": 0.82,
+    "recall5": 0.855,
+    "recall10": 0.945,
+    "mrr": 0.790676897491374,
+    "ndcg10": 0.8251591718287049,
+    "retrieve_ms": 0.11238062500069645,
+    "query_embed_ms": 31.605339999996428
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "DONE": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "POSSIBLE": 1.0,
+     "omit_subject": 1.0,
+     "polite": 1.0,
+     "UNDECIDED": 1.0,
+     "HEARSAY": 1.0,
+     "NOT_DONE": 1.0,
+     "pronoun": 1.0,
+     "PLANNED": 1.0,
+     "WANTED": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "DONE": 0.29411764705882354,
+     "has_subject": 0.6588235294117647,
+     "casual": 0.6861313868613139,
+     "POSSIBLE": 0.8928571428571429,
+     "omit_subject": 0.7,
+     "polite": 0.6190476190476191,
+     "UNDECIDED": 0.7096774193548387,
+     "HEARSAY": 0.6785714285714286,
+     "NOT_DONE": 0.8846153846153846,
+     "pronoun": 0.6666666666666666,
+     "PLANNED": 0.4838709677419355,
+     "WANTED": 0.8636363636363636
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "DONE": 0.8529411764705882,
+     "has_subject": 0.8294117647058824,
+     "casual": 0.8759124087591241,
+     "POSSIBLE": 0.8928571428571429,
+     "omit_subject": 1.0,
+     "polite": 0.8095238095238095,
+     "UNDECIDED": 0.8387096774193549,
+     "HEARSAY": 0.8214285714285714,
+     "NOT_DONE": 0.8846153846153846,
+     "pronoun": 1.0,
+     "PLANNED": 0.8064516129032258,
+     "WANTED": 0.9090909090909091
+    }
+   }
+  },
+  "10000|L0|raw": {
+   "bm25": {
+    "recall1": 0.465,
+    "recall3": 0.585,
+    "recall5": 0.72,
+    "recall10": 0.88,
+    "mrr": 0.5731637366162495,
+    "ndcg10": 0.6409744026281712,
+    "ms": 43.013128335001056
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.235,
+    "recall3": 0.42,
+    "recall5": 0.515,
+    "recall10": 0.625,
+    "mrr": 0.3645250302470421,
+    "ndcg10": 0.4155294105626174,
+    "retrieve_ms": 0.11960917000124027,
+    "query_embed_ms": 13.292105625000659
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.79,
+    "recall3": 0.91,
+    "recall5": 0.935,
+    "recall10": 0.985,
+    "mrr": 0.8575311355311354,
+    "ndcg10": 0.8877286611414982,
+    "retrieve_ms": 0.12934146000134206,
+    "query_embed_ms": 32.37780874999771
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "UNDECIDED": 0.24390243902439024,
+     "has_subject": 0.7,
+     "casual": 0.7404580152671756,
+     "HEARSAY": 0.5806451612903226,
+     "POSSIBLE": 0.7083333333333334,
+     "pronoun": 0.7727272727272727,
+     "NOT_DONE": 0.9230769230769231,
+     "DONE": 0.9696969696969697,
+     "omit_subject": 0.8333333333333334,
+     "PLANNED": 0.92,
+     "polite": 0.6811594202898551,
+     "WANTED": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "UNDECIDED": 0.6341463414634146,
+     "has_subject": 0.5176470588235295,
+     "casual": 0.5343511450381679,
+     "HEARSAY": 0.2903225806451613,
+     "POSSIBLE": 0.5833333333333334,
+     "pronoun": 0.3181818181818182,
+     "NOT_DONE": 0.9230769230769231,
+     "DONE": 0.2727272727272727,
+     "omit_subject": 0.5,
+     "PLANNED": 0.36,
+     "polite": 0.4782608695652174,
+     "WANTED": 0.6
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "UNDECIDED": 0.926829268292683,
+     "has_subject": 0.9235294117647059,
+     "casual": 0.9389312977099237,
+     "HEARSAY": 1.0,
+     "POSSIBLE": 0.75,
+     "pronoun": 1.0,
+     "NOT_DONE": 1.0,
+     "DONE": 0.9393939393939394,
+     "omit_subject": 1.0,
+     "PLANNED": 0.96,
+     "polite": 0.927536231884058,
+     "WANTED": 0.95
+    }
+   }
+  },
+  "10000|sudachi-m|raw": {
+   "bm25": {
+    "recall1": 0.795,
+    "recall3": 0.87,
+    "recall5": 0.935,
+    "recall10": 0.99,
+    "mrr": 0.8520648656898657,
+    "ndcg10": 0.8842466623568866,
+    "ms": 10.952418329998181
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.26,
+    "recall3": 0.49,
+    "recall5": 0.605,
+    "recall10": 0.695,
+    "mrr": 0.41167665335431797,
+    "ndcg10": 0.4728643054830391,
+    "retrieve_ms": 0.07637521000106062,
+    "query_embed_ms": 12.772782919996644
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.67,
+    "recall3": 0.76,
+    "recall5": 0.82,
+    "recall10": 0.87,
+    "mrr": 0.7376164793578158,
+    "ndcg10": 0.764795230443585,
+    "retrieve_ms": 0.10718958000325074,
+    "query_embed_ms": 31.8141270849992
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "UNDECIDED": 0.7317073170731707,
+     "has_subject": 0.9235294117647059,
+     "casual": 0.9007633587786259,
+     "HEARSAY": 0.967741935483871,
+     "POSSIBLE": 1.0,
+     "pronoun": 0.9090909090909091,
+     "NOT_DONE": 1.0,
+     "DONE": 1.0,
+     "omit_subject": 1.0,
+     "PLANNED": 0.96,
+     "polite": 1.0,
+     "WANTED": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "UNDECIDED": 0.5853658536585366,
+     "has_subject": 0.6,
+     "casual": 0.6259541984732825,
+     "HEARSAY": 0.6451612903225806,
+     "POSSIBLE": 0.5833333333333334,
+     "pronoun": 0.4090909090909091,
+     "NOT_DONE": 0.9230769230769231,
+     "DONE": 0.48484848484848486,
+     "omit_subject": 0.6333333333333333,
+     "PLANNED": 0.32,
+     "polite": 0.5652173913043478,
+     "WANTED": 0.75
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "UNDECIDED": 0.7804878048780488,
+     "has_subject": 0.7941176470588235,
+     "casual": 0.8091603053435115,
+     "HEARSAY": 0.8387096774193549,
+     "POSSIBLE": 0.75,
+     "pronoun": 1.0,
+     "NOT_DONE": 0.9615384615384616,
+     "DONE": 0.9090909090909091,
+     "omit_subject": 0.9666666666666667,
+     "PLANNED": 0.76,
+     "polite": 0.8405797101449275,
+     "WANTED": 0.7
+    }
+   }
+  },
+  "10000|sudachi-m|l1": {
+   "bm25": {
+    "recall1": 0.755,
+    "recall3": 0.84,
+    "recall5": 0.9,
+    "recall10": 0.98,
+    "mrr": 0.8150851925851925,
+    "ndcg10": 0.8526960920060115,
+    "ms": 11.165473539999766
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.205,
+    "recall3": 0.39,
+    "recall5": 0.5,
+    "recall10": 0.6,
+    "mrr": 0.3369898570546253,
+    "ndcg10": 0.3895220938798809,
+    "retrieve_ms": 0.08082271000148467,
+    "query_embed_ms": 13.02729103999809
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.69,
+    "recall3": 0.755,
+    "recall5": 0.805,
+    "recall10": 0.88,
+    "mrr": 0.7438071481047928,
+    "ndcg10": 0.7713279782513516,
+    "retrieve_ms": 0.09306604500125104,
+    "query_embed_ms": 32.12082729000031
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "UNDECIDED": 0.5853658536585366,
+     "has_subject": 0.888235294117647,
+     "casual": 0.8702290076335878,
+     "HEARSAY": 0.9354838709677419,
+     "POSSIBLE": 1.0,
+     "pronoun": 0.7727272727272727,
+     "NOT_DONE": 1.0,
+     "DONE": 1.0,
+     "omit_subject": 0.9666666666666667,
+     "PLANNED": 0.96,
+     "polite": 0.9565217391304348,
+     "WANTED": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "UNDECIDED": 0.34146341463414637,
+     "has_subject": 0.4647058823529412,
+     "casual": 0.5267175572519084,
+     "HEARSAY": 0.5806451612903226,
+     "POSSIBLE": 0.4583333333333333,
+     "pronoun": 0.45454545454545453,
+     "NOT_DONE": 0.8461538461538461,
+     "DONE": 0.45454545454545453,
+     "omit_subject": 0.7,
+     "PLANNED": 0.28,
+     "polite": 0.4492753623188406,
+     "WANTED": 0.65
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "UNDECIDED": 0.7560975609756098,
+     "has_subject": 0.7705882352941177,
+     "casual": 0.8091603053435115,
+     "HEARSAY": 0.8064516129032258,
+     "POSSIBLE": 0.7083333333333334,
+     "pronoun": 0.9545454545454546,
+     "NOT_DONE": 0.9615384615384616,
+     "DONE": 0.8484848484848485,
+     "omit_subject": 1.0,
+     "PLANNED": 0.84,
+     "polite": 0.7971014492753623,
+     "WANTED": 0.7
+    }
+   }
+  },
+  "10000|sudachi-g|raw": {
+   "bm25": {
+    "recall1": 0.76,
+    "recall3": 0.87,
+    "recall5": 0.935,
+    "recall10": 0.97,
+    "mrr": 0.8303583152958153,
+    "ndcg10": 0.8624663304738611,
+    "ms": 11.259741664998728
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.26,
+    "recall3": 0.47,
+    "recall5": 0.58,
+    "recall10": 0.68,
+    "mrr": 0.4083434182860512,
+    "ndcg10": 0.4648581558132205,
+    "retrieve_ms": 0.09786604000055377,
+    "query_embed_ms": 11.05786624999837
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.65,
+    "recall3": 0.8,
+    "recall5": 0.855,
+    "recall10": 0.895,
+    "mrr": 0.7398892712507212,
+    "ndcg10": 0.773395699834492,
+    "retrieve_ms": 0.10466854000242165,
+    "query_embed_ms": 31.8131347949975
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "UNDECIDED": 0.8048780487804879,
+     "has_subject": 0.9235294117647059,
+     "casual": 0.9312977099236641,
+     "HEARSAY": 0.9354838709677419,
+     "POSSIBLE": 0.9583333333333334,
+     "pronoun": 0.9545454545454546,
+     "NOT_DONE": 1.0,
+     "DONE": 1.0,
+     "omit_subject": 1.0,
+     "PLANNED": 0.92,
+     "polite": 0.9420289855072463,
+     "WANTED": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "UNDECIDED": 0.6585365853658537,
+     "has_subject": 0.5588235294117647,
+     "casual": 0.5725190839694656,
+     "HEARSAY": 0.6129032258064516,
+     "POSSIBLE": 0.5833333333333334,
+     "pronoun": 0.3181818181818182,
+     "NOT_DONE": 0.8846153846153846,
+     "DONE": 0.3939393939393939,
+     "omit_subject": 0.7,
+     "PLANNED": 0.24,
+     "polite": 0.5942028985507246,
+     "WANTED": 0.7
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "UNDECIDED": 0.8536585365853658,
+     "has_subject": 0.8294117647058824,
+     "casual": 0.8473282442748091,
+     "HEARSAY": 0.8709677419354839,
+     "POSSIBLE": 0.7916666666666666,
+     "pronoun": 1.0,
+     "NOT_DONE": 0.9230769230769231,
+     "DONE": 0.9696969696969697,
+     "omit_subject": 1.0,
+     "PLANNED": 0.84,
+     "polite": 0.8695652173913043,
+     "WANTED": 0.65
+    }
+   }
+  },
+  "10000|sudachi-g|l1": {
+   "bm25": {
+    "recall1": 0.795,
+    "recall3": 0.875,
+    "recall5": 0.905,
+    "recall10": 0.95,
+    "mrr": 0.8459124387139094,
+    "ndcg10": 0.8687307814680061,
+    "ms": 10.575888960001976
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.245,
+    "recall3": 0.405,
+    "recall5": 0.495,
+    "recall10": 0.64,
+    "mrr": 0.36148043073868785,
+    "ndcg10": 0.41750930470294134,
+    "retrieve_ms": 0.0784633350031072,
+    "query_embed_ms": 12.380491045000781
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.465,
+    "recall3": 0.6,
+    "recall5": 0.67,
+    "recall10": 0.74,
+    "mrr": 0.5579250174528616,
+    "ndcg10": 0.5934966256864282,
+    "retrieve_ms": 0.09217499999977008,
+    "query_embed_ms": 31.71829249999973
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "UNDECIDED": 0.7073170731707317,
+     "has_subject": 0.888235294117647,
+     "casual": 0.9007633587786259,
+     "HEARSAY": 0.9354838709677419,
+     "POSSIBLE": 0.9583333333333334,
+     "pronoun": 0.8181818181818182,
+     "NOT_DONE": 1.0,
+     "DONE": 0.9696969696969697,
+     "omit_subject": 1.0,
+     "PLANNED": 0.88,
+     "polite": 0.9130434782608695,
+     "WANTED": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "UNDECIDED": 0.43902439024390244,
+     "has_subject": 0.5117647058823529,
+     "casual": 0.5038167938931297,
+     "HEARSAY": 0.2903225806451613,
+     "POSSIBLE": 0.5416666666666666,
+     "pronoun": 0.36363636363636365,
+     "NOT_DONE": 0.8846153846153846,
+     "DONE": 0.45454545454545453,
+     "omit_subject": 0.4,
+     "PLANNED": 0.32,
+     "polite": 0.4782608695652174,
+     "WANTED": 0.65
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "UNDECIDED": 0.5365853658536586,
+     "has_subject": 0.6352941176470588,
+     "casual": 0.6564885496183206,
+     "HEARSAY": 0.7741935483870968,
+     "POSSIBLE": 0.625,
+     "pronoun": 0.6818181818181818,
+     "NOT_DONE": 0.9230769230769231,
+     "DONE": 0.6060606060606061,
+     "omit_subject": 0.8666666666666667,
+     "PLANNED": 0.76,
+     "polite": 0.6956521739130435,
+     "WANTED": 0.5
+    }
+   }
+  },
+  "10000|mecab-m|raw": {
+   "bm25": {
+    "recall1": 0.73,
+    "recall3": 0.85,
+    "recall5": 0.925,
+    "recall10": 0.98,
+    "mrr": 0.8071012404257688,
+    "ndcg10": 0.8480895486468012,
+    "ms": 10.904647084998942
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.265,
+    "recall3": 0.49,
+    "recall5": 0.61,
+    "recall10": 0.7,
+    "mrr": 0.4139471870633191,
+    "ndcg10": 0.47582997907603347,
+    "retrieve_ms": 0.09510062499884953,
+    "query_embed_ms": 12.270280420002564
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.675,
+    "recall3": 0.76,
+    "recall5": 0.82,
+    "recall10": 0.87,
+    "mrr": 0.7411592545557223,
+    "ndcg10": 0.7673999799289056,
+    "retrieve_ms": 0.0930022900001859,
+    "query_embed_ms": 31.657908335000684
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "UNDECIDED": 0.7317073170731707,
+     "has_subject": 0.9117647058823529,
+     "casual": 0.8931297709923665,
+     "HEARSAY": 0.967741935483871,
+     "POSSIBLE": 1.0,
+     "pronoun": 0.8636363636363636,
+     "NOT_DONE": 1.0,
+     "DONE": 1.0,
+     "omit_subject": 1.0,
+     "PLANNED": 0.96,
+     "polite": 0.9855072463768116,
+     "WANTED": 0.9
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "UNDECIDED": 0.5853658536585366,
+     "has_subject": 0.6058823529411764,
+     "casual": 0.6335877862595419,
+     "HEARSAY": 0.6451612903225806,
+     "POSSIBLE": 0.625,
+     "pronoun": 0.4090909090909091,
+     "NOT_DONE": 0.9230769230769231,
+     "DONE": 0.48484848484848486,
+     "omit_subject": 0.6333333333333333,
+     "PLANNED": 0.32,
+     "polite": 0.5652173913043478,
+     "WANTED": 0.75
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "UNDECIDED": 0.7804878048780488,
+     "has_subject": 0.7941176470588235,
+     "casual": 0.816793893129771,
+     "HEARSAY": 0.8064516129032258,
+     "POSSIBLE": 0.75,
+     "pronoun": 1.0,
+     "NOT_DONE": 0.9615384615384616,
+     "DONE": 0.9090909090909091,
+     "omit_subject": 0.9666666666666667,
+     "PLANNED": 0.8,
+     "polite": 0.8260869565217391,
+     "WANTED": 0.7
+    }
+   }
+  },
+  "10000|mecab-m|l1": {
+   "bm25": {
+    "recall1": 0.74,
+    "recall3": 0.825,
+    "recall5": 0.905,
+    "recall10": 0.98,
+    "mrr": 0.8047852841602843,
+    "ndcg10": 0.8449188637386331,
+    "ms": 11.250645210002403
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.205,
+    "recall3": 0.39,
+    "recall5": 0.505,
+    "recall10": 0.6,
+    "mrr": 0.33733802721944206,
+    "ndcg10": 0.38967532198051347,
+    "retrieve_ms": 0.09083625000130269,
+    "query_embed_ms": 12.445941249998214
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.695,
+    "recall3": 0.755,
+    "recall5": 0.805,
+    "recall10": 0.88,
+    "mrr": 0.7453294472442383,
+    "ndcg10": 0.7721411039168005,
+    "retrieve_ms": 0.1130870849965504,
+    "query_embed_ms": 32.72938750000321
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "UNDECIDED": 0.6341463414634146,
+     "has_subject": 0.8941176470588236,
+     "casual": 0.8778625954198473,
+     "HEARSAY": 0.9354838709677419,
+     "POSSIBLE": 0.9583333333333334,
+     "pronoun": 0.7727272727272727,
+     "NOT_DONE": 1.0,
+     "DONE": 1.0,
+     "omit_subject": 0.9666666666666667,
+     "PLANNED": 0.96,
+     "polite": 0.9565217391304348,
+     "WANTED": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "UNDECIDED": 0.34146341463414637,
+     "has_subject": 0.47058823529411764,
+     "casual": 0.5267175572519084,
+     "HEARSAY": 0.6129032258064516,
+     "POSSIBLE": 0.4583333333333333,
+     "pronoun": 0.45454545454545453,
+     "NOT_DONE": 0.8461538461538461,
+     "DONE": 0.45454545454545453,
+     "omit_subject": 0.7,
+     "PLANNED": 0.28,
+     "polite": 0.463768115942029,
+     "WANTED": 0.65
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "UNDECIDED": 0.7560975609756098,
+     "has_subject": 0.7705882352941177,
+     "casual": 0.8091603053435115,
+     "HEARSAY": 0.8064516129032258,
+     "POSSIBLE": 0.7083333333333334,
+     "pronoun": 0.9545454545454546,
+     "NOT_DONE": 0.9615384615384616,
+     "DONE": 0.8484848484848485,
+     "omit_subject": 1.0,
+     "PLANNED": 0.84,
+     "polite": 0.7971014492753623,
+     "WANTED": 0.7
+    }
+   }
+  },
+  "10000|sudachi-p|raw": {
+   "bm25": {
+    "recall1": 0.095,
+    "recall3": 0.18,
+    "recall5": 0.245,
+    "recall10": 0.32,
+    "mrr": 0.17394700043712089,
+    "ndcg10": 0.19328535511475017,
+    "ms": 10.111168749999706
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.25,
+    "recall3": 0.455,
+    "recall5": 0.56,
+    "recall10": 0.68,
+    "mrr": 0.3917101940969356,
+    "ndcg10": 0.4509720732927341,
+    "retrieve_ms": 0.0784968750031112,
+    "query_embed_ms": 12.656092704996809
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.605,
+    "recall3": 0.805,
+    "recall5": 0.855,
+    "recall10": 0.92,
+    "mrr": 0.7210659197439875,
+    "ndcg10": 0.7670590522952955,
+    "retrieve_ms": 0.10385104000306455,
+    "query_embed_ms": 32.047251875001166
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "UNDECIDED": 0.0,
+     "has_subject": 0.2411764705882353,
+     "casual": 0.31297709923664124,
+     "HEARSAY": 0.06451612903225806,
+     "POSSIBLE": 0.20833333333333334,
+     "pronoun": 0.0,
+     "NOT_DONE": 0.38461538461538464,
+     "DONE": 0.696969696969697,
+     "omit_subject": 0.26666666666666666,
+     "PLANNED": 0.24,
+     "polite": 0.11594202898550725,
+     "WANTED": 0.15
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "UNDECIDED": 0.5365853658536586,
+     "has_subject": 0.5529411764705883,
+     "casual": 0.5801526717557252,
+     "HEARSAY": 0.5161290322580645,
+     "POSSIBLE": 0.5833333333333334,
+     "pronoun": 0.36363636363636365,
+     "NOT_DONE": 1.0,
+     "DONE": 0.3939393939393939,
+     "omit_subject": 0.6,
+     "PLANNED": 0.32,
+     "polite": 0.5217391304347826,
+     "WANTED": 0.65
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "UNDECIDED": 0.8048780487804879,
+     "has_subject": 0.8352941176470589,
+     "casual": 0.8473282442748091,
+     "HEARSAY": 0.8387096774193549,
+     "POSSIBLE": 0.8333333333333334,
+     "pronoun": 1.0,
+     "NOT_DONE": 1.0,
+     "DONE": 0.9393939393939394,
+     "omit_subject": 0.9666666666666667,
+     "PLANNED": 0.8,
+     "polite": 0.8695652173913043,
+     "WANTED": 0.75
+    }
+   }
+  },
+  "10000|sudachi-p|l1": {
+   "bm25": {
+    "recall1": 0.405,
+    "recall3": 0.475,
+    "recall5": 0.57,
+    "recall10": 0.77,
+    "mrr": 0.4937502216077972,
+    "ndcg10": 0.5460198079858474,
+    "ms": 10.987713125000482
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.24,
+    "recall3": 0.455,
+    "recall5": 0.57,
+    "recall10": 0.64,
+    "mrr": 0.38111889099077073,
+    "ndcg10": 0.4336908188969869,
+    "retrieve_ms": 0.08626708499832603,
+    "query_embed_ms": 12.481732500000362
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.715,
+    "recall3": 0.805,
+    "recall5": 0.84,
+    "recall10": 0.905,
+    "mrr": 0.7796941430895568,
+    "ndcg10": 0.8052710749499787,
+    "retrieve_ms": 0.07526729500114016,
+    "query_embed_ms": 32.9717299999993
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "UNDECIDED": 0.5121951219512195,
+     "has_subject": 0.6470588235294118,
+     "casual": 0.5419847328244275,
+     "HEARSAY": 0.06451612903225806,
+     "POSSIBLE": 0.8333333333333334,
+     "pronoun": 0.13636363636363635,
+     "NOT_DONE": 0.8076923076923077,
+     "DONE": 0.5454545454545454,
+     "omit_subject": 0.13333333333333333,
+     "PLANNED": 0.6,
+     "polite": 0.6231884057971014,
+     "WANTED": 0.85
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "UNDECIDED": 0.4634146341463415,
+     "has_subject": 0.5529411764705883,
+     "casual": 0.5877862595419847,
+     "HEARSAY": 0.6129032258064516,
+     "POSSIBLE": 0.5833333333333334,
+     "pronoun": 0.5,
+     "NOT_DONE": 0.9615384615384616,
+     "DONE": 0.42424242424242425,
+     "omit_subject": 0.6666666666666666,
+     "PLANNED": 0.36,
+     "polite": 0.5362318840579711,
+     "WANTED": 0.7
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "UNDECIDED": 0.8048780487804879,
+     "has_subject": 0.8176470588235294,
+     "casual": 0.8473282442748091,
+     "HEARSAY": 0.8387096774193549,
+     "POSSIBLE": 0.7916666666666666,
+     "pronoun": 1.0,
+     "NOT_DONE": 1.0,
+     "DONE": 0.9090909090909091,
+     "omit_subject": 0.9666666666666667,
+     "PLANNED": 0.8,
+     "polite": 0.8260869565217391,
+     "WANTED": 0.7
+    }
+   }
+  },
+  "10000|ginza-d|raw": {
+   "bm25": {
+    "recall1": 0.895,
+    "recall3": 0.99,
+    "recall5": 0.995,
+    "recall10": 0.995,
+    "mrr": 0.9395606060606062,
+    "ndcg10": 0.9535993467861743,
+    "ms": 11.001590414998645
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.295,
+    "recall3": 0.535,
+    "recall5": 0.65,
+    "recall10": 0.73,
+    "mrr": 0.4434255623647947,
+    "ndcg10": 0.5063302325844067,
+    "retrieve_ms": 0.08339604499724373,
+    "query_embed_ms": 12.874828545000128
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.645,
+    "recall3": 0.78,
+    "recall5": 0.82,
+    "recall10": 0.895,
+    "mrr": 0.7303122072933731,
+    "ndcg10": 0.7658300735884565,
+    "retrieve_ms": 0.1189941650000037,
+    "query_embed_ms": 31.641077710000904
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "UNDECIDED": 1.0,
+     "has_subject": 0.9941176470588236,
+     "casual": 0.9923664122137404,
+     "HEARSAY": 1.0,
+     "POSSIBLE": 1.0,
+     "pronoun": 1.0,
+     "NOT_DONE": 1.0,
+     "DONE": 1.0,
+     "omit_subject": 1.0,
+     "PLANNED": 0.96,
+     "polite": 1.0,
+     "WANTED": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "UNDECIDED": 0.7317073170731707,
+     "has_subject": 0.6470588235294118,
+     "casual": 0.6564885496183206,
+     "HEARSAY": 0.6774193548387096,
+     "POSSIBLE": 0.625,
+     "pronoun": 0.45454545454545453,
+     "NOT_DONE": 0.8846153846153846,
+     "DONE": 0.48484848484848486,
+     "omit_subject": 0.6666666666666666,
+     "PLANNED": 0.4,
+     "polite": 0.6376811594202898,
+     "WANTED": 0.75
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "UNDECIDED": 0.7804878048780488,
+     "has_subject": 0.7941176470588235,
+     "casual": 0.816793893129771,
+     "HEARSAY": 0.9032258064516129,
+     "POSSIBLE": 0.75,
+     "pronoun": 1.0,
+     "NOT_DONE": 0.9615384615384616,
+     "DONE": 0.9090909090909091,
+     "omit_subject": 0.9666666666666667,
+     "PLANNED": 0.76,
+     "polite": 0.8260869565217391,
+     "WANTED": 0.6
+    }
+   }
+  },
+  "10000|ginza-d|l1": {
+   "bm25": {
+    "recall1": 0.95,
+    "recall3": 0.99,
+    "recall5": 0.995,
+    "recall10": 1.0,
+    "mrr": 0.9707222222222223,
+    "ndcg10": 0.9780219553894934,
+    "ms": 11.332074375000047
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.205,
+    "recall3": 0.43,
+    "recall5": 0.54,
+    "recall10": 0.645,
+    "mrr": 0.35288338827467136,
+    "ndcg10": 0.413402900481701,
+    "retrieve_ms": 0.07744687499780412,
+    "query_embed_ms": 11.58592021000004
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.7,
+    "recall3": 0.795,
+    "recall5": 0.825,
+    "recall10": 0.895,
+    "mrr": 0.7605470056514385,
+    "ndcg10": 0.7879445955541461,
+    "retrieve_ms": 0.11632375000317552,
+    "query_embed_ms": 31.63521208499787
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "UNDECIDED": 1.0,
+     "has_subject": 0.9941176470588236,
+     "casual": 0.9923664122137404,
+     "HEARSAY": 1.0,
+     "POSSIBLE": 1.0,
+     "pronoun": 1.0,
+     "NOT_DONE": 1.0,
+     "DONE": 1.0,
+     "omit_subject": 1.0,
+     "PLANNED": 0.96,
+     "polite": 1.0,
+     "WANTED": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "UNDECIDED": 0.4146341463414634,
+     "has_subject": 0.5058823529411764,
+     "casual": 0.5572519083969466,
+     "HEARSAY": 0.5483870967741935,
+     "POSSIBLE": 0.4583333333333333,
+     "pronoun": 0.5,
+     "NOT_DONE": 0.8846153846153846,
+     "DONE": 0.5757575757575758,
+     "omit_subject": 0.7333333333333333,
+     "PLANNED": 0.36,
+     "polite": 0.5072463768115942,
+     "WANTED": 0.6
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "UNDECIDED": 0.8048780487804879,
+     "has_subject": 0.7941176470588235,
+     "casual": 0.8091603053435115,
+     "HEARSAY": 0.9032258064516129,
+     "POSSIBLE": 0.7083333333333334,
+     "pronoun": 0.9545454545454546,
+     "NOT_DONE": 0.9615384615384616,
+     "DONE": 0.8484848484848485,
+     "omit_subject": 1.0,
+     "PLANNED": 0.84,
+     "polite": 0.855072463768116,
+     "WANTED": 0.65
+    }
+   }
+  },
+  "10000|naive|raw": {
+   "bm25": {
+    "recall1": 0.16,
+    "recall3": 0.16,
+    "recall5": 0.165,
+    "recall10": 0.165,
+    "mrr": 0.16553665366977505,
+    "ndcg10": 0.16215338279036698,
+    "ms": 0.9915510400014683
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.36,
+    "recall3": 0.515,
+    "recall5": 0.6,
+    "recall10": 0.705,
+    "mrr": 0.4716125454892914,
+    "ndcg10": 0.5194535851756422,
+    "retrieve_ms": 0.07926374999897234,
+    "query_embed_ms": 13.433987499997784
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.65,
+    "recall3": 0.76,
+    "recall5": 0.85,
+    "recall10": 0.895,
+    "mrr": 0.7299258753334064,
+    "ndcg10": 0.7647878074924787,
+    "retrieve_ms": 0.08614062499873398,
+    "query_embed_ms": 32.12416249999933
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "UNDECIDED": 0.0,
+     "has_subject": 0.19411764705882353,
+     "casual": 0.19083969465648856,
+     "HEARSAY": 0.0,
+     "POSSIBLE": 0.4166666666666667,
+     "pronoun": 0.045454545454545456,
+     "NOT_DONE": 0.5384615384615384,
+     "DONE": 0.030303030303030304,
+     "omit_subject": 0.0,
+     "PLANNED": 0.04,
+     "polite": 0.11594202898550725,
+     "WANTED": 0.35
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "UNDECIDED": 0.7560975609756098,
+     "has_subject": 0.5705882352941176,
+     "casual": 0.6106870229007634,
+     "HEARSAY": 0.5483870967741935,
+     "POSSIBLE": 0.625,
+     "pronoun": 0.22727272727272727,
+     "NOT_DONE": 0.8461538461538461,
+     "DONE": 0.3939393939393939,
+     "omit_subject": 0.7666666666666667,
+     "PLANNED": 0.4,
+     "polite": 0.5797101449275363,
+     "WANTED": 0.6
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "UNDECIDED": 0.8780487804878049,
+     "has_subject": 0.8235294117647058,
+     "casual": 0.8473282442748091,
+     "HEARSAY": 0.9354838709677419,
+     "POSSIBLE": 0.625,
+     "pronoun": 0.8636363636363636,
+     "NOT_DONE": 0.9615384615384616,
+     "DONE": 0.8787878787878788,
+     "omit_subject": 1.0,
+     "PLANNED": 0.84,
+     "polite": 0.855072463768116,
+     "WANTED": 0.75
+    }
+   }
+  },
+  "10000|naive|l1": {
+   "bm25": {
+    "recall1": 0.91,
+    "recall3": 1.0,
+    "recall5": 1.0,
+    "recall10": 1.0,
+    "mrr": 0.9525,
+    "ndcg10": 0.9648197315178589,
+    "ms": 1.5645108299986532
+   },
+   "text-embedding-nomic-embed-text-v1.5": {
+    "recall1": 0.365,
+    "recall3": 0.525,
+    "recall5": 0.625,
+    "recall10": 0.69,
+    "mrr": 0.47135979325817545,
+    "ndcg10": 0.5167345408158728,
+    "retrieve_ms": 0.05975249999664811,
+    "query_embed_ms": 10.937963329997729
+   },
+   "text-embedding-qwen3-embedding-0.6b": {
+    "recall1": 0.675,
+    "recall3": 0.735,
+    "recall5": 0.8,
+    "recall10": 0.88,
+    "mrr": 0.7341590120775088,
+    "ndcg10": 0.7631361657046812,
+    "retrieve_ms": 0.10065062499961641,
+    "query_embed_ms": 32.682891459999155
+   },
+   "by_group_recall5": {
+    "bm25": {
+     "UNDECIDED": 1.0,
+     "has_subject": 1.0,
+     "casual": 1.0,
+     "HEARSAY": 1.0,
+     "POSSIBLE": 1.0,
+     "pronoun": 1.0,
+     "NOT_DONE": 1.0,
+     "DONE": 1.0,
+     "omit_subject": 1.0,
+     "PLANNED": 1.0,
+     "polite": 1.0,
+     "WANTED": 1.0
+    },
+    "text-embedding-nomic-embed-text-v1.5": {
+     "UNDECIDED": 0.8292682926829268,
+     "has_subject": 0.611764705882353,
+     "casual": 0.648854961832061,
+     "HEARSAY": 0.45161290322580644,
+     "POSSIBLE": 0.7083333333333334,
+     "pronoun": 0.3181818181818182,
+     "NOT_DONE": 0.9230769230769231,
+     "DONE": 0.3939393939393939,
+     "omit_subject": 0.7,
+     "PLANNED": 0.4,
+     "polite": 0.5797101449275363,
+     "WANTED": 0.65
+    },
+    "text-embedding-qwen3-embedding-0.6b": {
+     "UNDECIDED": 0.8780487804878049,
+     "has_subject": 0.7647058823529411,
+     "casual": 0.816793893129771,
+     "HEARSAY": 0.8064516129032258,
+     "POSSIBLE": 0.6666666666666666,
+     "pronoun": 0.7727272727272727,
+     "NOT_DONE": 0.8846153846153846,
+     "DONE": 0.8484848484848485,
+     "omit_subject": 1.0,
+     "PLANNED": 0.8,
+     "polite": 0.7681159420289855,
+     "WANTED": 0.6
+    }
+   }
+  }
+ },
+ "embed_seconds": {
+  "text-embedding-nomic-embed-text-v1.5|L0": 124.011582333,
+  "text-embedding-nomic-embed-text-v1.5|sudachi-m": 117.75950745899996,
+  "text-embedding-nomic-embed-text-v1.5|sudachi-g": 118.13445875000002,
+  "text-embedding-nomic-embed-text-v1.5|mecab-m": 116.6101420419999,
+  "text-embedding-nomic-embed-text-v1.5|sudachi-p": 114.20070404199998,
+  "text-embedding-nomic-embed-text-v1.5|ginza-d": 119.43611295799997,
+  "text-embedding-nomic-embed-text-v1.5|naive": 111.06215054200015,
+  "text-embedding-qwen3-embedding-0.6b|L0": 556.6588697500001,
+  "text-embedding-qwen3-embedding-0.6b|sudachi-m": 599.8810387910003,
+  "text-embedding-qwen3-embedding-0.6b|sudachi-g": 555.7457065829999,
+  "text-embedding-qwen3-embedding-0.6b|mecab-m": 627.9634667089999,
+  "text-embedding-qwen3-embedding-0.6b|sudachi-p": 615.6727594999998,
+  "text-embedding-qwen3-embedding-0.6b|ginza-d": 641.7929957910001,
+  "text-embedding-qwen3-embedding-0.6b|naive": 562.3829095000001
+ },
+ "embed_texts_per_s": {
+  "text-embedding-nomic-embed-text-v1.5|L0": 80.63762925907734,
+  "text-embedding-nomic-embed-text-v1.5|sudachi-m": 84.91883344095741,
+  "text-embedding-nomic-embed-text-v1.5|sudachi-g": 84.64930644125035,
+  "text-embedding-nomic-embed-text-v1.5|mecab-m": 85.75583414003788,
+  "text-embedding-nomic-embed-text-v1.5|sudachi-p": 87.56513441740486,
+  "text-embedding-nomic-embed-text-v1.5|ginza-d": 83.72677034052948,
+  "text-embedding-nomic-embed-text-v1.5|naive": 90.03967554381472,
+  "text-embedding-qwen3-embedding-0.6b|L0": 17.964323472454645,
+  "text-embedding-qwen3-embedding-0.6b|sudachi-m": 16.669971799998866,
+  "text-embedding-qwen3-embedding-0.6b|sudachi-g": 17.993841214689642,
+  "text-embedding-qwen3-embedding-0.6b|mecab-m": 15.924493270934228,
+  "text-embedding-qwen3-embedding-0.6b|sudachi-p": 16.242394755488615,
+  "text-embedding-qwen3-embedding-0.6b|ginza-d": 15.581347982265143,
+  "text-embedding-qwen3-embedding-0.6b|naive": 17.78147918629095
+ },
+ "convert_ms_per_text": {
+  "sudachi-m": 0.0522014167,
+  "sudachi-g": 0.05133537500000001,
+  "mecab-m": 0.06942887090000001,
+  "sudachi-p": 0.05158963749999999,
+  "ginza-d": 20.602037825,
+  "naive": 0.0019551083000010293
+ },
+ "avg_chars": {
+  "L0": 31.4257,
+  "sudachi-m": 25.7026,
+  "sudachi-g": 17.6399,
+  "mecab-m": 25.7589,
+  "sudachi-p": 27.67,
+  "ginza-d": 29.8595,
+  "naive": 13.4517
+ }
+}
