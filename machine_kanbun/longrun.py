@@ -70,6 +70,9 @@ def run(model: str, lengths: List[int], variants: List[str], seed: int, n_questi
                 qlang = "JA"
                 ctx = encode_doc(entities, fmt, pol)
             sys_legend = lg.legend_text(cond) if cond in ("full", "minimal") else None
+            if ml and rep_ == "IRIDL":  # code legend in the question language, paid once in the system prompt
+                from . import irlabel
+                sys_legend = irlabel.legend(qlang)
             system = f"[run:{uuid.uuid4().hex[:8]}] {qamod.SYSTEMS[qlang]}" + (f"\n{sys_legend}" if sys_legend else "")
             use_ml = bool(ml) and (qlang != "JA" or clang != "JA")
             qtext = lambda q: mlenc.question_text(q, qlang)

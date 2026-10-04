@@ -116,6 +116,11 @@ def cmd_longqa(a):
         sys.exit(75)  # EX_TEMPFAIL: caller should reload the model and resume
 
 
+def cmd_irreport(a):
+    from . import irreport
+    irreport.main()
+
+
 def cmd_mlreport(a):
     from . import mlreport
     mlreport.main()
@@ -169,6 +174,7 @@ def main():
     l.set_defaults(fn=cmd_longqa)
     ab = sub.add_parser("ablreport"); ab.set_defaults(fn=cmd_ablreport)
     mr = sub.add_parser("mlreport", help="Issue #11 report"); mr.set_defaults(fn=cmd_mlreport)
+    ir = sub.add_parser("irreport", help="Issue #17 report"); ir.set_defaults(fn=cmd_irreport)
     cv = sub.add_parser("convcost", help="Issue #10: conversion cost (rule-based timing + LLM L0->L1)")
     cv.add_argument("--model", required=True)
     cv.add_argument("--lengths", nargs="*", type=int, default=[2000, 8000, 16000, 32000])

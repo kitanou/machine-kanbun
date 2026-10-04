@@ -50,6 +50,9 @@ def localize(p: Profile, lang: str) -> Profile:
 
 def encode_ml(profiles: Iterable[Profile], lang: str, rep: str) -> str:
     ps: List[Profile] = list(profiles)
+    if rep in ("IRC", "IRL", "IRID", "IRIDL"):  # label-localisation ablation (Issue #17)
+        from . import irlabel
+        return irlabel.render(ps, lang, rep)
     if rep == "MKW":
         return encode_doc([localize(p, lang) for p in ps], "L5")
     if rep == "L0":
@@ -70,7 +73,7 @@ def question_text(q, lang: str) -> str:
 def parse_variant(v: str):
     """'EN-L0' / 'KO-MKW' / 'EN-MKW@JA' -> (ctx_lang, rep, question_lang) or None."""
     import re
-    m = re.fullmatch(r"(JA|EN|KO)-(L0|L1|MKW)(?:@(JA|EN|KO))?", v)
+    m = re.fullmatch(r"(JA|EN|KO)-(L0|L1|MKW|IRC|IRL|IRID|IRIDL)(?:@(JA|EN|KO))?", v)
     if not m:
         return None
     return m.group(1), m.group(2), m.group(3) or m.group(1)
