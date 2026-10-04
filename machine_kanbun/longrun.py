@@ -17,6 +17,7 @@ from typing import List, Optional
 from . import legend as lg
 from . import qa as qamod
 from .encoder import POLICIES, encode_doc
+from . import mlenc
 from .gen import generate
 from .lmstudio import chat
 from .sysmem import Peak
@@ -59,24 +60,36 @@ def run(model: str, lengths: List[int], variants: List[str], seed: int, n_questi
                 cond = pol["legend"]
             if (fmt, cond, seed) in done:
                 continue
-            ctx = encode_doc(entities, fmt, pol)
+            ml = mlenc.parse_variant(v)  # multilingual variant such as EN-L0 / KO-MKW / EN-MKW@JA (Issue #11)
+            if ml:
+                clang, rep_, qlang = ml
+                ctx = mlenc.encode_ml(entities, clang, rep_)
+                fmt, cond = v, "none"
+            else:
+                clang = rep_ = None
+                qlang = "JA"
+                ctx = encode_doc(entities, fmt, pol)
             sys_legend = lg.legend_text(cond) if cond in ("full", "minimal") else None
-            system = f"[run:{uuid.uuid4().hex[:8]}] {qamod.SYSTEM}" + (f"\n{sys_legend}" if sys_legend else "")
+            system = f"[run:{uuid.uuid4().hex[:8]}] {qamod.SYSTEMS[qlang]}" + (f"\n{sys_legend}" if sys_legend else "")
+            use_ml = bool(ml) and (qlang != "JA" or clang != "JA")
+            qtext = lambda q: mlenc.question_text(q, qlang)
+            mkprompt = (lambda c, q: qamod.build_prompt_lang(c, qtext(q), qlang, no_think)) if ml else None
             rows, err = [], None
             try:
                 # baseline: same prompt with an empty context -> context tokens = cold - base
-                b = chat(model, system, qamod.build_prompt_v2("", questions[0], None, no_think),
+                b = chat(model, system, (mkprompt("", questions[0]) if ml else qamod.build_prompt_v2("", questions[0], None, no_think)),
                          base_url=base_url, max_tokens=5, extra=extra, deadline=240)
                 for i, q in enumerate(questions):
                     el = lg.legend_text("category", q.cat) if cond == "category" else None
-                    prompt = qamod.build_prompt_v2(ctx, q, el, no_think)
+                    prompt = mkprompt(ctx, q) if ml else qamod.build_prompt_v2(ctx, q, el, no_think)
                     if i == 0:
                         with Peak() as pk:
                             r = chat(model, system, prompt, base_url=base_url, extra=extra, timeout=900, deadline=900)
                     else:
                         r = chat(model, system, prompt, base_url=base_url, extra=extra, timeout=600, deadline=240)
                     rec = dict(model=model, length=length, seed=seed, fmt=fmt, legend=cond, i=i, cold=(i == 0),
-                               cat=q.cat, op=q.op, q=q.q, ok=qamod.score(q, r.text), answer=r.text,
+                               cat=q.cat, op=q.op, q=qtext(q) if ml else q.q, ok=qamod.score(q, r.text, ml=use_ml), answer=r.text,
+                               lang=clang, rep=rep_, qlang=qlang if ml else None,
                                prompt_tokens=r.prompt_tokens, completion_tokens=r.completion_tokens,
                                ttft=r.ttft, total=r.total, n_facts=n_facts, n_entities=len(entities),
                                ctx_chars=len(ctx), legend_chars=len(sys_legend or ""))

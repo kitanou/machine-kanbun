@@ -126,6 +126,18 @@ def cmd_convcost(a):
     convcost.run(a.model, a.lengths, a.llm_lengths)
 
 
+def cmd_mlconv(a):
+    import sys
+
+    from . import mlconv
+    from .lmstudio import Stalled
+    try:
+        mlconv.run(a.model, a.langs, a.length, a.n_questions)
+    except Stalled as e:
+        print(f"STALLED: {e}", flush=True)
+        sys.exit(75)
+
+
 def cmd_longreport(a):
     from . import longreport
     longreport.main(a.reuse)
@@ -156,6 +168,12 @@ def main():
     cv.add_argument("--lengths", nargs="*", type=int, default=[2000, 8000, 16000, 32000])
     cv.add_argument("--llm-lengths", nargs="*", type=int, default=[2000, 8000])
     cv.set_defaults(fn=cmd_convcost)
+    mc = sub.add_parser("mlconv", help="Issue #11: direct EN/KO/JA -> MKW conversion by an LLM")
+    mc.add_argument("--model", required=True)
+    mc.add_argument("--langs", nargs="*", default=["JA", "EN", "KO"])
+    mc.add_argument("--length", type=int, default=2000)
+    mc.add_argument("--n-questions", type=int, default=8)
+    mc.set_defaults(fn=cmd_mlconv)
     lr = sub.add_parser("longreport"); lr.add_argument("--reuse", nargs="*", type=int, default=[1, 10, 100])
     lr.set_defaults(fn=cmd_longreport)
     r = sub.add_parser("report"); r.add_argument("files", nargs="*"); r.set_defaults(fn=cmd_report)
