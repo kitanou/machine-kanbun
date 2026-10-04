@@ -11,6 +11,7 @@ from __future__ import annotations
 import random
 from typing import Callable, Dict, List, Tuple
 
+from . import i18n
 from .model import Fact, Profile, Question
 
 SURNAMES = ("佐藤 鈴木 高橋 田中 伊藤 渡辺 山本 中村 小林 加藤 吉田 山田 佐々木 山口 松本 井上 木村 林 斎藤 清水 "
@@ -95,7 +96,21 @@ def build_person(rng: random.Random, name: str, alias: str) -> Tuple[Profile, Li
         Question(f"{L}の{c[1][0]}に関する問題の原因は？", "因果", answer=[c[0][0]], op="故"),
         Question(f"「{alias}」と呼ばれている人物の職業は？", "参照解決", answer=[job]),
     ]
-    return Profile(L, L, facts, []), qs
+    params = dict(name=name, alias=alias, year=year, job=job, city=city, food=food, unc=unc_food, drinks=drinks,
+                  dev=dev, w=w, cmp=(cmp_a, cmp_b), ci=CAUSES.index(c))
+    return _finish(Profile(L, L, facts, [], {"cls": "人物", "name": name}), qs, i18n.labels("人物", name), *i18n.person_texts(i18n.labels("人物", name), params))
+
+
+def _finish(prof, qs, labels, texts, qml):
+    """Attach English/Korean wording (same canonical facts) to facts and questions."""
+    for f in prof.facts:
+        f.en, f.en1, f.ko, f.ko1 = texts[f.id]
+    assert len(qs) == len(qml), (prof.label, len(qs), len(qml))
+    for q, (qe, qk, ans) in zip(qs, qml):
+        q.q_en, q.q_ko = qe, qk
+        if ans:
+            q.answer_ml = [ans]
+    return prof, qs
 
 
 def build_project(rng: random.Random, code: str, owner: str) -> Tuple[Profile, List[Question]]:
@@ -145,7 +160,9 @@ def build_project(rng: random.Random, code: str, owner: str) -> Tuple[Profile, L
         Question(f"{L}で{fa}と{fb}のどちらの処理速度が速いですか？", "比較", answer=[fa], op=">"),
         Question(f"{L}のAWSへの移行は確定していますか？", "不確実性", yn=False, op="疑"),
     ]
-    return Profile(L, L, facts, []), qs
+    params = dict(due=(y, m, d), owner=owner, size=size, lang=lang, db=db, vers=vers, non_db=non_db, fa=fa, fb=fb)
+    lab = i18n.labels("案件", code)
+    return _finish(Profile(L, L, facts, [], {"cls": "案件", "name": code, "owner": owner}), qs, lab, *i18n.project_texts(lab, params))
 
 
 def build_event(rng: random.Random, name: str) -> Tuple[Profile, List[Question]]:
@@ -187,7 +204,14 @@ def build_event(rng: random.Random, name: str) -> Tuple[Profile, List[Question]]
         Question(f"{L}の屋台の将来の予定軒数は？", "時制", answer=[str(stalls[2])], op="将"),
         Question(f"{L}の花火の実施は確定していますか？", "不確実性", yn=False, op="疑"),
     ]
-    return Profile(L, L, facts, []), qs
+    import re as _re
+    mo, dd = (int(x) for x in _re.match(r"(\d+)月(\d+)日", day).groups())
+    season = next(k for k in i18n.SEASON if name.endswith(k))
+    nplace = name[: -len(season)]
+    params = dict(month=mo, day=dd, place=place[:-2], cap=cap, bud=bud, stalls=stalls, parking=parking)
+    lab = i18n.labels("催事", name, place=nplace, season=season)
+    return _finish(Profile(L, L, facts, [], {"cls": "催事", "name": name, "place": nplace, "season": season, "venue": place[:-2]}),
+                   qs, lab, *i18n.event_texts(lab, params))
 
 
 def generate(target_tokens: int, count: Callable[[str], int], seed: int = 0, n_questions: int = 40) -> Tuple[List[Profile], List[Question]]:
@@ -236,14 +260,25 @@ def _cross_questions(rng, entities, persons):
     out: List[Question] = []
     projects = [e for e in entities if e.label.startswith("案件")]
     events = [e for e in entities if e.label.startswith("催事")]
+
+    def lab(e):  # (ja, en, ko) labels
+        m = e.meta
+        return i18n.labels(m["cls"], m["name"], **({k: m[k] for k in ("place", "season") if k in m}))
+
     for pr in rng.sample(projects, min(3, len(projects))):
         owner = next(f.value for f in pr.facts if f.key == "担当")
         person = by.get(f"人物{owner}")
         if person:  # two-hop: project -> owner -> owner's attribute
             job = next(f.value for f in person.facts if f.key == "職")
             city = next(f.value for f in person.facts if f.key == "住")
-            out.append(Question(f"{pr.label}の担当者の職業は？", "横断推論", answer=[job]))
-            out.append(Question(f"{pr.label}の担当者はどこに住んでいますか？", "横断推論", answer=[city]))
+            _, le, lk = lab(pr)
+            je, jk = i18n.JOB[job]
+            ce, ck = i18n.CITY[city]
+            qj = Question(f"{pr.label}の担当者の職業は？", "横断推論", answer=[job], q_en=f"What is the job of the owner of {le}?",
+                          q_ko=f"{lk}의 담당자의 직업은 무엇입니까?", answer_ml=[f"{job}|{je}|{jk}"])
+            qc = Question(f"{pr.label}の担当者はどこに住んでいますか？", "横断推論", answer=[city], q_en=f"Where does the owner of {le} live?",
+                          q_ko=f"{lk}의 담당자는 어디에 살고 있습니까?", answer_ml=[f"{city}|{ce}|{ck}"])
+            out += [qj, qc]
     if len(events) >= 2:
         for _ in range(2):
             a, b = rng.sample(events, 2)
@@ -251,7 +286,13 @@ def _cross_questions(rng, entities, persons):
             cb = int(next(f.value for f in b.facts if f.key == "定員")[:-1])
             if ca != cb:
                 win = a if ca > cb else b
-                out.append(Question(f"{a.label}と{b.label}では、定員が多いのはどちらですか？", "横断推論", answer=[win.label[2:]], op=">"))
+                _, ae, ak = lab(a)
+                _, be, bk = lab(b)
+                wj, we, wk = i18n.name_forms("催事", win.meta["name"], place=win.meta["place"], season=win.meta["season"])
+                out.append(Question(f"{a.label}と{b.label}では、定員が多いのはどちらですか？", "横断推論", answer=[win.label[2:]], op=">",
+                                    q_en=f"Which has the larger capacity, {ae} or {be}?",
+                                    q_ko=f"{i18n.with_(ak)} {bk} 중 정원이 더 많은 것은 어느 쪽입니까?",
+                                    answer_ml=[f"{wj}|{we}|{wk}"]))
     return out
 
 

@@ -1,0 +1,8 @@
+load google/gemma-4-12b 13s rc=0
+google/gemma-4-12b variants 2k n=8 311s rc=0
+google/gemma-4-12b convert 2k (JA EN KO) 277s rc=0
+google/gemma-4-12b variants 8k n=8 (EN-L0 KO-L0 KO-MKW) 257s rc=0
+load qwen/qwen3-8b 6s rc=0
+qwen/qwen3-8b variants 2k n=8 177s rc=0
+qwen/qwen3-8b convert 2k (JA EN KO) 74s rc=0
+DONE

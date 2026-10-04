@@ -30,6 +30,11 @@ class Fact:
     effect: Optional[Dict[str, str]] = None
     a: str = ""
     b: str = ""
+    # other-language renderings of the same canonical fact (Issue #11): L0 / L1 text
+    en: str = ""
+    en1: str = ""
+    ko: str = ""
+    ko1: str = ""
 
 
 @dataclass
@@ -40,6 +45,9 @@ class Question:
     answer: List[str] = field(default_factory=list)  # all must appear (span questions)
     reject: List[str] = field(default_factory=list)  # none may appear
     op: str = ""  # semantic operator exercised (不 無 未 非 禁 疑 故 若 過今将 ...)
+    answer_ml: List[str] = field(default_factory=list)  # "ja|en|ko" alternatives for non-Japanese settings
+    q_en: str = ""  # same question in English / Korean (Issue #11)
+    q_ko: str = ""
 
 
 @dataclass
@@ -48,6 +56,7 @@ class Profile:
     label: str
     facts: List[Fact]
     questions: List[Question]
+    meta: Dict[str, str] = field(default_factory=dict)  # entity class / proper names for localisation
 
 
 def _fact(d: Dict[str, Any]) -> Fact:
