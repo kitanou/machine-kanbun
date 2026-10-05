@@ -100,7 +100,8 @@ def run_qa(model: str, n: int = 300, nq: int = 60, base_url: str = "http://local
     if path.exists():
         for l in path.read_text(encoding="utf-8").splitlines():
             r = json.loads(l)
-            done.add((r["lang"], r["rep"]))
+            if "error" not in r:
+                done.add((r["lang"], r["rep"]))
     facts = jpml.make_facts(600)[:n]
     qsel = random.Random(5).sample(range(n), nq)
     extra = {"reasoning_effort": "none"} if "gemma" in model else None
@@ -108,7 +109,10 @@ def run_qa(model: str, n: int = 300, nq: int = 60, base_url: str = "http://local
     for lg in jpml.LANGS:
         texts = [jpml.render(f, lg) for f in facts]
         l1 = [jpml.L1[lg](x) for x in texts]
-        for rep, docs in (("L0", texts), ("L1", l1)):
+        l1n = [jpml.l1n(x, lg) for x in texts]
+        for rep, docs in (("L0", texts), ("L1", l1), ("L1n", l1n)):
+            if rep == "L1n" and lg == "ja":
+                continue
             if (lg, rep) in done:
                 continue
             ctx = "\n".join(docs)
@@ -116,7 +120,7 @@ def run_qa(model: str, n: int = 300, nq: int = 60, base_url: str = "http://local
             system = f"[run:{uuid.uuid4().hex[:8]}] {SYSTEM if lg == 'ja' else 'You answer questions using only the memo notes.'}"
             rows = []
             try:
-                base = chat(model, system, f"{h}:\n\n\n{qh}: x\n{INSTR[lg]}{nt}", max_tokens=5, base_url=base_url, extra=extra, deadline=240)
+                base = chat(model, f"[base:{uuid.uuid4().hex[:8]}] {SYSTEM if lg == 'ja' else 'You answer questions using only the memo notes.'}", f"{h}:\n\n\n{qh}: x\n{INSTR[lg]}{nt}", max_tokens=12, base_url=base_url, extra=extra, deadline=240)
                 for i, k in enumerate(qsel):
                     f = facts[k]
                     r = chat(model, system, f"{h}:\n{ctx}\n\n{qh}: {jpml.question(f, lg)}\n{INSTR[lg]}{nt}", max_tokens=8, base_url=base_url, extra=extra,

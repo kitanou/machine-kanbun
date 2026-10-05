@@ -96,6 +96,7 @@ class Probe:
         for k, idx in tokidx.items():
             if idx:
                 res[f"mass_{k}"] = w[:, idx].sum(axis=1).tolist()
+                res[f"maxhead_{k}"] = attn[:, :, idx].sum(axis=2).max(axis=1).tolist()  # strongest single head per layer
         res["entropy"] = (-(attn * np.log(attn + 1e-12)).sum(axis=2).mean(axis=1)).tolist()
         res["hid_last"] = np.stack(REC["hid_last"]).astype(np.float32)
         res["hid_span"] = np.stack(REC["hid_span"]).astype(np.float32)
@@ -186,7 +187,7 @@ def run(n: int = 100, per_pos: int = 8, seed: int = 29, out: str = "attn") -> No
             lg = np.array(r["logits"])
             margin = float(lg[gold] - np.max(np.delete(lg, gold)))
             rec = dict(cond=cname, rep=rep, n_mem=nm, target=t, pos=p, status=m.status, T=r["T"], correct=bool(lg.argmax() == gold), margin=margin,
-                       span_tokens=r["spans"], entropy=r["entropy"], **{k: v for k, v in r.items() if k.startswith("mass_")})
+                       span_tokens=r["spans"], entropy=r["entropy"], **{k: v for k, v in r.items() if k.startswith(("mass_", "maxhead_"))})
             results.append(rec)
             hid[f"{cname}|{t}|{p}|last"] = r["hid_last"].astype(np.float16)
             hid[f"{cname}|{t}|{p}|span"] = r["hid_span"].astype(np.float16)

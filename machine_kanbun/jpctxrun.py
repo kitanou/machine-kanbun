@@ -10,7 +10,7 @@ RATIO = {"google/gemma-4-12b": 0.89}
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("group", choices=["tm600", "tm300", "tm100", "ablation300", "ablation600", "taw300", "tm600b", "tm300b", "ablation300b"])
+    ap.add_argument("group", choices=["tm600", "tm300", "tm100", "ablation300", "ablation600", "taw300", "tm600b", "tm300b", "ablation300b", "taw100"])
     ap.add_argument("--model", required=True)
     ap.add_argument("--ratio", type=float)
     a = ap.parse_args()
@@ -21,6 +21,8 @@ def main():
             jpctx.run_group(a.model, a.group, jpctx.token_matched_group(n, r), universe=int(0.83 * n), qseed=2, log=lambda s: print(s, flush=True))
         elif a.group == "ablation300b":
             jpctx.run_group(a.model, a.group, jpctx.ablation_group(300), universe=250, qseed=2, log=lambda s: print(s, flush=True))
+        elif a.group == "taw100":  # qwen3-8b in LM Studio hangs on prompts above ~4k tokens, so its replication runs at N=100
+            jpctx.run_group(a.model, a.group, jpctx.taw_group(a.model, 100), universe=80, log=lambda s: print(s, flush=True))
         elif a.group == "taw300":
             jpctx.run_group(a.model, a.group, jpctx.taw_group(a.model, 300), universe=250, log=lambda s: print(s, flush=True))
         elif a.group.startswith("tm"):

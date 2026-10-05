@@ -120,10 +120,22 @@ def load_chats(only_verified: bool = True) -> List[Dict]:
     return [r for r in rows if r.get("ok_gen") and (r.get("verified") or not only_verified)]
 
 
-REPS = {"L0": None, "sudachi-m": ("sudachi", "m"), "sudachi-g": ("sudachi", "g"), "naive": ("naive", "m")}
+class Refined:
+    """Issue #27 refinement after the failure analysis (self-corrections, slang and negation scope were lost): keep conjugated surface
+    forms and interjections / conjunctions / fillers (r1); additionally keep case particles and clause connectors (r2)."""
+
+    def __init__(self, level: int):
+        self.level = level
+        self.an = jl1.make("sudachi")
+
+    def __call__(self, text: str) -> str:
+        return jl1.to_l1(self.an.analyze(text), surface=True, keep_filler=True, keep_case=self.level >= 2, keep_connectors=self.level >= 2, keep_quote=True)
 
 
-def run_qa(model: str, base_url="http://localhost:1234/v1", log=print) -> None:
+REPS = {"L0": None, "sudachi-m": ("sudachi", "m"), "sudachi-g": ("sudachi", "g"), "naive": ("naive", "m"), "refined-r1": Refined(1), "refined-r2": Refined(2)}
+
+
+def run_qa(model: str, base_url="http://localhost:1234/v1", log=print, max_chats: int = 0) -> None:
     """All verified chats form one memory store (a few thousand tokens); the question for every chat is asked against it."""
     chats = load_chats()
     path = OUT / f"nat_qa_{model.replace('/', '_')}.jsonl"
@@ -134,10 +146,12 @@ def run_qa(model: str, base_url="http://localhost:1234/v1", log=print) -> None:
     order = list(range(len(chats)))
     rng.shuffle(order)
     chats = [chats[i] for i in order]
+    if max_chats:
+        chats = chats[:max_chats]
     for rep, spec in REPS.items():
         if rep in done:
             continue
-        conv = jl1.Converter(*spec) if spec else None
+        conv = (spec if isinstance(spec, Refined) else jl1.Converter(*spec)) if spec else None
         t0 = time.perf_counter()
         docs = [c["text"] if conv is None else to_l1_chat(conv, c["text"]) for c in chats]
         conv_ms = (time.perf_counter() - t0) / len(chats) * 1000
@@ -145,10 +159,10 @@ def run_qa(model: str, base_url="http://localhost:1234/v1", log=print) -> None:
         system = f"[run:{uuid.uuid4().hex[:8]}] {SYSTEM}"
         rows = []
         try:
-            base = chat(model, system, f"記憶メモ:\n\n\n質問: x\n{INSTR}{nt}", max_tokens=5, base_url=base_url, extra=extra, deadline=240)
+            base = chat(model, f"[base:{uuid.uuid4().hex[:8]}] {SYSTEM}", f"記憶メモ:\n\n\n質問: x\n{INSTR}{nt}", max_tokens=12, base_url=base_url, extra=extra, deadline=240)
             for i, c in enumerate(chats):
                 r = chat(model, system, f"記憶メモ:\n{ctx}\n\n質問: {c['q']}\n{INSTR}{nt}", max_tokens=8, base_url=base_url, extra=extra,
-                         deadline=1800 if i == 0 else 240, timeout=1800 if i == 0 else 300)
+                         deadline=400 if i == 0 else 240, timeout=420 if i == 0 else 300)
                 rows.append(dict(model=model, rep=rep, i=i, id=c["id"], status=c["status"], phenomena=c["phenomena"], typo=c["typo"], gold=c["gold"], answer=r.text,
                                  ok=score(r.text, c["gold"]), prompt_tokens=r.prompt_tokens, ctx_tokens=(r.prompt_tokens - base.prompt_tokens) if i == 0 else None,
                                  ttft=r.ttft, total=r.total, conv_ms=conv_ms, ctx_chars=len(ctx)))

@@ -86,7 +86,8 @@ def run_group(model: str, group: str, conds: Dict[str, Tuple[str, int]], univers
     if path.exists():
         for l in path.read_text(encoding="utf-8").splitlines():
             r = json.loads(l)
-            done.add((r["group"], r["cond"]))
+            if "error" not in r:
+                done.add((r["group"], r["cond"]))
     mems = memories()
     qs = make_questions(mems, universe, nq, ntq, seed=qseed)
     extra = {"reasoning_effort": "none"} if "gemma" in model else None
@@ -100,11 +101,11 @@ def run_group(model: str, group: str, conds: Dict[str, Tuple[str, int]], univers
         system = f"[run:{uuid.uuid4().hex[:8]}] {SYSTEM}"
         rows = []
         try:
-            base = chat(model, system, f"記憶メモ:\n\n\n質問: x\n{INSTR}{nt}", max_tokens=5, base_url=base_url, extra=extra, deadline=240)
+            base = chat(model, f"[base:{uuid.uuid4().hex[:8]}] {SYSTEM}", f"記憶メモ:\n\n\n質問: x\n{INSTR}{nt}", max_tokens=12, base_url=base_url, extra=extra, deadline=240)
             for i, q in enumerate(qs):
                 instr = INSTR if q["kind"] == "status" else TIME_INSTR
                 prompt = f"記憶メモ:\n{ctx}\n\n質問: {q['text']}\n{instr}{nt}"
-                r = chat(model, system, prompt, max_tokens=30, base_url=base_url, extra=extra, deadline=1800 if i == 0 else 240, timeout=1800 if i == 0 else 300)
+                r = chat(model, system, prompt, max_tokens=30, base_url=base_url, extra=extra, deadline=400 if i == 0 else 240, timeout=420 if i == 0 else 300)
                 rows.append(dict(model=model, group=group, cond=cond, variant=variant, n_mem=n, qi=i, cold=(i == 0), kind=q["kind"], pos_bin=q["pos_bin"],
                                  status=q["status"], q=q["text"], gold=q["gold"], answer=r.text, ok=score_q(q, r.text), prompt_tokens=r.prompt_tokens,
                                  ctx_tokens=(r.prompt_tokens - base.prompt_tokens) if i == 0 else None, ttft=r.ttft, total=r.total, ctx_chars=len(ctx)))
