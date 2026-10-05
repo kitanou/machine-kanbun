@@ -1,0 +1,13 @@
+variant,cond,acc,tokens,ratio
+short,A_base,0.9714,557.4,1.0
+short,B_scf,0.8667,512.4,0.919
+short,E_secf,0.819,600.8,1.078
+short,N_nf_tokmatch,0.9714,505.6,0.907
+short,D_scf_tag,0.9238,567.4,1.018
+short,G_secf_tag,0.7238,670.7,1.203
+long,A_base,1.0,1270.6,1.0
+long,B_scf,0.8254,1147.4,0.903
+long,E_secf,0.7302,1422.7,1.12
+long,N_nf_tokmatch,1.0,1139.9,0.897
+long,D_scf_tag,0.9365,1151.1,0.906
+long,G_secf_tag,0.6984,1456.6,1.146

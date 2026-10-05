@@ -10,3 +10,7 @@ DONE 33b
 22:09 33 secf generation gemma rc=0 6850s
 22:44 33 secf judge qwen rc=0 2128s
 DONE 33c
+01:32 49 secf convert long rc=0 727s
+02:33 49 qa short rc=0 3683s
+03:56 49 qa long rc=0 4981s
+DONE 49
