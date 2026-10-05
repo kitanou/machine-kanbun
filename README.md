@@ -3,6 +3,21 @@
 LLM に渡す文脈を「漢字 + 漢文的省略 + 構造記号」の擬似漢文 IR に変換し、
 トークン数・意味保持・TTFT がどう変わるかを測る。
 
+## 用語: NF / SCF / SeCF(Issue #35)
+今後の解析・表・グラフ・Issue・論文では、圧縮の強さ(L0, L1, L5)ではなく**表現の性質**で名前を付ける。
+
+| 新名称 | 略称 | 旧称 | 定義 |
+|---|---|---|---|
+| Natural Form | **NF** | L0 | 元の自然言語。文体・助詞・語順・ニュアンスを保持し、圧縮処理なし |
+| Structural Compact Form | **SCF** | 軽量L1 / Parser L1 | 既存の言語解析器と規則で、高速・決定的に冗長性を削る表現。追加の LLM 推論は不要 |
+| Semantic Compact Form | **SeCF** | L1(#19 まで)・L5/機械漢文 | 意味保持を最優先に、意味単位でさらに冗長性を除いた表現。生成コストを許容 |
+
+- `NF → SCF → SeCF` の順に変換してもよく、`NF → SeCF` を直接生成してもよい。
+- `L0 / L1 / L5` は廃止せず**圧縮プロファイル**として別軸にする: `SCF-L1`、`SeCF-L1`、`SeCF-L5` のように書く。
+- 本 README の #20 以降の日本語実験の簡易 L1(sudachi-m など)は **SCF-L1**、#4〜#19 の L1・L5・IR は **SeCF-L1 / SeCF-L5**。裸の「L1」は文脈で意味が違う(#20 以降は SCF、#19 まで SeCF)。
+- 過去実験は旧称のまま記述し、各節の冒頭に読み替えを付けた。生成するレポートでは `machine_kanbun/terms.py` の `display()` で標準名に読み替える。JSON/CSV の既存キー(`L0`、`sudachi-m` …)は再現性のため変更せず、CSV に `form`(NF/SCF/SeCF)列を追加した。
+- 定義の詳細、SCF/SeCF の境界条件・生成要件、論文 Terminology 節の原稿は [docs/terminology.md](docs/terminology.md)。
+
 ## 構成
 - `machine_kanbun/model.py` — 構造化 Fact / Question / Profile
 - `machine_kanbun/encoder.py` — KCR エンコーダ。L0〜L5 と JSON を生成
@@ -343,6 +358,8 @@ scripts/run_ir_e.sh; scripts/run_zh.sh; scripts/run_natural.sh           # 実�
 
 ## Issue #20: 日本語 L0 と既存解析器ベースの簡易 L1
 
+> 表記: 本節の L0 = NF、簡易 L1(sudachi-m など)= SCF-L1(Issue #35)。以下は当時の旧称のまま。トークナイザ表の数値は、のちに直した「なんか」分割の修正後に再計算すると 0.01〜0.02 小さくなる(例: Qwen3 の m 1.24 → 1.22。`results/jp/report.md` は再生成済み)。
+
 日本語の会話文だけを対象に、**L0(自然文のまま)**と、**既存の形態素解析器・係り受け解析器 + 軽量ルールで作る簡易 L1**を比べた。LLM も新しい解析器も使わない。全結果は [results/jp/report.md](results/jp/report.md)(表・変換例・グラフ)、[results.csv](results/jp/results.csv)、各 JSON/JSONL。
 
 - 解析器: SudachiPy(モード C)、MeCab(fugashi + unidic-lite)、Janome(IPAdic)、GiNZA(spaCy, UD)。
@@ -398,6 +415,8 @@ RAG モード(実験5, BM25 上位 5 件を LLM へ, 各 40 問): N=10,000 で L
 - 限界: ①データは自作の会話体生成器で、実際の会話ログではない(氏名 + 事象でほぼ一意に引けるため検索は易しい)。②LLM の評価は各条件 40 問で、有意と言えるのは naive の悪化と gemma N=600 の m だけ。③情報保持(実験4)は規則による自己採点。④LLM は 2 モデル、埋め込みは 2 モデル、ハードウェアは 1 台(M 系 Mac)。⑤LLMLingua との比較は対象外。⑥N=10,000 の RAG は LLM に渡すのが BM25 上位 5 件(埋め込み検索を RAG の入力に使った場合は未評価)。
 
 ## Issue #25〜#31: 簡易L1の効果の要因分解と一般化(日本語)
+
+> 表記: 本節の L0 = NF、簡易 L1(sudachi-m、g、refined など)= SCF-L1(Issue #35)。以下は当時の旧称のまま。`results/jp2/report.md` は標準名で出力される。
 
 #20 で見えた「長文脈で簡易 L1 が L0 より高精度」「トークナイザ依存」などの追加検証。全結果は [results/jp2/report.md](results/jp2/report.md)(表)、[ctx_summary.csv](results/jp2/ctx_summary.csv)、各 JSON/JSONL、`chart_*.svg`。主評価モデルは gemma-4-12b(LM Studio、文脈 20,000)、各条件は状態QA 60 問 + 時期QA 20 問(同一質問集合・同一文脈・ペア符号検定)。コードは `jlvar.py`(表現バリアント)、`jpctx.py`(制御付き長文脈QA)、`tokaware.py`、`jpdual.py`、`jpnat.py`、`jpml.py`、`jpattn.py`、`jp2report.py`、実行は `scripts/run_jp2*.sh`。
 

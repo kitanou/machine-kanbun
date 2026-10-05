@@ -8,6 +8,8 @@ from collections import defaultdict
 from pathlib import Path
 from typing import Dict, List
 
+from . import terms
+
 RES = Path(__file__).parent.parent / "results" / "jp"
 
 
@@ -63,7 +65,8 @@ def main():
     L: List[str] = []
     P = L.append
     csv_rows = []
-    P("# Issue #20 日本語 L0 と既存解析器ベースの簡易 L1 の比較\n")
+    P("# Issue #20 日本語 NF(旧 L0)と既存解析器ベースの SCF(旧 簡易 L1)の比較\n")
+    P(terms.note() + "(以下、表中の L0 は NF、L1 は SCF-L1、sudachi-m などは SCF の変種)\n")
     P("対象は日本語の会話文のみ。簡易 L1 は既存の形態素解析器(SudachiPy / MeCab(fugashi, unidic-lite) / Janome)と係り受け解析器(GiNZA)の出力を"
       "軽量ルールで写像したもので、LLM は使わない。変種: **m** 形態素のみ(空白区切り)、**g** m を空白なしで連結、**p** 格助詞を残す、**c** 接続を残す、"
       "**d** GiNZA の係り受けで節に分け省略された主語を補う、**naive** 解析器なしでひらがな連を削るだけ。\n")
@@ -254,6 +257,8 @@ def main():
     text = "\n".join(L)
     (RES / "report.md").write_text(text + "\n", encoding="utf-8")
     if csv_rows:
+        for r in csv_rows:
+            r["form"] = terms.form_of(str(r.get("config", "")).split("|")[0])
         keys = sorted({k for r in csv_rows for k in r})
         with (RES / "results.csv").open("w", newline="", encoding="utf-8") as fh:
             w = csv.DictWriter(fh, fieldnames=keys)
