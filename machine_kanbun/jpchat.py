@@ -79,6 +79,8 @@ def build_scenarios(n: int = 35, seed: int = 33, n_ex: int = N_EX) -> List[Dict]
 
 
 def variant_files(variant: str):
+    if variant == "secf":  # SeCF conditions on the short histories
+        return ("histories.jsonl", "gensecf_", "judgesecf_")
     return ("histories_long.jsonl", "genlong_", "judgelong_") if variant == "long" else ("histories.jsonl", "gen_", "judge_")
 
 
@@ -118,8 +120,71 @@ def l1_text(text: str) -> str:
     return _conv(text)
 
 
+SECF_SYSTEM = """日本語の会話の1発話を、LLMの内部メモリ用の意味構造(SeCF)に変換します。出力は構造1行のみ。説明は書かない。
+形式: 主体{時:..; event:..; <対象>:{state:..}; decision:true|false|unknown; ..}
+- 事実(誰が・いつ・何を・どういう状態か)を保持する。助詞・敬語・相づちは落とす。
+- 実行済/未実行/予定/希望/迷い/伝聞/可能性は state か decision で必ず区別して残す(確定していないことを確定にしない)。
+- 話者がユーザーの発話は主体を「ユーザー」とする。アシスタントの返事は「アシスタント{act:共感|質問|助言; 内容:..}」とする。
+
+例:
+入力: 昨日、田中さんと久しぶりに話した。田中さんは会社を辞めようか迷っているが、まだ決めていない。
+出力: 田中{時:昨日; event:会話; 退職:{state:検討}; decision:false}
+入力: 佐藤さんが旅行に行ったという話は聞いただけで、本当かどうか分からない。
+出力: 佐藤{旅行:{state:伝聞; 確認:false}; decision:unknown}
+入力: 今日はずっと雨で、なんだか気分が重いな。
+出力: ユーザー{時:今日; 天気:雨; 気分:重い}
+入力: それは気が重くなりますよね。無理せず過ごしてくださいね。
+出力: アシスタント{act:共感; 内容:{気分:重い; 助言:無理しない}}"""
+_secf_cache: Optional[Dict[str, str]] = None
+SECF_MODEL = "google/gemma-4-12b"
+
+
+def secf_text(text: str, model: str = SECF_MODEL, base_url="http://localhost:1234/v1") -> str:
+    """SeCF-L1 of one utterance: LLM-generated semantic structure (cached; temperature 0)."""
+    global _secf_cache
+    path = OUT / "secf_cache.jsonl"
+    if _secf_cache is None:
+        _secf_cache = {}
+        if path.exists():
+            for l in path.read_text(encoding="utf-8").splitlines():
+                r = json.loads(l)
+                _secf_cache[r["text"]] = r["secf"]
+    if text in _secf_cache:
+        return _secf_cache[text]
+    r = chat(model, SECF_SYSTEM, f"入力: {text}\n出力:", max_tokens=160, base_url=base_url, extra={"reasoning_effort": "none"}, deadline=120, timeout=140)
+    out = r.text.strip().split("\n")[0].strip()
+    out = re.sub(r"^出力[:：]\s*", "", out)
+    _secf_cache[text] = out
+    OUT.mkdir(parents=True, exist_ok=True)
+    with path.open("a", encoding="utf-8") as fh:
+        fh.write(json.dumps(dict(text=text, secf=out, ms=round(r.total * 1000)), ensure_ascii=False) + "\n")
+    return out
+
+
+def prep_secf(variant: str = "short", log=print) -> None:
+    """Pre-compute the SeCF form of every user/assistant utterance of the histories."""
+    n = 0
+    for h in load_histories(variant):
+        for u, a in h["exchanges"]:
+            secf_text(u)
+            secf_text(a)
+        n += 1
+        if n % 5 == 0:
+            log(f"secf converted {n} histories")
+
+
 # ---------------------------------------------------------------------------------------------------------- conditions
 def cond_table(variant: str = "short") -> Dict[str, Dict]:
+    if variant == "secf":  # SeCF mirror of the short conditions: C = hybrid (message list), E = full (c=8), G = isolated (tag + instruction)
+        c = {}
+        for k in (2, 4, 6, 7, 8):
+            c[f"C_c{k}"] = dict(family="role", c=k, form="secf")
+        for k in (2, 4, 6, 7, 8):
+            c[f"G_c{k}"] = dict(family="tag", c=k, instr=True, form="secf")
+        c["G0_noinstr_c6"] = dict(family="tag", c=6, instr=False, form="secf")
+        c["GP2_recent_then_block_c6"] = dict(family="tag", c=6, instr=True, order="recent_first", form="secf")
+        c["GP3_block_persona_c6"] = dict(family="tag", c=6, instr=True, persona_after=True, form="secf")
+        return c
     if variant == "long":  # 24 exchanges: old 16 / 24 exchanges compressed
         return {"A_base": dict(family="role", c=0), "B_c16": dict(family="role", c=16), "B_c24": dict(family="role", c=24),
                 "T0_plain": dict(family="tag", c=16, instr=True, l1=False), "D_c16": dict(family="tag", c=16, instr=True), "D_c24": dict(family="tag", c=24, instr=True),
@@ -141,7 +206,8 @@ def build_messages(sc: Dict, spec: Dict, nonce: str):
     ex = sc["exchanges"]
     c = spec["c"]
     t0 = time.perf_counter()
-    old = [[l1_text(u), l1_text(a)] for u, a in ex[:c]] if spec.get("l1", True) else [list(x) for x in ex[:c]]
+    conv = secf_text if spec.get("form") == "secf" else l1_text
+    old = [[conv(u), conv(a)] for u, a in ex[:c]] if spec.get("l1", True) else [list(x) for x in ex[:c]]
     conv_ms = (time.perf_counter() - t0) * 1000
     recent = ex[c:]
     q = sc["question"]
@@ -154,6 +220,8 @@ def build_messages(sc: Dict, spec: Dict, nonce: str):
     comp = "\n".join(f"U: {u}\nA: {a}" for u, a in old)
     rec = "\n".join(f"User: {u}\nAssistant: {a}" for u, a in recent)
     note = BLOCK_NOTE if spec.get("l1", True) else PLAIN_NOTE
+    if spec.get("form") == "secf":
+        note = note.replace("machine-compressed", "machine-generated semantic-structure (SeCF)")
     tag = "compressed_context" if spec.get("l1", True) else "earlier_conversation"
     block = f"<{tag}>\n{note}\n\n{comp}\n</{tag}>" if c else ""
     recent_block = f"<recent_conversation>\n{rec}\n{'User: ' if rec else 'User: '}{q}\n</recent_conversation>" if rec else f"<recent_conversation>\nUser: {q}\n</recent_conversation>"
@@ -203,6 +271,9 @@ def run_gen(model: str, base_url="http://localhost:1234/v1", log=print, conds: O
 _PUNCT = "。！？!?、,.…「」『』()（）[]【】~〜・:：;；/／"
 _SENT = re.compile(r"[。！？!?\n]+")
 _L1_LABEL = re.compile(r"(?<![ぁ-んァ-ヶー一-龥])(未|有|無|済|否)(?![ぁ-んァ-ヶー一-龥])")
+_STRUCT = re.compile(r"[{}\[\]]|[A-Za-z_]+\s*:\s*|[^\s。、]{1,6}:[^\s。、/]{1,8}|;")
+_BULLET = re.compile(r"^\s*([-*・•]|\d+[.)．])\s")
+_FIELD = re.compile(r"\b(event|state|decision|act|status|true|false|unknown)\b|主体|アシスタント\{|ユーザー\{|時:")
 _POLITE_END = ("です", "ます", "ません", "でした", "ました", "でしょう", "ください", "ましょう", "ですね", "ますね", "ですよ", "ますよ", "ですか", "ますか")
 
 
@@ -228,7 +299,9 @@ def style_metrics(text: str) -> Dict[str, float]:
         chars=len(text), sentences=len(sents), avg_sentence_chars=len(text) / ns,
         particle_rate=sum(t.pos == "助詞" for t in toks_all) / nt, noun_rate=sum(t.pos in ("名詞", "代名詞") for t in toks_all) / nt, verb_rate=sum(t.pos == "動詞" for t in toks_all) / nt,
         sentence_final_rate=sum(p in ("助動詞", "助詞", "動詞", "形容詞", "形状詞") for p in last_pos) / ns, taigen_rate=sum(p in ("名詞", "代名詞") for p in last_pos) / ns,
-        polite_rate=polite / ns, telegraphic_rate=telegraphic / ns, l1_label_per_100=labels / n_chars * 100, slash_per_100=(text.count("/") + text.count("→")) / n_chars * 100)
+        polite_rate=polite / ns, telegraphic_rate=telegraphic / ns, l1_label_per_100=labels / n_chars * 100, slash_per_100=(text.count("/") + text.count("→")) / n_chars * 100,
+        struct_per_100=len(_STRUCT.findall(text)) / n_chars * 100, bullet_rate=sum(bool(_BULLET.match(l)) for l in text.split("\n")) / max(len([l for l in text.split("\n") if l.strip()]), 1),
+        field_per_100=len(_FIELD.findall(text)) / n_chars * 100)
 
 
 # ---------------------------------------------------------------------------------------------------------- judge
@@ -285,10 +358,12 @@ def judge(model: str, gen_model: str, base_url="http://localhost:1234/v1", log=p
 
 if __name__ == "__main__":
     mode = sys.argv[1]
-    variant = "long" if sys.argv[-1] == "long" else "short"
+    variant = sys.argv[-1] if sys.argv[-1] in ("long", "secf") else "short"
     try:
         if mode == "hist":
             gen_histories(sys.argv[2], n=21 if variant == "long" else 35, log=lambda s: print(s, flush=True), variant=variant)
+        elif mode == "prep_secf":
+            prep_secf("short", log=lambda s: print(s, flush=True))
         elif mode == "gen":
             run_gen(sys.argv[2], log=lambda s: print(s, flush=True), variant=variant)
         elif mode == "judge":

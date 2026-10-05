@@ -1,0 +1,29 @@
+secf converted 5 histories
+secf converted 10 histories
+secf converted 15 histories
+secf converted 20 histories
+secf converted 25 histories
+secf converted 30 histories
+secf converted 35 histories
+C_c2: n=35 prompt=427tok ttft=5.1s len=446chars
+C_c4: n=35 prompt=431tok ttft=4.9s len=418chars
+C_c6: n=35 prompt=444tok ttft=5.0s len=438chars
+C_c7: n=35 prompt=450tok ttft=5.1s len=468chars
+C_c8: n=35 prompt=457tok ttft=5.3s len=461chars
+G_c2: n=35 prompt=492tok ttft=5.5s len=310chars
+G_c4: n=35 prompt=497tok ttft=5.5s len=333chars
+G_c6: n=35 prompt=512tok ttft=5.6s len=350chars
+G_c7: n=35 prompt=519tok ttft=5.7s len=375chars
+G_c8: n=35 prompt=526tok ttft=5.9s len=425chars
+G0_noinstr_c6: n=35 prompt=486tok ttft=5.7s len=449chars
+GP2_recent_then_block_c6: n=35 prompt=512tok ttft=5.9s len=467chars
+GP3_block_persona_c6: n=35 prompt=557tok ttft=6.2s len=407chars
+judged 50
+judged 100
+judged 150
+judged 200
+judged 250
+judged 300
+judged 350
+judged 400
+judged 450

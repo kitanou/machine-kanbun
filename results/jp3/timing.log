@@ -6,3 +6,7 @@ DONE 33
 19:20 33 long generation gemma rc=0 2842s
 19:31 33 long judge qwen rc=0 659s
 DONE 33b
+20:14 33 secf convert gemma rc=0 643s
+22:09 33 secf generation gemma rc=0 6850s
+22:44 33 secf judge qwen rc=0 2128s
+DONE 33c
