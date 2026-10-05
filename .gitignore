@@ -5,3 +5,4 @@ __pycache__/
 .venv-ja/
 .venv-mlx/
 results/jp2/cache/
+results/jp2/*_hidden.npz

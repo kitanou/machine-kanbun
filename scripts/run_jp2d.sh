@@ -16,3 +16,4 @@ for g in tm600b tm300b; do
 done
 lms unload --all >/dev/null 2>&1
 echo "DONE D" >> $LOG
+[ -x scripts/run_jp2e.sh ] && scripts/run_jp2e.sh

@@ -1,0 +1,28 @@
+L0: acc=0.30 margin=-2.91 T=2142
+sudachi-m: acc=0.23 margin=-4.72 T=2668
+sudachi-g: acc=0.28 margin=-3.58 T=1652
+L0-tm(m)@122: acc=0.45 margin=-2.21 T=2579
+L0-tm(g)@70: acc=0.28 margin=-3.24 T=1547
+L0: acc=0.35 margin=-2.35 T=5092
+sudachi-m: acc=0.25 margin=-2.91 T=6393
+sudachi-g: acc=0.35 margin=-1.42 T=3869
+L0-tm(m)@305: acc=0.35 margin=-2.05 T=6194
+L0-tm(g)@175: acc=0.40 margin=-1.88 T=3627
+google/gemma-4-12b tm600b L0@600: status=73.3% time=85.0% ctx=11360tok cold_ttft=112.0s
+google/gemma-4-12b tm600b m@600: status=73.3% time=75.0% ctx=10098tok cold_ttft=100.0s
+google/gemma-4-12b tm600b L0-tm@534: status=76.7% time=85.0% ctx=10158tok cold_ttft=99.9s
+google/gemma-4-12b tm600b m-tm@674: status=73.3% time=75.0% ctx=11310tok cold_ttft=111.8s
+google/gemma-4-12b tm300b L0@300: status=75.0% time=100.0% ctx=5683tok cold_ttft=57.0s
+google/gemma-4-12b tm300b m@300: status=76.7% time=85.0% ctx=5022tok cold_ttft=49.7s
+google/gemma-4-12b tm300b L0-tm@267: status=70.0% time=95.0% ctx=5071tok cold_ttft=50.2s
+google/gemma-4-12b tm300b m-tm@337: status=71.7% time=95.0% ctx=5636tok cold_ttft=56.8s
+google/gemma-4-12b natural refined-r1: acc=80.3% ctx=6340tok cold_ttft=63.4s n=76
+google/gemma-4-12b natural refined-r2: acc=82.9% ctx=6663tok cold_ttft=65.3s n=76
+google/gemma-4-12b en L1n: acc=85.0% ctx=2902tok cold_ttft=29.4s
+google/gemma-4-12b ko L1n: acc=45.0% ctx=3209tok cold_ttft=32.9s
+google/gemma-4-12b zh L1n: acc=71.7% ctx=2798tok cold_ttft=28.1s
+L0: acc=0.40 margin=-2.82 T=2146
+sudachi-m: acc=0.36 margin=-2.99 T=2673
+sudachi-g: acc=0.34 margin=-3.28 T=1655
+L0-tm(m)@122: acc=0.42 margin=-2.67 T=2586
+L0-tm(g)@70: acc=0.34 margin=-2.81 T=1547

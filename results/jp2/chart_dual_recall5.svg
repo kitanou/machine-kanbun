@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="440" font-family="sans-serif" font-size="11">
+<rect width="900" height="440" fill="white"/>
+<text x="450.0" y="22" text-anchor="middle" font-size="14">#28 Recall@5(メモリ 10,000 件)</text>
+<line x1="60" y1="380" x2="840" y2="380" stroke="#444"/><line x1="60" y1="60" x2="60" y2="380" stroke="#444"/>
+<text x="16" y="220.0" transform="rotate(-90 16 220.0)" text-anchor="middle">Recall@5</text>
+<text x="54" y="384" text-anchor="end">0.00</text><line x1="60" y1="380" x2="840" y2="380" stroke="#eee"/>
+<text x="54" y="304" text-anchor="end">0.25</text><line x1="60" y1="300" x2="840" y2="300" stroke="#eee"/>
+<text x="54" y="224" text-anchor="end">0.50</text><line x1="60" y1="220" x2="840" y2="220" stroke="#eee"/>
+<text x="54" y="144" text-anchor="end">0.75</text><line x1="60" y1="140" x2="840" y2="140" stroke="#eee"/>
+<text x="54" y="64" text-anchor="end">1.00</text><line x1="60" y1="60" x2="840" y2="60" stroke="#eee"/>
+<text x="109" y="394" text-anchor="middle">bm25_L0</text>
+<rect x="70" y="136" width="39" height="244" fill="#c0392b"/>
+<rect x="109" y="136" width="39" height="244" fill="#2471a3"/>
+<text x="206" y="394" text-anchor="middle">bm25_L1</text>
+<rect x="167" y="83" width="39" height="297" fill="#c0392b"/>
+<rect x="206" y="83" width="39" height="297" fill="#2471a3"/>
+<text x="304" y="394" text-anchor="middle">vec_L0</text>
+<rect x="265" y="83" width="39" height="297" fill="#c0392b"/>
+<rect x="304" y="205" width="39" height="175" fill="#2471a3"/>
+<text x="401" y="394" text-anchor="middle">vec_L1</text>
+<rect x="362" y="133" width="39" height="247" fill="#c0392b"/>
+<rect x="401" y="195" width="39" height="185" fill="#2471a3"/>
+<text x="499" y="394" text-anchor="middle">hybrid_L0</text>
+<rect x="460" y="79" width="39" height="301" fill="#c0392b"/>
+<rect x="499" y="109" width="39" height="271" fill="#2471a3"/>
+<text x="596" y="394" text-anchor="middle">dual</text>
+<rect x="557" y="69" width="39" height="311" fill="#c0392b"/>
+<rect x="596" y="119" width="39" height="261" fill="#2471a3"/>
+<text x="694" y="394" text-anchor="middle">dual_2view</text>
+<rect x="655" y="63" width="39" height="317" fill="#c0392b"/>
+<rect x="694" y="118" width="39" height="262" fill="#2471a3"/>
+<text x="791" y="394" text-anchor="middle">weighted_dual</text>
+<rect x="752" y="66" width="39" height="314" fill="#c0392b"/>
+<rect x="791" y="82" width="39" height="298" fill="#2471a3"/>
+<rect x="710" y="34" width="10" height="10" fill="#c0392b"/><text x="725" y="43">qwen3-emb</text>
+<rect x="710" y="49" width="10" height="10" fill="#2471a3"/><text x="725" y="58">nomic</text>
+</svg>

@@ -238,6 +238,18 @@ def l1_ja(text: str) -> str:
 
 L1 = {"ja": l1_ja, "en": l1_en, "ko": l1_ko, "zh": l1_zh}
 
+# L1n: same words, but the meaning markers are written as native words instead of ASCII labels (NOT/PST/HEAR/WANT/MAY)
+NATIVE = {"en": {"NOT": "not", "PST": "-ed", "HEAR": "heard", "WANT": "want", "MAY": "might"},
+          "ko": {"NOT": "않", "PST": "었", "HEAR": "들었", "WANT": "싶", "MAY": "ᆯ지도"},
+          "zh": {"NOT": "没", "PST": "了", "HEAR": "听说", "WANT": "想", "MAY": "可能"}}
+
+
+def l1n(text: str, lang: str) -> str:
+    base = L1[lang](text)
+    if lang == "ja":
+        return base
+    return " ".join(NATIVE[lang].get(w, w) for w in base.split())
+
 # status recovery by native rules (marker + content cue) from the L1 text alone
 CUES = {"ja": dict(MAY="かも", HEAR=None, UND=("迷う", "決める"), PLAN=("予定",), WANT=("たい",), NOT="ない", PST="た"),
         "en": dict(MAY="MAY", HEAR="HEAR", UND=("think", "decide"), PLAN=("plan",), WANT="WANT", NOT="NOT", PST="PST"),

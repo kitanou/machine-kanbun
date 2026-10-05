@@ -167,7 +167,7 @@ def merge_kamo(toks: List[Tok]) -> List[Tok]:
 
 
 def to_l1(toks: List[Tok], keep_case: bool = False, keep_connectors: bool = False, sep: str = " ", *, drop: frozenset = frozenset(),
-          surface: bool = False, keep_filler: bool = False, keep_polite: bool = False, no_slash: bool = False, drop_person: bool = False) -> str:
+          surface: bool = False, keep_filler: bool = False, keep_polite: bool = False, no_slash: bool = False, drop_person: bool = False, keep_quote: bool = False) -> str:
     """Ablation switches (Issues #25/#30; defaults reproduce the Issue #20 variants):
     drop = marker words to delete (ない/た/らしい/たい/かも/みたい/う); surface = keep conjugated surface instead of lemma;
     keep_filler / keep_polite = keep fillers+interjections+conjunctions / polite+copula auxiliaries; no_slash = no sentence marker;
@@ -215,7 +215,9 @@ def to_l1(toks: List[Tok], keep_case: bool = False, keep_connectors: bool = Fals
             i += 1
             continue
         if t.pos in ("助詞", "ADP", "SCONJ", "PART"):
-            if keep_case and s in CASE and out and last_noun:
+            if keep_quote and s in ("って", "だって", "と") and out and i + 1 < n and toks[i + 1].lemma in ("言う", "聞く", "思う", "いう") or (keep_quote and s in ("って", "だって")):
+                out.append("って")
+            elif keep_case and s in CASE and out and last_noun:
                 out[-1] += s
             elif keep_connectors and s in CONNECT:
                 out.append(CONNECT[s])

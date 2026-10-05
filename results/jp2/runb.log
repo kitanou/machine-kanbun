@@ -1,0 +1,39 @@
+ng-nomic-embed-text-v1.5 N=1000 done (w=0.5)
+ng-nomic-embed-text-v1.5 N=10000 done (w=0.9)
+ing-qwen3-embedding-0.6b N=1000 done (w=0.3)
+ing-qwen3-embedding-0.6b N=10000 done (w=0.6)
+QA google/gemma-4-12b bm25_L0 feed=L0: acc=73.3% hit=73% prompt=230tok
+QA google/gemma-4-12b bm25_L0 feed=L1: acc=71.7% hit=73% prompt=215tok
+QA google/gemma-4-12b bm25_L1 feed=L0: acc=85.0% hit=92% prompt=224tok
+QA google/gemma-4-12b bm25_L1 feed=L1: acc=81.7% hit=92% prompt=209tok
+QA google/gemma-4-12b vec_L0 feed=L0: acc=90.0% hit=97% prompt=236tok
+QA google/gemma-4-12b vec_L0 feed=L1: acc=80.0% hit=97% prompt=224tok
+QA google/gemma-4-12b hybrid_L0 feed=L0: acc=95.0% hit=97% prompt=230tok
+QA google/gemma-4-12b hybrid_L0 feed=L1: acc=80.0% hit=97% prompt=216tok
+QA google/gemma-4-12b dual feed=L0: acc=95.0% hit=98% prompt=227tok
+QA google/gemma-4-12b dual feed=L1: acc=88.3% hit=98% prompt=215tok
+QA google/gemma-4-12b quad feed=L0: acc=95.0% hit=97% prompt=227tok
+QA google/gemma-4-12b quad feed=L1: acc=83.3% hit=97% prompt=211tok
+google/gemma-4-12b taw300 L0: status=80.0% time=90.0% ctx=5684tok cold_ttft=57.4s
+google/gemma-4-12b taw300 sudachi-m: status=90.0% time=80.0% ctx=5020tok cold_ttft=57.7s
+google/gemma-4-12b taw300 sudachi-g: status=75.0% time=80.0% ctx=4004tok cold_ttft=43.9s
+google/gemma-4-12b taw300 taw[own:gemma2]-best_readable: status=70.0% time=85.0% ctx=4902tok cold_ttft=50.9s
+google/gemma-4-12b taw300 taw[own:gemma2]-best: status=83.3% time=95.0% ctx=3806tok cold_ttft=40.7s
+google/gemma-4-12b taw300 taw[foreign:qwen3]-best_readable: status=80.0% time=85.0% ctx=6043tok cold_ttft=62.1s
+google/gemma-4-12b taw300 taw[foreign:qwen3]-best: status=80.0% time=95.0% ctx=3806tok cold_ttft=41.0s
+google/gemma-4-12b natural L0: acc=82.9% ctx=8175tok cold_ttft=79.3s n=76
+google/gemma-4-12b natural sudachi-m: acc=71.1% ctx=5639tok cold_ttft=56.1s n=76
+google/gemma-4-12b natural sudachi-g: acc=77.6% ctx=4743tok cold_ttft=50.4s n=76
+google/gemma-4-12b natural naive: acc=44.7% ctx=3539tok cold_ttft=36.3s n=76
+google/gemma-4-12b ja L0: acc=70.0% ctx=3275tok cold_ttft=33.9s
+google/gemma-4-12b ja L1: acc=68.3% ctx=2882tok cold_ttft=29.5s
+google/gemma-4-12b en L0: acc=90.0% ctx=3872tok cold_ttft=40.0s
+google/gemma-4-12b en L1: acc=73.3% ctx=2731tok cold_ttft=27.1s
+google/gemma-4-12b ko L0: acc=70.0% ctx=4090tok cold_ttft=40.0s
+google/gemma-4-12b ko L1: acc=56.7% ctx=2899tok cold_ttft=29.2s
+google/gemma-4-12b zh L0: acc=90.0% ctx=2553tok cold_ttft=25.3s
+google/gemma-4-12b zh L1: acc=40.0% ctx=2666tok cold_ttft=26.6s
+ERROR taw300 L0: ValueError: empty response (usage={'prompt_tokens': 6179, 'completion_tokens': 5, 'total_tokens': 6184, 'completion_tokens_details': {'reasoning_tokens': 3}}, c
+STALLED: no completion within 240s
+STALLED: no completion within 240s
+STALLED: no completion within 240s

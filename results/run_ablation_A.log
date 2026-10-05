@@ -1,0 +1,2 @@
+google/gemma-4-12b len=2000 L0: acc=100.0% ctx=1899tok cold_ttft=21.4s
+google/gemma-4-12b len=2000 L1: acc=100.0% ctx=863tok cold_ttft=10.2s
