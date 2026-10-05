@@ -9,6 +9,8 @@ from math import comb
 from pathlib import Path
 from typing import Dict, List
 
+from . import terms
+
 OUT = Path(__file__).parent.parent / "results" / "jp2"
 
 
@@ -111,8 +113,8 @@ def section_ctx(model_key: str, P):
                 x, y, p = paired(by, c, base)
                 sg = f"{x}:{y}, p={p:.3f}"
             ratio = s["ctx"] / s0["ctx"] if s0 else float("nan")
-            P(f"| {c} | {s['ctx']} | {ratio:.2f} | {s['acc']:.1%} | {s['ci'][0]:.2f}-{s['ci'][1]:.2f} | {s['time_acc']:.0%} | {s['ttft']:.0f} | {s['warm']:.1f} | {s['acc'] / (s['ctx'] / 1000):.3f} | {sg} |")
-            csvrows.append(dict(model=model_key, group=g, cond=c, ctx_tokens=s["ctx"], token_ratio=round(ratio, 3), status_acc=round(s["acc"], 4), time_acc=round(s["time_acc"], 4),
+            P(f"| {terms.display(c)} | {s['ctx']} | {ratio:.2f} | {s['acc']:.1%} | {s['ci'][0]:.2f}-{s['ci'][1]:.2f} | {s['time_acc']:.0%} | {s['ttft']:.0f} | {s['warm']:.1f} | {s['acc'] / (s['ctx'] / 1000):.3f} | {sg} |")
+            csvrows.append(dict(model=model_key, group=g, cond=c, form=terms.form_of(c), ctx_tokens=s["ctx"], token_ratio=round(ratio, 3), status_acc=round(s["acc"], 4), time_acc=round(s["time_acc"], 4),
                                 cold_ttft=round(s["ttft"], 1), warm_s=round(s["warm"], 2)))
         # by status category and position
         P("\n状態別の正答率(状態QA):\n")
@@ -124,7 +126,7 @@ def section_ctx(model_key: str, P):
             for s_ in sts:
                 q = [r for r in rs if r["kind"] == "status" and r["status"] == s_]
                 cells.append(f"{sum(r['ok'] for r in q) / len(q):.2f}" if q else "-")
-            P(f"| {c} | " + " | ".join(cells) + " |")
+            P(f"| {terms.display(c)} | " + " | ".join(cells) + " |")
         P("\n正解メモリの位置別の正答率(状態QA, 位置ビン0=先頭〜4=末尾):\n")
         P("| 条件 | " + " | ".join(f"bin{b}" for b in range(5)) + " |")
         P("|---|---|---|---|---|---|")
@@ -133,7 +135,7 @@ def section_ctx(model_key: str, P):
             for b in range(5):
                 q = [r for r in rs if r["kind"] == "status" and r["pos_bin"] == b]
                 cells.append(f"{sum(r['ok'] for r in q) / len(q):.2f}" if q else "-")
-            P(f"| {c} | " + " | ".join(cells) + " |")
+            P(f"| {terms.display(c)} | " + " | ".join(cells) + " |")
     with (OUT / "ctx_summary.csv").open("a", newline="", encoding="utf-8") as fh:
         w = csv.DictWriter(fh, fieldnames=list(csvrows[0]))
         if fh.tell() == 0:
@@ -151,7 +153,7 @@ def pareto(model_key: str):
     pts = []
     for c, rs in by.items():
         s = summarize(rs)
-        pts.append((c, s["ctx"] / base["ctx"], s["acc"], kind(c)))
+        pts.append((terms.display(c), s["ctx"] / base["ctx"], s["acc"], kind(c)))
     svg_scatter(pts, f"トークン比 vs 状態QA正答率({model_key}, N=300)", "トークン比(L0=1.0)", "状態QA正答率", OUT / f"chart_pareto_{model_key}.svg")
 
 
@@ -178,7 +180,7 @@ def section_natural(model_key: str, P):
             y = sum(1 for i in a if b[i] and not a[i])
             sg = f"{x}:{y}, p={sign_p(x, y):.3f}"
         lo, hi = wilson(k, n)
-        P(f"| {rep} | {cold['ctx_tokens']} | {cold['ctx_tokens'] / c0:.2f} | {k / n:.1%} | {lo:.2f}-{hi:.2f} | {cold['ttft']:.0f} | {cold['conv_ms']:.2f} | {sg} |")
+        P(f"| {terms.display(rep)} | {cold['ctx_tokens']} | {cold['ctx_tokens'] / c0:.2f} | {k / n:.1%} | {lo:.2f}-{hi:.2f} | {cold['ttft']:.0f} | {cold['conv_ms']:.2f} | {sg} |")
     P("\n失敗カテゴリ別(現象タグ / 状態)の正答率:\n")
     cats = ["subj_omit", "anaphora", "selfcorrect", "fragment", "slang", "multi_turn"]
     P("| 表現 | " + " | ".join(cats) + " | typo注入 | " + " | ".join(["DONE", "NOT_DONE", "PLANNED", "WANTED", "UNDECIDED", "HEARSAY", "POSSIBLE"]) + " |")
@@ -193,7 +195,12 @@ def section_natural(model_key: str, P):
         for s_ in ["DONE", "NOT_DONE", "PLANNED", "WANTED", "UNDECIDED", "HEARSAY", "POSSIBLE"]:
             q = [r for r in rs if r["status"] == s_]
             cells.append(f"{sum(r['ok'] for r in q) / len(q):.2f} ({len(q)})" if q else "-")
-        P(f"| {rep} | " + " | ".join(cells) + " |")
+        P(f"| {terms.display(rep)} | " + " | ".join(cells) + " |")
+
+
+def _strat(name: str) -> str:
+    """Retrieval strategy names: bm25_L0 -> bm25_NF, vec_L1 -> vec_SCF, hybrid_L0 -> hybrid_NF (Issue #35 naming)."""
+    return name.replace("_L0", "_NF").replace("_L1", "_SCF").replace("L0", "NF")
 
 
 def jl(name):
@@ -229,7 +236,7 @@ def section_dual(P):
             for s in S:
                 r = d["results"][f"{m}|{N}|{s}"]
                 g = r["recall5_by_status"]
-                P(f"| {s} | {r['recall1']:.2f} | {r['recall5']:.2f} | {r['recall10']:.2f} | {r['mrr']:.2f} | {r['ndcg10']:.2f} | {g['UNDECIDED']:.2f}/{g['HEARSAY']:.2f}/{g['POSSIBLE']:.2f} |")
+                P(f"| {_strat(s)} | {r['recall1']:.2f} | {r['recall5']:.2f} | {r['recall10']:.2f} | {r['mrr']:.2f} | {r['ndcg10']:.2f} | {g['UNDECIDED']:.2f}/{g['HEARSAY']:.2f}/{g['POSSIBLE']:.2f} |")
     P("\nコスト:\n")
     st = d["stats"]
     P(f"- テキスト容量: L0 {st['bytes_L0']:,} B / L1 {st['bytes_L1']:,} B({st['bytes_L1'] / st['bytes_L0']:.0%})。BM25 ポスティング: {st['bm25_postings_L0']:,} → {st['bm25_postings_L1']:,}、語彙 {st['bm25_terms_L0']} → {st['bm25_terms_L1']}。変換 {st['convert_s']:.2f} s/{st['n']} 件。")
@@ -244,7 +251,7 @@ def section_dual(P):
         P("| モデル | 検索 | LLMに渡す表現 | 取得ヒット率 | 正答率 | プロンプトtok |")
         P("|---|---|---|---|---|---|")
         for (m, s, f), rs in by.items():
-            P(f"| {m} | {s} | {f} | {sum(r['hit'] for r in rs) / len(rs):.0%} | {sum(r['ok'] for r in rs) / len(rs):.1%} | {sum(r['prompt_tokens'] for r in rs) / len(rs):.0f} |")
+            P(f"| {m} | {_strat(s)} | {_strat('L' + f[1:] + '_') if False else terms.display('L' + f[1:] if f.startswith('L') else f)} | {sum(r['hit'] for r in rs) / len(rs):.0%} | {sum(r['ok'] for r in rs) / len(rs):.1%} | {sum(r['prompt_tokens'] for r in rs) / len(rs):.0f} |")
 
 
 def section_ml(P):
@@ -282,7 +289,7 @@ def section_ml(P):
             for s_ in ["DONE", "NOT_DONE", "PLANNED", "WANTED", "UNDECIDED", "HEARSAY", "POSSIBLE"]:
                 q = [r for r in rs if r["status"] == s_]
                 cells.append(f"{sum(r['ok'] for r in q)}/{len(q)}")
-            P(f"| {m} | {lg} | {rep} | {cold['ctx_tokens']} | {cold['ttft']:.0f} | {sum(r['ok'] for r in rs) / len(rs):.1%} | {' '.join(cells)} |")
+            P(f"| {m} | {lg} | {terms.display(rep)} | {cold['ctx_tokens']} | {cold['ttft']:.0f} | {sum(r['ok'] for r in rs) / len(rs):.1%} | {' '.join(cells)} |")
 
 
 def section_attn(P):
@@ -317,7 +324,7 @@ def section_attn(P):
             for p in pos:
                 q = [r for r in res if r["cond"] == c and r["pos"] == p]
                 cells.append(f"{np.mean([r['margin'] for r in q]):+.1f} / {np.mean([r['correct'] for r in q]):.2f}")
-            P(f"| {c} | " + " | ".join(cells) + " |")
+            P(f"| {terms.display(c)} | " + " | ".join(cells) + " |")
         # per-prompt association between attention to the target memory and the answer margin
         from itertools import combinations
         rho = {}
@@ -365,7 +372,8 @@ def pool(rows):
 def main():
     lines: List[str] = []
     P = lines.append
-    P("# Issue #25〜#31 追加検証(日本語簡易L1)\n")
+    P("# Issue #25〜#31 追加検証(日本語 NF と SCF)\n")
+    P(terms.note() + "\n")
     P("共通の方法: 条件ごとに文脈を固定して prefix cache を使い、同一の質問集合で全条件を比較する(コールド=1問目のprefill、ウォーム=2問目以降)。差は同じ質問でのペア符号検定。各条件の質問は状態QA 60 問 + 時期QA 20 問。\n")
     (OUT / "ctx_summary.csv").unlink(missing_ok=True)
     P("## #25 / #30 長文脈での精度要因・最小十分表現\n")
@@ -422,19 +430,19 @@ def charts():
     d = jl("ml_tokens.json")
     if d:
         tk = list(d["tokenizers"])
-        svg_bars(tk, {"L0": [d["tokenizers"][t]["cv_L0"] for t in tk], "L1": [d["tokenizers"][t]["cv_L1"] for t in tk], "L1(content only)": [d["sensitivity"]["L1_content_words_only"][t]["cv_L1"] for t in tk]},
-                 "#31 言語間 tok/fact の CV(小さいほど収束)", "CV", OUT / "chart_ml_cv.svg")
+        svg_bars(tk, {"NF": [d["tokenizers"][t]["cv_L0"] for t in tk], "SCF-L1": [d["tokenizers"][t]["cv_L1"] for t in tk], "SCF-L1(content only)": [d["sensitivity"]["L1_content_words_only"][t]["cv_L1"] for t in tk]},
+                 "#31 言語間 tok/fact の CV(小さいほど収束。NF vs SCF)", "CV", OUT / "chart_ml_cv.svg")
     d = jl("dual_index.json")
     if d:
         m = "text-embedding-qwen3-embedding-0.6b"
         S = ["bm25_L0", "bm25_L1", "vec_L0", "vec_L1", "hybrid_L0", "dual", "dual_2view", "weighted_dual"]
-        svg_bars(S, {"qwen3-emb": [d["results"][f"{m}|10000|{s}"]["recall5"] for s in S],
+        svg_bars([_strat(x) for x in S], {"qwen3-emb": [d["results"][f"{m}|10000|{s}"]["recall5"] for s in S],
                      "nomic": [d["results"][f"text-embedding-nomic-embed-text-v1.5|10000|{s}"]["recall5"] for s in S]}, "#28 Recall@5(メモリ 10,000 件)", "Recall@5", OUT / "chart_dual_recall5.svg", ymax=1.0)
     d = jl("tokaware.json")
     if d:
         tk = list(d)
         svg_bars(tk, {"汎用m": [d[t]["generic_m"]["ratio_vs_L0"] for t in tk], "汎用g": [d[t]["generic_g"]["ratio_vs_L0"] for t in tk], "最小": [d[t]["best"]["ratio_vs_L0"] for t in tk],
-                      "読みやすさ制約付き最小": [d[t]["best_readable"]["ratio_vs_L0"] for t in tk]}, "#26 L1/L0 トークン比(tokenizer別)", "トークン比", OUT / "chart_tokaware_ratio.svg")
+                      "読みやすさ制約付き最小": [d[t]["best_readable"]["ratio_vs_L0"] for t in tk]}, "#26 SCF/NF トークン比(tokenizer別)", "トークン比", OUT / "chart_tokaware_ratio.svg")
 
 
 if __name__ == "__main__":

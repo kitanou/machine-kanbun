@@ -8,19 +8,19 @@
 <text x="54" y="224" text-anchor="end">0.50</text><line x1="60" y1="220" x2="840" y2="220" stroke="#eee"/>
 <text x="54" y="144" text-anchor="end">0.75</text><line x1="60" y1="140" x2="840" y2="140" stroke="#eee"/>
 <text x="54" y="64" text-anchor="end">1.00</text><line x1="60" y1="60" x2="840" y2="60" stroke="#eee"/>
-<text x="109" y="394" text-anchor="middle">bm25_L0</text>
+<text x="109" y="394" text-anchor="middle">bm25_NF</text>
 <rect x="70" y="136" width="39" height="244" fill="#c0392b"/>
 <rect x="109" y="136" width="39" height="244" fill="#2471a3"/>
-<text x="206" y="394" text-anchor="middle">bm25_L1</text>
+<text x="206" y="394" text-anchor="middle">bm25_SCF</text>
 <rect x="167" y="83" width="39" height="297" fill="#c0392b"/>
 <rect x="206" y="83" width="39" height="297" fill="#2471a3"/>
-<text x="304" y="394" text-anchor="middle">vec_L0</text>
+<text x="304" y="394" text-anchor="middle">vec_NF</text>
 <rect x="265" y="83" width="39" height="297" fill="#c0392b"/>
 <rect x="304" y="205" width="39" height="175" fill="#2471a3"/>
-<text x="401" y="394" text-anchor="middle">vec_L1</text>
+<text x="401" y="394" text-anchor="middle">vec_SCF</text>
 <rect x="362" y="133" width="39" height="247" fill="#c0392b"/>
 <rect x="401" y="195" width="39" height="185" fill="#2471a3"/>
-<text x="499" y="394" text-anchor="middle">hybrid_L0</text>
+<text x="499" y="394" text-anchor="middle">hybrid_NF</text>
 <rect x="460" y="79" width="39" height="301" fill="#c0392b"/>
 <rect x="499" y="109" width="39" height="271" fill="#2471a3"/>
 <text x="596" y="394" text-anchor="middle">dual</text>

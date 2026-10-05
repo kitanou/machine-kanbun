@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="440" font-family="sans-serif" font-size="11">
 <rect width="900" height="440" fill="white"/>
-<text x="450.0" y="22" text-anchor="middle" font-size="14">#31 言語間 tok/fact の CV(小さいほど収束)</text>
+<text x="450.0" y="22" text-anchor="middle" font-size="14">#31 言語間 tok/fact の CV(小さいほど収束。NF vs SCF)</text>
 <line x1="60" y1="380" x2="840" y2="380" stroke="#444"/><line x1="60" y1="60" x2="60" y2="380" stroke="#444"/>
 <text x="16" y="220.0" transform="rotate(-90 16 220.0)" text-anchor="middle">CV</text>
 <text x="54" y="384" text-anchor="end">0.00</text><line x1="60" y1="380" x2="840" y2="380" stroke="#eee"/>
@@ -36,7 +36,7 @@
 <rect x="740" y="109" width="30" height="271" fill="#c0392b"/>
 <rect x="769" y="253" width="30" height="127" fill="#2471a3"/>
 <rect x="799" y="246" width="30" height="134" fill="#1e8449"/>
-<rect x="710" y="34" width="10" height="10" fill="#c0392b"/><text x="725" y="43">L0</text>
-<rect x="710" y="49" width="10" height="10" fill="#2471a3"/><text x="725" y="58">L1</text>
-<rect x="710" y="64" width="10" height="10" fill="#1e8449"/><text x="725" y="73">L1(content only)</text>
+<rect x="710" y="34" width="10" height="10" fill="#c0392b"/><text x="725" y="43">NF</text>
+<rect x="710" y="49" width="10" height="10" fill="#2471a3"/><text x="725" y="58">SCF-L1</text>
+<rect x="710" y="64" width="10" height="10" fill="#1e8449"/><text x="725" y="73">SCF-L1(content only)</text>
 </svg>
