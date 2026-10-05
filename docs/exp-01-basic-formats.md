@@ -2,7 +2,7 @@
 
 [← README に戻る](../README.md) ・ [用語(NF/SCF/SeCF)](terminology.md)
 
-> 表記: 本書の L0 = NF、L1 = SeCF-L1(構造化 Fact から作る電報体)、L5 / MKW / IR = SeCF-L5(Issue #35)。以下は当時の旧称のまま記述している。
+> 表記: 本書の L0 = NF、L1(日本語要約)= SeCF-L1、L2〜L4 = SeCF-L2〜L4、L5 / MKW / IR = SeCF-L5(Issue #35。各レベルの定義は README の「機械漢文の圧縮レベル」)。以下は当時の旧称のまま記述している。
 
 47 問 × 7 形式(L0〜L5 と JSON)、temperature 0、思考オフ。
 
