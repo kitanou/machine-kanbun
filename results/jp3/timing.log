@@ -1,0 +1,5 @@
+15:30 33 histories gemma rc=0 456s
+17:36 33 generation gemma rc=0 7573s
+18:17 33 judge qwen rc=0 2485s
+DONE 33
+18:33 33 long histories gemma rc=0 918s

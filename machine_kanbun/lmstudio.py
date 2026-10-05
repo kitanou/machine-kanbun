@@ -27,10 +27,10 @@ class Reply:
 
 def chat(model: str, system: str, user: str, base_url: str = BASE_URL,
          max_tokens: int = 300, timeout: float = 300, extra: Optional[dict] = None,
-         deadline: float = 600) -> Reply:
+         deadline: float = 600, messages: Optional[list] = None) -> Reply:
     body = json.dumps({
         "model": model,
-        "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}],
+        "messages": messages if messages is not None else [{"role": "system", "content": system}, {"role": "user", "content": user}],
         "temperature": 0,
         "max_tokens": max_tokens,
         "stream": True,
