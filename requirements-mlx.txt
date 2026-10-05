@@ -1,0 +1,8 @@
+# Issue #29 attention / hidden-state analysis (Python 3.11, .venv-mlx; Apple silicon). The model weights come from the local HF cache
+# (mlx-community/Qwen3-1.7B-4bit); no download is needed if it is already cached.
+mlx==0.32.3
+mlx-lm==0.32.0
+tokenizers
+SudachiPy
+SudachiDict-core
+numpy
