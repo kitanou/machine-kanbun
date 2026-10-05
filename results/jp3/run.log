@@ -1,0 +1,60 @@
+history 0 done
+history 1 done
+history 2 done
+history 3 done
+history 4 done
+history 5 done
+history 6 done
+history 7 done
+history 8 done
+history 9 done
+history 10 done
+history 11 done
+history 12 done
+history 13 done
+history 14 done
+history 15 done
+history 16 done
+history 17 done
+history 18 done
+history 19 done
+history 20 done
+history 21 done
+history 22 done
+history 23 done
+history 24 done
+history 25 done
+history 26 done
+history 27 done
+history 28 done
+history 29 done
+history 30 done
+history 31 done
+history 32 done
+history 33 done
+history 34 done
+A_base: n=35 prompt=413tok ttft=4.6s len=539chars
+B_c2: n=35 prompt=400tok ttft=4.5s len=543chars
+B_c4: n=35 prompt=387tok ttft=4.5s len=492chars
+B_c6: n=35 prompt=378tok ttft=4.3s len=531chars
+B_c7: n=35 prompt=371tok ttft=4.2s len=544chars
+B_c8: n=35 prompt=368tok ttft=4.2s len=540chars
+T0_plain: n=35 prompt=461tok ttft=5.1s len=417chars
+D_c2: n=35 prompt=455tok ttft=5.0s len=299chars
+D_c4: n=35 prompt=442tok ttft=5.0s len=301chars
+D_c6: n=35 prompt=433tok ttft=4.9s len=328chars
+D_c7: n=35 prompt=427tok ttft=4.8s len=326chars
+D_c8: n=35 prompt=423tok ttft=4.7s len=385chars
+D0_noinstr_c6: n=35 prompt=407tok ttft=4.6s len=361chars
+P2_recent_then_block_c6: n=35 prompt=433tok ttft=4.9s len=418chars
+P3_block_persona_c6: n=35 prompt=478tok ttft=5.3s len=342chars
+judged 50
+judged 100
+judged 150
+judged 200
+judged 250
+judged 300
+judged 350
+judged 400
+judged 450
+judged 500

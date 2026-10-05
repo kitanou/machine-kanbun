@@ -1,0 +1,15 @@
+# Japanese / multilingual analyzers and tokenizers used by Issues #20-#33 (Python 3.9, .venv-ja)
+-r requirements.txt
+numpy>=1.26
+tokenizers>=0.22
+SudachiPy==0.6.11
+SudachiDict-core
+fugashi==1.5.2
+unidic-lite==1.0.8
+Janome==0.5.0
+spacy>=3.4,<3.8        # install with: pip install --only-binary=:all: "spacy>=3.4,<3.8"
+ginza==5.2.1
+ja-ginza==5.2.0
+kiwipiepy==0.24.0      # Korean (Issue #31)
+jieba==0.42.1          # Chinese (Issue #31)
+spacy-lookups-data     # English lemma lookup (Issue #31)
