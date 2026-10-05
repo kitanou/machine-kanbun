@@ -1,0 +1,7 @@
+cond,sem_diff,nat_diff,nat_p,contam_diff,polite_diff,token_ratio,meets_criteria
+B_c16,-0.048,-0.19,0.247,0.143,0.102,0.924,True
+B_c24,-0.048,-0.048,1.0,0.0,-0.103,0.891,False
+T0_plain,0.0,-0.048,1.0,0.0,0.125,0.998,False
+D_c16,0.0,-0.143,0.4924,0.0,0.149,0.928,True
+D_c24,0.238,0.0,1.0,-0.238,0.052,0.894,True
+P2_recent_then_block_c16,-0.238,-0.095,0.4924,0.095,0.136,0.928,True
