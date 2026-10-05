@@ -19,3 +19,12 @@ history 17 done
 history 18 done
 history 19 done
 history 20 done
+A_base: n=21 prompt=1125tok ttft=11.9s len=439chars
+B_c16: n=21 prompt=1040tok ttft=11.1s len=336chars
+B_c24: n=21 prompt=1002tok ttft=10.8s len=486chars
+T0_plain: n=21 prompt=1123tok ttft=12.0s len=278chars
+D_c16: n=21 prompt=1044tok ttft=11.1s len=218chars
+D_c24: n=21 prompt=1006tok ttft=10.7s len=366chars
+P2_recent_then_block_c16: n=21 prompt=1044tok ttft=11.4s len=269chars
+judged 50
+judged 100
