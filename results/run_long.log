@@ -1,0 +1,13 @@
+ERROR google/gemma-4-12b 16000 json: ValueError: server error: {'message': 'The number of tokens to keep from the initial prompt is greater than the context length. Try to load the model with a larger context length, or provide a shorter
+google/gemma-4-12b len=16000 L0: acc=95.8% ctx=13607tok cold_ttft=143.9s
+google/gemma-4-12b len=16000 L1: acc=93.8% ctx=6167tok cold_ttft=61.1s
+google/gemma-4-12b len=16000 L3:none: acc=97.9% ctx=6362tok cold_ttft=63.2s
+google/gemma-4-12b len=16000 L5:none: acc=93.8% ctx=6277tok cold_ttft=62.9s
+google/gemma-4-12b len=16000 L5:full: acc=97.9% ctx=6277tok cold_ttft=64.4s
+google/gemma-4-12b len=16000 L5:minimal: acc=95.8% ctx=6277tok cold_ttft=63.4s
+google/gemma-4-12b len=16000 adaptive:minimal: acc=95.8% ctx=6277tok cold_ttft=66.3s
+google/gemma-4-12b len=32000 L1: acc=95.8% ctx=12075tok cold_ttft=127.4s
+google/gemma-4-12b len=32000 L5:none: acc=91.7% ctx=12358tok cold_ttft=124.0s
+google/gemma-4-12b len=32000 L5:full: acc=91.7% ctx=12358tok cold_ttft=129.2s
+google/gemma-4-12b len=32000 L5:minimal: acc=91.7% ctx=12358tok cold_ttft=125.0s
+google/gemma-4-12b len=32000 adaptive:minimal: acc=91.7% ctx=12358tok cold_ttft=128.9s

@@ -1,0 +1,41 @@
+qwen/qwen3-8b len=2000 json: acc=89.6% ctx=2832tok cold_ttft=17.7s
+qwen/qwen3-8b len=2000 L0: acc=97.9% ctx=2034tok cold_ttft=12.7s
+qwen/qwen3-8b len=2000 L1: acc=91.7% ctx=1008tok cold_ttft=6.5s
+qwen/qwen3-8b len=2000 L3:none: acc=93.8% ctx=966tok cold_ttft=6.3s
+qwen/qwen3-8b len=2000 L3:full: acc=91.7% ctx=966tok cold_ttft=6.4s
+qwen/qwen3-8b len=2000 L5:none: acc=93.8% ctx=954tok cold_ttft=6.3s
+qwen/qwen3-8b len=2000 L5:full: acc=89.6% ctx=954tok cold_ttft=6.4s
+qwen/qwen3-8b len=2000 L5:minimal: acc=89.6% ctx=954tok cold_ttft=6.3s
+qwen/qwen3-8b len=2000 L5:category: acc=91.7% ctx=961tok cold_ttft=6.3s
+qwen/qwen3-8b len=2000 adaptive:none: acc=89.6% ctx=1004tok cold_ttft=6.5s
+qwen/qwen3-8b len=2000 adaptive:minimal: acc=87.5% ctx=1004tok cold_ttft=6.6s
+STALLED: no completion within 240s
+stalled (attempt 1): reloading qwen/qwen3-8b
+STALLED: no completion within 240s
+stalled (attempt 2): reloading qwen/qwen3-8b
+STALLED: no completion within 240s
+stalled (attempt 3): reloading qwen/qwen3-8b
+STALLED: no completion within 240s
+stalled (attempt 4): reloading qwen/qwen3-8b
+STALLED: no completion within 240s
+stalled (attempt 5): reloading qwen/qwen3-8b
+ERROR qwen/qwen3-8b 16000 json: ValueError: server error: {'message': 'The number of tokens to keep from the initial prompt is greater than the context length. Try to load the model with a larger context length, or provide a shorter
+STALLED: no completion within 240s
+stalled (attempt 1): reloading qwen/qwen3-8b
+ERROR qwen/qwen3-8b 16000 L0: ValueError: server error: {'message': 'Error in iterating prediction stream: RuntimeError: [METAL] Command buffer execution failed: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfM
+ERROR qwen/qwen3-8b 16000 L1: ValueError: empty response (usage={'prompt_tokens': 147, 'completion_tokens': 4, 'total_tokens': 151, 'completion_tokens_details': {'reasoning_tokens': 3}}, chunks=0)
+ERROR qwen/qwen3-8b 16000 L3:none: ValueError: empty response (usage={'prompt_tokens': 149, 'completion_tokens': 4, 'total_tokens': 153, 'completion_tokens_details': {'reasoning_tokens': 3}}, chunks=0)
+ERROR qwen/qwen3-8b 16000 L5:none: ValueError: empty response (usage={'prompt_tokens': 150, 'completion_tokens': 4, 'total_tokens': 154, 'completion_tokens_details': {'reasoning_tokens': 3}}, chunks=0)
+ERROR qwen/qwen3-8b 16000 L5:full: ValueError: server error: {'message': 'Error in iterating prediction stream: RuntimeError: [METAL] Command buffer execution failed: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfM
+ERROR qwen/qwen3-8b 16000 L5:minimal: ValueError: empty response (usage={'prompt_tokens': 164, 'completion_tokens': 4, 'total_tokens': 168, 'completion_tokens_details': {'reasoning_tokens': 3}}, chunks=0)
+ERROR qwen/qwen3-8b 16000 adaptive:minimal: ValueError: empty response (usage={'prompt_tokens': 163, 'completion_tokens': 4, 'total_tokens': 167, 'completion_tokens_details': {'reasoning_tokens': 3}}, chunks=0)
+STALLED: no completion within 240s
+stalled (attempt 1): reloading qwen/qwen3-8b
+STALLED: no completion within 240s
+stalled (attempt 2): reloading qwen/qwen3-8b
+STALLED: no completion within 240s
+stalled (attempt 3): reloading qwen/qwen3-8b
+STALLED: no completion within 240s
+stalled (attempt 4): reloading qwen/qwen3-8b
+STALLED: no completion within 240s
+stalled (attempt 5): reloading qwen/qwen3-8b
