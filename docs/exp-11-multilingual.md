@@ -2,7 +2,7 @@
 
 [← README に戻る](../README.md) ・ [用語(NF/SCF/SeCF)](terminology.md)
 
-> 表記: 本書の L0 = NF、L1 = SeCF-L1(構造化 Fact から作る電報体)、L5 / MKW / IR = SeCF-L5(Issue #35)。以下は当時の旧称のまま記述している。
+> 表記: 本書の L0 = NF、L1(日本語要約)= SeCF-L1、L2〜L4 = SeCF-L2〜L4、L5 / MKW / IR = SeCF-L5(Issue #35。各レベルの定義は README の「機械漢文の圧縮レベル」)。以下は当時の旧称のまま記述している。
 
 同一の Canonical Facts から EN/KO/JA の L0・L1 と MKW を生成して比較(`i18n.py` `mlenc.py`)。**MKW は関係・演算子・概念語を漢字(言語非依存)に統一し、
 固有名詞(人名・愛称・都市・会場)だけ原言語の表記**を保つ。完全版は [results/ml_report.md](../results/ml_report.md)(3言語の実例・全表)、[results/ml_table.csv](../results/ml_table.csv)、`results/ml_pareto_*.svg`。

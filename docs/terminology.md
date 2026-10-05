@@ -17,9 +17,9 @@
 | 軸 | 値 | 意味 |
 |---|---|---|
 | Representation | NF / SCF / SeCF | 表現の性質(生成方法と保持するもの) |
-| Compression Profile | L0 / L1 / L5 … | 圧縮の強さ(L0=なし、L1=表層文法の削除、L5=強い意味再符号化) |
+| Compression Profile | L0 / L1 / L2 / L3 / L4 / L5 … | 圧縮の強さ(L0=なし、L1=日本語要約、L2=漢字圧縮、L3=擬似漢文、L4=構造漢文、L5=機械漢文。各段階の定義と例は [README](../README.md) の「機械漢文の圧縮レベル」) |
 
-組み合わせは `SCF-L1`、`SeCF-L1`、`SeCF-L5` のように書く。本リポジトリの Issue #20 以降の日本語実験の簡易 L1(`sudachi-m` など)はすべて **SCF-L1**、Issue #4〜#19 の L1(構造化 Fact からの電報体)は **SeCF-L1**、L5 / 機械漢文 / IR(IR-C・IR-L・IR-ID)は **SeCF-L5** にあたる。文言文(C1)は別の自然言語 baseline で、NF の一種として扱う。
+組み合わせは `SCF-L1`、`SeCF-L1`、`SeCF-L5` のように書く。本リポジトリの Issue #20 以降の日本語実験の簡易 L1(`sudachi-m` など)はすべて **SCF-L1**、Issue #4〜#19 の L1(構造化 Fact から作る簡潔な日本語要約)は **SeCF-L1**、L2〜L4(漢字圧縮・擬似漢文・構造漢文)は **SeCF-L2〜L4**、L5 / 機械漢文 / IR(IR-C・IR-L・IR-ID)は **SeCF-L5** にあたる。文言文(C1)は別の自然言語 baseline で、NF の一種として扱う。
 
 ## SCF と SeCF の境界
 
@@ -39,7 +39,7 @@
 | tokenizer-aware L1(`taw:*`) | SCF | 書き方だけを探索。意味は変えない |
 | 多言語パーサベース L1(ja/en/ko/zh) | SCF | 各言語の既存解析器と規則 |
 | LLM による要約・電報体への書き換え | SeCF | LLM 推論が必要 |
-| 構造化 Fact から作る電報体(旧 L1)、機械漢文 L5、IR-C/IR-L/IR-ID | SeCF | 意味構造(Fact)を経由して再符号化 |
+| 構造化 Fact から作る簡潔な日本語要約(旧 L1)、漢字圧縮・擬似漢文・構造漢文・機械漢文(旧 L2〜L5)、IR-C/IR-L/IR-ID | SeCF | 意味構造(Fact)を経由して再符号化 |
 
 **生成要件**: SCF は(a) 追加の LLM 推論なし、(b) 入力長に対してほぼ線形で、リアルタイム処理に耐える、(c) 同じ入力に同じ出力(決定的)。SeCF は意味保持を QA・状態復元で検証することを要件にし、生成コストは許容する。
 
