@@ -14,3 +14,5 @@ DONE 33c
 02:33 49 qa short rc=0 3683s
 03:56 49 qa long rc=0 4981s
 DONE 49
+04:28 51 short rc=0 1811s
+05:08 51 long rc=0 2364s

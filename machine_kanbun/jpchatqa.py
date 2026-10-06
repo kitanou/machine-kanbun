@@ -23,7 +23,10 @@ from .lmstudio import Stalled, chat
 SEEDS = (0, 1, 2)
 LET = "ABCDEFG"
 CONDS = {"A_base": dict(family="role", c=0), "B_scf": dict(family="role", c=-1), "E_secf": dict(family="role", c=-1, form="secf"),
-         "N_nf_tokmatch": dict(family="role", c=0, trim=True), "D_scf_tag": dict(family="tag", c=-1, instr=True), "G_secf_tag": dict(family="tag", c=-1, instr=True, form="secf")}
+         "N_nf_tokmatch": dict(family="role", c=0, trim=True), "D_scf_tag": dict(family="tag", c=-1, instr=True), "G_secf_tag": dict(family="tag", c=-1, instr=True, form="secf"),
+         # Issue #51: markers made readable
+         "B_legend": dict(family="role", c=-1, legend=True), "B_expl": dict(family="role", c=-1, form="scf_expl"), "B_expl_legend": dict(family="role", c=-1, form="scf_expl", legend=True)}
+BASE_CONDS = ("A_base", "B_scf", "E_secf", "N_nf_tokmatch", "D_scf_tag", "G_secf_tag")
 
 
 def option_text(sc: Dict, status: str) -> str:
@@ -71,7 +74,7 @@ def spec_for(name: str, sc: Dict) -> Dict:
     return s
 
 
-def run(model: str, variant: str, base_url="http://localhost:1234/v1", log=print) -> None:
+def run(model: str, variant: str, base_url="http://localhost:1234/v1", log=print, only=None) -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     path = OUT / f"qa_{variant}_{model.replace('/', '_')}.jsonl"
     done = {(r["cond"], r["sid"], r["seed"]) for r in map(json.loads, path.read_text(encoding="utf-8").splitlines())} if path.exists() else set()
@@ -82,7 +85,7 @@ def run(model: str, variant: str, base_url="http://localhost:1234/v1", log=print
         for seed in SEEDS:
             q, gold, order = make_question(sc, seed)
             for cname in CONDS:
-                if (cname, sc["sid"], seed) in done:
+                if (only and cname not in only) or (cname, sc["sid"], seed) in done:
                     continue
                 spec = spec_for(cname, sc)
                 s2 = dict(sc, question=q)
@@ -106,12 +109,13 @@ def prep(variant: str, log=print):
 
 
 if __name__ == "__main__":
-    mode, model, variant = sys.argv[1], sys.argv[2] if len(sys.argv) > 2 else "", sys.argv[-1]
+    args = [a for a in sys.argv if a != "--51"]
+    mode, model, variant = args[1], args[2] if len(args) > 2 else "", args[-1]
     try:
         if mode == "prep":
             prep(variant, log=lambda s: print(s, flush=True))
         elif mode == "run":
-            run(model, variant, log=lambda s: print(s, flush=True))
+            run(model, variant, log=lambda s: print(s, flush=True), only=("B_legend", "B_expl", "B_expl_legend") if "--51" in sys.argv else None)
     except Stalled as e:
         print(f"STALLED: {e}", flush=True)
         sys.exit(75)

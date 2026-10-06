@@ -173,6 +173,15 @@ def prep_secf(variant: str = "short", log=print) -> None:
             log(f"secf converted {n} histories")
 
 
+MARKER_EXPL = {"た": "済", "たい": "希望", "ない": "否定", "らしい": "伝聞", "かも": "可能性", "みたい": "推量"}
+LEGEND = "圧縮された履歴の記法: 語は空白区切り、/ は文の区切り。た=過去・完了、たい=願望、ない=否定、らしい=伝聞、かも=可能性、みたい=推量。"
+
+
+def l1_expl(text: str) -> str:
+    """SCF-L1 with the functional markers replaced by self-explanatory words (済/希望/否定/伝聞/可能性/推量); whole space-separated tokens only."""
+    return " ".join(MARKER_EXPL.get(w, w) for w in l1_text(text).split(" "))
+
+
 # ---------------------------------------------------------------------------------------------------------- conditions
 def cond_table(variant: str = "short") -> Dict[str, Dict]:
     if variant == "secf":  # SeCF mirror of the short conditions: C = hybrid (message list), E = full (c=8), G = isolated (tag + instruction)
@@ -206,13 +215,13 @@ def build_messages(sc: Dict, spec: Dict, nonce: str):
     ex = sc["exchanges"]
     c = spec["c"]
     t0 = time.perf_counter()
-    conv = secf_text if spec.get("form") == "secf" else l1_text
+    conv = secf_text if spec.get("form") == "secf" else l1_expl if spec.get("form") == "scf_expl" else l1_text
     old = [[conv(u), conv(a)] for u, a in ex[:c]] if spec.get("l1", True) else [list(x) for x in ex[:c]]
     conv_ms = (time.perf_counter() - t0) * 1000
     recent = ex[c:]
     q = sc["question"]
     if spec["family"] == "role":
-        msgs = [{"role": "system", "content": f"[run:{nonce}] {PERSONA}"}]
+        msgs = [{"role": "system", "content": f"[run:{nonce}] {PERSONA}" + (f"\n{LEGEND}" if spec.get("legend") else "")}]
         for u, a in old + [list(x) for x in recent]:
             msgs += [{"role": "user", "content": u}, {"role": "assistant", "content": a}]
         msgs.append({"role": "user", "content": q})
