@@ -1,0 +1,1 @@
+このWiki は研究ポータルです。事実と状態の原簿は [RESULTS.md](https://github.com/kitanou/machine-kanbun/blob/main/RESULTS.md) と [RESEARCH_MAP.md](https://github.com/kitanou/machine-kanbun/blob/main/RESEARCH_MAP.md)。原稿は [wiki/](https://github.com/kitanou/machine-kanbun/blob/main/wiki) で管理しています。
