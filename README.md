@@ -68,7 +68,7 @@ LLM を使わず、既存の形態素解析器(Sudachi / MeCab / Janome)と係�
 - **長文脈での精度(#25)**: #20 で見えた「N=600 で SCF が NF より +20pt(p=0.022)」は**再現しなかった**。質問を倍にすると +7.5pt(p=0.22)に縮み、同トークン数にそろえた NF と差がない。**効果の大半はトークン削減と文脈長で説明でき、意味密度の優位を示す証拠はない**(検出力は低い)。
 - **検索(#20, #28)**: BM25 では SCF が大きく改善(Recall@5 0.72 → 0.94〜0.99、10,000 件)。埋め込みでは強いモデル(qwen3-embedding)なら NF のほうが強い。**検索は SCF(語彙)、LLM への入力は NF** の Dual-Index が最良(Recall@5 0.97〜0.99)。弱い埋め込みでは SCF 単独が最良。
 - **実会話に近いデータ(#27)**: LLM 生成の自然会話では汎用 SCF が NF より有意に悪化(71.1% 対 82.9%)。否定・言い直し・俗語・伝聞の「って」が落ちるためで、精製ルールで NF と同等(82.9%、トークン -18%)に回復した(同じデータからの精製で過学習の可能性)。
-- **チャット履歴の文体(#33)**: 古い履歴を SCF にしても、回答の自然さ・会話らしさ・汚染は baseline と有意差がなく、電報文体の混入はない(短い履歴 35 件、長い 24 往復の履歴 21 件)。軽い drift(体言止めの増加)はメッセージ列方式の全履歴 SCF で出る。トークン削減は 7〜11% と小さく、利点は古い事実が参照されやすくなる点。「SCF で文脈を持ち、NF で話す」二層構造は成立する。**SeCF(LLM が意味構造に変換)でも汚染は出ないが、トークンは 1.03〜1.27 倍に増え、変換は 1 発話約 1.5 秒かかる**ため、Chat の履歴表現としては SCF が実用的。
+- **チャット履歴(#33, #49, #51)**: 古い履歴を SCF-L1 にしても、回答の自然さ・会話らしさ・汚染は baseline と有意差がなく、電報文体の混入はない(短い履歴 35 件、長い 24 往復の履歴 21 件)。軽い drift(体言止めの増加)はメッセージ列方式の全履歴 SCF で出る。**SeCF-L1(#19 の L1 = 簡潔な自然言語への書き直し)も汚染は出ず、古い事実の想起(状態 7 択 QA、#49 の方式)は NF の 96〜98% に保たれ(SCF-L1 は 83〜87%、-10〜-17pt)、圧縮率も 0.85〜0.88(SCF-L1 は 0.90〜0.92)と、想起・圧縮率・文体で SCF-L1 以上**。コストは変換 1 発話約 1.2 秒(LLM)で、SCF-L1(1 ms 未満)の 3 桁大。SCF-L1 は願望・完了を取り違え(#49)、標識の凡例や自明語化でも回復は検出できない(#51)。構造化 `{}` 型(SeCF-L5 相当)は想起 73〜82% でトークンも増える(初回 #33 の結果で、SeCF-L1 ではない)。かつての「圧縮した履歴のほうが事実に言及されやすい」は語の有無の指標で、正答率では逆転したため取り下げた。
 - **多言語・内部表現(#29, #31)**: 各言語の既存パーサで L1 化するとトークン数の言語間ばらつきは 7 トークナイザすべてで収束するが、QA は日本語以外で保てない(中国語 90% → 40%、標識を各言語の語で書くと 72%)。注意・隠れ状態の解析は、動かせる小型モデルが課題を解けず検出不能。
 - → [#20](docs/exp-20-japanese-scf.md) / [#25〜#31](docs/exp-25-31-followups.md) / [#33](docs/exp-33-chat-style.md)
 
@@ -96,7 +96,7 @@ LLM を使わず、既存の形態素解析器(Sudachi / MeCab / Janome)と係�
 | #29 | Transformer は NF と SCF をどう読むか | 小型モデルが課題を解けず検出不能 | 同上 |
 | #30 | 圧縮の限界(最小十分表現) | 否定・不確実性・語順・主語が必須 | 同上 |
 | #31 | 多言語パーサベース L1 の収束 | トークンは収束、QA は日本語以外で保てない | 同上 |
-| #33 | SCF 履歴は回答の文体を汚染するか | SCF・SeCF とも汚染は検出されず。圧縮は SCF 7〜11%、SeCF は増加(1.03〜1.27 倍) | [exp-33](docs/exp-33-chat-style.md) |
+| #33 | SCF 履歴は回答の文体を汚染するか | SCF-L1・SeCF-L1 とも汚染は検出されず。想起は SeCF-L1 が NF 並み、SCF-L1 は -10〜-17pt。変換コストは SeCF-L1 が 3 桁大 | [exp-33](docs/exp-33-chat-style.md) |
 | #35 | 名称を NF / SCF / SeCF に統一 | — | [terminology](docs/terminology.md) |
 
 未着手・未達の Issue は §7。
@@ -109,7 +109,7 @@ LLM を使わず、既存の形態素解析器(Sudachi / MeCab / Janome)と係�
 | **機械漢文 IR(#1〜#19)** | `model.py` `encoder.py`(KCR エンコーダ L0〜L5)、`data/profiles.json`(ベンチマーク)、`gen.py` `legend.py` `longrun.py` `longreport.py`(#4)、`ablate.py` `ablreport.py` `convcost.py`(#10)、`i18n.py` `mlenc.py` `mlconv.py` `mlreport.py`(#11)、`irlabel.py` `irreport.py`(#17)、`layers.py` `labelfam.py` `i18n_zh.py` `zhreport.py` `core.py` `natural*.py`(#19) |
 | **日本語 SCF(#20)** | `jl1.py`(SCF 変換器: Sudachi/MeCab/Janome/GiNZA + 規則)、`jpdata.py`(会話体メモリ生成)、`jpbench.py` `jpretention.py` `jprag.py` `jpllm.py` `jprun.py` `jpbreak.py` `jpretime.py` `jpstats.py` `jpreport.py` |
 | **要因分解・一般化(#25〜#31)** | `jlvar.py`(表現バリアント)、`jpctx.py` `jpctxrun.py`(制御付き長文脈 QA)、`tokaware.py` `jptokaware.py`(#26)、`jpnat.py` `jpnatrun.py`(#27)、`jpdual.py`(#28)、`jpattn.py`(#29, MLX)、`jpml.py` `jpmlrun.py`(#31)、`jp2report.py` |
-| **チャット履歴(#33)** | `jpchat.py` `jpchatreport.py` `jpchatsecf.py` |
+| **チャット履歴(#33, #49, #51)** | `jpchat.py` `jpchatreport.py` `jpchatsecf.py`(初回の構造化 = SeCF-L5 相当)`jpchatsecf1.py`(SeCF-L1)`jpchatqa.py` `jpchatqareport.py`(想起 QA) |
 | **実行・監視** | `scripts/run_*.sh`(いずれも再開可能。LM Studio が固まると再ロードして再開)、`scripts/status_*.sh` |
 | **テスト** | `tests/`(`python -m pytest tests -q`) |
 | **結果** | `results/`(JSON/JSONL、CSV、SVG、`*_report.md`)。生データと全表はここ |
@@ -133,7 +133,8 @@ PYTHONPATH=. .venv-ja/bin/python -m machine_kanbun.jpreport        # #20 レポ�
 scripts/run_jp2.sh; scripts/run_jp2b.sh                 # #25〜#31(LM Studio、約 10 時間)
 PYTHONPATH=. .venv-ja/bin/python -m machine_kanbun.jp2report       # #25〜#31 のレポートと CSV・グラフ
 scripts/run_jp3.sh; scripts/run_jp3b.sh; scripts/run_jp3_secf.sh   # #33
-PYTHONPATH=. .venv-ja/bin/python -m machine_kanbun.jpchatsecf         # #33 SeCF のレポート
+PYTHONPATH=. .venv-ja/bin/python -m machine_kanbun.jpchatsecf         # #33 初回(構造化 = SeCF-L5 相当)のレポート
+scripts/run_jp3_secf1.sh; PYTHONPATH=. .venv-ja/bin/python -m machine_kanbun.jpchatsecf1   # #33 再実行(SeCF-L1)と想起 QA(#49)
 PYTHONPATH=. .venv-ja/bin/python -m machine_kanbun.jpchatreport    # #33 のレポート
 ```
 各 `scripts/run_*.sh` は途中経過を `results/<dir>/timing.log` と `progress.txt` に残し、完了済みの段階を飛ばして再開する。
