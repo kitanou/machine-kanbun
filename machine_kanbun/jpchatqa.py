@@ -27,6 +27,7 @@ CONDS = {"A_base": dict(family="role", c=0), "B_scf": dict(family="role", c=-1),
          # Issue #51: markers made readable
          "B_legend": dict(family="role", c=-1, legend=True), "B_expl": dict(family="role", c=-1, form="scf_expl"), "B_expl_legend": dict(family="role", c=-1, form="scf_expl", legend=True)}
 CONDS.update({"E1_secf1": dict(family="role", c=-1, form="secf1"), "G1_secf1_tag": dict(family="tag", c=-1, instr=True, form="secf1")})  # Issue #33 redo: SeCF-L1
+CONDS.update({"T3_secf1_scf_nf": dict(family="tier", plan="T3"), "T2_secf1_nf": dict(family="tier", plan="T2"), "T3m_target_in_scf": dict(family="tier", plan="T3m")})  # Issue #54
 BASE_CONDS = ("A_base", "B_scf", "E_secf", "N_nf_tokmatch", "D_scf_tag", "G_secf_tag")
 
 
@@ -68,6 +69,44 @@ def trim_to(sc: Dict, target: int) -> List[List[str]]:
     return [ex[i] for i in best]
 
 
+def tier_forms(sc: Dict, plan: str) -> List[str]:
+    """Form per exchange (oldest first): T3 = 1/2 SeCF-L1, 1/4 SCF-L1, 1/4 NF; T2 = 3/4 SeCF-L1, 1/4 NF; T3m = T3 counts but the target-person exchanges are put in the SCF layer."""
+    n = len(sc["exchanges"])
+    q = n // 4
+    if plan == "T2":
+        return ["secf1"] * (n - q) + ["nf"] * q
+    forms = ["secf1"] * (n - 2 * q) + ["scf"] * q + ["nf"] * q
+    if plan == "T3m":
+        tgt = [i for i, (u, a) in enumerate(sc["exchanges"]) if sc["person"] in u or sc["person"] in a]
+        nf_idx = set(range(n - q, n))
+        scf_idx = [i for i in tgt if i not in nf_idx]
+        for i in range(n):  # fill the SCF layer with the oldest non-target exchanges up to q
+            if len(scf_idx) >= q:
+                break
+            if i not in scf_idx and i not in nf_idx:
+                scf_idx.append(i)
+        scf_idx = scf_idx[:max(q, len(tgt))] if len(scf_idx) > q else scf_idx
+        forms = ["nf" if i in nf_idx else "scf" if i in scf_idx else "secf1" for i in range(n)]
+    return forms
+
+
+def tier_messages(sc: Dict, plan: str, nonce: str, question: str):
+    import time
+    forms = tier_forms(sc, plan)
+    msgs = [{"role": "system", "content": f"[run:{nonce}] {jpchat.PERSONA}"}]
+    sync_ms = 0.0
+    for (u, a), f in zip(sc["exchanges"], forms):
+        if f == "scf":
+            t0 = time.perf_counter()
+            u, a = jpchat.l1_text(u), jpchat.l1_text(a)
+            sync_ms += (time.perf_counter() - t0) * 1000
+        elif f == "secf1":
+            u, a = jpchat.secf1_text(u), jpchat.secf1_text(a)
+        msgs += [{"role": "user", "content": u}, {"role": "assistant", "content": a}]
+    msgs.append({"role": "user", "content": question})
+    return msgs, sync_ms, forms
+
+
 def spec_for(name: str, sc: Dict) -> Dict:
     s = dict(CONDS[name])
     if s.get("c") == -1:
@@ -93,11 +132,15 @@ def run(model: str, variant: str, base_url="http://localhost:1234/v1", log=print
                 if spec.get("trim"):
                     target = hist_tokens(sc["exchanges"], jpchat.l1_text)
                     s2["exchanges"] = trim_to(sc, target)
-                msgs, conv_ms = build_messages(s2, spec, uuid.uuid4().hex[:8])
+                if spec["family"] == "tier":
+                    msgs, conv_ms, forms = tier_messages(s2, spec["plan"], uuid.uuid4().hex[:8], q)
+                else:
+                    msgs, conv_ms = build_messages(s2, spec, uuid.uuid4().hex[:8])
+                    forms = None
                 r = chat(model, "", "", messages=msgs, max_tokens=6, base_url=base_url, extra=extra, deadline=300, timeout=320)
                 m = re.search(r"[A-G]", r.text)
                 rec = dict(cond=cname, sid=sc["sid"], seed=seed, status=sc["status"], gold=gold, pred=m.group(0) if m else None, pred_status=order[LET.index(m.group(0))] if m else None,
-                           raw=r.text[:20], prompt_tokens=r.prompt_tokens, ttft=r.ttft, n_ex=len(s2["exchanges"]))
+                           raw=r.text[:20], prompt_tokens=r.prompt_tokens, ttft=r.ttft, n_ex=len(s2["exchanges"]), conv_sync_ms=conv_ms, forms="".join(f[0] for f in forms) if forms else None)
                 with path.open("a", encoding="utf-8") as fh:
                     fh.write(json.dumps(rec, ensure_ascii=False) + "\n")
                 n += 1
@@ -110,13 +153,13 @@ def prep(variant: str, log=print):
 
 
 if __name__ == "__main__":
-    args = [a for a in sys.argv if a not in ("--51", "--secf1")]
+    args = [a for a in sys.argv if a not in ("--51", "--secf1", "--tier")]
     mode, model, variant = args[1], args[2] if len(args) > 2 else "", args[-1]
     try:
         if mode == "prep":
             prep(variant, log=lambda s: print(s, flush=True))
         elif mode == "run":
-            run(model, variant, log=lambda s: print(s, flush=True), only=("B_legend", "B_expl", "B_expl_legend") if "--51" in sys.argv else ("E1_secf1", "G1_secf1_tag") if "--secf1" in sys.argv else None)
+            run(model, variant, log=lambda s: print(s, flush=True), only=("B_legend", "B_expl", "B_expl_legend") if "--51" in sys.argv else ("E1_secf1", "G1_secf1_tag") if "--secf1" in sys.argv else ("T3_secf1_scf_nf", "T2_secf1_nf", "T3m_target_in_scf") if "--tier" in sys.argv else None)
     except Stalled as e:
         print(f"STALLED: {e}", flush=True)
         sys.exit(75)
