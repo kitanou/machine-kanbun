@@ -197,12 +197,22 @@ def secf1_text(text: str, model: str = SECF_MODEL, base_url="http://localhost:12
                 _secf1_cache[r["text"]] = r["secf1"]
     if text in _secf1_cache:
         return _secf1_cache[text]
-    r = chat(model, SECF1_SYSTEM, f"入力: {text}\n出力:", max_tokens=160, base_url=base_url, extra={"reasoning_effort": "none"}, deadline=120, timeout=140)
-    out = re.sub(r"^出力[:：]\s*", "", r.text.strip().split("\n")[0].strip())
+    out, ms, fallback = None, 0, False
+    for max_tokens in (160, 320, 320):  # gemma occasionally returns an empty body: retry with more room, finally fall back to the original text (flagged)
+        try:
+            r = chat(model, SECF1_SYSTEM, f"入力: {text}\n出力:", max_tokens=max_tokens, base_url=base_url, extra={"reasoning_effort": "none"}, deadline=120, timeout=140)
+        except ValueError:
+            continue
+        out = re.sub(r"^出力[:：]\s*", "", r.text.strip().split("\n")[0].strip())
+        ms = round(r.total * 1000)
+        if out:
+            break
+    if not out:
+        out, fallback = text, True
     _secf1_cache[text] = out
     OUT.mkdir(parents=True, exist_ok=True)
     with path.open("a", encoding="utf-8") as fh:
-        fh.write(json.dumps(dict(text=text, secf1=out, ms=round(r.total * 1000)), ensure_ascii=False) + "\n")
+        fh.write(json.dumps(dict(text=text, secf1=out, ms=ms, **({"fallback": True} if fallback else {})), ensure_ascii=False) + "\n")
     return out
 
 
