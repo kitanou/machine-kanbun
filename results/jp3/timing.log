@@ -26,6 +26,24 @@ DONE 49
 09:46 33r qa long rc=0 1410s
 10:20 54 short rc=0 1671s
 10:58 54 long rc=0 2286s
+retry 1: 59 prep
+retry 2: 59 prep
+retry 3: 59 prep
+retry 4: 59 prep
+15:34 59 prep rc=1 1137s
+retry 1: 59 retrieval
+retry 2: 59 retrieval
+retry 3: 59 retrieval
+retry 4: 59 retrieval
+15:36 59 retrieval rc=1 98s
+retry 1: 59 qa
+retry 2: 59 qa
+retry 3: 59 qa
+retry 4: 59 qa
+15:38 59 qa rc=1 92s
+15:53 59 prep rc=0 421s
+15:56 59 retrieval rc=0 188s
+16:10 59 qa rc=0 837s
 12:12 57 histories rc=0 1529s
 12:30 57 secf1 rc=0 1103s
 14:54 57 qa rc=0 8612s
