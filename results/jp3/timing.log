@@ -56,3 +56,10 @@ retry 4: 59 qa
 19:58 60 convert  rc=0 1239s
 20:06 60 ttft  rc=0 465s
 21:02 67 state rc=0 3091s
+21:26 69 hit _pilot rc=0 542s
+21:33 69 cap _pilot rc=0 468s
+23:46 69 hit  rc=0 6899s
+00:04 69 slots  rc=0 1071s
+00:49 69 stress rc=0 2629s
+02:08 69 stress rc=0 4661s
+03:05 69 stress rc=0 3363s
