@@ -79,8 +79,12 @@ def build_scenarios(n: int = 35, seed: int = 33, n_ex: int = N_EX) -> List[Dict]
 
 
 def variant_files(variant: str):
-    if variant == "secf":  # SeCF conditions on the short histories
+    if variant == "secf":  # structured SeCF-L5-like conditions on the short histories (initial #33; not SeCF-L1)
         return ("histories.jsonl", "gensecf_", "judgesecf_")
+    if variant == "secf1":  # SeCF-L1 (concise natural Japanese) on the short histories
+        return ("histories.jsonl", "gensecf1_", "judgesecf1_")
+    if variant == "secf1long":
+        return ("histories_long.jsonl", "gensecf1long_", "judgesecf1long_")
     return ("histories_long.jsonl", "genlong_", "judgelong_") if variant == "long" else ("histories.jsonl", "gen_", "judge_")
 
 
@@ -161,6 +165,58 @@ def secf_text(text: str, model: str = SECF_MODEL, base_url="http://localhost:123
     return out
 
 
+SECF1_SYSTEM = """日本語の会話の1発話を、意味を保ったまま簡潔な自然な日本語に書き直します(SeCF-L1)。出力は書き直した文のみ。説明は書かない。
+- 主語の反復・フィラー・相づち・丁寧な文末・冗長な言い回しを除き、短くする。
+- 助詞と活用は残し、普通の日本語として読める文にする。箇条書き・記号・括弧書きの構造は使わない。
+- 固有名詞・数・時は残す。否定・予定・願望・迷い・伝聞・可能性・未確認などの状態は必ず残し、確定していないことを確定にしない。
+- アシスタントの返事は、共感・質問・助言の要点だけを短く言い換える。
+
+例:
+入力: まあ、遠藤花子さんはこの前新しい仕事を始めました。
+出力: 遠藤花子さんは先日、新しい仕事を始めた。
+入力: 昨日、田中さんと久しぶりに話した。田中さんは会社を辞めようか迷っているが、まだ決めていない。
+出力: 昨日、田中さんと久々に話した。田中さんは退職を迷っていて、未決定。
+入力: 佐藤さんが旅行に行ったという話は聞いただけで、本当かどうか分からない。
+出力: 佐藤さんが旅行に行ったらしいが、未確認。
+入力: 今日はずっと雨で、なんだか気分が重いな。
+出力: 今日は一日中雨で、気分が重い。
+入力: それは気が重くなりますよね。無理せず過ごしてくださいね。
+出力: 気が重くなる気持ちに共感。無理せず過ごすよう助言。"""
+_secf1_cache: Optional[Dict[str, str]] = None
+
+
+def secf1_text(text: str, model: str = SECF_MODEL, base_url="http://localhost:1234/v1") -> str:
+    """SeCF-L1 of one utterance (Issue #33 redo): concise natural Japanese rewrite by an LLM (the #19 L1 style; cached; temperature 0)."""
+    global _secf1_cache
+    path = OUT / "secf1_cache.jsonl"
+    if _secf1_cache is None:
+        _secf1_cache = {}
+        if path.exists():
+            for l in path.read_text(encoding="utf-8").splitlines():
+                r = json.loads(l)
+                _secf1_cache[r["text"]] = r["secf1"]
+    if text in _secf1_cache:
+        return _secf1_cache[text]
+    r = chat(model, SECF1_SYSTEM, f"入力: {text}\n出力:", max_tokens=160, base_url=base_url, extra={"reasoning_effort": "none"}, deadline=120, timeout=140)
+    out = re.sub(r"^出力[:：]\s*", "", r.text.strip().split("\n")[0].strip())
+    _secf1_cache[text] = out
+    OUT.mkdir(parents=True, exist_ok=True)
+    with path.open("a", encoding="utf-8") as fh:
+        fh.write(json.dumps(dict(text=text, secf1=out, ms=round(r.total * 1000)), ensure_ascii=False) + "\n")
+    return out
+
+
+def prep_secf1(variant: str = "short", log=print) -> None:
+    n = 0
+    for h in load_histories(variant):
+        for u, a in h["exchanges"]:
+            secf1_text(u)
+            secf1_text(a)
+        n += 1
+        if n % 5 == 0:
+            log(f"secf1 converted {n} histories")
+
+
 def prep_secf(variant: str = "short", log=print) -> None:
     """Pre-compute the SeCF form of every user/assistant utterance of the histories."""
     n = 0
@@ -173,8 +229,25 @@ def prep_secf(variant: str = "short", log=print) -> None:
             log(f"secf converted {n} histories")
 
 
+MARKER_EXPL = {"た": "済", "たい": "希望", "ない": "否定", "らしい": "伝聞", "かも": "可能性", "みたい": "推量"}
+LEGEND = "圧縮された履歴の記法: 語は空白区切り、/ は文の区切り。た=過去・完了、たい=願望、ない=否定、らしい=伝聞、かも=可能性、みたい=推量。"
+
+
+def l1_expl(text: str) -> str:
+    """SCF-L1 with the functional markers replaced by self-explanatory words (済/希望/否定/伝聞/可能性/推量); whole space-separated tokens only."""
+    return " ".join(MARKER_EXPL.get(w, w) for w in l1_text(text).split(" "))
+
+
 # ---------------------------------------------------------------------------------------------------------- conditions
 def cond_table(variant: str = "short") -> Dict[str, Dict]:
+    if variant == "secf1":  # SeCF-L1 mirror of the SCF conditions: C = hybrid (message list, c<8), E = full (c=8), G = isolated tag + instruction
+        c = {f"C1_c{k}": dict(family="role", c=k, form="secf1") for k in (2, 4, 6, 7, 8)}
+        c.update({f"G1_c{k}": dict(family="tag", c=k, instr=True, form="secf1") for k in (2, 4, 6, 8)})
+        c["G10_noinstr_c6"] = dict(family="tag", c=6, instr=False, form="secf1")
+        return c
+    if variant == "secf1long":
+        return {"C1_c16": dict(family="role", c=16, form="secf1"), "C1_c24": dict(family="role", c=24, form="secf1"),
+                "G1_c16": dict(family="tag", c=16, instr=True, form="secf1"), "G1_c24": dict(family="tag", c=24, instr=True, form="secf1")}
     if variant == "secf":  # SeCF mirror of the short conditions: C = hybrid (message list), E = full (c=8), G = isolated (tag + instruction)
         c = {}
         for k in (2, 4, 6, 7, 8):
@@ -206,13 +279,13 @@ def build_messages(sc: Dict, spec: Dict, nonce: str):
     ex = sc["exchanges"]
     c = spec["c"]
     t0 = time.perf_counter()
-    conv = secf_text if spec.get("form") == "secf" else l1_text
+    conv = {"secf": secf_text, "secf1": secf1_text, "scf_expl": l1_expl}.get(spec.get("form"), l1_text)
     old = [[conv(u), conv(a)] for u, a in ex[:c]] if spec.get("l1", True) else [list(x) for x in ex[:c]]
     conv_ms = (time.perf_counter() - t0) * 1000
     recent = ex[c:]
     q = sc["question"]
     if spec["family"] == "role":
-        msgs = [{"role": "system", "content": f"[run:{nonce}] {PERSONA}"}]
+        msgs = [{"role": "system", "content": f"[run:{nonce}] {PERSONA}" + (f"\n{LEGEND}" if spec.get("legend") else "")}]
         for u, a in old + [list(x) for x in recent]:
             msgs += [{"role": "user", "content": u}, {"role": "assistant", "content": a}]
         msgs.append({"role": "user", "content": q})
@@ -221,7 +294,9 @@ def build_messages(sc: Dict, spec: Dict, nonce: str):
     rec = "\n".join(f"User: {u}\nAssistant: {a}" for u, a in recent)
     note = BLOCK_NOTE if spec.get("l1", True) else PLAIN_NOTE
     if spec.get("form") == "secf":
-        note = note.replace("machine-compressed", "machine-generated semantic-structure (SeCF)")
+        note = note.replace("machine-compressed", "machine-generated semantic-structure (SeCF-L5-like)")
+    if spec.get("form") == "secf1":
+        note = note.replace("machine-compressed", "machine-condensed (SeCF-L1)")
     tag = "compressed_context" if spec.get("l1", True) else "earlier_conversation"
     block = f"<{tag}>\n{note}\n\n{comp}\n</{tag}>" if c else ""
     recent_block = f"<recent_conversation>\n{rec}\n{'User: ' if rec else 'User: '}{q}\n</recent_conversation>" if rec else f"<recent_conversation>\nUser: {q}\n</recent_conversation>"
@@ -358,10 +433,12 @@ def judge(model: str, gen_model: str, base_url="http://localhost:1234/v1", log=p
 
 if __name__ == "__main__":
     mode = sys.argv[1]
-    variant = sys.argv[-1] if sys.argv[-1] in ("long", "secf") else "short"
+    variant = sys.argv[-1] if sys.argv[-1] in ("long", "secf", "secf1", "secf1long") else "short"
     try:
         if mode == "hist":
             gen_histories(sys.argv[2], n=21 if variant == "long" else 35, log=lambda s: print(s, flush=True), variant=variant)
+        elif mode == "prep_secf1":
+            prep_secf1("long" if "long" in variant else "short", log=lambda s: print(s, flush=True))
         elif mode == "prep_secf":
             prep_secf("short", log=lambda s: print(s, flush=True))
         elif mode == "gen":
