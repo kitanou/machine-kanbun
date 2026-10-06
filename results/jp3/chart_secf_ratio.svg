@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="440" font-family="sans-serif" font-size="11">
+<rect width="760" height="440" fill="white"/>
+<text x="380.0" y="22" text-anchor="middle" font-size="14">圧縮比率 vs 自然さ・汚染: SCF と SeCF</text>
+<line x1="62" y1="378" x2="698" y2="378" stroke="#444"/><line x1="62" y1="62" x2="62" y2="378" stroke="#444"/>
+<text x="380.0" y="426" text-anchor="middle">圧縮した古い履歴の割合(%)</text>
+<text x="16" y="220.0" transform="rotate(-90 16 220.0)" text-anchor="middle">スコア(1-5)</text>
+<text x="62" y="392" text-anchor="middle">0</text>
+<text x="56" y="382" text-anchor="end">1.06</text>
+<text x="221" y="392" text-anchor="middle">25</text>
+<text x="56" y="303" text-anchor="end">2.04</text>
+<text x="380" y="392" text-anchor="middle">50</text>
+<text x="56" y="224" text-anchor="end">3.03</text>
+<text x="539" y="392" text-anchor="middle">75</text>
+<text x="56" y="145" text-anchor="end">4.01</text>
+<text x="698" y="392" text-anchor="middle">100</text>
+<text x="56" y="66" text-anchor="end">5</text>
+<polyline fill="none" stroke="#c0392b" stroke-width="2" points="62,67 221,71 380,71 539,67 618,67 698,67"/>
+<circle cx="62" cy="67" r="3" fill="#c0392b"/>
+<circle cx="221" cy="71" r="3" fill="#c0392b"/>
+<circle cx="380" cy="71" r="3" fill="#c0392b"/>
+<circle cx="539" cy="67" r="3" fill="#c0392b"/>
+<circle cx="618" cy="67" r="3" fill="#c0392b"/>
+<circle cx="698" cy="67" r="3" fill="#c0392b"/>
+<rect x="570" y="34" width="10" height="10" fill="#c0392b"/><text x="585" y="43">SCF msg 自然さ</text>
+<polyline fill="none" stroke="#2471a3" stroke-width="2" points="62,355 221,355 380,357 539,360 618,355 698,357"/>
+<circle cx="62" cy="355" r="3" fill="#2471a3"/>
+<circle cx="221" cy="355" r="3" fill="#2471a3"/>
+<circle cx="380" cy="357" r="3" fill="#2471a3"/>
+<circle cx="539" cy="360" r="3" fill="#2471a3"/>
+<circle cx="618" cy="355" r="3" fill="#2471a3"/>
+<circle cx="698" cy="357" r="3" fill="#2471a3"/>
+<rect x="570" y="49" width="10" height="10" fill="#2471a3"/><text x="585" y="58">SCF msg 汚染</text>
+<polyline fill="none" stroke="#1e8449" stroke-width="2" points="62,67 221,64 380,67 539,62 618,67 698,64"/>
+<circle cx="62" cy="67" r="3" fill="#1e8449"/>
+<circle cx="221" cy="64" r="3" fill="#1e8449"/>
+<circle cx="380" cy="67" r="3" fill="#1e8449"/>
+<circle cx="539" cy="62" r="3" fill="#1e8449"/>
+<circle cx="618" cy="67" r="3" fill="#1e8449"/>
+<circle cx="698" cy="64" r="3" fill="#1e8449"/>
+<rect x="570" y="64" width="10" height="10" fill="#1e8449"/><text x="585" y="73">SeCF msg 自然さ</text>
+<polyline fill="none" stroke="#e67e22" stroke-width="2" points="62,355 221,376 380,369 539,378 618,371 698,373"/>
+<circle cx="62" cy="355" r="3" fill="#e67e22"/>
+<circle cx="221" cy="376" r="3" fill="#e67e22"/>
+<circle cx="380" cy="369" r="3" fill="#e67e22"/>
+<circle cx="539" cy="378" r="3" fill="#e67e22"/>
+<circle cx="618" cy="371" r="3" fill="#e67e22"/>
+<circle cx="698" cy="373" r="3" fill="#e67e22"/>
+<rect x="570" y="79" width="10" height="10" fill="#e67e22"/><text x="585" y="88">SeCF msg 汚染</text>
+<polyline fill="none" stroke="#8e44ad" stroke-width="2" points="62,64 221,62 380,64 539,67 618,64 698,64"/>
+<circle cx="62" cy="64" r="3" fill="#8e44ad"/>
+<circle cx="221" cy="62" r="3" fill="#8e44ad"/>
+<circle cx="380" cy="64" r="3" fill="#8e44ad"/>
+<circle cx="539" cy="67" r="3" fill="#8e44ad"/>
+<circle cx="618" cy="64" r="3" fill="#8e44ad"/>
+<circle cx="698" cy="64" r="3" fill="#8e44ad"/>
+<rect x="570" y="94" width="10" height="10" fill="#8e44ad"/><text x="585" y="103">SCF 分離 自然さ</text>
+<polyline fill="none" stroke="#7f8c8d" stroke-width="2" points="62,362 221,371 380,371 539,367 618,364 698,362"/>
+<circle cx="62" cy="362" r="3" fill="#7f8c8d"/>
+<circle cx="221" cy="371" r="3" fill="#7f8c8d"/>
+<circle cx="380" cy="371" r="3" fill="#7f8c8d"/>
+<circle cx="539" cy="367" r="3" fill="#7f8c8d"/>
+<circle cx="618" cy="364" r="3" fill="#7f8c8d"/>
+<circle cx="698" cy="362" r="3" fill="#7f8c8d"/>
+<rect x="570" y="109" width="10" height="10" fill="#7f8c8d"/><text x="585" y="118">SCF 分離 汚染</text>
+<polyline fill="none" stroke="#16a085" stroke-width="2" points="62,64 221,67 380,62 539,71 618,64 698,67"/>
+<circle cx="62" cy="64" r="3" fill="#16a085"/>
+<circle cx="221" cy="67" r="3" fill="#16a085"/>
+<circle cx="380" cy="62" r="3" fill="#16a085"/>
+<circle cx="539" cy="71" r="3" fill="#16a085"/>
+<circle cx="618" cy="64" r="3" fill="#16a085"/>
+<circle cx="698" cy="67" r="3" fill="#16a085"/>
+<rect x="570" y="124" width="10" height="10" fill="#16a085"/><text x="585" y="133">SeCF 分離 自然さ</text>
+<polyline fill="none" stroke="#d35400" stroke-width="2" points="62,362 221,369 380,369 539,362 618,367 698,362"/>
+<circle cx="62" cy="362" r="3" fill="#d35400"/>
+<circle cx="221" cy="369" r="3" fill="#d35400"/>
+<circle cx="380" cy="369" r="3" fill="#d35400"/>
+<circle cx="539" cy="362" r="3" fill="#d35400"/>
+<circle cx="618" cy="367" r="3" fill="#d35400"/>
+<circle cx="698" cy="362" r="3" fill="#d35400"/>
+<rect x="570" y="139" width="10" height="10" fill="#d35400"/><text x="585" y="148">SeCF 分離 汚染</text>
+</svg>
