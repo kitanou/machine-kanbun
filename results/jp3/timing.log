@@ -24,3 +24,5 @@ DONE 49
 09:03 33r judge long rc=0 369s
 09:22 33r qa short rc=0 1141s
 09:46 33r qa long rc=0 1410s
+10:20 54 short rc=0 1671s
+10:58 54 long rc=0 2286s
