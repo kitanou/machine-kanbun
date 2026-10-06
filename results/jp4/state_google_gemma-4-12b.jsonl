@@ -1,0 +1,1260 @@
+{"variant": "V0", "rep": "nf", "id": 0, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 0, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 0, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "pred_status": "WANTED", "ok": true, "exact7": true, "raw": "F"}
+{"variant": "V3", "rep": "nf", "id": 0, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 0, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 0, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 0, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "pred_status": "WANTED", "ok": true, "exact7": true, "raw": "F"}
+{"variant": "V3", "rep": "scf", "id": 0, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 0, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 0, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 0, "status": "WANTED", "gold": "いいえ", "pred": null, "pred_status": null, "ok": false, "exact7": false, "raw": "なし"}
+{"variant": "V3", "rep": "secf1", "id": 0, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 1, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "nf", "id": 1, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 1, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "nf", "id": 1, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "scf", "id": 1, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "scf", "id": 1, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 1, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "scf", "id": 1, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "secf1", "id": 1, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 1, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 1, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "secf1", "id": 1, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "nf", "id": 2, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V1", "rep": "nf", "id": 2, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V2", "rep": "nf", "id": 2, "status": "DONE", "gold": "はい", "pred": "はい", "pred_status": "DONE", "ok": true, "exact7": true, "raw": "F"}
+{"variant": "V3", "rep": "nf", "id": 2, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V0", "rep": "scf", "id": 2, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V1", "rep": "scf", "id": 2, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V2", "rep": "scf", "id": 2, "status": "DONE", "gold": "はい", "pred": "はい", "pred_status": "DONE", "ok": true, "exact7": true, "raw": "F"}
+{"variant": "V3", "rep": "scf", "id": 2, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V0", "rep": "secf1", "id": 2, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V1", "rep": "secf1", "id": 2, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V2", "rep": "secf1", "id": 2, "status": "DONE", "gold": "はい", "pred": "はい", "pred_status": "DONE", "ok": true, "exact7": true, "raw": "F"}
+{"variant": "V3", "rep": "secf1", "id": 2, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V0", "rep": "nf", "id": 3, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 3, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 3, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "pred_status": "PLANNED", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "nf", "id": 3, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 3, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 3, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 3, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "pred_status": "PLANNED", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "scf", "id": 3, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 3, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 3, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 3, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "pred_status": "PLANNED", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "secf1", "id": 3, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 4, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 4, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 4, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "pred_status": "PLANNED", "ok": true, "exact7": true, "raw": "F"}
+{"variant": "V3", "rep": "nf", "id": 4, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 4, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 4, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 4, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "pred_status": "PLANNED", "ok": true, "exact7": true, "raw": "F"}
+{"variant": "V3", "rep": "scf", "id": 4, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 4, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 4, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 4, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "pred_status": "PLANNED", "ok": true, "exact7": true, "raw": "F"}
+{"variant": "V3", "rep": "secf1", "id": 4, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 5, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "nf", "id": 5, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 5, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "E"}
+{"variant": "V3", "rep": "nf", "id": 5, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "scf", "id": 5, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "scf", "id": 5, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 5, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "E"}
+{"variant": "V3", "rep": "scf", "id": 5, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "secf1", "id": 5, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 5, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 5, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "E"}
+{"variant": "V3", "rep": "secf1", "id": 5, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "nf", "id": 6, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 6, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 6, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "pred_status": "WANTED", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "nf", "id": 6, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 6, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 6, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 6, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "pred_status": "WANTED", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "scf", "id": 6, "status": "WANTED", "gold": "いいえ", "pred": "未確定", "ok": false, "raw": "未確定"}
+{"variant": "V0", "rep": "secf1", "id": 6, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 6, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 6, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "pred_status": "WANTED", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "secf1", "id": 6, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 7, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "nf", "id": 7, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 7, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "nf", "id": 7, "status": "UNDECIDED", "gold": "未確定", "pred": "いいえ", "ok": false, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 7, "status": "UNDECIDED", "gold": "未確定", "pred": "いいえ", "ok": false, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 7, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 7, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "scf", "id": 7, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "secf1", "id": 7, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 7, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 7, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "secf1", "id": 7, "status": "UNDECIDED", "gold": "未確定", "pred": "いいえ", "ok": false, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 8, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V1", "rep": "nf", "id": 8, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V2", "rep": "nf", "id": 8, "status": "DONE", "gold": "はい", "pred": "はい", "pred_status": "DONE", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "nf", "id": 8, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V0", "rep": "scf", "id": 8, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V1", "rep": "scf", "id": 8, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V2", "rep": "scf", "id": 8, "status": "DONE", "gold": "はい", "pred": "はい", "pred_status": "DONE", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "scf", "id": 8, "status": "DONE", "gold": "はい", "pred": "不明", "ok": false, "raw": "不明"}
+{"variant": "V0", "rep": "secf1", "id": 8, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V1", "rep": "secf1", "id": 8, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V2", "rep": "secf1", "id": 8, "status": "DONE", "gold": "はい", "pred": "はい", "pred_status": "DONE", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "secf1", "id": 8, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V0", "rep": "nf", "id": 9, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "nf", "id": 9, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 9, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "nf", "id": 9, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "scf", "id": 9, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "scf", "id": 9, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 9, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "scf", "id": 9, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "secf1", "id": 9, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 9, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 9, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "secf1", "id": 9, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "nf", "id": 10, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "nf", "id": 10, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 10, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "nf", "id": 10, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "scf", "id": 10, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "scf", "id": 10, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 10, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "scf", "id": 10, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "secf1", "id": 10, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 10, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 10, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "secf1", "id": 10, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "nf", "id": 11, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "nf", "id": 11, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 11, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "E"}
+{"variant": "V3", "rep": "nf", "id": 11, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "scf", "id": 11, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "scf", "id": 11, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 11, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "E"}
+{"variant": "V3", "rep": "scf", "id": 11, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "secf1", "id": 11, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 11, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 11, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "E"}
+{"variant": "V3", "rep": "secf1", "id": 11, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "nf", "id": 12, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "nf", "id": 12, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 12, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "nf", "id": 12, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "scf", "id": 12, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "scf", "id": 12, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 12, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "scf", "id": 12, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "secf1", "id": 12, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 12, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 12, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "secf1", "id": 12, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "nf", "id": 13, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "nf", "id": 13, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 13, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "nf", "id": 13, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "scf", "id": 13, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "scf", "id": 13, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 13, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "scf", "id": 13, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "secf1", "id": 13, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 13, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 13, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "secf1", "id": 13, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "nf", "id": 14, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "nf", "id": 14, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 14, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "F"}
+{"variant": "V3", "rep": "nf", "id": 14, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "scf", "id": 14, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "scf", "id": 14, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 14, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "F"}
+{"variant": "V3", "rep": "scf", "id": 14, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "secf1", "id": 14, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 14, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 14, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "F"}
+{"variant": "V3", "rep": "secf1", "id": 14, "status": "UNDECIDED", "gold": "未確定", "pred": "いいえ", "ok": false, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 15, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "nf", "id": 15, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 15, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "E"}
+{"variant": "V3", "rep": "nf", "id": 15, "status": "UNDECIDED", "gold": "未確定", "pred": "いいえ", "ok": false, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 15, "status": "UNDECIDED", "gold": "未確定", "pred": "いいえ", "ok": false, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 15, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 15, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "E"}
+{"variant": "V3", "rep": "scf", "id": 15, "status": "UNDECIDED", "gold": "未確定", "pred": "いいえ", "ok": false, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 15, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 15, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 15, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "E"}
+{"variant": "V3", "rep": "secf1", "id": 15, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "nf", "id": 16, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "nf", "id": 16, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 16, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "nf", "id": 16, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "scf", "id": 16, "status": "UNDECIDED", "gold": "未確定", "pred": "いいえ", "ok": false, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 16, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 16, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "scf", "id": 16, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "secf1", "id": 16, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 16, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 16, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "secf1", "id": 16, "status": "UNDECIDED", "gold": "未確定", "pred": "いいえ", "ok": false, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 17, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 17, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 17, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "pred_status": "WANTED", "ok": true, "exact7": true, "raw": "F"}
+{"variant": "V3", "rep": "nf", "id": 17, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 17, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 17, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 17, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "pred_status": "WANTED", "ok": true, "exact7": true, "raw": "F"}
+{"variant": "V3", "rep": "scf", "id": 17, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 17, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 17, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 17, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "pred_status": "WANTED", "ok": true, "exact7": true, "raw": "F"}
+{"variant": "V3", "rep": "secf1", "id": 17, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 18, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "nf", "id": 18, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 18, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "nf", "id": 18, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "scf", "id": 18, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "scf", "id": 18, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 18, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "scf", "id": 18, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "secf1", "id": 18, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 18, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 18, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "secf1", "id": 18, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "nf", "id": 19, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "nf", "id": 19, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 19, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "nf", "id": 19, "status": "POSSIBLE", "gold": "未確定", "pred": "いいえ", "ok": false, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 19, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "scf", "id": 19, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 19, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "scf", "id": 19, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "secf1", "id": 19, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 19, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 19, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "secf1", "id": 19, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "nf", "id": 20, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 20, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 20, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "E"}
+{"variant": "V3", "rep": "nf", "id": 20, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 20, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 20, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 20, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "E"}
+{"variant": "V3", "rep": "scf", "id": 20, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 20, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 20, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 20, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "E"}
+{"variant": "V3", "rep": "secf1", "id": 20, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 21, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 21, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 21, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "G"}
+{"variant": "V3", "rep": "nf", "id": 21, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 21, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 21, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 21, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "G"}
+{"variant": "V3", "rep": "scf", "id": 21, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 21, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 21, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 21, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "G"}
+{"variant": "V3", "rep": "secf1", "id": 21, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 22, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V1", "rep": "nf", "id": 22, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V2", "rep": "nf", "id": 22, "status": "DONE", "gold": "はい", "pred": "はい", "pred_status": "DONE", "ok": true, "exact7": true, "raw": "E"}
+{"variant": "V3", "rep": "nf", "id": 22, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V0", "rep": "scf", "id": 22, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V1", "rep": "scf", "id": 22, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V2", "rep": "scf", "id": 22, "status": "DONE", "gold": "はい", "pred": "はい", "pred_status": "DONE", "ok": true, "exact7": true, "raw": "E"}
+{"variant": "V3", "rep": "scf", "id": 22, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V0", "rep": "secf1", "id": 22, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V1", "rep": "secf1", "id": 22, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V2", "rep": "secf1", "id": 22, "status": "DONE", "gold": "はい", "pred": "はい", "pred_status": "DONE", "ok": true, "exact7": true, "raw": "E"}
+{"variant": "V3", "rep": "secf1", "id": 22, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V0", "rep": "nf", "id": 23, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 23, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 23, "status": "WANTED", "gold": "いいえ", "pred": "未確定", "pred_status": "HEARSAY", "ok": false, "exact7": false, "raw": "C"}
+{"variant": "V3", "rep": "nf", "id": 23, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 23, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 23, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 23, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "pred_status": "WANTED", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "scf", "id": 23, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 23, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 23, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 23, "status": "WANTED", "gold": "いいえ", "pred": null, "pred_status": null, "ok": false, "exact7": false, "raw": "記憶メモには「前"}
+{"variant": "V3", "rep": "secf1", "id": 23, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 24, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "nf", "id": 24, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 24, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "nf", "id": 24, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "scf", "id": 24, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "scf", "id": 24, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 24, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "scf", "id": 24, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "secf1", "id": 24, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 24, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 24, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "secf1", "id": 24, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "nf", "id": 25, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 25, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 25, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "pred_status": "PLANNED", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "nf", "id": 25, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 25, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 25, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 25, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "pred_status": "PLANNED", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "scf", "id": 25, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 25, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 25, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 25, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "pred_status": "PLANNED", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "secf1", "id": 25, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 26, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "nf", "id": 26, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 26, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "E"}
+{"variant": "V3", "rep": "nf", "id": 26, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "scf", "id": 26, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "scf", "id": 26, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 26, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "E"}
+{"variant": "V3", "rep": "scf", "id": 26, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "secf1", "id": 26, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 26, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 26, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "E"}
+{"variant": "V3", "rep": "secf1", "id": 26, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "nf", "id": 27, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "nf", "id": 27, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 27, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "nf", "id": 27, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "scf", "id": 27, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "scf", "id": 27, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 27, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "scf", "id": 27, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "secf1", "id": 27, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 27, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 27, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "secf1", "id": 27, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "nf", "id": 28, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V1", "rep": "nf", "id": 28, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V2", "rep": "nf", "id": 28, "status": "DONE", "gold": "はい", "pred": "はい", "pred_status": "DONE", "ok": true, "exact7": true, "raw": "G"}
+{"variant": "V3", "rep": "nf", "id": 28, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V0", "rep": "scf", "id": 28, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V1", "rep": "scf", "id": 28, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V2", "rep": "scf", "id": 28, "status": "DONE", "gold": "はい", "pred": "はい", "pred_status": "DONE", "ok": true, "exact7": true, "raw": "G"}
+{"variant": "V3", "rep": "scf", "id": 28, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V0", "rep": "secf1", "id": 28, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V1", "rep": "secf1", "id": 28, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V2", "rep": "secf1", "id": 28, "status": "DONE", "gold": "はい", "pred": "はい", "pred_status": "DONE", "ok": true, "exact7": true, "raw": "G"}
+{"variant": "V3", "rep": "secf1", "id": 28, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V0", "rep": "nf", "id": 29, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "nf", "id": 29, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 29, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "G"}
+{"variant": "V3", "rep": "nf", "id": 29, "status": "UNDECIDED", "gold": "未確定", "pred": "いいえ", "ok": false, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 29, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "scf", "id": 29, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 29, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "G"}
+{"variant": "V3", "rep": "scf", "id": 29, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "secf1", "id": 29, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 29, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 29, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "G"}
+{"variant": "V3", "rep": "secf1", "id": 29, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "nf", "id": 30, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 30, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 30, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "nf", "id": 30, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 30, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 30, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 30, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "scf", "id": 30, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 30, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 30, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 30, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "secf1", "id": 30, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 31, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "nf", "id": 31, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 31, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "nf", "id": 31, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "scf", "id": 31, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "scf", "id": 31, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 31, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "scf", "id": 31, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "secf1", "id": 31, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 31, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 31, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "secf1", "id": 31, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "nf", "id": 32, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 32, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 32, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "pred_status": "PLANNED", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "nf", "id": 32, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 32, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 32, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 32, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "pred_status": "PLANNED", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "scf", "id": 32, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 32, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 32, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 32, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "pred_status": "PLANNED", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "secf1", "id": 32, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 33, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 33, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 33, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "F"}
+{"variant": "V3", "rep": "nf", "id": 33, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 33, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 33, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 33, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "F"}
+{"variant": "V3", "rep": "scf", "id": 33, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 33, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 33, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 33, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "F"}
+{"variant": "V3", "rep": "secf1", "id": 33, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 34, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "nf", "id": 34, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 34, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "G"}
+{"variant": "V3", "rep": "nf", "id": 34, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "scf", "id": 34, "status": "UNDECIDED", "gold": "未確定", "pred": "いいえ", "ok": false, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 34, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 34, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "G"}
+{"variant": "V3", "rep": "scf", "id": 34, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "secf1", "id": 34, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 34, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 34, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "G"}
+{"variant": "V3", "rep": "secf1", "id": 34, "status": "UNDECIDED", "gold": "未確定", "pred": "いいえ", "ok": false, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 35, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 35, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 35, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "pred_status": "WANTED", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "nf", "id": 35, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 35, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 35, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 35, "status": "WANTED", "gold": "いいえ", "pred": "未確定", "pred_status": "POSSIBLE", "ok": false, "exact7": false, "raw": "B"}
+{"variant": "V3", "rep": "scf", "id": 35, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 35, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 35, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 35, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "pred_status": "WANTED", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "secf1", "id": 35, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 36, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V1", "rep": "nf", "id": 36, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V2", "rep": "nf", "id": 36, "status": "DONE", "gold": "はい", "pred": "はい", "pred_status": "DONE", "ok": true, "exact7": true, "raw": "F"}
+{"variant": "V3", "rep": "nf", "id": 36, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V0", "rep": "scf", "id": 36, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V1", "rep": "scf", "id": 36, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V2", "rep": "scf", "id": 36, "status": "DONE", "gold": "はい", "pred": "はい", "pred_status": "DONE", "ok": true, "exact7": true, "raw": "F"}
+{"variant": "V3", "rep": "scf", "id": 36, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V0", "rep": "secf1", "id": 36, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V1", "rep": "secf1", "id": 36, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V2", "rep": "secf1", "id": 36, "status": "DONE", "gold": "はい", "pred": "はい", "pred_status": "DONE", "ok": true, "exact7": true, "raw": "F"}
+{"variant": "V3", "rep": "secf1", "id": 36, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V0", "rep": "nf", "id": 37, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "nf", "id": 37, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 37, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "F"}
+{"variant": "V3", "rep": "nf", "id": 37, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "scf", "id": 37, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "scf", "id": 37, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 37, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "F"}
+{"variant": "V3", "rep": "scf", "id": 37, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "secf1", "id": 37, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 37, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 37, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "F"}
+{"variant": "V3", "rep": "secf1", "id": 37, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "nf", "id": 38, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V1", "rep": "nf", "id": 38, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V2", "rep": "nf", "id": 38, "status": "DONE", "gold": "はい", "pred": "はい", "pred_status": "DONE", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "nf", "id": 38, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V0", "rep": "scf", "id": 38, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V1", "rep": "scf", "id": 38, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V2", "rep": "scf", "id": 38, "status": "DONE", "gold": "はい", "pred": "はい", "pred_status": "DONE", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "scf", "id": 38, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V0", "rep": "secf1", "id": 38, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V1", "rep": "secf1", "id": 38, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V2", "rep": "secf1", "id": 38, "status": "DONE", "gold": "はい", "pred": "はい", "pred_status": "DONE", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "secf1", "id": 38, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V0", "rep": "nf", "id": 39, "status": "UNDECIDED", "gold": "未確定", "pred": "いいえ", "ok": false, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 39, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 39, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "nf", "id": 39, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "scf", "id": 39, "status": "UNDECIDED", "gold": "未確定", "pred": "はい", "ok": false, "raw": "はい"}
+{"variant": "V1", "rep": "scf", "id": 39, "status": "UNDECIDED", "gold": "未確定", "pred": "はい", "ok": false, "raw": "はい"}
+{"variant": "V2", "rep": "scf", "id": 39, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "scf", "id": 39, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "secf1", "id": 39, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 39, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 39, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "secf1", "id": 39, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "nf", "id": 40, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 40, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 40, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "pred_status": "PLANNED", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "nf", "id": 40, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 40, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 40, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 40, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "pred_status": "PLANNED", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "scf", "id": 40, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 40, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 40, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 40, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "pred_status": "PLANNED", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "secf1", "id": 40, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 41, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "nf", "id": 41, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 41, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "nf", "id": 41, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "scf", "id": 41, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "scf", "id": 41, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 41, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "scf", "id": 41, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "secf1", "id": 41, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 41, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 41, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "secf1", "id": 41, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "nf", "id": 42, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 42, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 42, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "pred_status": "PLANNED", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "nf", "id": 42, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 42, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 42, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 42, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "pred_status": "PLANNED", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "scf", "id": 42, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 42, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 42, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 42, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "pred_status": "PLANNED", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "secf1", "id": 42, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 43, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "nf", "id": 43, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 43, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "nf", "id": 43, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "scf", "id": 43, "status": "HEARSAY", "gold": "未確定", "pred": "いいえ", "ok": false, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 43, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 43, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "scf", "id": 43, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "secf1", "id": 43, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 43, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 43, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "secf1", "id": 43, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "nf", "id": 44, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 44, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 44, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "pred_status": "PLANNED", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "nf", "id": 44, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 44, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 44, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 44, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "pred_status": "PLANNED", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "scf", "id": 44, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 44, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 44, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 44, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "pred_status": "PLANNED", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "secf1", "id": 44, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 45, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 45, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 45, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "nf", "id": 45, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 45, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 45, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 45, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "scf", "id": 45, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 45, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 45, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 45, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "secf1", "id": 45, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 46, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V1", "rep": "nf", "id": 46, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V2", "rep": "nf", "id": 46, "status": "DONE", "gold": "はい", "pred": "はい", "pred_status": "DONE", "ok": true, "exact7": true, "raw": "G"}
+{"variant": "V3", "rep": "nf", "id": 46, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V0", "rep": "scf", "id": 46, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V1", "rep": "scf", "id": 46, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V2", "rep": "scf", "id": 46, "status": "DONE", "gold": "はい", "pred": "はい", "pred_status": "DONE", "ok": true, "exact7": true, "raw": "G"}
+{"variant": "V3", "rep": "scf", "id": 46, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V0", "rep": "secf1", "id": 46, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V1", "rep": "secf1", "id": 46, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V2", "rep": "secf1", "id": 46, "status": "DONE", "gold": "はい", "pred": "はい", "pred_status": "DONE", "ok": true, "exact7": true, "raw": "G"}
+{"variant": "V3", "rep": "secf1", "id": 46, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V0", "rep": "nf", "id": 47, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "nf", "id": 47, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 47, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "nf", "id": 47, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "scf", "id": 47, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "scf", "id": 47, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 47, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "scf", "id": 47, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "secf1", "id": 47, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 47, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 47, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "secf1", "id": 47, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "nf", "id": 48, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 48, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 48, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "pred_status": "WANTED", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "nf", "id": 48, "status": "WANTED", "gold": "いいえ", "pred": "未確定", "ok": false, "raw": "未確定"}
+{"variant": "V0", "rep": "scf", "id": 48, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 48, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 48, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "pred_status": "WANTED", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "scf", "id": 48, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 48, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 48, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 48, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "pred_status": "WANTED", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "secf1", "id": 48, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 49, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "nf", "id": 49, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 49, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "nf", "id": 49, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "scf", "id": 49, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "scf", "id": 49, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 49, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "scf", "id": 49, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "secf1", "id": 49, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 49, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 49, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "secf1", "id": 49, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "nf", "id": 50, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 50, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 50, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "nf", "id": 50, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 50, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 50, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 50, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "scf", "id": 50, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 50, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 50, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 50, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "secf1", "id": 50, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 51, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 51, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 51, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "G"}
+{"variant": "V3", "rep": "nf", "id": 51, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 51, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 51, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 51, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "G"}
+{"variant": "V3", "rep": "scf", "id": 51, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 51, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 51, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 51, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "G"}
+{"variant": "V3", "rep": "secf1", "id": 51, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 52, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "nf", "id": 52, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 52, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "nf", "id": 52, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "scf", "id": 52, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "scf", "id": 52, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 52, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "scf", "id": 52, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "secf1", "id": 52, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 52, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 52, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "secf1", "id": 52, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "nf", "id": 53, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 53, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 53, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "pred_status": "PLANNED", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "nf", "id": 53, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 53, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 53, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 53, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "pred_status": "PLANNED", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "scf", "id": 53, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 53, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 53, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 53, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "pred_status": "PLANNED", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "secf1", "id": 53, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 54, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "nf", "id": 54, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 54, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "nf", "id": 54, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "scf", "id": 54, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "scf", "id": 54, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 54, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "scf", "id": 54, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "secf1", "id": 54, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 54, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 54, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "secf1", "id": 54, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "nf", "id": 55, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "nf", "id": 55, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 55, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "nf", "id": 55, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "scf", "id": 55, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "scf", "id": 55, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 55, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "scf", "id": 55, "status": "UNDECIDED", "gold": "未確定", "pred": "不明", "ok": false, "raw": "不明"}
+{"variant": "V0", "rep": "secf1", "id": 55, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 55, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 55, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "secf1", "id": 55, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "nf", "id": 56, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 56, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 56, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "pred_status": "WANTED", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "nf", "id": 56, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 56, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 56, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 56, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "pred_status": "WANTED", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "scf", "id": 56, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 56, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 56, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 56, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "pred_status": "WANTED", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "secf1", "id": 56, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 57, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 57, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 57, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "pred_status": "PLANNED", "ok": true, "exact7": true, "raw": "F"}
+{"variant": "V3", "rep": "nf", "id": 57, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 57, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 57, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 57, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "pred_status": "PLANNED", "ok": true, "exact7": true, "raw": "F"}
+{"variant": "V3", "rep": "scf", "id": 57, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 57, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 57, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 57, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "pred_status": "PLANNED", "ok": true, "exact7": true, "raw": "F"}
+{"variant": "V3", "rep": "secf1", "id": 57, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 58, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 58, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 58, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "F"}
+{"variant": "V3", "rep": "nf", "id": 58, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 58, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 58, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 58, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "F"}
+{"variant": "V3", "rep": "scf", "id": 58, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 58, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 58, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 58, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "F"}
+{"variant": "V3", "rep": "secf1", "id": 58, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 59, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 59, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 59, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "pred_status": "PLANNED", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "nf", "id": 59, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 59, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 59, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 59, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "pred_status": "PLANNED", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "scf", "id": 59, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 59, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 59, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 59, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "pred_status": "PLANNED", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "secf1", "id": 59, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 60, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 60, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 60, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "pred_status": "WANTED", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "nf", "id": 60, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 60, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 60, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 60, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "pred_status": "WANTED", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "scf", "id": 60, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 60, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 60, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 60, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "pred_status": "WANTED", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "secf1", "id": 60, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 61, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "nf", "id": 61, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 61, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "nf", "id": 61, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "scf", "id": 61, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "scf", "id": 61, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 61, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "scf", "id": 61, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "secf1", "id": 61, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 61, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 61, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "secf1", "id": 61, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "nf", "id": 62, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 62, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 62, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "pred_status": "WANTED", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "nf", "id": 62, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 62, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 62, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 62, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "pred_status": "WANTED", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "scf", "id": 62, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 62, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 62, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 62, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "pred_status": "WANTED", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "secf1", "id": 62, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 63, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "nf", "id": 63, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 63, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "F"}
+{"variant": "V3", "rep": "nf", "id": 63, "status": "POSSIBLE", "gold": "未確定", "pred": "いいえ", "ok": false, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 63, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "scf", "id": 63, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 63, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "F"}
+{"variant": "V3", "rep": "scf", "id": 63, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "secf1", "id": 63, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 63, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 63, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "F"}
+{"variant": "V3", "rep": "secf1", "id": 63, "status": "POSSIBLE", "gold": "未確定", "pred": "いいえ", "ok": false, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 64, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "nf", "id": 64, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 64, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "nf", "id": 64, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "scf", "id": 64, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "scf", "id": 64, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 64, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "scf", "id": 64, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "secf1", "id": 64, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 64, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 64, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "pred_status": "POSSIBLE", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "secf1", "id": 64, "status": "POSSIBLE", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "nf", "id": 65, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V1", "rep": "nf", "id": 65, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V2", "rep": "nf", "id": 65, "status": "DONE", "gold": "はい", "pred": "はい", "pred_status": "DONE", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "nf", "id": 65, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V0", "rep": "scf", "id": 65, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V1", "rep": "scf", "id": 65, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V2", "rep": "scf", "id": 65, "status": "DONE", "gold": "はい", "pred": "未確定", "pred_status": "POSSIBLE", "ok": false, "exact7": false, "raw": "C"}
+{"variant": "V3", "rep": "scf", "id": 65, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V0", "rep": "secf1", "id": 65, "status": "DONE", "gold": "はい", "pred": "不明", "ok": false, "raw": "不明"}
+{"variant": "V1", "rep": "secf1", "id": 65, "status": "DONE", "gold": "はい", "pred": "不明", "ok": false, "raw": "不明"}
+{"variant": "V2", "rep": "secf1", "id": 65, "status": "DONE", "gold": "はい", "pred": "はい", "pred_status": "DONE", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "secf1", "id": 65, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V0", "rep": "nf", "id": 67, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "nf", "id": 67, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 67, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "nf", "id": 67, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "scf", "id": 67, "status": "UNDECIDED", "gold": "未確定", "pred": "いいえ", "ok": false, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 67, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 67, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "scf", "id": 67, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "secf1", "id": 67, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 67, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 67, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "secf1", "id": 67, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "nf", "id": 68, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "nf", "id": 68, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 68, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "E"}
+{"variant": "V3", "rep": "nf", "id": 68, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "scf", "id": 68, "status": "UNDECIDED", "gold": "未確定", "pred": "いいえ", "ok": false, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 68, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 68, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "E"}
+{"variant": "V3", "rep": "scf", "id": 68, "status": "UNDECIDED", "gold": "未確定", "pred": "いいえ", "ok": false, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 68, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 68, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 68, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "E"}
+{"variant": "V3", "rep": "secf1", "id": 68, "status": "UNDECIDED", "gold": "未確定", "pred": "いいえ", "ok": false, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 69, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "nf", "id": 69, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 69, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "G"}
+{"variant": "V3", "rep": "nf", "id": 69, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "scf", "id": 69, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "scf", "id": 69, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 69, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "G"}
+{"variant": "V3", "rep": "scf", "id": 69, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "secf1", "id": 69, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 69, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 69, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "G"}
+{"variant": "V3", "rep": "secf1", "id": 69, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "nf", "id": 72, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 72, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 72, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "E"}
+{"variant": "V3", "rep": "nf", "id": 72, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 72, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 72, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 72, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "E"}
+{"variant": "V3", "rep": "scf", "id": 72, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 72, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 72, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 72, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "E"}
+{"variant": "V3", "rep": "secf1", "id": 72, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 73, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "nf", "id": 73, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 73, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "nf", "id": 73, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "scf", "id": 73, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "scf", "id": 73, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 73, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "scf", "id": 73, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "secf1", "id": 73, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 73, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 73, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "secf1", "id": 73, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "nf", "id": 74, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "nf", "id": 74, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 74, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "E"}
+{"variant": "V3", "rep": "nf", "id": 74, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "scf", "id": 74, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "scf", "id": 74, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 74, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "E"}
+{"variant": "V3", "rep": "scf", "id": 74, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "secf1", "id": 74, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 74, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 74, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "E"}
+{"variant": "V3", "rep": "secf1", "id": 74, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "nf", "id": 75, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 75, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 75, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "nf", "id": 75, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 75, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 75, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 75, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "scf", "id": 75, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 75, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 75, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 75, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "secf1", "id": 75, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 76, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 76, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 76, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "nf", "id": 76, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 76, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 76, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 76, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "scf", "id": 76, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 76, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 76, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 76, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "secf1", "id": 76, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 77, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "nf", "id": 77, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 77, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "nf", "id": 77, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "scf", "id": 77, "status": "UNDECIDED", "gold": "未確定", "pred": "はい", "ok": false, "raw": "はい"}
+{"variant": "V1", "rep": "scf", "id": 77, "status": "UNDECIDED", "gold": "未確定", "pred": "はい", "ok": false, "raw": "はい"}
+{"variant": "V2", "rep": "scf", "id": 77, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "scf", "id": 77, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "secf1", "id": 77, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 77, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 77, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "secf1", "id": 77, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "nf", "id": 78, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 78, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 78, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "pred_status": "PLANNED", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "nf", "id": 78, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 78, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 78, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 78, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "pred_status": "PLANNED", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "scf", "id": 78, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 78, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 78, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 78, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "pred_status": "PLANNED", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "secf1", "id": 78, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 79, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "nf", "id": 79, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 79, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "nf", "id": 79, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "scf", "id": 79, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "scf", "id": 79, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 79, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "scf", "id": 79, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "secf1", "id": 79, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 79, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 79, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "secf1", "id": 79, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "nf", "id": 81, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V1", "rep": "nf", "id": 81, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V2", "rep": "nf", "id": 81, "status": "DONE", "gold": "はい", "pred": "はい", "pred_status": "DONE", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "nf", "id": 81, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V0", "rep": "scf", "id": 81, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V1", "rep": "scf", "id": 81, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V2", "rep": "scf", "id": 81, "status": "DONE", "gold": "はい", "pred": "はい", "pred_status": "DONE", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "scf", "id": 81, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V0", "rep": "secf1", "id": 81, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V1", "rep": "secf1", "id": 81, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V2", "rep": "secf1", "id": 81, "status": "DONE", "gold": "はい", "pred": "はい", "pred_status": "DONE", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "secf1", "id": 81, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V0", "rep": "nf", "id": 82, "status": "UNDECIDED", "gold": "未確定", "pred": "いいえ", "ok": false, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 82, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 82, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "E"}
+{"variant": "V3", "rep": "nf", "id": 82, "status": "UNDECIDED", "gold": "未確定", "pred": "いいえ", "ok": false, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 82, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "scf", "id": 82, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 82, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "E"}
+{"variant": "V3", "rep": "scf", "id": 82, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "secf1", "id": 82, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 82, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 82, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "E"}
+{"variant": "V3", "rep": "secf1", "id": 82, "status": "UNDECIDED", "gold": "未確定", "pred": "いいえ", "ok": false, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 83, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "nf", "id": 83, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 83, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "nf", "id": 83, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "scf", "id": 83, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "scf", "id": 83, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 83, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "scf", "id": 83, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "secf1", "id": 83, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 83, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 83, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "secf1", "id": 83, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "nf", "id": 84, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "nf", "id": 84, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 84, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "nf", "id": 84, "status": "UNDECIDED", "gold": "未確定", "pred": "いいえ", "ok": false, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 84, "status": "UNDECIDED", "gold": "未確定", "pred": "いいえ", "ok": false, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 84, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 84, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "scf", "id": 84, "status": "UNDECIDED", "gold": "未確定", "pred": "いいえ", "ok": false, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 84, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 84, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 84, "status": "UNDECIDED", "gold": "未確定", "pred": "未確定", "pred_status": "UNDECIDED", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "secf1", "id": 84, "status": "UNDECIDED", "gold": "未確定", "pred": "いいえ", "ok": false, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 85, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 85, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 85, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "pred_status": "PLANNED", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "nf", "id": 85, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 85, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 85, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 85, "status": "PLANNED", "gold": "いいえ", "pred": "未確定", "pred_status": "POSSIBLE", "ok": false, "exact7": false, "raw": "C"}
+{"variant": "V3", "rep": "scf", "id": 85, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 85, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 85, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 85, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "pred_status": "PLANNED", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "secf1", "id": 85, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 86, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "nf", "id": 86, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 86, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "nf", "id": 86, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "scf", "id": 86, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "scf", "id": 86, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 86, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "scf", "id": 86, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "secf1", "id": 86, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 86, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 86, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "secf1", "id": 86, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "nf", "id": 87, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 87, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 87, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "G"}
+{"variant": "V3", "rep": "nf", "id": 87, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 87, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 87, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 87, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "G"}
+{"variant": "V3", "rep": "scf", "id": 87, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 87, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 87, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 87, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "G"}
+{"variant": "V3", "rep": "secf1", "id": 87, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 90, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V1", "rep": "nf", "id": 90, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V2", "rep": "nf", "id": 90, "status": "DONE", "gold": "はい", "pred": "はい", "pred_status": "DONE", "ok": true, "exact7": true, "raw": "E"}
+{"variant": "V3", "rep": "nf", "id": 90, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V0", "rep": "scf", "id": 90, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V1", "rep": "scf", "id": 90, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V2", "rep": "scf", "id": 90, "status": "DONE", "gold": "はい", "pred": "はい", "pred_status": "DONE", "ok": true, "exact7": true, "raw": "E"}
+{"variant": "V3", "rep": "scf", "id": 90, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V0", "rep": "secf1", "id": 90, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V1", "rep": "secf1", "id": 90, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V2", "rep": "secf1", "id": 90, "status": "DONE", "gold": "はい", "pred": "はい", "pred_status": "DONE", "ok": true, "exact7": true, "raw": "E"}
+{"variant": "V3", "rep": "secf1", "id": 90, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V0", "rep": "nf", "id": 91, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "nf", "id": 91, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 91, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "nf", "id": 91, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "scf", "id": 91, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "scf", "id": 91, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 91, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "scf", "id": 91, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "secf1", "id": 91, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 91, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 91, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "secf1", "id": 91, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "nf", "id": 92, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 92, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 92, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "pred_status": "PLANNED", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "nf", "id": 92, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 92, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 92, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 92, "status": "PLANNED", "gold": "いいえ", "pred": "未確定", "pred_status": "POSSIBLE", "ok": false, "exact7": false, "raw": "C"}
+{"variant": "V3", "rep": "scf", "id": 92, "status": "PLANNED", "gold": "いいえ", "pred": "未確定", "ok": false, "raw": "未確定"}
+{"variant": "V0", "rep": "secf1", "id": 92, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 92, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 92, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "pred_status": "PLANNED", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "secf1", "id": 92, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 93, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 93, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 93, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "pred_status": "PLANNED", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "nf", "id": 93, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 93, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 93, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 93, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "pred_status": "PLANNED", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "scf", "id": 93, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 93, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 93, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 93, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "pred_status": "PLANNED", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "secf1", "id": 93, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 94, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 94, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 94, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "pred_status": "WANTED", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "nf", "id": 94, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 94, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 94, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 94, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "pred_status": "WANTED", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "scf", "id": 94, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 94, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 94, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 94, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "pred_status": "WANTED", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "secf1", "id": 94, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 95, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 95, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 95, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "pred_status": "PLANNED", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "nf", "id": 95, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 95, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 95, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 95, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "pred_status": "PLANNED", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "scf", "id": 95, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 95, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 95, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 95, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": false, "raw": "D"}
+{"variant": "V3", "rep": "secf1", "id": 95, "status": "PLANNED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 98, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 98, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 98, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "nf", "id": 98, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 98, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 98, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 98, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "scf", "id": 98, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 98, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 98, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 98, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "secf1", "id": 98, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 100, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 100, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 100, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "G"}
+{"variant": "V3", "rep": "nf", "id": 100, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 100, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 100, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 100, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "G"}
+{"variant": "V3", "rep": "scf", "id": 100, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 100, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 100, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 100, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "G"}
+{"variant": "V3", "rep": "secf1", "id": 100, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 102, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V1", "rep": "nf", "id": 102, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V2", "rep": "nf", "id": 102, "status": "DONE", "gold": "はい", "pred": "はい", "pred_status": "DONE", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "nf", "id": 102, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V0", "rep": "scf", "id": 102, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V1", "rep": "scf", "id": 102, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V2", "rep": "scf", "id": 102, "status": "DONE", "gold": "はい", "pred": "はい", "pred_status": "DONE", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "scf", "id": 102, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V0", "rep": "secf1", "id": 102, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V1", "rep": "secf1", "id": 102, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V2", "rep": "secf1", "id": 102, "status": "DONE", "gold": "はい", "pred": "はい", "pred_status": "DONE", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "secf1", "id": 102, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V0", "rep": "nf", "id": 105, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V1", "rep": "nf", "id": 105, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V2", "rep": "nf", "id": 105, "status": "DONE", "gold": "はい", "pred": "はい", "pred_status": "DONE", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "nf", "id": 105, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V0", "rep": "scf", "id": 105, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V1", "rep": "scf", "id": 105, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V2", "rep": "scf", "id": 105, "status": "DONE", "gold": "はい", "pred": "はい", "pred_status": "DONE", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "scf", "id": 105, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V0", "rep": "secf1", "id": 105, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V1", "rep": "secf1", "id": 105, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V2", "rep": "secf1", "id": 105, "status": "DONE", "gold": "はい", "pred": "はい", "pred_status": "DONE", "ok": true, "exact7": true, "raw": "D"}
+{"variant": "V3", "rep": "secf1", "id": 105, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V0", "rep": "nf", "id": 106, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V1", "rep": "nf", "id": 106, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V2", "rep": "nf", "id": 106, "status": "DONE", "gold": "はい", "pred": "はい", "pred_status": "DONE", "ok": true, "exact7": true, "raw": "E"}
+{"variant": "V3", "rep": "nf", "id": 106, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V0", "rep": "scf", "id": 106, "status": "DONE", "gold": "はい", "pred": "いいえ", "ok": false, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 106, "status": "DONE", "gold": "はい", "pred": "未確定", "ok": false, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 106, "status": "DONE", "gold": "はい", "pred": "いいえ", "pred_status": "PLANNED", "ok": false, "exact7": false, "raw": "A"}
+{"variant": "V3", "rep": "scf", "id": 106, "status": "DONE", "gold": "はい", "pred": "いいえ", "ok": false, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 106, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V1", "rep": "secf1", "id": 106, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V2", "rep": "secf1", "id": 106, "status": "DONE", "gold": "はい", "pred": "はい", "pred_status": "DONE", "ok": true, "exact7": true, "raw": "E"}
+{"variant": "V3", "rep": "secf1", "id": 106, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V0", "rep": "nf", "id": 109, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "nf", "id": 109, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 109, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "nf", "id": 109, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "scf", "id": 109, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "scf", "id": 109, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 109, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "scf", "id": 109, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "secf1", "id": 109, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 109, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 109, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "secf1", "id": 109, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "nf", "id": 111, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "nf", "id": 111, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "nf", "id": 111, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "nf", "id": 111, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "scf", "id": 111, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "scf", "id": 111, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "scf", "id": 111, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "scf", "id": 111, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "secf1", "id": 111, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V1", "rep": "secf1", "id": 111, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V2", "rep": "secf1", "id": 111, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "pred_status": "HEARSAY", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "secf1", "id": 111, "status": "HEARSAY", "gold": "未確定", "pred": "未確定", "ok": true, "raw": "未確定"}
+{"variant": "V0", "rep": "nf", "id": 114, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 114, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 114, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "pred_status": "WANTED", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "nf", "id": 114, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 114, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 114, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 114, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "pred_status": "WANTED", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "scf", "id": 114, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 114, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 114, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 114, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "pred_status": "WANTED", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "secf1", "id": 114, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 122, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V1", "rep": "nf", "id": 122, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V2", "rep": "nf", "id": 122, "status": "DONE", "gold": "はい", "pred": "はい", "pred_status": "DONE", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "nf", "id": 122, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V0", "rep": "scf", "id": 122, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V1", "rep": "scf", "id": 122, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V2", "rep": "scf", "id": 122, "status": "DONE", "gold": "はい", "pred": "はい", "pred_status": "DONE", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "scf", "id": 122, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V0", "rep": "secf1", "id": 122, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V1", "rep": "secf1", "id": 122, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V2", "rep": "secf1", "id": 122, "status": "DONE", "gold": "はい", "pred": "はい", "pred_status": "DONE", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "secf1", "id": 122, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V0", "rep": "nf", "id": 124, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 124, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 124, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "pred_status": "WANTED", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "nf", "id": 124, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 124, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 124, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 124, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "pred_status": "WANTED", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "scf", "id": 124, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 124, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 124, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 124, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "pred_status": "WANTED", "ok": true, "exact7": true, "raw": "B"}
+{"variant": "V3", "rep": "secf1", "id": 124, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 126, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V1", "rep": "nf", "id": 126, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V2", "rep": "nf", "id": 126, "status": "DONE", "gold": "はい", "pred": "はい", "pred_status": "DONE", "ok": true, "exact7": true, "raw": "F"}
+{"variant": "V3", "rep": "nf", "id": 126, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V0", "rep": "scf", "id": 126, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V1", "rep": "scf", "id": 126, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V2", "rep": "scf", "id": 126, "status": "DONE", "gold": "はい", "pred": "はい", "pred_status": "DONE", "ok": true, "exact7": true, "raw": "F"}
+{"variant": "V3", "rep": "scf", "id": 126, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V0", "rep": "secf1", "id": 126, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V1", "rep": "secf1", "id": 126, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V2", "rep": "secf1", "id": 126, "status": "DONE", "gold": "はい", "pred": "はい", "pred_status": "DONE", "ok": true, "exact7": true, "raw": "F"}
+{"variant": "V3", "rep": "secf1", "id": 126, "status": "DONE", "gold": "はい", "pred": "はい", "ok": true, "raw": "はい"}
+{"variant": "V0", "rep": "nf", "id": 131, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 131, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 131, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "nf", "id": 131, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 131, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 131, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 131, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "scf", "id": 131, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 131, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 131, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 131, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "pred_status": "NOT_DONE", "ok": true, "exact7": true, "raw": "C"}
+{"variant": "V3", "rep": "secf1", "id": 131, "status": "NOT_DONE", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 133, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 133, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 133, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "pred_status": "WANTED", "ok": true, "exact7": true, "raw": "G"}
+{"variant": "V3", "rep": "nf", "id": 133, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 133, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 133, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 133, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "pred_status": "WANTED", "ok": true, "exact7": true, "raw": "G"}
+{"variant": "V3", "rep": "scf", "id": 133, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 133, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 133, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 133, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "pred_status": "WANTED", "ok": true, "exact7": true, "raw": "G"}
+{"variant": "V3", "rep": "secf1", "id": 133, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 137, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 137, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 137, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "pred_status": "WANTED", "ok": true, "exact7": true, "raw": "E"}
+{"variant": "V3", "rep": "nf", "id": 137, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 137, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 137, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 137, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "pred_status": "WANTED", "ok": true, "exact7": true, "raw": "E"}
+{"variant": "V3", "rep": "scf", "id": 137, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 137, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 137, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 137, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "pred_status": "WANTED", "ok": true, "exact7": true, "raw": "E"}
+{"variant": "V3", "rep": "secf1", "id": 137, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "nf", "id": 143, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "nf", "id": 143, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "nf", "id": 143, "status": "WANTED", "gold": "いいえ", "pred": null, "pred_status": null, "ok": false, "exact7": false, "raw": "記憶メモには「結"}
+{"variant": "V3", "rep": "nf", "id": 143, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "scf", "id": 143, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "scf", "id": 143, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "scf", "id": 143, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "pred_status": "WANTED", "ok": true, "exact7": true, "raw": "A"}
+{"variant": "V3", "rep": "scf", "id": 143, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V0", "rep": "secf1", "id": 143, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V1", "rep": "secf1", "id": 143, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}
+{"variant": "V2", "rep": "secf1", "id": 143, "status": "WANTED", "gold": "いいえ", "pred": null, "pred_status": null, "ok": false, "exact7": false, "raw": "記憶メモには「結"}
+{"variant": "V3", "rep": "secf1", "id": 143, "status": "WANTED", "gold": "いいえ", "pred": "いいえ", "ok": true, "raw": "いいえ"}

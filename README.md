@@ -85,7 +85,7 @@ LLM を使わず、既存の形態素解析器(Sudachi / MeCab / Janome)と係�
 - **多言語・内部表現(#29, #31)**: 各言語の既存パーサで L1 化するとトークン数の言語間ばらつきは 7 トークナイザすべてで収束するが、QA は日本語以外で保てない(中国語 90% → 40%、標識を各言語の語で書くと 72%)。注意・隠れ状態の解析は、動かせる小型モデルが課題を解けず検出不能。
 - → [#20](docs/exp-20-japanese-scf.md) / [#25〜#31](docs/exp-25-31-followups.md) / [#33](docs/exp-33-chat-style.md)
 
-### 2.4 Chat 履歴と Long-term Memory(Issue #33 再実行, #49, #51, #54, #57, #59, #60, #62)
+### 2.4 Chat 履歴と Long-term Memory(Issue #33 再実行, #49, #51, #54, #57, #59, #60, #62, #67)
 SCF-L1 = Chat Context、SeCF-L1 = Long-term Memory という役割分担([#56](https://github.com/kitanou/machine-kanbun/issues/56))を検証した。**SeCF-L1 は #19 の L1(助詞・活用を残した簡潔な自然言語への書き直し。ここでは gemma-4-12b が各発話を書き直す)**。初回 #33 の `主体{…}` 型の構造化条件は SeCF-L5 相当で、SeCF-L1 の結果としては扱わない。状態 7 択 QA(はい / いいえ / 未確定などの状態を問う、決定的採点)で想起を測った。
 - **文体(#33)**: 古い履歴を SCF-L1 / SeCF-L1 にしても、NF の回答の自然さ・会話らしさ・Persona の汚染は検出されない。直近 NF の窓 0 往復でも問題なし。
 - **想起(#49, #33 再実行)**: **SCF-L1 は古い事実の想起が NF より -10〜-17pt**(トークン数をそろえた NF は NF 並み)。特に願望(WANTED)・完了(DONE)を取り違える。**SeCF-L1 は NF 並み**(短 0.962 / 長 0.968、NF 0.971 / 1.000)で、圧縮率も 0.85〜0.88(SCF-L1 は 0.90〜0.92)。構造化 `{}` 型(SeCF-L5 相当)は 0.70〜0.82 に落ちトークンも増える。標識の凡例や自明語化では SCF-L1 の低下は回復を検出できない(#51)。かつての「圧縮履歴のほうが事実に言及されやすい」は語の有無の指標による見かけで、取り下げた。
@@ -94,7 +94,8 @@ SCF-L1 = Chat Context、SeCF-L1 = Long-term Memory という役割分担([#56](h
 - **Long-term Memory の検索(#59)**: SeCF-L1 に検索上の独自の利点はない(ベクトルは NF 0.947 > SeCF-L1 0.900、BM25 は SCF-L1 0.893 > SeCF-L1 0.807)。最良は #28 と同じ Dual(BM25 = SCF-L1、ベクトル = NF、R@1 0.980)。LLM に渡す記憶としては SeCF-L1 ≒ NF > SCF-L1 だが、節約は 7〜8%、変換は 1 件約 1.2 秒で、約 40 回検索されないと回収できない。
 - **状態が変わる記憶(#62)**: 日付つきの 2〜3 回更新の記憶は、生の記憶列のまま最新状態を約 0.87〜0.90 で答えられ、SeCF-L1 で統合しても利得はない(0.867、トークン +6%)。難しいのは「迷い」に戻る遷移(上限でも 0.67)。
 - **文章長と変換コスト(#60)**: SeCF-L1 の圧縮率は文章長ではなく文体で決まる(chat 0.74〜0.76 で平坦、news 0.88 → 0.81)。TTFT の短縮は長さに比例するが小さく(2000 トークンで 2〜2.5 秒、16〜20%)、**同期変換は 25〜2000 トークンのどの長さでも SeCF-L1 のほうが遅い**(変換は節約の約 22 倍)。事前変換した記憶でも、変換コストの回収に 1 件あたり約 24〜56 回の再利用が必要。
-- → [#33](docs/exp-33-chat-style.md) / [#59](docs/exp-mem-secf1.md) / [#62](docs/exp-mem-update.md) / [#60](docs/exp-60-length-breakeven.md)
+- **質問形式の影響(#67)**: 現行の 3 択 QA(はい / いいえ / 未確定)の指示は UNDECIDED(迷い)を過小評価していた。「迷い・まだ決めていない = 未確定」の注意を足すと UNDECIDED が +20pt(NF 0.87、SCF-L1 0.40 → 0.87、SeCF-L1 1.00)、「いいえ」系は変わらない。**#20・#59・#62 の 3 択の結果は再評価が必要**(7 択の #49・#33 再実行・#54・#57 は影響を受けにくい)。
+- → [#33](docs/exp-33-chat-style.md) / [#59](docs/exp-mem-secf1.md) / [#62](docs/exp-mem-update.md) / [#60](docs/exp-60-length-breakeven.md) / [#67](docs/exp-state-question.md)
 
 ### 2.5 再現しなかった・修正された結果
 - **#20 の N=600 の優位**(+20pt, p=0.022)は、質問サンプルを足すと有意でなくなった(#25)。#20 の p 値の一部は偶然だった可能性が高い。
@@ -131,6 +132,7 @@ SCF-L1 = Chat Context、SeCF-L1 = Long-term Memory という役割分担([#56](h
 | #59 | SeCF-L1 を Long-term Memory 表現にすると | 検索上の独自の利点なし。LLM 入力としては NF 並み〜SCF-L1 より正確 | [exp-mem-secf1](docs/exp-mem-secf1.md) |
 | #62 | 状態が変わる記憶で SeCF-L1 統合は有効か | 利得なし(最新状態 0.867 対 生の NF 0.883)。「迷い」に戻る遷移が難しい | [exp-mem-update](docs/exp-mem-update.md) |
 | #60 | SeCF-L1 の文章長別の圧縮率・TTFT 短縮・変換コストの損益分岐点 | 圧縮率は文体で決まる(chat 0.74、news 0.81〜0.88)。TTFT 短縮は長さに比例(2000 トークンで 2〜2.5 秒)。同期変換はどの長さでも遅く損益分岐点なし(変換は節約の約 22 倍)。事前変換は 24〜56 回の再利用で回収 | [exp-60](docs/exp-60-length-breakeven.md) |
+| #67 | 「迷い」を「いいえ」と読む誤りの原因(質問形式・表現・モデル) | 原因の大半は 3 択の指示の不足(注意書きで UNDECIDED +20pt)と SCF-L1 の断片。現行の 3 択 QA は未確定系を過小評価 | [exp-state](docs/exp-state-question.md) |
 | #35 | 名称を NF / SCF / SeCF に統一 | — | [terminology](docs/terminology.md) |
 
 未着手・未達の Issue は §7。
@@ -146,6 +148,7 @@ SCF-L1 = Chat Context、SeCF-L1 = Long-term Memory という役割分担([#56](h
 | **チャット履歴(#33, #49, #51, #54, #57)** | `jpchat.py` `jpchatreport.py` `jpchatsecf.py`(初回の構造化 = SeCF-L5 相当)`jpchatsecf1.py`(SeCF-L1)`jpchatqa.py` `jpchatqareport.py`(想起 QA、三層履歴)`jpchatbudget.py` `jpchatbudgetreport.py`(同一 budget) |
 | **Long-term Memory(#59, #62)** | `jpmem.py`(記憶の検索・回答)、`jpmemupd.py`(状態が変わる記憶・統合) |
 | **文章長と変換コスト(#60)** | `jplen.py`(長さ別の圧縮率・TTFT・変換時間・損益分岐) |
+| **質問形式(#67)** | `jpstate.py`(3 択の指示・7 択・few-shot の比較) |
 | **多言語の続き(#39)** | `mlpar.py`(9 言語の並列文のコンパクトさ)、`mlscf.py`(FLORES-200 での言語別 SCF と収束) |
 | **実行・監視** | `scripts/run_*.sh`(いずれも再開可能。LM Studio が固まると再ロードして再開)、`scripts/status_*.sh` |
 | **テスト** | `tests/`(`python -m pytest tests -q`) |
@@ -194,10 +197,10 @@ PYTHONPATH=. .venv-ja/bin/python -m machine_kanbun.mlpar; PYTHONPATH=. .venv-ja/
 ## 7. 未完・今後
 研究の方向は Meta Issue [#56](https://github.com/kitanou/machine-kanbun/issues/56) と [RESEARCH_MAP.md](RESEARCH_MAP.md) の未解決問題(U1〜U13)で管理している。
 - **終了した方向**: SeCF-L5 / 機械漢文 / Semantic IR(#2、#6、#8、#14 など。結果は保存済み)、LLMLingua 系との比較(#13)。
-- **次の候補**: 「まだ決めていない」を LLM が「いいえ」と読む問題(U13)、重要度に基づく SeCF-L1 への書き直しの優先順位(U10)、表現効果を検出できる難しい課題(U11)。
+- **次の候補**: #20・#59・#62 の 3 択 QA を改善した指示で再測定(U15)、重要度に基づく SeCF-L1 への書き直しの優先順位(U10)、表現効果を検出できる難しい課題(U11)。
 - **保留(再開条件つき)**: 多言語 SCF(#39。形態素解析つき SCF、母語話者評価、信頼できる並列コーパスが必要。グリーンランド語は FLORES-200 にも含まれない)、Transformer 内部機構(#29。動かせるモデルが律速)、Tokenizer / Transformer 横断評価(#41〜#43)。
 - **データ・評価の限界**: 実会話コーパスでの再現、人手の匿名評価(`results/jp3/blind_sheet.csv` を用意済み)、より大きいモデル、qwen の長文脈の再評価。
 - **Wiki**: 研究ポータルとして整備中(#45。原稿は `wiki/`)。
 
 ## 8. 文書の索引
-[用語](docs/terminology.md) ・ [#1 基本比較](docs/exp-01-basic-formats.md) ・ [#4 長文脈](docs/exp-04-long-context.md) ・ [#10 L1 アブレーション](docs/exp-10-l1-ablation.md) ・ [#11 多言語](docs/exp-11-multilingual.md) ・ [#17 ラベル局所化](docs/exp-17-label-localization.md) ・ [#19 研究整理](docs/exp-19-synthesis.md) ・ [#20 日本語 SCF](docs/exp-20-japanese-scf.md) ・ [#25〜#31](docs/exp-25-31-followups.md) ・ [#33 チャット文体・想起・三層・budget](docs/exp-33-chat-style.md) ・ [#39 多言語 SCF](docs/exp-39-multilingual-scf.md) ・ [#59 Long-term Memory](docs/exp-mem-secf1.md) ・ [#62 状態が変わる記憶](docs/exp-mem-update.md) ・ [#60 文章長と変換コスト](docs/exp-60-length-breakeven.md) ・ [RESULTS](RESULTS.md) ・ [RESEARCH_MAP](RESEARCH_MAP.md) ・ [Wiki](https://github.com/kitanou/machine-kanbun/wiki)
+[用語](docs/terminology.md) ・ [#1 基本比較](docs/exp-01-basic-formats.md) ・ [#4 長文脈](docs/exp-04-long-context.md) ・ [#10 L1 アブレーション](docs/exp-10-l1-ablation.md) ・ [#11 多言語](docs/exp-11-multilingual.md) ・ [#17 ラベル局所化](docs/exp-17-label-localization.md) ・ [#19 研究整理](docs/exp-19-synthesis.md) ・ [#20 日本語 SCF](docs/exp-20-japanese-scf.md) ・ [#25〜#31](docs/exp-25-31-followups.md) ・ [#33 チャット文体・想起・三層・budget](docs/exp-33-chat-style.md) ・ [#39 多言語 SCF](docs/exp-39-multilingual-scf.md) ・ [#59 Long-term Memory](docs/exp-mem-secf1.md) ・ [#62 状態が変わる記憶](docs/exp-mem-update.md) ・ [#60 文章長と変換コスト](docs/exp-60-length-breakeven.md) ・ [#67 質問形式](docs/exp-state-question.md) ・ [RESULTS](RESULTS.md) ・ [RESEARCH_MAP](RESEARCH_MAP.md) ・ [Wiki](https://github.com/kitanou/machine-kanbun/wiki)
