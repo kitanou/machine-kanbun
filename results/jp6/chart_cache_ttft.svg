@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="440" font-family="sans-serif" font-size="11">
+<rect width="760" height="440" fill="white"/>
+<text x="380.0" y="22" text-anchor="middle" font-size="14">記憶のトークン数 vs TTFT(キャッシュ状態別)</text>
+<line x1="62" y1="378" x2="698" y2="378" stroke="#444"/><line x1="62" y1="62" x2="62" y2="378" stroke="#444"/>
+<text x="380.0" y="426" text-anchor="middle">プロンプトのトークン数</text>
+<text x="16" y="220.0" transform="rotate(-90 16 220.0)" text-anchor="middle">TTFT(秒)</text>
+<text x="62" y="392" text-anchor="middle">864</text>
+<text x="56" y="382" text-anchor="end">0.485</text>
+<text x="221" y="392" text-anchor="middle">1.83e+03</text>
+<text x="56" y="303" text-anchor="end">2.16</text>
+<text x="380" y="392" text-anchor="middle">3.87e+03</text>
+<text x="56" y="224" text-anchor="end">9.64</text>
+<text x="539" y="392" text-anchor="middle">8.18e+03</text>
+<text x="56" y="145" text-anchor="end">43</text>
+<text x="698" y="392" text-anchor="middle">1.73e+04</text>
+<text x="56" y="66" text-anchor="end">192</text>
+<polyline fill="none" stroke="#c0392b" stroke-width="2" points="102,280 243,285 382,325 530,293 615,291 675,298 698,292"/>
+<circle cx="102" cy="280" r="3" fill="#c0392b"/>
+<circle cx="243" cy="285" r="3" fill="#c0392b"/>
+<circle cx="382" cy="325" r="3" fill="#c0392b"/>
+<circle cx="530" cy="293" r="3" fill="#c0392b"/>
+<circle cx="615" cy="291" r="3" fill="#c0392b"/>
+<circle cx="675" cy="298" r="3" fill="#c0392b"/>
+<circle cx="698" cy="292" r="3" fill="#c0392b"/>
+<rect x="570" y="34" width="10" height="10" fill="#c0392b"/><text x="585" y="43">nf HIT</text>
+<polyline fill="none" stroke="#2471a3" stroke-width="2" points="102,249 243,203 382,175 530,143 615,121 675,105 698,88"/>
+<circle cx="102" cy="249" r="3" fill="#2471a3"/>
+<circle cx="243" cy="203" r="3" fill="#2471a3"/>
+<circle cx="382" cy="175" r="3" fill="#2471a3"/>
+<circle cx="530" cy="143" r="3" fill="#2471a3"/>
+<circle cx="615" cy="121" r="3" fill="#2471a3"/>
+<circle cx="675" cy="105" r="3" fill="#2471a3"/>
+<circle cx="698" cy="88" r="3" fill="#2471a3"/>
+<rect x="570" y="49" width="10" height="10" fill="#2471a3"/><text x="585" y="58">nf PARTIAL</text>
+<polyline fill="none" stroke="#1e8449" stroke-width="2" points="102,215 243,179 382,146 530,110 615,89 675,62 698,65"/>
+<circle cx="102" cy="215" r="3" fill="#1e8449"/>
+<circle cx="243" cy="179" r="3" fill="#1e8449"/>
+<circle cx="382" cy="146" r="3" fill="#1e8449"/>
+<circle cx="530" cy="110" r="3" fill="#1e8449"/>
+<circle cx="615" cy="89" r="3" fill="#1e8449"/>
+<circle cx="675" cy="62" r="3" fill="#1e8449"/>
+<circle cx="698" cy="65" r="3" fill="#1e8449"/>
+<rect x="570" y="64" width="10" height="10" fill="#1e8449"/><text x="585" y="73">nf MISS</text>
+<polyline fill="none" stroke="#e67e22" stroke-width="2" points="62,378 198,317 336,328 483,304 568,302 627,306 651,263"/>
+<circle cx="62" cy="378" r="3" fill="#e67e22"/>
+<circle cx="198" cy="317" r="3" fill="#e67e22"/>
+<circle cx="336" cy="328" r="3" fill="#e67e22"/>
+<circle cx="483" cy="304" r="3" fill="#e67e22"/>
+<circle cx="568" cy="302" r="3" fill="#e67e22"/>
+<circle cx="627" cy="306" r="3" fill="#e67e22"/>
+<circle cx="651" cy="263" r="3" fill="#e67e22"/>
+<rect x="570" y="79" width="10" height="10" fill="#e67e22"/><text x="585" y="88">secf1 HIT</text>
+<polyline fill="none" stroke="#8e44ad" stroke-width="2" points="62,260 198,223 336,190 483,155 568,135 627,72 651,93"/>
+<circle cx="62" cy="260" r="3" fill="#8e44ad"/>
+<circle cx="198" cy="223" r="3" fill="#8e44ad"/>
+<circle cx="336" cy="190" r="3" fill="#8e44ad"/>
+<circle cx="483" cy="155" r="3" fill="#8e44ad"/>
+<circle cx="568" cy="135" r="3" fill="#8e44ad"/>
+<circle cx="627" cy="72" r="3" fill="#8e44ad"/>
+<circle cx="651" cy="93" r="3" fill="#8e44ad"/>
+<rect x="570" y="94" width="10" height="10" fill="#8e44ad"/><text x="585" y="103">secf1 PARTIAL</text>
+<polyline fill="none" stroke="#7f8c8d" stroke-width="2" points="62,226 198,190 336,159 483,122 568,100 627,87 651,80"/>
+<circle cx="62" cy="226" r="3" fill="#7f8c8d"/>
+<circle cx="198" cy="190" r="3" fill="#7f8c8d"/>
+<circle cx="336" cy="159" r="3" fill="#7f8c8d"/>
+<circle cx="483" cy="122" r="3" fill="#7f8c8d"/>
+<circle cx="568" cy="100" r="3" fill="#7f8c8d"/>
+<circle cx="627" cy="87" r="3" fill="#7f8c8d"/>
+<circle cx="651" cy="80" r="3" fill="#7f8c8d"/>
+<rect x="570" y="109" width="10" height="10" fill="#7f8c8d"/><text x="585" y="118">secf1 MISS</text>
+</svg>
