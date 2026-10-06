@@ -6,3 +6,5 @@ __pycache__/
 .venv-mlx/
 results/jp2/cache/
 results/jp2/*_hidden.npz
+data_ext/
+results/par/emb_cache.json
