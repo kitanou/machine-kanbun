@@ -26,3 +26,6 @@ DONE 49
 09:46 33r qa long rc=0 1410s
 10:20 54 short rc=0 1671s
 10:58 54 long rc=0 2286s
+12:12 57 histories rc=0 1529s
+12:30 57 secf1 rc=0 1103s
+14:54 57 qa rc=0 8612s
