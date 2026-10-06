@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="440" font-family="sans-serif" font-size="11">
+<rect width="760" height="440" fill="white"/>
+<text x="380.0" y="22" text-anchor="middle" font-size="14">NF 長 vs 同期変換の総レイテンシ差(正 = NF が速い)</text>
+<line x1="62" y1="378" x2="698" y2="378" stroke="#444"/><line x1="62" y1="62" x2="62" y2="378" stroke="#444"/>
+<text x="380.0" y="426" text-anchor="middle">NF のトークン数(o200k)</text>
+<text x="16" y="220.0" transform="rotate(-90 16 220.0)" text-anchor="middle">変換+SeCF TTFT − NF TTFT(秒)</text>
+<text x="62" y="392" text-anchor="middle">33.5</text>
+<text x="56" y="382" text-anchor="end">1.65</text>
+<text x="221" y="392" text-anchor="middle">88.5</text>
+<text x="56" y="303" text-anchor="end">16.6</text>
+<text x="380" y="392" text-anchor="middle">234</text>
+<text x="56" y="224" text-anchor="end">31.5</text>
+<text x="539" y="392" text-anchor="middle">619</text>
+<text x="56" y="145" text-anchor="end">46.5</text>
+<text x="698" y="392" text-anchor="middle">1.64e+03</text>
+<text x="56" y="66" text-anchor="end">61.4</text>
+<polyline fill="none" stroke="#c0392b" stroke-width="2" points="63,378 257,366 475,310 694,76"/>
+<circle cx="63" cy="378" r="3" fill="#c0392b"/>
+<circle cx="257" cy="366" r="3" fill="#c0392b"/>
+<circle cx="475" cy="310" r="3" fill="#c0392b"/>
+<circle cx="694" cy="76" r="3" fill="#c0392b"/>
+<rect x="570" y="34" width="10" height="10" fill="#c0392b"/><text x="585" y="43">chat 同期の総差(s)</text>
+<polyline fill="none" stroke="#2471a3" stroke-width="2" points="62,378 238,366 475,305 692,82"/>
+<circle cx="62" cy="378" r="3" fill="#2471a3"/>
+<circle cx="238" cy="366" r="3" fill="#2471a3"/>
+<circle cx="475" cy="305" r="3" fill="#2471a3"/>
+<circle cx="692" cy="82" r="3" fill="#2471a3"/>
+<rect x="570" y="49" width="10" height="10" fill="#2471a3"/><text x="585" y="58">news 同期の総差(s)</text>
+<polyline fill="none" stroke="#1e8449" stroke-width="2" points="80,377 247,365 478,292 698,62"/>
+<circle cx="80" cy="377" r="3" fill="#1e8449"/>
+<circle cx="247" cy="365" r="3" fill="#1e8449"/>
+<circle cx="478" cy="292" r="3" fill="#1e8449"/>
+<circle cx="698" cy="62" r="3" fill="#1e8449"/>
+<rect x="570" y="64" width="10" height="10" fill="#1e8449"/><text x="585" y="73">bullets 同期の総差(s)</text>
+</svg>

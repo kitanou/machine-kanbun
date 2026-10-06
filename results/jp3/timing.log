@@ -49,3 +49,9 @@ retry 4: 59 qa
 14:54 57 qa rc=0 8612s
 16:51 62 prep rc=0 1108s
 17:11 62 run rc=0 1195s
+17:40 60 convert --pilot rc=0 405s
+17:43 60 ttft --pilot rc=0 214s
+19:07 60 convert  rc=0 3817s
+19:35 60 ttft  rc=0 1647s
+19:58 60 convert  rc=0 1239s
+20:06 60 ttft  rc=0 465s

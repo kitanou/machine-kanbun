@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="440" font-family="sans-serif" font-size="11">
+<rect width="760" height="440" fill="white"/>
+<text x="380.0" y="22" text-anchor="middle" font-size="14">NF 長 vs SeCF-L1/NF トークン比</text>
+<line x1="62" y1="378" x2="698" y2="378" stroke="#444"/><line x1="62" y1="62" x2="62" y2="378" stroke="#444"/>
+<text x="380.0" y="426" text-anchor="middle">NF のトークン数(o200k)</text>
+<text x="16" y="220.0" transform="rotate(-90 16 220.0)" text-anchor="middle">SeCF-L1 / NF</text>
+<text x="62" y="392" text-anchor="middle">33.5</text>
+<text x="56" y="382" text-anchor="end">0.735</text>
+<text x="221" y="392" text-anchor="middle">88.5</text>
+<text x="56" y="303" text-anchor="end">0.771</text>
+<text x="380" y="392" text-anchor="middle">234</text>
+<text x="56" y="224" text-anchor="end">0.806</text>
+<text x="539" y="392" text-anchor="middle">619</text>
+<text x="56" y="145" text-anchor="end">0.842</text>
+<text x="698" y="392" text-anchor="middle">1.64e+03</text>
+<text x="56" y="66" text-anchor="end">0.878</text>
+<polyline fill="none" stroke="#c0392b" stroke-width="2" points="63,363 257,323 475,362 694,378"/>
+<circle cx="63" cy="363" r="3" fill="#c0392b"/>
+<circle cx="257" cy="323" r="3" fill="#c0392b"/>
+<circle cx="475" cy="362" r="3" fill="#c0392b"/>
+<circle cx="694" cy="378" r="3" fill="#c0392b"/>
+<rect x="570" y="34" width="10" height="10" fill="#c0392b"/><text x="585" y="43">chat SeCF/NF</text>
+<polyline fill="none" stroke="#2471a3" stroke-width="2" points="62,62 238,121 475,162 692,202"/>
+<circle cx="62" cy="62" r="3" fill="#2471a3"/>
+<circle cx="238" cy="121" r="3" fill="#2471a3"/>
+<circle cx="475" cy="162" r="3" fill="#2471a3"/>
+<circle cx="692" cy="202" r="3" fill="#2471a3"/>
+<rect x="570" y="49" width="10" height="10" fill="#2471a3"/><text x="585" y="58">news SeCF/NF</text>
+<polyline fill="none" stroke="#1e8449" stroke-width="2" points="80,145 247,136 478,75 698,220"/>
+<circle cx="80" cy="145" r="3" fill="#1e8449"/>
+<circle cx="247" cy="136" r="3" fill="#1e8449"/>
+<circle cx="478" cy="75" r="3" fill="#1e8449"/>
+<circle cx="698" cy="220" r="3" fill="#1e8449"/>
+<rect x="570" y="64" width="10" height="10" fill="#1e8449"/><text x="585" y="73">bullets SeCF/NF</text>
+</svg>
