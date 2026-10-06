@@ -1,0 +1,39 @@
+secf1 converted 5 histories
+secf1 converted 10 histories
+secf1 converted 15 histories
+secf1 converted 20 histories
+secf1 converted 25 histories
+secf1 converted 30 histories
+secf1 converted 35 histories
+secf1 converted 5 histories
+secf1 converted 10 histories
+secf1 converted 15 histories
+secf1 converted 20 histories
+C1_c2: n=35 prompt=395tok ttft=4.5s len=546chars
+C1_c4: n=35 prompt=377tok ttft=4.3s len=558chars
+C1_c6: n=35 prompt=362tok ttft=4.2s len=548chars
+C1_c7: n=35 prompt=354tok ttft=4.0s len=537chars
+C1_c8: n=35 prompt=347tok ttft=4.0s len=535chars
+G1_c2: n=35 prompt=459tok ttft=5.1s len=315chars
+G1_c4: n=35 prompt=443tok ttft=4.9s len=321chars
+G1_c6: n=35 prompt=429tok ttft=4.8s len=338chars
+G1_c8: n=35 prompt=414tok ttft=4.7s len=403chars
+G10_noinstr_c6: n=35 prompt=403tok ttft=4.6s len=463chars
+C1_c16: n=21 prompt=995tok ttft=10.6s len=438chars
+C1_c24: n=21 prompt=934tok ttft=9.9s len=413chars
+G1_c16: n=21 prompt=1014tok ttft=10.7s len=256chars
+G1_c24: n=21 prompt=955tok ttft=10.2s len=314chars
+judged 50
+judged 100
+judged 150
+judged 200
+judged 250
+judged 300
+judged 350
+judged 50
+short qa 50
+short qa 100
+short qa 150
+short qa 200
+long qa 50
+long qa 100

@@ -26,6 +26,7 @@ CONDS = {"A_base": dict(family="role", c=0), "B_scf": dict(family="role", c=-1),
          "N_nf_tokmatch": dict(family="role", c=0, trim=True), "D_scf_tag": dict(family="tag", c=-1, instr=True), "G_secf_tag": dict(family="tag", c=-1, instr=True, form="secf"),
          # Issue #51: markers made readable
          "B_legend": dict(family="role", c=-1, legend=True), "B_expl": dict(family="role", c=-1, form="scf_expl"), "B_expl_legend": dict(family="role", c=-1, form="scf_expl", legend=True)}
+CONDS.update({"E1_secf1": dict(family="role", c=-1, form="secf1"), "G1_secf1_tag": dict(family="tag", c=-1, instr=True, form="secf1")})  # Issue #33 redo: SeCF-L1
 BASE_CONDS = ("A_base", "B_scf", "E_secf", "N_nf_tokmatch", "D_scf_tag", "G_secf_tag")
 
 
@@ -109,13 +110,13 @@ def prep(variant: str, log=print):
 
 
 if __name__ == "__main__":
-    args = [a for a in sys.argv if a != "--51"]
+    args = [a for a in sys.argv if a not in ("--51", "--secf1")]
     mode, model, variant = args[1], args[2] if len(args) > 2 else "", args[-1]
     try:
         if mode == "prep":
             prep(variant, log=lambda s: print(s, flush=True))
         elif mode == "run":
-            run(model, variant, log=lambda s: print(s, flush=True), only=("B_legend", "B_expl", "B_expl_legend") if "--51" in sys.argv else None)
+            run(model, variant, log=lambda s: print(s, flush=True), only=("B_legend", "B_expl", "B_expl_legend") if "--51" in sys.argv else ("E1_secf1", "G1_secf1_tag") if "--secf1" in sys.argv else None)
     except Stalled as e:
         print(f"STALLED: {e}", flush=True)
         sys.exit(75)
