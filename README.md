@@ -97,6 +97,7 @@ LLM を使わず、既存の形態素解析器(Sudachi / MeCab / Janome)と係�
 | #30 | 圧縮の限界(最小十分表現) | 否定・不確実性・語順・主語が必須 | 同上 |
 | #31 | 多言語パーサベース L1 の収束 | トークンは収束、QA は日本語以外で保てない | 同上 |
 | #33 | SCF 履歴は回答の文体を汚染するか | SCF・SeCF とも汚染は検出されず。圧縮は SCF 7〜11%、SeCF は増加(1.03〜1.27 倍) | [exp-33](docs/exp-33-chat-style.md) |
+| #39 段階 1-2 | 多言語(9 言語)の compactness は一致するか、言語別 SCF は収束するか | 乖離し、粗い SCF では収束しない。文字数は ja 0.50・zh 0.33 だが token は ja 1.14〜1.89。eu・tr は語数が少なくても token が 1.1〜1.7 倍 | [exp-39](docs/exp-39-multilingual-scf.md) |
 | #35 | 名称を NF / SCF / SeCF に統一 | — | [terminology](docs/terminology.md) |
 
 未着手・未達の Issue は §7。
